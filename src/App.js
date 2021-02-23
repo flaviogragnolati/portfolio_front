@@ -8,11 +8,11 @@ import Main from 'views/main';
 import About from 'views/about';
 import useSpy from 'utils/observerHook';
 import { defaults } from 'utils/config';
-
-const TestThemeDiv = styled.div`
-  background-color: ${(p) => p.theme.palette.primary.main};
-  color: ${(p) => p.theme.palette.primary.contrastText};
-`;
+import BackToTopBtn from 'components/BackToTop';
+import SectionTitle from 'components/SectionTitle';
+import Contact from 'views/contact';
+import Section from 'components/Section';
+import Skills from 'views/skills';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,54 +22,40 @@ const useStyles = makeStyles((theme) => ({
   // toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
+    paddingLeft: '10px',
   },
 }));
 
 const App = () => {
   const classes = useStyles();
   const { spyItems, nodeRefs } = useSpy();
-  const { home, about, services, projects, contact } = spyItems;
+  const { home, about, skills, projects, contact } = spyItems;
 
   return (
     <div className={classes.root}>
       <Sidebar ref={nodeRefs} spy={spyItems} />
       <main className={classes.content}>
-        <div />
+        <div id="top-anchor" />
         <section id="home" ref={home.ref}>
-          <Main id="home" />
+          <Main id="home" ref={nodeRefs.about} />
         </section>
-        <section id="about" ref={about.ref}>
-          <h1>ABOUT</h1>
+        <Section id="about" title="about" ref={about.ref}>
           <About />
-          <About />
-          <About />
-          <About />
-        </section>
-        <section id="services" ref={services.ref}>
-          <div>
-            <h1>SERVICES</h1>
-            <About />
-            <About />
-            <About />
-            <About />
-          </div>
-        </section>
-        <section id="projects" ref={projects.ref}>
-          <div>
-            <h1>PROJECTS</h1>
-            <About />
-            <About />
-            <About />
-            <About />
-          </div>
-        </section>
-        <section id="contact" ref={contact.ref}>
-          <h1>CONTACT</h1>
-          <About />
-          <About />
-          <About />
-          <About />
-        </section>
+        </Section>
+        <Section id="skills" title="skills" ref={skills.ref}>
+          <Skills />
+        </Section>
+        <Section id="projects" title="projects" ref={projects.ref}>
+          <h1>
+            Project carrousel with hover effect and some detail, onClick modal?>
+          </h1>
+          Looking for a custom job? Click here to contact me! 👋
+        </Section>
+        <Section id="contact" title="contact" ref={contact.ref}>
+          <Contact />
+        </Section>
+
+        <BackToTopBtn />
       </main>
     </div>
   );

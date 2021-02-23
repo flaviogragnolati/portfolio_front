@@ -3,7 +3,7 @@ const ES = {
     content: [
       { text: 'Inicio', icon: 'home', id: 'home' },
       { text: 'Acerca de mi', icon: 'about', id: 'about' },
-      { text: 'Servicios', icon: 'services', id: 'services' },
+      { text: 'Habilidades', icon: 'services', id: 'skills' },
       { text: 'Proyectos', icon: 'projects', id: 'projects' },
       { text: 'Contacto', icon: 'contact', id: 'contact' },
     ],
@@ -17,6 +17,7 @@ const ES = {
     title: 'Flavio Gragnolati',
     button: 'Contratame!',
     subtitle: 'Redes Sociales',
+    type: ' ',
   },
   Main: { title: '', tabs: '' },
   Projects: {},

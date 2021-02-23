@@ -33,7 +33,7 @@ const SidebarDiv = styled.div`
   top: 0;
   left: 0;
 `;
-const drawerWidth = 300;
+const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
   drawer: {

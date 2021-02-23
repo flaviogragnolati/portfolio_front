@@ -1,38 +1,51 @@
-import { Typography } from '@material-ui/core';
 import React from 'react';
+import styled from 'styled-components';
+import { Button, Grid, Paper, Typography } from '@material-ui/core';
+
+const p = `     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+            suscipit nisi vitae feugiat vestibulum. Aliquam porta nulla vel odio
+            scelerisque, pretium volutpat dui euismod. Integer porttitor dolor
+            placerat malesuada dictum. Fusce enim dolor, dignissim quis ornare
+            at, elementum nec turpis. Donec ac interdum libero, sed condimentum
+            lectus. Nunc nec iaculis tortor. Donec interdum sollicitudin eros in
+            pharetra. Donec ultricies laoreet dictum. Maecenas vestibulum
+            sodales justo, id hendrerit orci aliquet gravida. Nulla facilisi.`;
+const FullDiv = styled.div`
+  width: 100%;
+  position: relative;
+`;
+
+const Left = styled.div`
+  /* background-color: blue; */
+  height: 100%;
+`;
+
+const Right = styled.div`
+  background-color: red;
+  height: 100%;
+`;
 
 function About() {
   return (
-    <div>
-      <Typography paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus
-        non enim praesent elementum facilisis leo vel. Risus at ultrices mi
-        tempus imperdiet. Semper risus in hendrerit gravida rutrum quisque non
-        tellus. Convallis convallis tellus id interdum velit laoreet id donec
-        ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl
-        suscipit adipiscing bibendum est ultricies integer quis. Cursus euismod
-        quis viverra nibh cras. Metus vulputate eu scelerisque felis imperdiet
-        proin fermentum leo. Mauris commodo quis imperdiet massa tincidunt. Cras
-        tincidunt lobortis feugiat vivamus at augue. At augue eget arcu dictum
-        varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt.
-        Lorem donec massa sapien faucibus et molestie ac.
-      </Typography>
-      <Typography paragraph>
-        Consequat mauris nunc congue nisi vitae suscipit. Fringilla est
-        ullamcorper eget nulla facilisi etiam dignissim diam. Pulvinar elementum
-        integer enim neque volutpat ac tincidunt. Ornare suspendisse sed nisi
-        lacus sed viverra tellus. Purus sit amet volutpat consequat mauris.
-        Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed
-        vulputate odio. Morbi tincidunt ornare massa eget egestas purus viverra
-        accumsan in. In hendrerit gravida rutrum quisque non tellus orci ac.
-        Pellentesque nec nam aliquam sem et tortor. Habitant morbi tristique
-        senectus et. Adipiscing elit duis tristique sollicitudin nibh sit.
-        Ornare aenean euismod elementum nisi quis eleifend. Commodo viverra
-        maecenas accumsan lacus vel facilisis. Nulla posuere sollicitudin
-        aliquam ultrices sagittis orci a.
-      </Typography>
-    </div>
+    <Grid
+      container
+      direction="row"
+      justify="center"
+      alignItems="stretch"
+      spacing={2}
+    >
+      <Grid item xs={10} md={7}>
+        <Paper elevation={5}>
+          <Left>
+            <Typography>{p}</Typography>
+            <Button>Download CV</Button>
+          </Left>
+        </Paper>
+      </Grid>
+      <Grid item xs={10} md={5}>
+        <Right>STACK</Right>
+      </Grid>
+    </Grid>
   );
 }
 

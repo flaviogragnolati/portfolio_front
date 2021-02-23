@@ -1,3 +1,5 @@
+import { indigo, teal, orange } from '@material-ui/core/colors';
+
 const contrastThreshold = 3;
 
 export const muiTheme = {
@@ -27,14 +29,10 @@ export const muiTheme = {
     palette: {
       type: 'light',
       primary: {
-        main: '#cfd8dc',
-        light: '#ffffff',
-        dark: '#9ea7aa',
+        main: indigo[500],
       },
       secondary: {
-        main: '#00838f',
-        light: '#4fb3bf',
-        dark: '#005662',
+        main: orange['A400'],
       },
       error: {
         light: '#e57373',
@@ -88,14 +86,10 @@ export const muiTheme = {
     palette: {
       type: 'dark',
       primary: {
-        main: '#212121',
-        light: '#484848',
-        dark: '#000000',
+        main: indigo[500],
       },
       secondary: {
-        main: '#78909c',
-        light: '#a7c0cd',
-        dark: '#4b636e',
+        main: orange['A400'],
       },
     },
   },

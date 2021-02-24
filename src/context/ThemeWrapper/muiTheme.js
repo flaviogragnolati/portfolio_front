@@ -1,8 +1,9 @@
+import { createMuiTheme } from '@material-ui/core';
 import { indigo, teal, orange } from '@material-ui/core/colors';
 
 const contrastThreshold = 3;
 
-export const muiTheme = {
+const muiTheme = {
   light: {
     themeName: 'light',
     typography: {
@@ -90,6 +91,39 @@ export const muiTheme = {
       },
       secondary: {
         main: orange['A400'],
+      },
+    },
+  },
+};
+
+export const overridesMuiTheme = {
+  overrides: {
+    MuiOutlinedInput: {
+      root: {
+        //   backgroundColor: 'rgb(232, 241, 250)',
+        //   '&:hover': {
+        //     backgroundColor: 'rgb(250, 232, 241)',
+        //     // Reset on touch devices, it doesn't add specificity
+        //     '@media (hover: none)': {
+        //       backgroundColor: 'rgb(232, 241, 250)',
+        //     },
+        //   },
+        //   '&.Mui-focused': {
+        //     backgroundColor: 'rgb(250, 241, 232)',
+        //     borderLeftWidth: 8,
+        //     padding: '4px !important',
+        //   },
+        '&:hover $notchedOutline': {
+          borderColor: 'yellow',
+        },
+        '&$focused $notchedOutline': {
+          borderWidth: 2,
+          borderLeftWidth: 8,
+          padding: '4px !important',
+        },
+      },
+      focused: {
+        backgroundColor: 'red',
       },
     },
   },

@@ -21,7 +21,39 @@ const ES = {
   },
   Main: { title: '', tabs: '' },
   Projects: {},
-  Contact: {},
+  Contact: {
+    title: 'Contacto',
+    subtitle: 'Estemos en contacto?',
+    sideText: 'No te gustan los formularios? Enviame un email!👋',
+    socialText: '...O encontrame en las redes sociales',
+    formModel: {
+      name: {
+        name: 'name',
+        label: 'Nombre',
+        requiredErrorMsg: 'Debe proveer un nombre',
+      },
+      subject: {
+        name: 'subject',
+        label: 'Asunto',
+      },
+      email: {
+        name: 'email',
+        label: 'Email',
+        requiredErrorMsg: 'El email es requerido',
+        invalidadErrorMsg: 'El email es invalido',
+      },
+      message: {
+        name: 'message',
+        label: 'Mensaje',
+        requiredErrorMsg: 'El cuerpo del mensaje es requerido',
+        minErrorMsg: 'El mensaje es demasiado corto',
+      },
+      submit: {
+        name: 'submit',
+        label: 'Enviar',
+      },
+    },
+  },
   Footer: {},
   Test: {
     title: 'Titul ode test',

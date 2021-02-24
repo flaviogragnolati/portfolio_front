@@ -1,5 +1,8 @@
 import React from 'react';
-import { makeStyles, TextField, withStyles } from '@material-ui/core';
+import { TextField } from 'formik-material-ui';
+import { makeStyles, withStyles } from '@material-ui/core';
+import styled from 'styled-components';
+import { Field } from 'formik';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -10,6 +13,12 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(1),
   },
 }));
+
+const StyledTextField = styled(TextField)`
+  &:hover {
+    background-color: red;
+  }
+`;
 
 const ValidationTextField = withStyles({
   root: {
@@ -28,17 +37,12 @@ const ValidationTextField = withStyles({
   },
 })(TextField);
 
-function Input({ label, ...props }) {
+function Input(name, label, ...rest) {
   const classes = useStyles();
 
   return (
     <>
-      <ValidationTextField
-        className={classes.margin}
-        label={label}
-        variant="outlined"
-        {...props}
-      />
+      <Field component={StyledTextField} name={name} label={label} />
     </>
   );
 }

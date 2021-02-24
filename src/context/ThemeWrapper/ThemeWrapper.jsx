@@ -34,7 +34,7 @@ import { useThemeMode } from './useThemeMode';
  */
 function ThemeWrapper({ children }) {
   const themeCtxValue = useThemeMode();
-  const [theme, toggleTheme] = themeCtxValue;
+  const [theme] = themeCtxValue;
   const fullTheme = useMemo(() => applyTheme(theme), [theme]);
 
   return (

@@ -1,14 +1,24 @@
 import React from 'react';
-import { Box, Grid, TextField } from '@material-ui/core';
-import Input from './components/Input';
-import { Formik, Form } from 'formik';
+import { Box, Button, Grid } from '@material-ui/core';
+import { Formik, Form, Field } from 'formik';
+import { useTanslation } from 'context/LangWrapper/useTranslation';
 import { getFormLang } from './components/contactForm';
-import { useLangContext } from 'context/LangWrapper/langContext';
+import { TextField } from 'formik-material-ui';
+import styled from 'styled-components';
+
+const StyledTextField = styled(TextField)`
+  /* margin: 1rem; */
+`;
 
 function Contact() {
-  const [lang] = useLangContext();
-  console.log('L:ANG', lang);
-  const [initialValues, contactFormValidation] = getFormLang(lang);
+  const {
+    Contact: { formModel, subtitle, sideText, socialText },
+  } = useTanslation();
+
+  const [initialValues, contactFormValidation, labels, names] = getFormLang(
+    formModel
+  );
+
   const handleSubmit = (values, onSubmitProps) => {
     console.log('SUBMITTING FORM', values);
   };
@@ -16,8 +26,9 @@ function Contact() {
   return (
     <>
       <Grid item xs={8} md={5}>
-        <h3>Let's talk about everything!</h3>
-        <p>Don't like forms? Send me an email. 👋</p>
+        <h3>{subtitle}</h3>
+        <p>{sideText}</p>
+        <p>{socialText}</p>
       </Grid>
       <Grid
         container
@@ -34,12 +45,43 @@ function Contact() {
           validationSchema={contactFormValidation}
         >
           <Form>
-            <Input label="Name" />
+            <Field
+              component={StyledTextField}
+              name={names.name}
+              label={labels.name}
+              variant="outlined"
+              fullWidth
+            />
             <Box display="flex" flexGrow="1">
-              <Input label="Email" fullWidth />
-              <Input label="Subject" fullWidth />
+              <Field
+                component={StyledTextField}
+                name={names.email}
+                label={labels.email}
+                variant="outlined"
+                fullWidth
+              />
+              <Field
+                component={StyledTextField}
+                name={names.subject}
+                label={labels.subject}
+                variant="outlined"
+                fullWidth
+              />
             </Box>
-            <Input label="Message" multiline={true} rows={5} rowsMax={10} />
+            <Field
+              component={StyledTextField}
+              name={names.message}
+              label={labels.message}
+              variant="outlined"
+              fullWidth
+              multiline={true}
+              rows={5}
+              rowsMax={10}
+            />
+            <br></br>
+            <Button type="submit" variant="outlined" size="lg">
+              {labels.submit}
+            </Button>
           </Form>
         </Formik>
       </Grid>

@@ -67,7 +67,7 @@ function Main(props, ref) {
   return (
     <Parallax
       bgImage={img}
-      bgImageAlt="main section backgroung img"
+      bgImageAlt="main section background img"
       bgImageStyle={{ height: '100vh', opacity: '0.7' }}
       strength={500}
     >

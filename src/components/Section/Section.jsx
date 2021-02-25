@@ -1,6 +1,6 @@
-import { Grid } from '@material-ui/core';
-import SectionTitle from 'components/SectionTitle';
 import React, { forwardRef } from 'react';
+import { Box, Grid } from '@material-ui/core';
+import SectionTitle from 'components/SectionTitle';
 import styled from 'styled-components';
 import Skills from 'views/skills';
 

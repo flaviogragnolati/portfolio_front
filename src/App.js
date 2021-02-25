@@ -13,6 +13,7 @@ import SectionTitle from 'components/SectionTitle';
 import Contact from 'views/contact';
 import Section from 'components/Section';
 import Skills from 'views/skills';
+import Projects from 'views/projects';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -46,10 +47,7 @@ const App = () => {
           <Skills />
         </Section>
         <Section id="projects" title="projects" ref={projects.ref}>
-          <h1>
-            Project carrousel with hover effect and some detail, onClick modal?>
-          </h1>
-          Looking for a custom job? Click here to contact me! 👋
+          <Projects />
         </Section>
         <Section id="contact" title="contact" ref={contact.ref}>
           <Contact />

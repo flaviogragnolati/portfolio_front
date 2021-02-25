@@ -100,19 +100,6 @@ export const overridesMuiTheme = {
   overrides: {
     MuiOutlinedInput: {
       root: {
-        //   backgroundColor: 'rgb(232, 241, 250)',
-        //   '&:hover': {
-        //     backgroundColor: 'rgb(250, 232, 241)',
-        //     // Reset on touch devices, it doesn't add specificity
-        //     '@media (hover: none)': {
-        //       backgroundColor: 'rgb(232, 241, 250)',
-        //     },
-        //   },
-        //   '&.Mui-focused': {
-        //     backgroundColor: 'rgb(250, 241, 232)',
-        //     borderLeftWidth: 8,
-        //     padding: '4px !important',
-        //   },
         '&:hover $notchedOutline': {
           borderColor: 'yellow',
         },

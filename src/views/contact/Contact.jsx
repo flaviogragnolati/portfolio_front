@@ -7,7 +7,8 @@ import { TextField } from 'formik-material-ui';
 import styled from 'styled-components';
 
 const StyledTextField = styled(TextField)`
-  /* margin: 1rem; */
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 `;
 
 function Contact() {
@@ -51,6 +52,7 @@ function Contact() {
               label={labels.name}
               variant="outlined"
               fullWidth
+              required
             />
             <Box display="flex" flexGrow="1">
               <Field
@@ -59,6 +61,7 @@ function Contact() {
                 label={labels.email}
                 variant="outlined"
                 fullWidth
+                required
               />
               <Field
                 component={StyledTextField}
@@ -77,11 +80,14 @@ function Contact() {
               multiline={true}
               rows={5}
               rowsMax={10}
+              required
             />
             <br></br>
-            <Button type="submit" variant="outlined" size="lg">
-              {labels.submit}
-            </Button>
+            <Box display="flex" flexGrow="1" justifyContent="flex-end">
+              <Button type="submit" variant="outlined" size="lg">
+                {labels.submit}
+              </Button>
+            </Box>
           </Form>
         </Formik>
       </Grid>

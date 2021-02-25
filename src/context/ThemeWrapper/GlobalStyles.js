@@ -1,7 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  *{margin:0;padding:0}
+  *{margin:0;
+    padding:0}
   html, body {
     transition: all 0.25s linear;
     font-size:1.2rem;

@@ -7,6 +7,7 @@ import Subtitle from './components/Subtitle';
 import HireMeButton from 'views/main/components/HireMeButton';
 import ScrollDown from 'views/main/components/ScrollDown';
 import Social from 'views/main/components/Social';
+import HireButton from 'views/main/components/HireButton';
 const img = argonath;
 
 const insideStyles = {
@@ -78,6 +79,7 @@ function Main(props, ref) {
           <Subtitle />
           <br></br>
           <HireMeButton />
+          <HireButton />
           <ScrollDown ref={ref} />
           <Social size="2rem" style={{ size: '2em' }} />
         </ContentDiv>

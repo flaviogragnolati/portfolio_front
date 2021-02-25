@@ -12,6 +12,7 @@ import {
   List,
   makeStyles,
   Toolbar,
+  Typography,
   useTheme,
 } from '@material-ui/core';
 
@@ -77,14 +78,14 @@ function Sidebar({ scrollAt, spy }, ref) {
   };
 
   const sidebarContent = (
-    <div>
-      <div className={classes.toolbar} />
-      <Divider />
+    <>
+      {/* <div className={classes.toolbar} /> */}
+      PORTFOLIO
       <Box
         display="flex"
         flexDirection="row"
         justifyContent="space-around"
-        pt={5}
+        pt={mobileOpen ? 5 : 10}
       >
         <SunMoon />
         <LangPicker />
@@ -102,7 +103,19 @@ function Sidebar({ scrollAt, spy }, ref) {
         ))}
         <Divider />
       </List>
-    </div>
+      <Box
+        display="flex"
+        flexDirection="column"
+        flexGrow="1"
+        justifyContent="flex-end"
+        alignItems="center"
+        pb={5}
+      >
+        <Typography variant="caption" display="block" gutterBottom>
+          Copywrite 2021 FG
+        </Typography>
+      </Box>
+    </>
   );
   return (
     <>

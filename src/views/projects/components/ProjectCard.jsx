@@ -46,6 +46,10 @@ const Img = styled.img`
 const Card = styled.div`
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   margin: 1rem auto;
   box-shadow: 0 3px 7px -1px rgba(#000, 0.1);
   margin-bottom: 1.6%;
@@ -64,8 +68,13 @@ const Card = styled.div`
   }
   ${(p) => p.theme.breakpoints.up('sm')} {
     flex-direction: row;
-    min-width: 70px;
-    max-width: 70%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* min-width: 70px; */
+    /* max-width: 70%; */
+    width: 50vw;
     height: 50vh;
   }
 `;

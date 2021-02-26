@@ -1,6 +1,6 @@
 import { Box } from '@material-ui/core';
 import { Dashboard, Schedule } from '@material-ui/icons';
-import TabWrapper from 'components/tabs';
+import TabWrapper from 'components/Tabs';
 import React from 'react';
 import SkillBar from 'react-skillbars';
 

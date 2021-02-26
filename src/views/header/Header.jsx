@@ -1,12 +1,10 @@
-import Footer from 'components/footer/Footer';
-import Sidebar from 'components/sidebar';
+import Sidebar from 'components/Sidebar';
 import React from 'react';
 
 function Header() {
   return (
     <header>
       <Sidebar />
-      <Footer />
     </header>
   );
 }

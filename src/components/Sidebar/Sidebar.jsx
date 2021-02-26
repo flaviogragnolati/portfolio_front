@@ -20,7 +20,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 
 // Custom components and hooks
-import SidebarItem from 'components/sidebar/components/SidebarItem';
+import SidebarItem from './components/SidebarItem';
 import { useTanslation } from 'context/LangWrapper/useTranslation';
 import LangPicker from 'components/LangPicker';
 import SunMoon from 'components/SunMoon/SunMoon';

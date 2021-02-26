@@ -1,10 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import { Tabs, Tab, Box } from '@material-ui/core';
 import styled from 'styled-components';
 import SkillBar from 'react-skillbars';
 
@@ -99,6 +96,11 @@ const StyledTabs = styled((props) => {
   }
 `;
 
+const StyledSkillBar = styled(SkillBar)`
+  background-color: blue;
+  width: 100%;
+`;
+
 const StyledTab = styled(Tab)`
   flex: 1 1 auto;
   margin: 10px;
@@ -170,10 +172,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
-    height: 224,
+    height: '100%',
   },
   tabs: {
-    borderRight: `1px solid ${theme.palette.divider}`,
+    borderRight: `5px solid ${theme.palette.divider}`,
   },
 }));
 
@@ -193,15 +195,17 @@ export default function VerticalTabs() {
         variant="fullWidth"
         value={value}
         onChange={handleChange}
-        aria-label="Vertical tabs example"
+        scrollButton="off"
         className={classes.tabs}
+        component="section"
+        centered={true}
       >
         <StyledTab label="Item One" {...a11yProps(0)} />
         <StyledTab label="Item Two" {...a11yProps(1)} />
         <StyledTab label="Item Three" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <SkillBar
+        <StyledSkillBar
           skills={skills}
           height={25}
           animationDelay={500}

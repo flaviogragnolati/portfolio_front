@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 const TabDiv = styled.div`
   background-color: red;
-  display: flex;
+  /* display: flex; */
 `;
 
 const TabListWrapper = styled.div``;

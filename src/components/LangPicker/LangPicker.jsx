@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  capitalize,
-  InputAdornment,
-  MenuItem,
-  Select,
-  Menu,
-  TextField,
-  ClickAwayListener,
-  MenuList,
-  Fade,
-} from '@material-ui/core';
+import { Button, capitalize, MenuItem, Menu, Fade } from '@material-ui/core';
 import TranslateIcon from '@material-ui/icons/Translate';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { useLangContext } from 'context/LangWrapper/langContext';

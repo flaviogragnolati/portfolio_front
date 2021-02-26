@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 // Custom Components
 import { makeStyles, Typography } from '@material-ui/core';
-import Sidebar from 'components/sidebar';
+import Sidebar from 'components/Sidebar';
 import Main from 'views/main';
 import About from 'views/about';
 import useSpy from 'utils/observerHook';

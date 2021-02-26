@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, Grid, Paper, Typography } from '@material-ui/core';
+import { Box, Button, Grid, Paper, Typography } from '@material-ui/core';
+import MoreArrow from './components/MoreArrow';
 
-const p = `     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+const p = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             suscipit nisi vitae feugiat vestibulum. Aliquam porta nulla vel odio
             scelerisque, pretium volutpat dui euismod. Integer porttitor dolor
             placerat malesuada dictum. Fusce enim dolor, dignissim quis ornare
@@ -10,6 +11,7 @@ const p = `     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasell
             lectus. Nunc nec iaculis tortor. Donec interdum sollicitudin eros in
             pharetra. Donec ultricies laoreet dictum. Maecenas vestibulum
             sodales justo, id hendrerit orci aliquet gravida. Nulla facilisi.`;
+
 const FullDiv = styled.div`
   width: 100%;
   position: relative;
@@ -45,6 +47,12 @@ function About() {
       <Grid item xs={10} md={5}>
         <Right>STACK</Right>
       </Grid>
+      <Box display="flex" justifyContent="flex-end" flexGrow="1" pt={5}>
+        <Button variant="outlined" size="small">
+          More about me
+        </Button>
+        <MoreArrow />
+      </Box>
     </Grid>
   );
 }

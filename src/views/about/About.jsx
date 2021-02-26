@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Button, Grid, Paper, Typography } from '@material-ui/core';
-import MoreArrow from './components/MoreArrow';
-
+import { Button, Grid, Paper, Typography } from '@material-ui/core';
+import MoreAbout from './components/MoreAbout';
+import ExpandAbout from './components/ExpandAbout';
 const p = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             suscipit nisi vitae feugiat vestibulum. Aliquam porta nulla vel odio
             scelerisque, pretium volutpat dui euismod. Integer porttitor dolor
@@ -47,12 +47,7 @@ function About() {
       <Grid item xs={10} md={5}>
         <Right>STACK</Right>
       </Grid>
-      <Box display="flex" justifyContent="flex-end" flexGrow="1" pt={5}>
-        <Button variant="outlined" size="small">
-          More about me
-        </Button>
-        <MoreArrow />
-      </Box>
+      <ExpandAbout />
     </Grid>
   );
 }

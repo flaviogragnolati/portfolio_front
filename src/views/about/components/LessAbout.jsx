@@ -1,5 +1,11 @@
+import { Box, Typography } from '@material-ui/core';
 import React from 'react';
 import styled from 'styled-components';
+
+// By far no the most efficent way of styling this 3 repating arrows...
+// but couldnt manage to make it work with a single component :(
+const color = (p) => p.theme.palette.secondary.main;
+const height = '30px';
 
 const ArrowOne = styled.div`
   position: absolute;
@@ -12,9 +18,9 @@ const ArrowOne = styled.div`
     display: block;
     position: absolute;
     transform-origin: bottom right;
-    background: blue;
+    background: ${color};
     width: 5px;
-    height: 50px;
+    height: ${height};
     border-radius: 10px;
     transform: translate(-50%, -50%) rotateZ(-45deg);
   }
@@ -36,9 +42,9 @@ const ArrowTwo = styled.div`
     display: block;
     position: absolute;
     transform-origin: bottom right;
-    background: blue;
+    background: ${color};
     width: 5px;
-    height: 50px;
+    height: ${height};
     border-radius: 10px;
     transform: translate(-50%, -50%) rotateZ(-45deg);
   }
@@ -60,9 +66,9 @@ const ArrowThree = styled.div`
     display: block;
     position: absolute;
     transform-origin: bottom right;
-    background: blue;
+    background: ${color};
     width: 5px;
-    height: 50px;
+    height: ${height};
     border-radius: 10px;
     transform: translate(-50%, -50%) rotateZ(-45deg);
   }
@@ -76,9 +82,24 @@ const ArrowThree = styled.div`
 
 const ArrowContainer = styled.div`
   display: block;
-  width: 100px;
-  height: 100px;
-  transform: translate(-50%, -50%) rotateZ(0deg);
+  margin-left: 0.7rem;
+  width: 50px;
+  height: 80px;
+  transform: translate(-0%, 0%) rotateZ(180deg);
+  transition: all 0.4s ease;
+`;
+
+const MoreText = styled.div`
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+`;
+
+const HoverBox = styled(Box)`
+  pointer-events: all;
+  display: flex;
+  border: blue 1px solid;
   &:hover {
     cursor: pointer;
   }
@@ -99,16 +120,21 @@ const ArrowContainer = styled.div`
   }
 `;
 
-function MoreArrow() {
+function LessAbout() {
   return (
-    <>
-      <ArrowContainer>
-        <ArrowOne />
-        <ArrowTwo />
-        <ArrowThree />
-      </ArrowContainer>
-    </>
+    <Box display="flex" justifyContent="flex-end" flexGrow="1">
+      <HoverBox>
+        <MoreText>
+          <Typography variant="h6">More about me</Typography>
+        </MoreText>
+        <ArrowContainer>
+          <ArrowOne />
+          <ArrowTwo />
+          <ArrowThree />
+        </ArrowContainer>
+      </HoverBox>
+    </Box>
   );
 }
 
-export default MoreArrow;
+export default LessAbout;

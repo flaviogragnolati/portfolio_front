@@ -1,15 +1,12 @@
-import React, { createRef, useEffect, useState } from 'react';
-import styled from 'styled-components';
+import React from 'react';
 
 // Custom Components
-import { makeStyles, Typography } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import Sidebar from 'components/Sidebar';
 import Main from 'views/main';
 import About from 'views/about';
 import useSpy from 'utils/observerHook';
-import { defaults } from 'utils/config';
 import BackToTopBtn from 'components/BackToTop';
-import SectionTitle from 'components/SectionTitle';
 import Contact from 'views/contact';
 import Section from 'components/Section';
 import Skills from 'views/skills';

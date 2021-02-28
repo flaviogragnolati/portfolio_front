@@ -99,7 +99,7 @@ const MoreText = styled.div`
 const HoverBox = styled(Box)`
   pointer-events: all;
   display: flex;
-  border: blue 1px solid;
+  /* border: blue 1px solid; */
   &:hover {
     cursor: pointer;
   }
@@ -120,12 +120,12 @@ const HoverBox = styled(Box)`
   }
 `;
 
-function LessAbout() {
+function LessAboutBtn({ BtnText }) {
   return (
     <Box display="flex" justifyContent="flex-end" flexGrow="1">
       <HoverBox>
         <MoreText>
-          <Typography variant="h6">More about me</Typography>
+          <Typography variant="h6">{BtnText}</Typography>
         </MoreText>
         <ArrowContainer>
           <ArrowOne />
@@ -137,4 +137,4 @@ function LessAbout() {
   );
 }
 
-export default LessAbout;
+export default LessAboutBtn;

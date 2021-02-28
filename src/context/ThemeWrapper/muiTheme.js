@@ -96,6 +96,9 @@ const muiTheme = {
   },
 };
 
+/**
+ * Object that contains all the overrides to the default Mui theme
+ */
 export const overridesMuiTheme = {
   overrides: {
     MuiOutlinedInput: {

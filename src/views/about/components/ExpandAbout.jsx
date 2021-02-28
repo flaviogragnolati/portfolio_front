@@ -3,13 +3,15 @@ import { withStyles } from '@material-ui/core/styles';
 import MuiAccordion from '@material-ui/core/Accordion';
 import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
 import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
-import MoreAbout from './MoreAbout';
-import LessAbout from './LessAbout';
+import MoreAboutBtn from './MoreAboutBtn';
+import LessAboutBtn from './LessAboutBtn';
 import styled from 'styled-components';
+import Timelines from 'views/timelines';
+import { useTanslation } from 'context/LangWrapper/useTranslation';
 
 const Accordion = styled(MuiAccordion)`
   background-color: transparent;
+  width: 100%;
 `;
 const AccordionSummary = styled(MuiAccordionSummary)`
   pointer-events: none;
@@ -30,6 +32,10 @@ const AccordionDetails = styled(MuiAccordionDetails)`
 // }))(MuiAccordionDetails);
 
 export default function CustomizedAccordions() {
+  const {
+    MoreAbout: { moreBtn, lessBtn },
+  } = useTanslation();
+
   const [expanded, setExpanded] = useState('panel1');
 
   const handleChange = (panel) => (event, newExpanded) => {
@@ -37,24 +43,21 @@ export default function CustomizedAccordions() {
   };
 
   return (
-    <div>
-      <Accordion
-        square
-        expanded={expanded === 'moreAbout'}
-        onChange={handleChange('moreAbout')}
-      >
-        <AccordionSummary id="moreAbout">
-          {expanded ? <LessAbout /> : <MoreAbout />}
-        </AccordionSummary>
-        <AccordionDetails>
-          <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget. Lorem ipsum
-            dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada
-            lacus ex, sit amet blandit leo lobortis eget.
-          </Typography>
-        </AccordionDetails>
-      </Accordion>
-    </div>
+    <Accordion
+      square
+      expanded={expanded === 'moreAbout'}
+      onChange={handleChange('moreAbout')}
+    >
+      <AccordionSummary id="moreAbout">
+        {expanded ? (
+          <LessAboutBtn BtnText={lessBtn} />
+        ) : (
+          <MoreAboutBtn BtnText={moreBtn} />
+        )}
+      </AccordionSummary>
+      <AccordionDetails>
+        <Timelines />
+      </AccordionDetails>
+    </Accordion>
   );
 }

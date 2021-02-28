@@ -56,10 +56,8 @@ export default ThemeWrapper;
 
 ThemeWrapper.defaultProps = {
   children: null,
-  theme: 'light',
 };
 
 ThemeWrapper.propTypes = {
   children: PropTypes.node.isRequired,
-  theme: PropTypes.string.isRequired,
 };

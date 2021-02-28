@@ -68,7 +68,6 @@ const useInView = ({
     ]
   );
   /* eslint-disable-next-line */
-
   useEffect(() => {
     if (!unobserve.current && state.entry && !triggerOnce && !skip) {
       // If we don't have a ref, then reset the state (unless the hook is set to only `triggerOnce` or `skip`)

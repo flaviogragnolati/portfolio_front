@@ -98,7 +98,7 @@ const MoreText = styled.div`
 const HoverBox = styled(Box)`
   pointer-events: all;
   display: flex;
-  border: blue 1px solid;
+  /* border: blue 1px solid; */
   &:hover {
     cursor: pointer;
   }
@@ -119,12 +119,12 @@ const HoverBox = styled(Box)`
   }
 `;
 
-function MoreAbout() {
+function MoreAboutBtn({BtnText}) {
   return (
     <Box display="flex" justifyContent="flex-end" flexGrow="1">
       <HoverBox>
         <MoreText>
-          <Typography variant="h6">Less about me</Typography>
+          <Typography variant="h6">{BtnText}</Typography>
         </MoreText>
         <ArrowContainer>
           <ArrowOne />
@@ -136,4 +136,4 @@ function MoreAbout() {
   );
 }
 
-export default MoreAbout;
+export default MoreAboutBtn;

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, Grid, Paper, Typography } from '@material-ui/core';
-import MoreAbout from './components/MoreAbout';
 import ExpandAbout from './components/ExpandAbout';
 const p = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
             suscipit nisi vitae feugiat vestibulum. Aliquam porta nulla vel odio

@@ -135,6 +135,12 @@ const ES = {
       3: 'Finalizado',
       4: 'Cancelado',
     },
+    card: {
+      statusHeading: 'Estado',
+      techStackHeading: 'Tecnologias',
+      previewHeading: 'Vista Previa',
+      dateHeading: 'Fecha',
+    },
     projects: [
       {
         img: '',
@@ -150,6 +156,7 @@ const ES = {
         git: 'www.github.com',
         website: 'www.website.com',
         preview: '',
+        date: '2020',
       },
       {
         img: '',
@@ -164,6 +171,7 @@ const ES = {
         git: 'www.github.com',
         website: 'www.website.com',
         preview: '',
+        date: '2020',
       },
       {
         img: '',
@@ -179,6 +187,7 @@ const ES = {
         git: 'www.github.com',
         website: 'www.website.com',
         preview: '',
+        date: '2321',
       },
     ],
   },

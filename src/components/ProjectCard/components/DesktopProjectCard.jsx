@@ -4,6 +4,7 @@ import img from 'assets/img/project1.jpg';
 import StatusChip from './StatusChip';
 import Date from './Date';
 import TechStack from './TechStack';
+import Icons from './Icons';
 
 const hoverBg = `rgba(150, 150, 150, 0.4)`;
 //Hover in Left Div with tags
@@ -188,32 +189,28 @@ function DesktopProjectCard({ project }) {
     preview,
   } = project;
   return (
-    <>
-      <h1>Desktop</h1>
-      <Card>
-        <Meta>
-          <Photo>
-            <Img src={img} />
-          </Photo>
-          <Details>
-            {/* <Date date={date} /> */}
-            <br></br>
-            <TechStack tech={tech} />
-          </Details>
-        </Meta>
-        <Description>
-          <StatusChip status={status} size="small" />
-          <Title>{title}</Title>
-          <SubTitle>{subtitle}</SubTitle>
-          <DescriptionText>{description}</DescriptionText>
-          <Links>
-            <p>{git}</p>
-            <p>{website}</p>
-            <More>Preview: {preview}</More>
-          </Links>
-        </Description>
-      </Card>
-    </>
+    <Card>
+      <Meta>
+        <Photo>
+          <Img src={img} />
+        </Photo>
+        <Details>
+          {/* <Date date={date} /> */}
+          <br></br>
+          <TechStack tech={tech} />
+        </Details>
+      </Meta>
+      <Description>
+        <StatusChip status={status} size="small" />
+        <Title>{title}</Title>
+        <SubTitle>{subtitle}</SubTitle>
+        <DescriptionText>{description}</DescriptionText>
+        <Links>
+          <Icons git={git} website={website} />
+          <More>Preview: {preview}</More>
+        </Links>
+      </Description>
+    </Card>
   );
 }
 

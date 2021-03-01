@@ -9,8 +9,6 @@ import {
   ButtonNext,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-
-import ProjectCard from './components/ProjectCard';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import ResponsiveProjectCard from 'components/ProjectCard';
 
@@ -27,14 +25,14 @@ const StyledBack = styled(ButtonBack)`
   width: 3vmin;
   height: 3vmin;
   background: transparent;
-  border-top: 1vmin solid white;
-  border-right: 1vmin solid white;
+  border-top: 1vmin solid ${(p) => p.theme.palette.text.primary};
+  border-right: 1vmin solid ${(p) => p.theme.palette.text.primary};
   box-shadow: 0 0 0 lightgray;
   transition: all 200ms ease;
   transform: translate3d(0, -50%, 0) rotate(-135deg);
   &:hover {
     border-color: orange;
-    box-shadow: 0.5vmin -0.5vmin 0 white;
+    box-shadow: 0.5vmin -0.5vmin 0 ${(p) => p.theme.palette.text.secondary};
     cursor: pointer;
   }
   &:before {
@@ -57,14 +55,14 @@ const StyledNext = styled(ButtonNext)`
   width: 3vmin;
   height: 3vmin;
   background: transparent;
-  border-top: 1vmin solid white;
-  border-right: 1vmin solid white;
+  border-top: 1vmin solid ${(p) => p.theme.palette.text.primary};
+  border-right: 1vmin solid ${(p) => p.theme.palette.text.primary};
   box-shadow: 0 0 0 lightgray;
   transition: all 200ms ease;
   transform: translate3d(0, -50%, 0) rotate(45deg);
   &:hover {
     border-color: orange;
-    box-shadow: 0.5vmin -0.5vmin 0 white;
+    box-shadow: 0.5vmin -0.5vmin 0 ${(p) => p.theme.palette.text.secondary};
     cursor: pointer;
   }
   &:before {

@@ -3,8 +3,10 @@ import { Chip } from '@material-ui/core';
 import styled from 'styled-components';
 import img from 'assets/img/project1.jpg';
 import StatusChip from './StatusChip';
+import Date from './Date';
+import TechStack from './TechStack';
 
-const hoverBg = `rgba(255, 255, 255, 0.3)`;
+const hoverBg = `rgba(150, 150, 150, 0.4)`;
 //Hover in Left Div with tags
 const Details = styled.div`
   color: ${(p) => p.theme.palette.secondary.dark};
@@ -24,11 +26,6 @@ const Tag = styled.label`
   &:hover {
     color: ${(p) => p.theme.palette.secondary.dark};
   }
-`;
-const Status = styled.h5`
-  color: blue;
-  background-color: beige;
-  padding: 1rem;
 `;
 
 //Left Photo Div
@@ -199,21 +196,13 @@ function ProjectCard({ project }) {
           <Img src={img} />
         </Photo>
         <Details>
-          <Status>
-            Status: <StatusChip status={status} size="medium" />
-          </Status>
+          {/* <Date date={date} /> */}
           <br></br>
-          <Tag>Aug. 24, 2015</Tag>
-          <br></br>
-          {tech.backend.map((tag) => (
-            <Chip color="secondary" size="small" label={tag} />
-          ))}
-          {tech.frontend.map((tag) => (
-            <Chip color="primary" size="small" label={tag} />
-          ))}
+          <TechStack tech={tech} />
         </Details>
       </Meta>
       <Description>
+        <StatusChip status={status} size="medium" />
         <Title>{title}</Title>
         <SubTitle>{subtitle}</SubTitle>
         <DescriptionText>{description}</DescriptionText>

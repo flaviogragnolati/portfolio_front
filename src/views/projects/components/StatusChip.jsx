@@ -4,15 +4,22 @@ import styled from 'styled-components';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 
 const StyledChip = styled(Chip)`
-  background-color: ${(p) => {
-    console.log('asd', p.type);
-    return p.theme.palette[p.type].main;
-  }};
+  background-color: ${(p) => p.theme.palette[p.type].main};
+`;
+
+const Status = styled.h5`
+  color: blue;
+  position: absolute;
+  top: 2%;
+  right: 2%;
 `;
 
 function StatusChip({ status, color: _color, ...rest }) {
   const {
-    Projects: { projectStatus },
+    Projects: {
+      projectStatus,
+      card: { statusHeading },
+    },
   } = useTranslation();
   let label, color;
   switch (status) {
@@ -42,7 +49,11 @@ function StatusChip({ status, color: _color, ...rest }) {
       break;
   }
 
-  return <StyledChip label={label} type={color} {...rest} />;
+  return (
+    <Status>
+      <StyledChip label={label} type={color} {...rest} />
+    </Status>
+  );
 }
 
 export default StatusChip;

@@ -1,2 +1,2 @@
-import SkillTabs from './SkillTabs';
-export default SkillTabs;
+import ResponsiveTabs from './ResponsiveTabs';
+export default ResponsiveTabs;

@@ -79,7 +79,6 @@ const StyledNext = styled(ButtonNext)`
 
 function Projects() {
   const matches = useMediaQuery((theme) => theme.breakpoints.up('sm'));
-  console.log('matches', matches);
   return (
     <>
       Looking for a custom job? Click here to contact me! 👋

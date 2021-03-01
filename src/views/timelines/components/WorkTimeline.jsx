@@ -7,7 +7,7 @@ import { School } from '@styled-icons/boxicons-solid/School';
 import { Star } from '@styled-icons/boxicons-regular/Star';
 import styled from 'styled-components';
 import { Box, Grid, Typography } from '@material-ui/core';
-import { useTanslation } from 'context/LangWrapper/useTranslation';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 const { VerticalTimeline, VerticalTimelineElement } = VerticalTimelineComponent;
 
@@ -24,7 +24,7 @@ const Company = styled.h5`
 function WorkTimeline() {
   const {
     MoreAbout: { work, workTitle },
-  } = useTanslation();
+  } = useTranslation();
   const t = useFullTheme();
   console.log('thjeme', t);
   return (

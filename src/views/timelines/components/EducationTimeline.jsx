@@ -3,11 +3,10 @@ import VerticalTimelineComponent from 'components/VerticalTimeline';
 import 'components/VerticalTimeline/VerticalTimeline.css';
 import 'components/VerticalTimeline/VerticalTimelineElement.css';
 import { NetworkChart } from '@styled-icons/boxicons-regular/NetworkChart';
-import { School } from '@styled-icons/boxicons-solid/School';
 import { Star } from '@styled-icons/boxicons-regular/Star';
 import styled from 'styled-components';
 import { Box, Grid, Typography } from '@material-ui/core';
-import { useTanslation } from 'context/LangWrapper/useTranslation';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 const { VerticalTimeline, VerticalTimelineElement } = VerticalTimelineComponent;
 
@@ -24,7 +23,7 @@ const Company = styled.h5`
 function EducationTimeline() {
   const {
     MoreAbout: { education, educationTitle },
-  } = useTanslation();
+  } = useTranslation();
   const t = useFullTheme();
   return (
     <Grid container direction="column" justify="flex-start" alignItems="center">

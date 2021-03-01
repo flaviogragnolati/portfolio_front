@@ -2,12 +2,12 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import EducationTimeline from './components/EducationTimeline';
 import WorkTimeline from './components/WorkTimeline';
-import { useTanslation } from 'context/LangWrapper/useTranslation';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 
 function Timelines() {
   const {
     MoreAbout: { subtitle },
-  } = useTanslation();
+  } = useTranslation();
   return (
     <Grid container>
       <Grid

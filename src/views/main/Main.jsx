@@ -1,5 +1,5 @@
 import React, { forwardRef } from 'react';
-import { useTanslation } from 'context/LangWrapper/useTranslation';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 import { Parallax } from 'react-parallax';
 import styled, { keyframes } from 'styled-components';
 import argonath from 'assets/img/argonathj.jpg';
@@ -64,7 +64,7 @@ const Title = styled.h1`
 function Main(props, ref) {
   const {
     Test: { title, body },
-  } = useTanslation();
+  } = useTranslation();
   return (
     <Parallax
       bgImage={img}

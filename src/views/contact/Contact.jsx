@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Button, Grid } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
-import { useTanslation } from 'context/LangWrapper/useTranslation';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 import { getFormLang } from './components/contactForm';
 import { TextField } from 'formik-material-ui';
 import styled from 'styled-components';
@@ -14,7 +14,7 @@ const StyledTextField = styled(TextField)`
 function Contact() {
   const {
     Contact: { formModel, subtitle, sideText, socialText },
-  } = useTanslation();
+  } = useTrranslation();
 
   const [initialValues, contactFormValidation, labels, names] = getFormLang(
     formModel

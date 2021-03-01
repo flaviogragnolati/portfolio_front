@@ -21,7 +21,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 
 // Custom components and hooks
 import SidebarItem from './components/SidebarItem';
-import { useTanslation } from 'context/LangWrapper/useTranslation';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 import LangPicker from 'components/LangPicker';
 import SunMoon from 'components/SunMoon/SunMoon';
 
@@ -71,7 +71,7 @@ function Sidebar({ scrollAt, spy }, ref) {
 
   const {
     Sidebar: { content, logo },
-  } = useTanslation();
+  } = useTranslation();
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);

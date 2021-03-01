@@ -1,4 +1,6 @@
 import React from 'react';
+import styled from 'styled-components';
+import { useMediaQuery } from '@material-ui/core';
 import {
   CarouselProvider,
   Slider,
@@ -6,11 +8,10 @@ import {
   ButtonBack,
   ButtonNext,
 } from 'pure-react-carousel';
+import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import ProjectCard from './components/ProjectCard';
-import 'pure-react-carousel/dist/react-carousel.es.css';
-import styled from 'styled-components';
-import { useMediaQuery } from '@material-ui/core';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 
 const StyledCarousel = styled(CarouselProvider)`
   width: 100%;
@@ -78,6 +79,9 @@ const StyledNext = styled(ButtonNext)`
 `;
 
 function Projects() {
+  const {
+    Projects: { subtitle, endphrase, projects },
+  } = useTranslation();
   const matches = useMediaQuery((theme) => theme.breakpoints.up('sm'));
   return (
     <>

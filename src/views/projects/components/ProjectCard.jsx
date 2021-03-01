@@ -1,18 +1,20 @@
 import React from 'react';
+import { Chip } from '@material-ui/core';
 import styled from 'styled-components';
-// import './ProjectCard.scss';
 import img from 'assets/img/project1.jpg';
+import StatusChip from './StatusChip';
 
+const hoverBg = `rgba(255, 255, 255, 0.3)`;
 //Hover in Left Div with tags
 const Details = styled.div`
-  color: black;
+  color: ${(p) => p.theme.palette.secondary.dark};
   position: absolute;
   top: 0;
   bottom: 0;
-  left: -100%;
+  left: -120%;
   margin: auto;
   transition: left 0.2s;
-  background: rgba(255, 255, 255, 0.3);
+  background: ${hoverBg};
   padding: 10px;
   width: 100%;
 `;
@@ -22,6 +24,11 @@ const Tag = styled.label`
   &:hover {
     color: ${(p) => p.theme.palette.secondary.dark};
   }
+`;
+const Status = styled.h5`
+  color: blue;
+  background-color: beige;
+  padding: 1rem;
 `;
 
 //Left Photo Div
@@ -172,7 +179,19 @@ const More = styled.p`
   }
 `;
 
-function ProjectCard() {
+function ProjectCard({ project }) {
+  const {
+    title,
+    subtitle,
+    description,
+    status,
+    tech,
+    date,
+    git,
+    website,
+    preview,
+  } = project || {};
+
   return (
     <Card>
       <Meta>
@@ -180,28 +199,28 @@ function ProjectCard() {
           <Img src={img} />
         </Photo>
         <Details>
-          <Tag>John Doe</Tag>
+          <Status>
+            Status: <StatusChip status={status} size="medium" />
+          </Status>
           <br></br>
           <Tag>Aug. 24, 2015</Tag>
           <br></br>
-          <Tag>Learn</Tag>
-          <Tag>Code</Tag>
-          <Tag>HTML</Tag>
-          <Tag>CSS</Tag>
+          {tech.backend.map((tag) => (
+            <Chip color="secondary" size="small" label={tag} />
+          ))}
+          {tech.frontend.map((tag) => (
+            <Chip color="primary" size="small" label={tag} />
+          ))}
         </Details>
       </Meta>
       <Description>
-        <Title>Learning to Code</Title>
-        <SubTitle>Opening a door to the future</SubTitle>
-        <DescriptionText>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad eum
-          dolorum architecto obcaecati enim dicta praesentium, quam nobis! Neque
-          ad aliquam facilis numquam. Veritatis, sit.
-        </DescriptionText>
+        <Title>{title}</Title>
+        <SubTitle>{subtitle}</SubTitle>
+        <DescriptionText>{description}</DescriptionText>
         <Links>
-          <p>Github</p>
-          <p>WWW</p>
-          <More>Preview</More>
+          <p>{git}</p>
+          <p>{website}</p>
+          <More>Preview: {preview}</More>
         </Links>
       </Description>
     </Card>

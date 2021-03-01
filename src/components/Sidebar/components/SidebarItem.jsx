@@ -42,10 +42,8 @@ function SidebarItem(
 
   const handleClick = (event) => {
     const section = event.currentTarget.getAttribute('section');
-    console.log('SECTION', section);
     if (sections.includes(section)) {
       setCurrent(section);
-      console.log('REF', ref);
       ref.current.scrollIntoView({
         behavior: 'smooth',
       });

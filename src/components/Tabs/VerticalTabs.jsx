@@ -18,8 +18,8 @@ const StyledTabs = styled((props) => {
 const StyledTab = styled(Tab)`
   flex: 1 1 auto;
   margin: 10px;
-  padding: 50px 10px;
-  border: 2px solid #f7f7f7;
+  /* padding: 50px 10px; */
+  /* border: 2px solid #f7f7f7; */
   text-align: center;
   text-transform: uppercase;
   position: relative;

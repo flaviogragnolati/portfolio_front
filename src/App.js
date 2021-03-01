@@ -32,6 +32,7 @@ const App = () => {
   return (
     <div className={classes.root}>
       <Sidebar ref={nodeRefs} spy={spyItems} />
+
       <main className={classes.content}>
         <div id="top-anchor" />
         <section id="home" ref={home.ref}>

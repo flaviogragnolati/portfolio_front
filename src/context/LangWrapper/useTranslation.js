@@ -7,7 +7,7 @@ import { defaults } from 'utils/config';
  * Custom hook that gets the current lang from context, and grabs the corresponding translation
  *
  */
-export const useTanslation = () => {
+export const useTranslation = () => {
   const [lang] = useLangContext();
   const translation = useMemo(() => {
     return Boolean(lang) ? translations[lang] : translations[defaults.lang];

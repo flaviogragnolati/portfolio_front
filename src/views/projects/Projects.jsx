@@ -94,15 +94,11 @@ function Projects() {
         visibleSlides={1}
       >
         <Slider>
-          <Slide index={0}>
-            <ProjectCard />
-          </Slide>
-          <Slide index={1}>
-            <ProjectCard />
-          </Slide>
-          <Slide index={2}>
-            <ProjectCard />
-          </Slide>
+          {projects.map((project, idx) => (
+            <Slide index={idx}>
+              <ProjectCard project={project} />
+            </Slide>
+          ))}
         </Slider>
         <StyledBack />
         <StyledNext />

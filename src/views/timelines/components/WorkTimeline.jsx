@@ -26,7 +26,6 @@ function WorkTimeline() {
     MoreAbout: { work, workTitle },
   } = useTranslation();
   const t = useFullTheme();
-  console.log('thjeme', t);
   return (
     <Grid container direction="column" justify="flex-start" alignItems="center">
       <Grid item xs={12}>

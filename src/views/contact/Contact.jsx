@@ -14,7 +14,7 @@ const StyledTextField = styled(TextField)`
 function Contact() {
   const {
     Contact: { formModel, subtitle, sideText, socialText },
-  } = useTrranslation();
+  } = useTranslation();
 
   const [initialValues, contactFormValidation, labels, names] = getFormLang(
     formModel

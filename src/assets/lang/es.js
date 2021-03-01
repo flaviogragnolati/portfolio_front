@@ -125,7 +125,63 @@ const ES = {
       },
     ],
   },
-  Projects: {},
+  Projects: {
+    subtitle: 'Estos son algunos de los proyectos en los que he trabajado',
+    endphrase: 'Si queres saber mas respecto de algun proyecto contactame',
+    projectStatus: {
+      0: 'Prototipo',
+      1: 'Desarrollo',
+      2: 'Produccion',
+      3: 'Finalizado',
+      4: 'Cancelado',
+    },
+    projects: [
+      {
+        img: '',
+        title: 'quizApp',
+        subtitle: 'App de quizzes',
+        description:
+          'Aplicacion web y movil para la gestion de quizzes. Herramienta para las instituciones educativas tercericen sus examenes',
+        status: 2,
+        tech: {
+          backend: ['express', 'sequelize', 'passport', 'oAuth', 'postgres'],
+          frontend: ['react', 'redux', 'formik', 'material-ui'],
+        },
+        git: 'www.github.com',
+        website: 'www.website.com',
+        preview: '',
+      },
+      {
+        img: '',
+        title: 'wineStore',
+        subtitle: 'ecommrce de vinos',
+        description: 'Vinoteca web',
+        status: 1,
+        tech: {
+          backend: ['express', 'sequelize', 'passport', 'oAuth', 'postgres'],
+          frontend: ['react', 'redux', 'formik', 'material-ui'],
+        },
+        git: 'www.github.com',
+        website: 'www.website.com',
+        preview: '',
+      },
+      {
+        img: '',
+        title: 'Materia Ceramica',
+        subtitle: 'ecommerce, blog y membership',
+        description:
+          'Aplicacion web y movil para la gestion de quizzes. Herramienta para las instituciones educativas tercericen sus examenes',
+        status: 0,
+        tech: {
+          backend: ['django', 'postgres', 'django-rest-framework'],
+          frontend: ['react', 'redux', 'formik', 'material-ui'],
+        },
+        git: 'www.github.com',
+        website: 'www.website.com',
+        preview: '',
+      },
+    ],
+  },
   Contact: {
     title: 'Contacto',
     subtitle: 'Estemos en contacto?',

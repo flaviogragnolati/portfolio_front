@@ -7,7 +7,7 @@ import MoreAboutBtn from './MoreAboutBtn';
 import LessAboutBtn from './LessAboutBtn';
 import styled from 'styled-components';
 import Timelines from 'views/timelines';
-import { useTanslation } from 'context/LangWrapper/useTranslation';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 
 const Accordion = styled(MuiAccordion)`
   background-color: transparent;
@@ -34,7 +34,7 @@ const AccordionDetails = styled(MuiAccordionDetails)`
 export default function CustomizedAccordions() {
   const {
     MoreAbout: { moreBtn, lessBtn },
-  } = useTanslation();
+  } = useTranslation();
 
   const [expanded, setExpanded] = useState('panel1');
 

@@ -12,6 +12,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 
 import ProjectCard from './components/ProjectCard';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
+import ResponsiveProjectCard from 'components/ProjectCard';
 
 const StyledCarousel = styled(CarouselProvider)`
   width: 100%;
@@ -96,7 +97,7 @@ function Projects() {
         <Slider>
           {projects.map((project, idx) => (
             <Slide index={idx}>
-              <ProjectCard project={project} />
+              <ResponsiveProjectCard project={project} />
             </Slide>
           ))}
         </Slider>

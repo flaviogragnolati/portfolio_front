@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import img from 'assets/img/project1.jpg';
 import StatusChip from './StatusChip';
-import Date from './Date';
 import TechStack from './TechStack';
 import Icons from './Icons';
 
@@ -125,7 +124,7 @@ const DescriptionText = styled.p`
     position: absolute;
     height: 5px;
     background: ${(p) => p.theme.palette.secondary.light};
-    width: 35px;
+    width: 55px;
     top: -0.75rem;
     border-radius: 3px;
   }
@@ -206,8 +205,8 @@ function DesktopProjectCard({ project }) {
         <SubTitle>{subtitle}</SubTitle>
         <DescriptionText>{description}</DescriptionText>
         <Links>
-          <Icons git={git} website={website} />
-          <More>Preview: {preview}</More>
+          <Icons git={git} website={website} preview={preview} />
+          {/* <More>Preview: {preview}</More> */}
         </Links>
       </Description>
     </Card>

@@ -14,6 +14,7 @@ import ResponsiveProjectCard from 'components/ProjectCard';
 
 const StyledCarousel = styled(CarouselProvider)`
   width: 100%;
+  height: 100%;
   position: relative;
 `;
 
@@ -87,7 +88,7 @@ function Projects() {
       Looking for a custom job? Click here to contact me! 👋
       <StyledCarousel
         naturalSlideWidth={matches ? 300 : 200}
-        naturalSlideHeight={matches ? 125 : 400}
+        naturalSlideHeight={matches ? 125 : 420}
         totalSlides={3}
         infinite={true}
         visibleSlides={1}

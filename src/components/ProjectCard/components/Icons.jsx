@@ -1,32 +1,54 @@
 import React from 'react';
-import { GithubSquare as _GithubSquare } from '@styled-icons/fa-brands';
-import { Browser as _Browser } from '@styled-icons/entypo';
+import { Code as _Code } from '@styled-icons/fa-solid';
+import { Preview as _Preview } from '@styled-icons/material-outlined';
+import { OpenInBrowser as _OpenInBrowser } from '@styled-icons/material';
+
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
   display: flex;
   flex-drection: row;
-  flex-grow: 0.1;
-  justify-content: space-between;
+  flex-grow: 1;
+  justify-content: flex-end;
 `;
 
-const GithubSquare = styled(_GithubSquare)`
+const Code = styled(_Code)`
   color: ${(p) => p.theme.palette.text.secondary};
   cursor: pointer;
+  margin-left: 1rem;
+  &:hover {
+    color: ${(p) => p.theme.palette.secondary.dark};
+  }
 `;
-const Browser = styled(_Browser)`
+
+const Preview = styled(_Preview)`
+  color: ${(p) => p.theme.palette.text.secondary};
+  margin-left: 1rem;
+  cursor: pointer;
+  &:hover {
+    color: ${(p) => p.theme.palette.secondary.dark};
+  }
+`;
+const OpenInBrowser = styled(_OpenInBrowser)`
   color: ${(p) => p.theme.palette.text.secondary};
   cursor: pointer;
+  margin-left: 1rem;
+  &:hover {
+    color: ${(p) => p.theme.palette.secondary.dark};
+  }
 `;
 
 function Icons({ git, website, ...rest }) {
   return (
     <StyledDiv {...rest}>
       <a href={git}>
-        <GithubSquare size="2.5rem" />
+        <Code size="2.5rem" />
       </a>
       <a href={git}>
-        <Browser size="2.5rem" />
+        <OpenInBrowser size="2.5rem" />
+      </a>
+      <a>
+        <Preview size="2.5rem" />
       </a>
     </StyledDiv>
   );

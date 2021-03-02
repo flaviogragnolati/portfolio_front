@@ -9,6 +9,7 @@ const SocialDiv = styled.div`
   right: 1rem;
   flex-direction: column;
   transition: all 0.5s;
+  backgroung-color: red;
   /* justify-content: center; */
   /* align-items: center; */
 `;
@@ -19,24 +20,35 @@ const LinkedinIcon = styled(Linkedin)`
   z-index: 1;
   width: 50px;
   height: 50px;
-  border-radius: 15%;
+  border-radius: 50%;
   font-size: 24px;
-  background-color: #f1f1f1;
+  color: white;
   line-height: 52px;
   text-align: center;
-  color: #48a65b;
+  background-color: green;
   transition: all 0.5s;
   &:after {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 25%;
+    border-radius: 50%;
     content: '';
     box-sizing: content-box;
+    top: -7px;
+    left: -7px;
+    padding: 7px;
+    box-shadow: 0 0 0 4px white;
+    transition: all 0.5s;
+    transform: scale(0.8);
+    opacity: 0;
   }
   &:hover {
-    background-color: blue;
-    color: red;
+    background-color: white;
+    color: green;
+  }
+  &:hover:after {
+    transform: scale(1);
+    opacity: 1;
   }
 `;
 
@@ -56,7 +68,7 @@ const MailIcon = styled(Mail)`
 function Social() {
   return (
     <SocialDiv>
-      <LinkedinIcon size="2rem" />
+      <LinkedinIcon size="2.5rem" />
       <GithubIcon size="2rem" />
       <MailIcon size="2rem" />
     </SocialDiv>

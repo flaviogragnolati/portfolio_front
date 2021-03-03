@@ -12,6 +12,7 @@ import { useTranslation } from 'context/LangWrapper/useTranslation';
 const Accordion = styled(MuiAccordion)`
   background-color: transparent;
   width: 100%;
+  box-shadow: none;
 `;
 const AccordionSummary = styled(MuiAccordionSummary)`
   pointer-events: none;
@@ -25,11 +26,6 @@ const AccordionSummary = styled(MuiAccordionSummary)`
 const AccordionDetails = styled(MuiAccordionDetails)`
   padding: ${(p) => p.theme.spacing(2)};
 `;
-// const AccordionDetails = withStyles((theme) => ({
-//   root: {
-//     padding: theme.spacing(2),
-//   },
-// }))(MuiAccordionDetails);
 
 export default function CustomizedAccordions() {
   const {
@@ -44,7 +40,6 @@ export default function CustomizedAccordions() {
 
   return (
     <Accordion
-      square
       expanded={expanded === 'moreAbout'}
       onChange={handleChange('moreAbout')}
     >

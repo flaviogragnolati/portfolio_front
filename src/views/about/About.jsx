@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Box, Button, Grid, Paper, Typography } from '@material-ui/core';
 import ExpandAbout from './components/ExpandAbout';
+import CVButton from './components/CVButton';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 
 const FullDiv = styled.div`
@@ -51,12 +52,8 @@ function About() {
               justifyContent="flex-end"
               pt={5}
             >
-              <Button variant="contained" color="primary">
-                {downloadCVBtn}
-              </Button>
-              <Button variant="contained" color="secondary">
-                {viewCVBtn}
-              </Button>
+              <CVButton text={downloadCVBtn} type="download" />
+              <CVButton text={viewCVBtn} type="view" />
             </Box>
           </Left>
         </Paper>

@@ -55,7 +55,7 @@ const App = () => {
         <Section id="contact" title={index[4].text} ref={contact.ref}>
           <Contact />
         </Section>
-        {/* <Social /> */}
+
         <BackToTopBtn />
       </main>
     </div>

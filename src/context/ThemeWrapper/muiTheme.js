@@ -112,9 +112,6 @@ export const overridesMuiTheme = {
           padding: '4px !important',
         },
       },
-      focused: {
-        backgroundColor: 'red',
-      },
     },
   },
 };

@@ -1,14 +1,16 @@
 import React from 'react';
-import { Box, Button, Grid } from '@material-ui/core';
+import { Box, Button, Grid, Paper } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import { getFormLang } from './components/contactForm';
+import SocialContact from './components/SocialContact';
 import { TextField } from 'formik-material-ui';
 import styled from 'styled-components';
 
 const StyledTextField = styled(TextField)`
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  /* padding: 0 10px; */
   &:hover {
     color: blue;
   }
@@ -36,12 +38,30 @@ function Contact() {
     console.log('SUBMITTING FORM', values);
   };
 
+  const emailMatch = sideText.match(/<.*>/g)[0].replace(/<|>/g, '');
+  const splitSideText = sideText.split('<email>');
+
   return (
     <>
-      <Grid item xs={8} md={5}>
+      <Grid
+        container
+        item
+        xs={12}
+        md={4}
+        direction="column"
+        justify="space-evenly"
+        alignItems="stretch"
+      >
         <h3>{subtitle}</h3>
-        <p>{sideText}</p>
+        <Box>
+          {splitSideText[0]}
+          <span>
+            <Button size="medium">{emailMatch}</Button>
+          </span>
+          {splitSideText[1]}
+        </Box>
         <p>{socialText}</p>
+        <SocialContact />
       </Grid>
       <Grid
         container
@@ -49,8 +69,8 @@ function Contact() {
         direction="column"
         justify="space-evenly"
         alignItems="stretch"
-        xs={10}
-        md={7}
+        xs={12}
+        md={8}
       >
         <Formik
           initialValues={initialValues}
@@ -95,7 +115,13 @@ function Contact() {
               required
             />
             <br></br>
-            <Box display="flex" flexGrow="1" justifyContent="flex-end">
+            <Box
+              display="flex"
+              flexGrow="1"
+              justifyContent="flex-end"
+              pt={2}
+              pb={2}
+            >
               <SubmitBtn type="submit" variant="contained" size="lg">
                 {labels.submit}
               </SubmitBtn>

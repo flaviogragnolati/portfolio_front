@@ -221,7 +221,7 @@ const ES = {
   Contact: {
     title: 'Contacto',
     subtitle: 'Estemos en contacto?',
-    sideText: 'No te gustan los formularios? Enviame un email!👋',
+    sideText: 'No te gustan los formularios? Enviame un <email>👋',
     socialText: '...O encontrame en las redes sociales',
     formModel: {
       name: {

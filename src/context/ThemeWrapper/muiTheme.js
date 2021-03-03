@@ -104,7 +104,7 @@ export const overridesMuiTheme = {
     MuiOutlinedInput: {
       root: {
         '&:hover $notchedOutline': {
-          borderColor: 'yellow',
+          borderColor: indigo[300],
         },
         '&$focused $notchedOutline': {
           borderWidth: 2,

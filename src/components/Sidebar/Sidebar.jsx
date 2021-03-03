@@ -22,8 +22,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 // Custom components and hooks
 import SidebarItem from './components/SidebarItem';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
-import LangPicker from 'components/LangPicker';
-import SunMoon from 'components/SunMoon/SunMoon';
+import LangPicker from './components/LangPicker';
+import SunMoon from './components/SunMoon';
+import Avatar from './components/Avatar';
 
 const SidebarDiv = styled.div`
   background-color: darkblue;
@@ -34,6 +35,7 @@ const SidebarDiv = styled.div`
   top: 0;
   left: 0;
 `;
+
 const drawerWidth = 250;
 
 const useStyles = makeStyles((theme) => ({
@@ -70,7 +72,7 @@ function Sidebar({ scrollAt, spy }, ref) {
   const [current, setCurrent] = useState('home');
 
   const {
-    Sidebar: { content, logo },
+    Sidebar: { index, logo },
   } = useTranslation();
 
   const handleDrawerToggle = () => {
@@ -80,19 +82,29 @@ function Sidebar({ scrollAt, spy }, ref) {
   const sidebarContent = (
     <>
       {/* <div className={classes.toolbar} /> */}
-      PORTFOLIO
       <Box
         display="flex"
         flexDirection="row"
-        justifyContent="space-around"
-        pt={mobileOpen ? 5 : 10}
+        justifyContent="space-between"
+        pt={mobileOpen ? 5 : 15}
+        pl={2}
+        pr={2}
       >
-        <SunMoon />
-        <LangPicker />
+        <Avatar />
+        <Box
+          display="flex"
+          flexDirection="column"
+          flexGrow="1"
+          justifyContent="center"
+          alignItems="flex-end"
+        >
+          <SunMoon />
+          <LangPicker />
+        </Box>
       </Box>
       <Divider />
       <List>
-        {content.map((item, idx) => (
+        {index.map((item, idx) => (
           <SidebarItem
             ref={ref[item.id]}
             key={idx}

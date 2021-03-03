@@ -62,9 +62,7 @@ const Title = styled.h1`
 `;
 
 function Main(props, ref) {
-  const {
-    Test: { title, body },
-  } = useTranslation();
+  const {} = useTranslation();
   return (
     <Parallax
       bgImage={img}

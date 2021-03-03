@@ -16,6 +16,7 @@ const Code = styled(_Code)`
   color: ${(p) => p.theme.palette.text.secondary};
   cursor: pointer;
   margin-left: 1rem;
+  transition: 0.3s ease;
   &:hover {
     color: ${(p) => p.theme.palette.secondary.dark};
   }
@@ -25,6 +26,7 @@ const Preview = styled(_Preview)`
   color: ${(p) => p.theme.palette.text.secondary};
   margin-left: 1rem;
   cursor: pointer;
+  transition: 0.3s ease;
   &:hover {
     color: ${(p) => p.theme.palette.secondary.dark};
   }
@@ -33,6 +35,7 @@ const OpenInBrowser = styled(_OpenInBrowser)`
   color: ${(p) => p.theme.palette.text.secondary};
   cursor: pointer;
   margin-left: 1rem;
+  transition: 0.3s ease;
   &:hover {
     color: ${(p) => p.theme.palette.secondary.dark};
   }

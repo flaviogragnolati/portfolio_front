@@ -9,6 +9,18 @@ import styled from 'styled-components';
 const StyledTextField = styled(TextField)`
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  &:hover {
+    color: blue;
+  }
+`;
+
+const SubmitBtn = styled(Button)`
+  width: 100%;
+  color: ${(p) => p.theme.palette.primary.contrastText};
+  background-color: ${(p) => p.theme.palette.primary.dark};
+  &:hover {
+    background-color: ${(p) => p.theme.palette.primary.light};
+  }
 `;
 
 function Contact() {
@@ -84,9 +96,9 @@ function Contact() {
             />
             <br></br>
             <Box display="flex" flexGrow="1" justifyContent="flex-end">
-              <Button type="submit" variant="outlined" size="lg">
+              <SubmitBtn type="submit" variant="contained" size="lg">
                 {labels.submit}
-              </Button>
+              </SubmitBtn>
             </Box>
           </Form>
         </Formik>

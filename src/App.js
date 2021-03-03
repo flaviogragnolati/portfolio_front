@@ -11,6 +11,7 @@ import Contact from 'views/contact';
 import Section from 'components/Section';
 import Skills from 'views/skills';
 import Projects from 'views/projects';
+import Social from 'views/main/components/Social';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -50,7 +51,7 @@ const App = () => {
         <Section id="contact" title="contact" ref={contact.ref}>
           <Contact />
         </Section>
-
+        {/* <Social /> */}
         <BackToTopBtn />
       </main>
     </div>

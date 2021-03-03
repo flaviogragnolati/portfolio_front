@@ -1,25 +1,36 @@
 const ES = {
   Sidebar: {
-    content: [
+    logo: 'FG',
+    index: [
       { text: 'Inicio', icon: 'home', id: 'home' },
       { text: 'Acerca de mi', icon: 'about', id: 'about' },
       { text: 'Habilidades', icon: 'services', id: 'skills' },
       { text: 'Proyectos', icon: 'projects', id: 'projects' },
       { text: 'Contacto', icon: 'contact', id: 'contact' },
     ],
-    logo: 'FG',
   },
   LangPicker: {
     header: 'Lenguaje',
-    langs: ['Español', 'English'],
+    langs: ['Español', 'English', 'Italiano'],
   },
-  Hero: {
+  Main: {
     title: 'Flavio Gragnolati',
     button: 'Contratame!',
     subtitle: 'Redes Sociales',
-    type: ' ',
+    typewritter: [
+      'Fullstack Web Developer',
+      'orientado a objetivos',
+      'codigo limpio',
+      'codigo DRY',
+    ],
   },
-  Main: { title: '', tabs: '' },
+  About: {
+    descriptionTitle: 'Un poco sobre mi...',
+    description:
+      'Soy un Fullstack Web developer, que le gusta programar codigo limpio, eficiente y DRY. Estoy altamente motivado, y dispuesto a trabajar en ambientes de rápido cambio. Siempre orientado a trabajar en equipo y por objetivos, y sin miedo de resolver problemas bajo presión.',
+    stackTitle: 'Mi stack de soluciones preferidas',
+    stackSubTitle: '(sin miedo de aprender nuevas tecnologias)',
+  },
   MoreAbout: {
     moreBtn: 'Mas acerca de mi',
     lessBtn: 'Menos acerca de mi',
@@ -239,11 +250,7 @@ const ES = {
       },
     },
   },
-  Footer: {},
-  Test: {
-    title: 'Titul ode test',
-    body: '[ES]loremipsum loremipsum loremipsum loremipsum [ES]',
-  },
+  Footer: { copy: 'Copyright 2021 FG' },
   Tooltips: {
     langBtn: 'Cambiar lenguaje',
     hireBtn: 'Contratame',

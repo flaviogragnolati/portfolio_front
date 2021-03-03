@@ -101,6 +101,7 @@ const muiTheme = {
  */
 export const overridesMuiTheme = {
   overrides: {
+    //modifies focus and hover effects of outlined input
     MuiOutlinedInput: {
       root: {
         '&:hover $notchedOutline': {
@@ -110,6 +111,15 @@ export const overridesMuiTheme = {
           borderWidth: 2,
           borderLeftWidth: 8,
           padding: '4px !important',
+        },
+      },
+    },
+    //Removes ripple effect on focus of accordion
+    MuiAccordionSummary: {
+      root: {
+        '&$focused': {
+          backgroundColor: 'transparent',
+          borderColor: 'transparent',
         },
       },
     },

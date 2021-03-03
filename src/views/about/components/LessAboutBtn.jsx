@@ -1,4 +1,4 @@
-import { Box, Typography } from '@material-ui/core';
+import { Box, ButtonBase, Typography } from '@material-ui/core';
 import React from 'react';
 import styled from 'styled-components';
 
@@ -124,14 +124,16 @@ function LessAboutBtn({ BtnText }) {
   return (
     <Box display="flex" justifyContent="flex-end" flexGrow="1">
       <HoverBox>
-        <MoreText>
-          <Typography variant="h6">{BtnText}</Typography>
-        </MoreText>
-        <ArrowContainer>
-          <ArrowOne />
-          <ArrowTwo />
-          <ArrowThree />
-        </ArrowContainer>
+        <ButtonBase focusRipple>
+          <MoreText>
+            <Typography variant="h6">{BtnText}</Typography>
+          </MoreText>
+          <ArrowContainer>
+            <ArrowOne />
+            <ArrowTwo />
+            <ArrowThree />
+          </ArrowContainer>
+        </ButtonBase>
       </HoverBox>
     </Box>
   );

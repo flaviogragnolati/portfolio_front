@@ -32,15 +32,15 @@ export default function CustomizedAccordions() {
     MoreAbout: { moreBtn, lessBtn },
   } = useTranslation();
 
-  const [expanded, setExpanded] = useState('panel1');
+  const [expanded, setExpanded] = useState(false);
 
   const handleChange = (panel) => (event, newExpanded) => {
-    setExpanded(newExpanded ? panel : false);
+    setExpanded(!expanded);
   };
 
   return (
     <Accordion
-      expanded={expanded === 'moreAbout'}
+      expanded={expanded === true}
       onChange={handleChange('moreAbout')}
     >
       <AccordionSummary id="moreAbout">

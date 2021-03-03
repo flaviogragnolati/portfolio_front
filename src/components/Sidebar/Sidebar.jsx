@@ -85,10 +85,11 @@ function Sidebar({ scrollAt, spy }, ref) {
       <Box
         display="flex"
         flexDirection="row"
-        justifyContent="space-between"
-        pt={mobileOpen ? 5 : 15}
-        pl={2}
-        pr={2}
+        justifyContent="space-around"
+        pt={mobileOpen ? 5 : 5}
+        pl={1}
+        pr={1}
+        pb={1}
       >
         <Avatar />
         <Box

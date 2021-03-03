@@ -15,10 +15,9 @@ const ES = {
   },
   Main: {
     title: 'Flavio Gragnolati',
-    button: 'Contratame!',
-    subtitle: 'Redes Sociales',
-    typewritter: [
-      'Fullstack Web Developer',
+    hireBtnText: 'Contratame!',
+    type: [
+      'Fullstack Web Developer, ',
       'orientado a objetivos',
       'codigo limpio',
       'codigo DRY',

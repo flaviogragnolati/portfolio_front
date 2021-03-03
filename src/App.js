@@ -12,6 +12,7 @@ import Section from 'components/Section';
 import Skills from 'views/skills';
 import Projects from 'views/projects';
 import Social from 'views/main/components/Social';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,6 +30,9 @@ const App = () => {
   const classes = useStyles();
   const { spyItems, nodeRefs } = useSpy();
   const { home, about, skills, projects, contact } = spyItems;
+  const {
+    Sidebar: { index },
+  } = useTranslation();
 
   return (
     <div className={classes.root}>
@@ -36,19 +40,19 @@ const App = () => {
 
       <main className={classes.content}>
         <div id="top-anchor" />
-        <section id="home" ref={home.ref}>
+        <section id="home" title={index[0].text} ref={home.ref}>
           <Main id="home" ref={nodeRefs.about} />
         </section>
-        <Section id="about" title="about" ref={about.ref}>
+        <Section id="about" title={index[1].text} ref={about.ref}>
           <About />
         </Section>
-        <Section id="skills" title="skills" ref={skills.ref}>
+        <Section id="skills" title={index[2].text} ref={skills.ref}>
           <Skills />
         </Section>
-        <Section id="projects" title="projects" ref={projects.ref}>
+        <Section id="projects" title={index[3].text} ref={projects.ref}>
           <Projects />
         </Section>
-        <Section id="contact" title="contact" ref={contact.ref}>
+        <Section id="contact" title={index[4].text} ref={contact.ref}>
           <Contact />
         </Section>
         {/* <Social /> */}

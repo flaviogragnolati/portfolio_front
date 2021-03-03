@@ -7,6 +7,7 @@ const TitleDiv = styled.div`
   display: flex;
   justify-content: center;
   padding: 1rem;
+  margin-bottom: 2rem;
 `;
 
 const Title = styled.h2`
@@ -24,7 +25,7 @@ const Title = styled.h2`
     height: 1px;
     bottom: 0;
     left: 25%;
-    border-bottom: 3px solid ${orange['A400']};
+    border-bottom: 3px solid ${(p) => p.theme.palette.secondary.light};
   }
 `;
 

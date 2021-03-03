@@ -10,11 +10,11 @@ const HireButton = styled(Button)`
   }
 `;
 
-function HireMeButton() {
+function HireMeButton({ text }) {
   return (
     <div>
       <HireButton variant="contained" size="large" color="secondary">
-        hire me!
+        {text}
       </HireButton>
     </div>
   );

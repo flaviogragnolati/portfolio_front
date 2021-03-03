@@ -4,10 +4,10 @@ import { Parallax } from 'react-parallax';
 import styled, { keyframes } from 'styled-components';
 import argonath from 'assets/img/argonathj.jpg';
 import Subtitle from './components/Subtitle';
-import HireMeButton from 'views/main/components/HireMeButton';
-import ScrollDown from 'views/main/components/ScrollDown';
-import Social from 'views/main/components/Social';
-import HireButton from 'views/main/components/HireButton';
+import HireMeButton from './components/HireMeButton';
+import ScrollDown from './components/ScrollDown';
+import Social from './components/Social';
+import HireButton from './components/HireButton';
 const img = argonath;
 
 const insideStyles = {
@@ -62,7 +62,10 @@ const Title = styled.h1`
 `;
 
 function Main(props, ref) {
-  const {} = useTranslation();
+  const {
+    Main: { title, hireBtnText, type },
+  } = useTranslation();
+  console.log(hireBtnText);
   return (
     <Parallax
       bgImage={img}
@@ -72,12 +75,12 @@ function Main(props, ref) {
     >
       <HeroDiv>
         <ContentDiv>
-          <Title>Flavio Gragnolati</Title>
+          <Title>{title}</Title>
           <br></br>
-          <Subtitle />
+          <Subtitle type={type} />
           <br></br>
-          <HireMeButton />
-          <HireButton />
+          <HireMeButton text={hireBtnText} />
+          <HireButton text={hireBtnText} />
           <ScrollDown ref={ref} />
           <Social size="2rem" style={{ size: '2em' }} />
         </ContentDiv>

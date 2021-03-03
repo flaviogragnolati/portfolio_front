@@ -28,8 +28,8 @@ const HeroButton = styled.button`
   }
 `;
 
-function HireButton() {
-  return <HeroButton>Hire Me!</HeroButton>;
+function HireButton({ text }) {
+  return <HeroButton>{text}</HeroButton>;
 }
 
 export default HireButton;

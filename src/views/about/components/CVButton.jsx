@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Button, ButtonBase } from '@material-ui/core';
+import { Box, ButtonBase } from '@material-ui/core';
 import { Download as _Download } from '@styled-icons/boxicons-regular';
 import { EyeOutline as _EyeOutline } from '@styled-icons/evaicons-outline';
 

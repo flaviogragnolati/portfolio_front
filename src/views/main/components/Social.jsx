@@ -89,6 +89,19 @@ const LinkedinDiv = styled.div`
   &:before {
     content: '';
     position: absolute;
+    left: 100%;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: ${(p) => p.theme.palette.primary.light};
+    transition: 0.5s;
+  }
+  &:hover:before {
+    left: 0;
+  }
+  /* &:before {
+    content: '';
+    position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
@@ -98,7 +111,7 @@ const LinkedinDiv = styled.div`
   }
   &:hover:before {
     top: 0;
-  }
+  } */
   &:hover ${LinkedinIcon} {
     color: ${(p) => p.theme.palette.background.paper};
   }
@@ -134,15 +147,15 @@ const GitDiv = styled.div`
   &:before {
     content: '';
     position: absolute;
-    top: 100%;
-    left: 0;
+    left: 100%;
+    bottom: 0;
     width: 100%;
     height: 100%;
     background: ${(p) => p.theme.palette.primary.light};
     transition: 0.5s;
   }
   &:hover:before {
-    top: 0;
+    left: 0;
   }
   &:hover ${GithubIcon} {
     color: ${(p) => p.theme.palette.background.paper};

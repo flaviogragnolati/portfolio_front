@@ -8,6 +8,7 @@ import HireMeButton from './components/HireMeButton';
 import ScrollDown from './components/ScrollDown';
 import Social from './components/Social';
 import HireButton from './components/HireButton';
+import { Box } from '@material-ui/core';
 const img = argonath;
 
 const insideStyles = {
@@ -49,23 +50,26 @@ const flip = keyframes`
   }
   `;
 
-const Title = styled.h1`
-  font-size: 2rem;
-  color: gray;
-  padding: 2rem;
-  animation-duration: 2s;
+const TitleOne = styled.h1`
+  font-size: 3rem;
+  color: ${(p) => p.theme.palette.primary.light};
+`;
+const TitleTwo = styled.h1`
+  font-size: 3rem;
+  color: ${(p) => p.theme.palette.secondary.light};
+  /* animation-duration: 2s;
   backface-visibility: visible !important;
-  border-radius: 10%;
-  :hover {
+  border-radius: 10%; */
+  /* :hover {
     animation-name: ${flip};
-  }
+  } */
 `;
 
 function Main(props, ref) {
   const {
     Main: { title, hireBtnText, type },
   } = useTranslation();
-  console.log(hireBtnText);
+  const splitTitle = title.split(' ');
   return (
     <Parallax
       bgImage={img}
@@ -75,7 +79,15 @@ function Main(props, ref) {
     >
       <HeroDiv>
         <ContentDiv>
-          <Title>{title}</Title>
+          <Box
+            display="flex"
+            flexDirection="row"
+            justifyContent="center"
+            pb={5}
+          >
+            <TitleOne>{splitTitle[0]}</TitleOne>
+            <TitleTwo>{splitTitle[1]}</TitleTwo>
+          </Box>
           <br></br>
           <Subtitle type={type} />
           <br></br>

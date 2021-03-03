@@ -52,8 +52,8 @@ function About() {
               justifyContent="flex-end"
               pt={5}
             >
-              <CVButton text={downloadCVBtn} type="download" />
-              <CVButton text={viewCVBtn} type="view" />
+              <CVButton text={downloadCVBtn} icon="download" />
+              <CVButton text={viewCVBtn} icon="view" />
             </Box>
           </Left>
         </Paper>

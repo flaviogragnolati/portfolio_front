@@ -29,6 +29,8 @@ const ES = {
       'Soy un Fullstack Web developer, que le gusta programar codigo limpio, eficiente y DRY. Estoy altamente motivado, y dispuesto a trabajar en ambientes de rápido cambio. Siempre orientado a trabajar en equipo y por objetivos, y sin miedo de resolver problemas bajo presión.',
     stackTitle: 'Mi stack de soluciones preferidas',
     stackSubTitle: '(sin miedo de aprender nuevas tecnologias)',
+    downloadCVBtn: 'Descargar CV',
+    viewCVBtn: 'Ver CV',
   },
   MoreAbout: {
     moreBtn: 'Mas acerca de mi',

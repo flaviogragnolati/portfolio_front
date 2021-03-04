@@ -26,6 +26,8 @@ import { useTranslation } from 'context/LangWrapper/useTranslation';
 import LangPicker from './components/LangPicker';
 import SunMoon from './components/SunMoon';
 import Avatar from './components/Avatar';
+import Footer from 'components/Footer';
+import useScreenSize from 'utils/useScreenSize';
 
 const SidebarDiv = styled.div`
   background-color: darkblue;
@@ -117,7 +119,20 @@ function Sidebar({ scrollAt, spy }, ref) {
         ))}
         <Divider />
       </List>
-      <Box
+      {!mobileOpen && (
+        <Box
+          display="flex"
+          flexDirection="column"
+          flexGrow="1"
+          justifyContent="flex-end"
+          alignItems="center"
+          pb={5}
+        >
+          <Footer />
+        </Box>
+      )}
+
+      {/* <Box
         display="flex"
         flexDirection="column"
         flexGrow="1"
@@ -129,7 +144,7 @@ function Sidebar({ scrollAt, spy }, ref) {
         <Typography variant="caption" display="block" gutterBottom>
           Copywrite 2021 FG
         </Typography>
-      </Box>
+      </Box> */}
     </>
   );
   return (

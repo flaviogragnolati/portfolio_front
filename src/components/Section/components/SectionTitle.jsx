@@ -1,6 +1,7 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
 import { orange } from '@material-ui/core/colors';
+import { Typography } from '@material-ui/core';
 
 const TitleDiv = styled.div`
   background-color: transparent;
@@ -10,9 +11,27 @@ const TitleDiv = styled.div`
   margin-bottom: 2rem;
 `;
 
-const Title = styled.h2`
+// const Title = styled.h2`
+//   color: ${(p) => p.theme.palette.primary.main};
+//   font-size: 3rem;
+//   text-transform: uppercase;
+//   font-weight: 500;
+//   display: inline-block;
+//   position: relative;
+//   outline: none;
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     width: 50%;
+//     height: 1px;
+//     bottom: 0;
+//     left: 25%;
+//     border-bottom: 3px solid ${(p) => p.theme.palette.secondary.light};
+//   }
+// `;
+const Title = styled(Typography)`
   color: ${(p) => p.theme.palette.primary.main};
-  font-size: 3rem;
+  /* font-size: 3rem; */
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
@@ -23,7 +42,7 @@ const Title = styled.h2`
     position: absolute;
     width: 50%;
     height: 1px;
-    bottom: 0;
+    bottom: -5%;
     left: 25%;
     border-bottom: 3px solid ${(p) => p.theme.palette.secondary.light};
   }
@@ -32,7 +51,9 @@ const Title = styled.h2`
 function SectionTitle({ title }) {
   return (
     <TitleDiv>
-      <Title>{title}</Title>
+      <Title variant="h2" gutterBottom>
+        {title}
+      </Title>
     </TitleDiv>
   );
 }

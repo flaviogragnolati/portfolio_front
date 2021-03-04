@@ -5,13 +5,9 @@ import ExpandAbout from './components/ExpandAbout';
 import CVButton from './components/CVButton';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 
-const FullDiv = styled.div`
-  width: 100%;
-  position: relative;
-`;
-
 const Left = styled.div`
   /* background-color: blue; */
+  widht: 100%;
   height: 100%;
   padding: 1rem;
 `;
@@ -42,7 +38,7 @@ function About() {
       alignItems="stretch"
       spacing={2}
     >
-      <Grid item xs={10} md={7}>
+      <Grid item xs={12} md={7}>
         <Paper variant="outlined" elevation={5}>
           <Left>
             <Typography>{description}</Typography>
@@ -50,6 +46,7 @@ function About() {
               display="flex"
               flexDirection="row"
               justifyContent="flex-end"
+              flexWrap="wrap"
               pt={5}
             >
               <CVButton text={downloadCVBtn} icon="download" />
@@ -58,7 +55,7 @@ function About() {
           </Left>
         </Paper>
       </Grid>
-      <Grid item xs={10} md={5}>
+      <Grid item xs={12} md={5}>
         <Right>
           {stackTitle}
           {stackSubTitle}

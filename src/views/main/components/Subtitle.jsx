@@ -1,5 +1,12 @@
+import { Box } from '@material-ui/core';
 import React, { createRef, useEffect } from 'react';
+import styled from 'styled-components';
 import Typewriter from 'typewriter-effect/dist/core';
+
+const SubtitleDiv = styled.div`
+  height: 15vh;
+  text-align: center;
+`;
 
 function Subtitle({ type }) {
   const writeHere = createRef();
@@ -26,7 +33,7 @@ function Subtitle({ type }) {
     }
   }, [writeHere, type]);
 
-  return <div ref={writeHere}></div>;
+  return <SubtitleDiv ref={writeHere}></SubtitleDiv>;
 }
 
 export default Subtitle;

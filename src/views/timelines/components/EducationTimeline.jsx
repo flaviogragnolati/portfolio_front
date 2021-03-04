@@ -10,13 +10,11 @@ import { useTranslation } from 'context/LangWrapper/useTranslation';
 import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 const { VerticalTimeline, VerticalTimelineElement } = VerticalTimelineComponent;
 
-const JobTitle = styled.h4`
-  font-size: 1.5rem;
+const JobTitle = styled(Typography)`
   color: ${(p) => p.theme.palette.primary.light};
 `;
 
-const Company = styled.h5`
-  font-size: 1rem;
+const Company = styled(Typography)`
   color: ${(p) => p.theme.palette.text.primary};
 `;
 
@@ -28,7 +26,9 @@ function EducationTimeline() {
   return (
     <Grid container direction="column" justify="flex-start" alignItems="center">
       <Grid item xs={12}>
-        <h3>{educationTitle}</h3>
+        <Typography variant="h4" gutterBottom>
+          {educationTitle}
+        </Typography>
       </Grid>
       <Grid item>
         <VerticalTimeline>
@@ -49,9 +49,9 @@ function EducationTimeline() {
               }}
               icon={<NetworkChart />}
             >
-              <JobTitle>{title}</JobTitle>
-              <Company>{school}</Company>
-              <Company>{type}</Company>
+              <JobTitle variant="h5">{title}</JobTitle>
+              <Company variant="h6">{school}</Company>
+              <Company variant="caption">{type}</Company>
               <Typography variant="body2" gutterBottom>
                 {description}
               </Typography>

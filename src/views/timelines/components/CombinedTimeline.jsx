@@ -12,14 +12,16 @@ import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 const { VerticalTimeline, VerticalTimelineElement } = VerticalTimelineComponent;
 
 const JobTitle = styled(Typography)`
+  /* font-size: 1.5rem; */
   color: ${(p) => p.theme.palette.primary.light};
 `;
 
 const Company = styled(Typography)`
+  /* font-size: 1rem; */
   color: ${(p) => p.theme.palette.text.primary};
 `;
 
-function WorkTimeline() {
+function CombinedTimeline() {
   const {
     MoreAbout: { work, workTitle },
   } = useTranslation();
@@ -53,7 +55,7 @@ function WorkTimeline() {
               >
                 <JobTitle variant="h5">{position}</JobTitle>
                 <Company variant="h6">{company}</Company>
-                <Company variant="caption">{sector}</Company>
+                <Company>{sector}</Company>
                 <Typography variant="body2" gutterBottom>
                   {description}
                 </Typography>
@@ -70,4 +72,4 @@ function WorkTimeline() {
   );
 }
 
-export default WorkTimeline;
+export default CombinedTimeline;

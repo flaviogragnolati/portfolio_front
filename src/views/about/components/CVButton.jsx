@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, ButtonBase } from '@material-ui/core';
+import { Box, ButtonBase, Typography } from '@material-ui/core';
 import { Download as _Download } from '@styled-icons/boxicons-regular';
 import { EyeOutline as _EyeOutline } from '@styled-icons/evaicons-outline';
 
@@ -15,7 +15,7 @@ const FillButton = styled(ButtonBase)`
   margin: 0.8rem;
   padding: 0.2rem 2rem;
   transition: 0.5s;
-  font-size:1.2rem;
+  /* font-size:1.2rem; */
   &:hover {
     box-shadow: inset 0 0 0 2rem ${(p) => p.theme.palette.primary.light};
     border-color: ${(p) => p.theme.palette.primary.dark};
@@ -41,7 +41,7 @@ function CVButton({ text, icon }) {
         alignItems="center"
         flexGrow="1"
       >
-        {text}
+        <Typography variant="body">{text}</Typography>
         {icon === 'download' ? (
           <Download size="1.5rem" />
         ) : (

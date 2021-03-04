@@ -15,6 +15,8 @@ import Social from 'views/main/components/Social';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import BarGraph from 'views/skills/components/BarGraph';
 import styled from 'styled-components';
+import Footer from 'components/Footer';
+import useScreenSize from 'utils/useScreenSize';
 
 const Graph = styled.div`
   background-color: transparent;
@@ -37,6 +39,8 @@ const App = () => {
   const classes = useStyles();
   const { spyItems, nodeRefs } = useSpy();
   const { home, about, skills, projects, contact } = spyItems;
+  const [mobile, tablet, desktop] = useScreenSize();
+
   const {
     Sidebar: { index },
   } = useTranslation();
@@ -62,9 +66,10 @@ const App = () => {
         <Section id="contact" title={index[4].text} ref={contact.ref}>
           <Contact />
         </Section>
-        <Graph>
+        {mobile && <Footer />}
+        {/* <Graph>
           <BarGraph />
-        </Graph>
+        </Graph> */}
         <BackToTopBtn />
       </main>
     </div>

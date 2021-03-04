@@ -8,7 +8,8 @@ import HireMeButton from './components/HireMeButton';
 import ScrollDown from './components/ScrollDown';
 import Social from './components/Social';
 import HireButton from './components/HireButton';
-import { Box } from '@material-ui/core';
+import { Box, Typography } from '@material-ui/core';
+import useScreenSize from 'utils/useScreenSize';
 const img = argonath;
 
 const insideStyles = {
@@ -50,12 +51,14 @@ const flip = keyframes`
   }
   `;
 
-const TitleOne = styled.h1`
-  font-size: 3rem;
+const TitleOne = styled(Typography)`
+  font-weight: 500;
+  /* font-size: 3rem; */
   color: ${(p) => p.theme.palette.primary.light};
 `;
-const TitleTwo = styled.h1`
-  font-size: 3rem;
+const TitleTwo = styled(Typography)`
+  /* font-size: 3rem; */
+  font-weight: 500;
   color: ${(p) => p.theme.palette.secondary.light};
   /* animation-duration: 2s;
   backface-visibility: visible !important;
@@ -66,6 +69,8 @@ const TitleTwo = styled.h1`
 `;
 
 function Main(props, ref) {
+  const [mobile, tablet, desktop] = useScreenSize();
+
   const {
     Main: { title, hireBtnText, type },
   } = useTranslation();
@@ -81,12 +86,15 @@ function Main(props, ref) {
         <ContentDiv>
           <Box
             display="flex"
+            // flexDirection={mobile || tablet ? 'column' : 'row'}
             flexDirection="row"
             justifyContent="center"
+            alignItems="center"
             pb={5}
+            flexWrap="wrap"
           >
-            <TitleOne>{splitTitle[0]}</TitleOne>
-            <TitleTwo>{splitTitle[1]}</TitleTwo>
+            <TitleOne variant="h1">{splitTitle[0]}</TitleOne>
+            <TitleTwo variant="h1">{splitTitle[1]}</TitleTwo>
           </Box>
           <br></br>
           <Subtitle type={type} />

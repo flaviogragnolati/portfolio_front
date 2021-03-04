@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import EducationTimeline from './components/EducationTimeline';
 import WorkTimeline from './components/WorkTimeline';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
@@ -19,7 +19,9 @@ function Timelines() {
         flexGrow="1"
         xs={12}
       >
-        <h2>{subtitle}</h2>
+        <Typography variant="h3" gutterBottom>
+          {subtitle}
+        </Typography>
       </Grid>
       <Grid
         item
@@ -27,7 +29,7 @@ function Timelines() {
         direction="column"
         justify="flex-start"
         alignItems="center"
-        flexGrow="1"
+        flexGrow={1}
         xs={12}
         md={6}
       >

@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
   // toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
-    paddingLeft: '10px',
+    // paddingLeft: '10px',
   },
 }));
 

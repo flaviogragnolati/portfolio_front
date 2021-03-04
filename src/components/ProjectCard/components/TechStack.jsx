@@ -12,29 +12,34 @@ const TechStackDiv = styled.div`
     if (p.screen.mobile) {
       return css`
         width: 100%;
+        padding-left: 10px;
       `;
     }
   }}
 `;
-const Backend = styled.div`
+const Backend = styled(Typography)`
+  color: ${(p) => p.theme.palette.text.primary};
+  font-weight: 500;
   /* background-color: blue;
   height: 20vh; */
   /* padding: 0.5rem; */
 `;
-const Frontend = styled.div`
-  /* background-color: red;
-  height: 20vh; */
-  /* padding: 0.5rem; */
+const Frontend = styled(Typography)`
+  color: ${(p) => p.theme.palette.text.primary};
+  font-weight: 500;
 `;
 
 const StyledChip = styled(Chip)`
-  padding: 0.2rem 0.2rem;
-  margin: ${(p) => p.theme.spacing(0.2)}px;
   ${(p) =>
+    p.desktop &&
+    css`
+      padding: 0.1rem 0.1rem;
+      margin: ${(p) => p.theme.spacing(0.2)}px;
+    `}/* ${(p) =>
     p.mobile &&
     css`
       margin: 0.1rem;
-    `}
+    `}  */
 `;
 
 function TechStack({ tech }) {
@@ -43,25 +48,32 @@ function TechStack({ tech }) {
       card: { techStackHeading },
     },
   } = useTranslation();
+
   let techStack;
+
   const [mobile, tablet, desktop] = useScreenSize();
   const screen = { mobile, tablet, desktop };
+
   if (mobile) {
     techStack = (
       <TechStackDiv screen={screen}>
-        <Frontend>
-          <Typography variant="h6">Frontend: </Typography>
-          {tech.frontend.map((tag) => (
-            <StyledChip color="primary" label={tag} />
-          ))}
+        <Frontend variant="h6" gutterBottom>
+          Frontend:{' '}
+          <span>
+            {tech.frontend.slice(0, 5).map((tag, idx) => {
+              return <StyledChip color="primary" label={tag} size="small" />;
+            })}
+            <StyledChip color="primary" label={'...'} size="small" />
+          </span>
         </Frontend>
-        <Backend>
-          <Typography variant="h6">Backend: </Typography>
-          <Box component="div" overflow="ellipsis">
-            {tech.backend.map((tag) => (
-              <StyledChip color="secondary" label={tag} />
+        <Backend variant="h6">
+          Backend:{' '}
+          <span>
+            {tech.backend.slice(0, 5).map((tag) => (
+              <StyledChip color="secondary" label={tag} size="small" />
             ))}
-          </Box>
+            <StyledChip color="secondary" label={'...'} size="small" />
+          </span>
         </Backend>
       </TechStackDiv>
     );
@@ -75,20 +87,20 @@ function TechStack({ tech }) {
         </Typography>
         <Frontend>
           <Typography variant="h6" gutterBottom>
-            Frontend:{' '}
+            Frontend:
           </Typography>
           {tech.frontend.map((tag) => (
-            <StyledChip color="primary" label={tag} />
+            <StyledChip color="primary" label={tag} desktop />
           ))}
         </Frontend>
         <br />
         <Backend>
           <Typography variant="h6" gutterBottom>
-            Backend:{' '}
+            Backend:
           </Typography>
           <Box component="div" overflow="ellipsis">
             {tech.backend.map((tag) => (
-              <StyledChip color="secondary" label={tag} />
+              <StyledChip color="secondary" label={tag} desktop />
             ))}
           </Box>
         </Backend>

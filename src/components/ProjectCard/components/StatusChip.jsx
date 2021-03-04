@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chip } from '@material-ui/core';
+import { Chip, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 
@@ -7,8 +7,7 @@ const StyledChip = styled(Chip)`
   background-color: ${(p) => p.theme.palette[p.type].main};
 `;
 
-const Status = styled.h5`
-  color: blue;
+const Status = styled(Typography)`
   position: absolute;
   top: 2%;
   right: 2%;
@@ -50,7 +49,7 @@ function StatusChip({ status, color: _color, ...rest }) {
   }
 
   return (
-    <Status>
+    <Status variant="overline">
       <StyledChip label={label} type={color} {...rest} />
     </Status>
   );

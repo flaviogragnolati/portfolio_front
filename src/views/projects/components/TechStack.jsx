@@ -21,58 +21,58 @@ const StyledChip = styled(Chip)`
   margin: ${(p) => p.theme.spacing(0.2)}px;
 `;
 
-function TechStack({ tech, mobile = false }) {
+function TechStack({ tech, mobile }) {
   const {
     Projects: {
       card: { techStackHeading },
     },
   } = useTranslation();
-  console.log('object', mobile);
   if (mobile) {
     return (
+      <h1>sads</h1>
+      // <TechStackDiv>
+      //   <Frontend>
+      //     {/* <Typography variant="h6">Frontend:</Typography> */}
+      //     Frontendd:
+      //     {tech.frontend.map((tag) => (
+      //       <StyledChip color="primary" size="small" label={tag} />
+      //     ))}
+      //   </Frontend>
+      //   <Backend>
+      //     <Typography variant="h6">Backend: </Typography>
+      //     {tech.backend.map((tag) => (
+      //       <StyledChip color="secondary" size="small" label={tag} />
+      //     ))}
+      //   </Backend>
+      // </TechStackDiv>
+    );
+  } else {
+    return (
       <TechStackDiv>
+        <Typography variant="h5" gutterBottom>
+          {techStackHeading}
+        </Typography>
+        <br />
         <Frontend>
-          {/* <Typography variant="h6">Frontend:</Typography> */}
-          Frontendd:
+          <Typography variant="h6" gutterBottom>
+            Frontend:{' '}
+          </Typography>
           {tech.frontend.map((tag) => (
-            <StyledChip color="primary" size="small" label={tag} />
+            <StyledChip color="primary" size="medium" label={tag} />
           ))}
         </Frontend>
+        <br />
         <Backend>
-          <Typography variant="h6">Backend: </Typography>
+          <Typography variant="h6" gutterBottom>
+            Backend:{' '}
+          </Typography>
           {tech.backend.map((tag) => (
-            <StyledChip color="secondary" size="small" label={tag} />
+            <StyledChip color="secondary" size="medium" label={tag} />
           ))}
         </Backend>
       </TechStackDiv>
     );
   }
-
-  return (
-    <TechStackDiv>
-      <Typography variant="h5" gutterBottom>
-        {techStackHeading}
-      </Typography>
-      <br />
-      <Frontend>
-        <Typography variant="h6" gutterBottom>
-          Frontend:{' '}
-        </Typography>
-        {tech.frontend.map((tag) => (
-          <StyledChip color="primary" size="medium" label={tag} />
-        ))}
-      </Frontend>
-      <br />
-      <Backend>
-        <Typography variant="h6" gutterBottom>
-          Backend:{' '}
-        </Typography>
-        {tech.backend.map((tag) => (
-          <StyledChip color="secondary" size="medium" label={tag} />
-        ))}
-      </Backend>
-    </TechStackDiv>
-  );
 }
 
 export default TechStack;

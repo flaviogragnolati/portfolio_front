@@ -28,6 +28,7 @@ import SunMoon from './components/SunMoon';
 import Avatar from './components/Avatar';
 import Footer from 'components/Footer';
 import useScreenSize from 'utils/useScreenSize';
+import CloseBtn from 'components/Sidebar/components/CloseBtn';
 
 const SidebarDiv = styled.div`
   background-color: darkblue;
@@ -82,9 +83,14 @@ function Sidebar({ scrollAt, spy }, ref) {
     setMobileOpen(!mobileOpen);
   };
 
+  const handleClose = () => {
+    setMobileOpen(!mobileOpen);
+  };
+
   const sidebarContent = (
     <>
       {/* <div className={classes.toolbar} /> */}
+      {mobileOpen && <CloseBtn handleClose={handleClose} />}
       <Box
         display="flex"
         flexDirection="row"
@@ -131,7 +137,6 @@ function Sidebar({ scrollAt, spy }, ref) {
           <Footer />
         </Box>
       )}
-
       {/* <Box
         display="flex"
         flexDirection="column"

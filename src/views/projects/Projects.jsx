@@ -88,7 +88,7 @@ function Projects() {
       Looking for a custom job? Click here to contact me! 👋
       <StyledCarousel
         naturalSlideWidth={matches ? 300 : 200}
-        naturalSlideHeight={matches ? 125 : 420}
+        naturalSlideHeight={matches ? 150 : 600}
         totalSlides={3}
         infinite={true}
         visibleSlides={1}

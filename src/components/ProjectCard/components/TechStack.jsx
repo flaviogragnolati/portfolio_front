@@ -30,6 +30,7 @@ const Frontend = styled(Typography)`
 `;
 
 const StyledChip = styled(Chip)`
+  /* margin: 0 1px; */
   ${(p) =>
     p.desktop &&
     css`
@@ -63,7 +64,7 @@ function TechStack({ tech }) {
             {tech.frontend.slice(0, 5).map((tag, idx) => {
               return <StyledChip color="primary" label={tag} size="small" />;
             })}
-            <StyledChip color="primary" label={'...'} size="small" />
+            <StyledChip color="primary" label={'...'} size="small" clickable />
           </span>
         </Frontend>
         <Backend variant="h6">

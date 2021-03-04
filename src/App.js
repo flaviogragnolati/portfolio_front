@@ -13,6 +13,13 @@ import Skills from 'views/skills';
 import Projects from 'views/projects';
 import Social from 'views/main/components/Social';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
+import BarGraph from 'views/skills/components/BarGraph';
+import styled from 'styled-components';
+
+const Graph = styled.div`
+  background-color: transparent;
+  height: 500px;
+`;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,7 +62,9 @@ const App = () => {
         <Section id="contact" title={index[4].text} ref={contact.ref}>
           <Contact />
         </Section>
-
+        <Graph>
+          <BarGraph />
+        </Graph>
         <BackToTopBtn />
       </main>
     </div>

@@ -94,7 +94,7 @@ function Main(props, ref) {
           <HireMeButton text={hireBtnText} />
           <HireButton text={hireBtnText} />
           <ScrollDown ref={ref} />
-          <Social size="2rem" style={{ size: '2em' }} />
+          {/* <Social size="2rem" style={{ size: '2em' }} /> */}
         </ContentDiv>
       </HeroDiv>
     </Parallax>

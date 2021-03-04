@@ -20,6 +20,7 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 
 // Custom components and hooks
+import SocialContact from './components/SocialContact';
 import SidebarItem from './components/SidebarItem';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import LangPicker from './components/LangPicker';
@@ -124,6 +125,7 @@ function Sidebar({ scrollAt, spy }, ref) {
         alignItems="center"
         pb={5}
       >
+        <SocialContact />
         <Typography variant="caption" display="block" gutterBottom>
           Copywrite 2021 FG
         </Typography>

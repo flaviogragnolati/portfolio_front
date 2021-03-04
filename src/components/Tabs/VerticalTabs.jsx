@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function VerticalTabs() {
+export default function VerticalTabs({ techSkills, softSkills, tools }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -115,15 +115,13 @@ export default function VerticalTabs() {
         <StyledTab label="Tools" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE
-        ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE ONE
-        ONE ONE ONE ONE
+        {techSkills}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        TWO
+        {softSkills}
       </TabPanel>
       <TabPanel value={value} index={2}>
-        THREE
+        {tools}
       </TabPanel>
     </div>
   );

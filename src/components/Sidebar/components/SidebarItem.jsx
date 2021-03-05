@@ -1,11 +1,5 @@
 import React, { forwardRef } from 'react';
-import {
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Link,
-  MenuItem,
-} from '@material-ui/core';
+import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
 import PersonIcon from '@material-ui/icons/Person';

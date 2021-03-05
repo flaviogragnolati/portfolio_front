@@ -30,37 +30,27 @@ import Footer from 'components/Footer';
 import useScreenSize from 'utils/useScreenSize';
 import CloseBtn from 'components/Sidebar/components/CloseBtn';
 
-const SidebarDiv = styled.div`
-  background-color: darkblue;
-  width: 300px;
-  height: 100vh;
-  min-height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-`;
-
-const drawerWidth = 250;
+const drawerWidth = 220;
 
 const useStyles = makeStyles((theme) => ({
   drawer: {
-    [theme.breakpoints.up('sm')]: {
+    [theme.breakpoints.up('md')]: {
       width: drawerWidth,
       flexShrink: 0,
     },
   },
-  appBar: {
-    [theme.breakpoints.up('sm')]: {
-      width: `calc(100% - ${drawerWidth}px)`,
-      marginLeft: drawerWidth,
-    },
-  },
-  menuButton: {
-    marginRight: theme.spacing(2),
-    [theme.breakpoints.up('sm')]: {
-      display: 'none',
-    },
-  },
+  // appBar: {
+  //   [theme.breakpoints.up('md')]: {
+  //     width: `calc(100% - ${drawerWidth}px)`,
+  //     marginLeft: drawerWidth,
+  //   },
+  // },
+  // menuButton: {
+  //   marginRight: theme.spacing(2),
+  //   [theme.breakpoints.up('md')]: {
+  //     display: 'none',
+  //   },
+  // },
   // necessary for content to be below app bar
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
@@ -71,7 +61,7 @@ const useStyles = makeStyles((theme) => ({
 function Sidebar({ scrollAt, spy }, ref) {
   const classes = useStyles();
   const theme = useTheme();
-
+  const [mobile, desktop] = useScreenSize();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [current, setCurrent] = useState('home');
 
@@ -137,39 +127,30 @@ function Sidebar({ scrollAt, spy }, ref) {
           <Footer />
         </Box>
       )}
-      {/* <Box
-        display="flex"
-        flexDirection="column"
-        flexGrow="1"
-        justifyContent="flex-end"
-        alignItems="center"
-        pb={5}
-      >
-        <SocialContact />
-        <Typography variant="caption" display="block" gutterBottom>
-          Copywrite 2021 FG
-        </Typography>
-      </Box> */}
     </>
   );
   return (
     <>
       <CssBaseline />
-      <AppBar color="transparent" elevation={0} className={classes.appBar}>
+      <AppBar
+        color="transparent"
+        elevation={0}
+        // className={classes.appBar}
+      >
         <Toolbar>
           <IconButton
             color="inherit"
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            className={classes.menuButton}
+            // className={classes.menuButton}
           >
             <MenuIcon />
           </IconButton>
         </Toolbar>
       </AppBar>
       <nav className={classes.drawer} aria-label="main navigation bar">
-        <Hidden smUp implementation="js">
+        <Hidden mdUp implementation="js">
           <Drawer
             variant="temporary"
             anchor={theme.direction === 'rtl' ? 'right' : 'left'}
@@ -185,7 +166,7 @@ function Sidebar({ scrollAt, spy }, ref) {
             {sidebarContent}
           </Drawer>
         </Hidden>
-        <Hidden xsDown implementation="js">
+        <Hidden smDown implementation="js">
           <Drawer
             classes={{
               paper: classes.drawerPaper,

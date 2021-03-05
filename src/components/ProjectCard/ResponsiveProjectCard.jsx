@@ -11,8 +11,8 @@ function ResponsiveProjectCard({ project }) {
   if (mobile) {
     card = <MobileProjectCard project={project} />;
   } else if (tablet) {
-    card = <TabletProjectCard project={project} />;
-  } else if (desktop) {
+    card = <h1>Tablet</h1>;
+  } else {
     card = <DesktopProjectCard project={project} />;
   }
   return <>{card}</>;

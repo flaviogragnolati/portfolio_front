@@ -52,8 +52,8 @@ function TechStack({ tech }) {
 
   let techStack;
 
-  const [mobile, tablet, desktop] = useScreenSize();
-  const screen = { mobile, tablet, desktop };
+  const [mobile, desktop] = useScreenSize();
+  const screen = { mobile, desktop };
 
   if (mobile) {
     techStack = (
@@ -78,8 +78,6 @@ function TechStack({ tech }) {
         </Backend>
       </TechStackDiv>
     );
-  } else if (tablet) {
-    techStack = <></>;
   } else {
     techStack = (
       <TechStackDiv screen={screen}>

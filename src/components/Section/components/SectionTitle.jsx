@@ -11,24 +11,6 @@ const TitleDiv = styled.div`
   margin-bottom: 2rem;
 `;
 
-// const Title = styled.h2`
-//   color: ${(p) => p.theme.palette.primary.main};
-//   font-size: 3rem;
-//   text-transform: uppercase;
-//   font-weight: 500;
-//   display: inline-block;
-//   position: relative;
-//   outline: none;
-//   &:before {
-//     content: '';
-//     position: absolute;
-//     width: 50%;
-//     height: 1px;
-//     bottom: 0;
-//     left: 25%;
-//     border-bottom: 3px solid ${(p) => p.theme.palette.secondary.light};
-//   }
-// `;
 const Title = styled(Typography)`
   color: ${(p) => p.theme.palette.primary.main};
   /* font-size: 3rem; */

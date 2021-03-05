@@ -1,7 +1,7 @@
 import React from 'react';
 
 // Custom Components
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, useMediaQuery } from '@material-ui/core';
 import Sidebar from 'components/Sidebar';
 import Main from 'views/main';
 import About from 'views/about';
@@ -39,7 +39,8 @@ const App = () => {
   const classes = useStyles();
   const { spyItems, nodeRefs } = useSpy();
   const { home, about, skills, projects, contact } = spyItems;
-  const [mobile, tablet, desktop] = useScreenSize();
+  const mdScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
+  // const [mobile ] = useScreenSize();
 
   const {
     Sidebar: { index },
@@ -66,7 +67,7 @@ const App = () => {
         <Section id="contact" title={index[4].text} ref={contact.ref}>
           <Contact />
         </Section>
-        {mobile && <Footer />}
+        {mdScreen && <Footer />}
         {/* <Graph>
           <BarGraph />
         </Graph> */}

@@ -69,7 +69,7 @@ const TitleTwo = styled(Typography)`
 `;
 
 function Main(props, ref) {
-  const [mobile, tablet, desktop] = useScreenSize();
+  const [mobile, desktop] = useScreenSize();
 
   const {
     Main: { title, hireBtnText, type },
@@ -99,7 +99,7 @@ function Main(props, ref) {
           <br></br>
           <Subtitle type={type} />
           <br></br>
-          <HireMeButton text={hireBtnText} />
+          {/* <HireMeButton text={hireBtnText} /> */}
           <HireButton text={hireBtnText} />
           <ScrollDown ref={ref} />
           {/* <Social size="2rem" style={{ size: '2em' }} /> */}

@@ -12,6 +12,7 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import ResponsiveProjectCard from 'components/ProjectCard';
 import useScreenSize from 'utils/useScreenSize';
+import useWindowDimensions from 'utils/useWindowDimensions';
 
 const StyledCarousel = styled(CarouselProvider)`
   width: 100%;
@@ -85,13 +86,19 @@ function Projects() {
   } = useTranslation();
   // const matches = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const [mobile, tablet, desktop] = useScreenSize();
-  console.log('object', mobile, tablet, desktop);
+
+  const { height, width } = useWindowDimensions();
+  const ratio = height / width;
+  const w = width - (10 % width);
+  console.log('ratio', ratio, height, width - (10 % width));
   return (
     <>
       Looking for a custom job? Click here to contact me! 👋
       <StyledCarousel
-        naturalSlideWidth={desktop ? 300 : 200}
-        naturalSlideHeight={desktop ? 100 : 600}
+        naturalSlideWidth={w}
+        naturalSlideHeight={
+          desktop ? w * ratio : tablet ? w * ratio : w * (ratio + 0.4)
+        }
         totalSlides={3}
         infinite={true}
         visibleSlides={1}

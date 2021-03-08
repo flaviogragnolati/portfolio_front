@@ -89,7 +89,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function VerticalTabs({ techSkills, softSkills, tools }) {
+export default function VerticalTabs({ techSkills, tools }) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
@@ -111,16 +111,12 @@ export default function VerticalTabs({ techSkills, softSkills, tools }) {
         centered={true}
       >
         <StyledTab label="Technical Skills" {...a11yProps(0)} />
-        <StyledTab label="Soft Skills" {...a11yProps(1)} />
-        <StyledTab label="Tools" {...a11yProps(2)} />
+        <StyledTab label="Tools" {...a11yProps(1)} />
       </Tabs>
       <TabPanel value={value} index={0}>
         {techSkills}
       </TabPanel>
       <TabPanel value={value} index={1}>
-        {softSkills}
-      </TabPanel>
-      <TabPanel value={value} index={2}>
         {tools}
       </TabPanel>
     </div>

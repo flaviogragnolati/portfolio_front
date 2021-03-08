@@ -12,8 +12,9 @@ const FillButton = styled(ButtonBase)`
   color: ${(p) => p.theme.palette.primary.contrastText}
   line-height: 1;
   border-radius: 5px;
-  margin: 0.8rem;
+  margin: 0.5rem 1rem;
   padding: 0.2rem 2rem;
+  width:100%;
   transition: 0.5s;
   /* font-size:1.2rem; */
   &:hover {

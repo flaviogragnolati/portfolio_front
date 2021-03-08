@@ -90,7 +90,6 @@ function Projects() {
   const { height, width } = useWindowDimensions();
   const ratio = height / width;
   const w = width - (10 % width);
-  console.log('ratio', ratio, height, width - (10 % width));
   return (
     <>
       Looking for a custom job? Click here to contact me! 👋

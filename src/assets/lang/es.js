@@ -26,7 +26,39 @@ const ES = {
   About: {
     descriptionTitle: 'Un poco sobre mi...',
     description:
-      'Soy un Fullstack Web developer, que le gusta programar codigo limpio, eficiente y DRY. Estoy altamente motivado, y dispuesto a trabajar en ambientes de rápido cambio. Siempre orientado a trabajar en equipo y por objetivos, y sin miedo de resolver problemas bajo presión.',
+      'Soy Full stack well developer, trabajo orientado a objetivos, estoy preparado para trabajar bajo presión y en entornos de cambios constantes. Desarrollo aplicaciones con código escalable, mantenible, limpio y debuggeable. ',
+    aboutCards: [
+      {
+        title: 'Trabajo en equipo',
+        icon: 'team',
+        text: 'Con experiencia dirigiendo equipos multidiciplinarios',
+      },
+      {
+        title: 'Aprendizaje',
+        icon: 'learn',
+        text: 'Dispuesto a aprender nuevas tecnologías',
+      },
+      {
+        title: 'Experiencia Laboral',
+        icon: 'work',
+        text: 'Con ámplia experiencia en diferentes industrias',
+      },
+      {
+        title: 'Comunicación',
+        icon: 'communication',
+        text: 'Comunicación Bilingüe fluida y clara',
+      },
+      {
+        title: 'Resolución de problemas',
+        icon: 'problem',
+        text: 'Resolución de analítica de problemas',
+      },
+      {
+        title: 'Compromiso',
+        icon: 'responsible',
+        text: 'Responsable y comprometido con los objetivos',
+      },
+    ],
     stackTitle: 'Mi stack de soluciones preferidas',
     stackSubTitle: '(sin miedo de aprender nuevas tecnologias)',
     downloadCVBtn: 'Descargar CV',

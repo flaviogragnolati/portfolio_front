@@ -1,22 +1,46 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Button, Grid, Paper, Typography } from '@material-ui/core';
+import {
+  Box,
+  Button,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+} from '@material-ui/core';
 import ExpandAbout from './components/ExpandAbout';
 import CVButton from './components/CVButton';
+import Stack from './components/Stack';
+import AboutCard from './components/AboutCard';
+
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 
 const Left = styled.div`
+  color: ${(p) => p.theme.palette.text.primary};
   /* background-color: blue; */
-  widht: 100%;
-  height: 100%;
-  padding: 1rem;
+  /* height: 100%; */
+  /* padding: 1rem; */
+  text-align: center;
 `;
 
 const Right = styled.div`
   padding: 1rem;
-  background-color: ${(p) => p.theme.palette.background.paper};
-  height: 100%;
+  /* background-color: ${(p) => p.theme.palette.background.paper}; */
+  /* height: 100%; */
   color: ${(p) => p.theme.palette.text.primary};
+`;
+
+const FullPaper = styled(Paper)`
+  height: 100%;
+  width: 100%;
+  padding: 1rem;
+`;
+const Color = styled.div`
+  background-color: red;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 `;
 
 function About() {
@@ -28,41 +52,94 @@ function About() {
       stackSubTitle,
       downloadCVBtn,
       viewCVBtn,
+      aboutCards,
     },
   } = useTranslation();
   return (
-    <Grid
-      container
-      direction="row"
-      justify="center"
-      alignItems="stretch"
-      spacing={2}
-    >
-      <Grid item xs={12} md={7}>
-        <Paper variant="outlined" elevation={5}>
-          <Left>
-            <Typography>{description}</Typography>
-            <Box
-              display="flex"
-              flexDirection="row"
-              justifyContent="flex-end"
-              flexWrap="wrap"
-              pt={5}
-            >
-              <CVButton text={downloadCVBtn} icon="download" />
-              <CVButton text={viewCVBtn} icon="view" />
-            </Box>
-          </Left>
-        </Paper>
+    <>
+      <Grid item xs={12} md={8}>
+        <Box textAlign="center">
+          <Typography variant="h6">{description}</Typography>
+        </Box>
       </Grid>
-      <Grid item xs={12} md={5}>
-        <Right>
-          {stackTitle}
-          {stackSubTitle}
-        </Right>
+      <Grid item xs={12} md={4}>
+        <Box
+          display="flex"
+          flexDirection="row"
+          justifyContent="flex-end"
+          alignItems="center"
+          flexGrow={1}
+          flexWrap="wrap"
+        >
+          <CVButton text={downloadCVBtn} icon="download" />
+          <CVButton text={viewCVBtn} icon="view" />
+        </Box>
       </Grid>
-      <ExpandAbout />
-    </Grid>
+      <Grid
+        container
+        item
+        xs={12}
+        md={12}
+        direction="row"
+        justify="center"
+        alignItems="flex-start"
+      >
+        {aboutCards.map((card, idx) => (
+          <Grid
+            container
+            item
+            xs={6}
+            sm={6}
+            md={4}
+            justify="center"
+            alignItems="stretch"
+          >
+            <AboutCard key={idx} text={card.text} icon={card.icon} />
+          </Grid>
+        ))}
+      </Grid>
+      <Grid
+        container
+        item
+        direction="row"
+        justify="center"
+        alignItems="center"
+        xs={12}
+      >
+        <Grid item xs={12}>
+          <Box textAlign="center">
+            <Typography variant="h4">{stackTitle}</Typography>
+            <Typography variant="subtitle1" gutterBottom>
+              {stackSubTitle}
+            </Typography>
+          </Box>
+        </Grid>
+        <Stack />
+      </Grid>
+      <Grid
+        container
+        item
+        xs={12}
+        direction="row"
+        justify="center"
+        alignItems="center"
+      >
+        <ExpandAbout />
+      </Grid>
+    </>
+
+    //     <Grid item>
+    //       <Box textAlign="center">
+    //         <Typography variant="h4">{stackTitle}</Typography>
+    //         <Typography variant="subtitle1" gutterBottom>
+    //           {stackSubTitle}
+    //         </Typography>
+    //       </Box>
+    //     </Grid>
+    //   <Stack />
+    //   </Grid> */}
+    //   {/* <ExpandAbout /> */}
+    // </Grid>
   );
 }
 

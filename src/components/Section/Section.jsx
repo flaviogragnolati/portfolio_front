@@ -15,7 +15,7 @@ function Section({ id, title, children, ...props }, ref) {
           <SectionTitle title={title} />
         </Grid>
         <Grid item xs={0} md={1} />
-        <Grid container item xs={10} md={10} spacing={2}>
+        <Grid container item xs={10} md={10} spacing={5}>
           {children}
         </Grid>
         <Grid item xs={0} md={1} />

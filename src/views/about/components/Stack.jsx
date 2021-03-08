@@ -11,82 +11,72 @@ import {
 } from '@styled-icons/simple-icons';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
+import useScreenSize from 'utils/useScreenSize';
+
+const iconProps = {
+  padding: '5px',
+  margin: '2rem',
+  'border-radius': '10px',
+  transition: '0.8s ease',
+};
+const iconHoverProps = {
+  transition: ' 0.8s ease',
+};
 
 const Mongodb = styled(_Mongodb)`
-  padding: 5px;
-  margin: 1.2rem;
-  border-radius: 10px;
-  transition: 1s ease;
+  ${{ ...iconProps }};
   &:hover {
     color: #3fa037;
     background-color: #3f3e42;
-    transition: 0.8s ease;
+    ${{ ...iconHoverProps }};
   }
 `;
 const Express = styled(_Express)`
-  padding: 5px;
-  margin: 1.2rem;
-  border-radius: 10px;
-  transition: 1s ease;
+  ${{ ...iconProps }};
   &:hover {
     color: white;
     background-color: #cd7871;
-    transition: 0.8s ease;
+    ${{ ...iconHoverProps }};
   }
 `;
 const ReactLogo = styled(_ReactLogo)`
-  padding: 5px;
-  margin: 1.2rem;
-  border-radius: 10px;
-  transition: 1s ease;
+  ${{ ...iconProps }};
   &:hover {
     color: #61dbfb;
     background-color: #1f1f1f;
-    transition: 0.8s ease;
+    ${{ ...iconHoverProps }};
   }
 `;
 const NodeDotJs = styled(_NodeDotJs)`
-  padding: 5px;
-  margin: 1.2rem;
-  border-radius: 10px;
-  transition: 1s ease;
+  ${{ ...iconProps }};
   &:hover {
     color: #3c873a;
     background-color: #303030;
-    transition: 0.8s ease;
+    ${{ ...iconHoverProps }};
   }
 `;
 const Python = styled(_Python)`
-  padding: 5px;
-  margin: 1.2rem;
-  border-radius: 10px;
-  transition: 1s ease;
+  ${{ ...iconProps }};
   &:hover {
     color: #ffd43b;
     background-color: #646464;
-    transition: 0.8s ease;
+    ${{ ...iconHoverProps }};
   }
 `;
 const Postgresql = styled(_Postgresql)`
-  padding: 5px;
-  margin: 1.2rem;
-  border-radius: 10px;
-  transition: 1s ease;
+  ${{ ...iconProps }};
   &:hover {
     color: #336791;
     background-color: #848484;
-    transition: 0.8s ease;
+    ${{ ...iconHoverProps }};
   }
 `;
 const Django = styled(_Django)`
-  padding: 5px;
-  margin: 10px;
-  border-radius: 10px;
-  transition: 1s ease;
+  ${{ ...iconProps }};
   &:hover {
     color: white;
     background-color: #103e2e;
-    transition: 0.8s ease;
+    ${{ ...iconHoverProps }};
   }
 `;
 
@@ -122,35 +112,49 @@ const Wrapper = styled.div`
 `;
 
 function Stack() {
+  const [mobile, tablet, desktop] = useScreenSize();
+
+  let gridProps, iconProps;
+  if (tablet || desktop) {
+    gridProps = {
+      container: true,
+      item: true,
+      direction: 'column',
+      justify: 'center',
+      alignItems: 'center',
+      xs: 12,
+      md: 3,
+    };
+    iconProps = { size: '6rem' };
+  } else if (mobile) {
+    gridProps = {
+      container: true,
+      item: true,
+      direction: 'row',
+      justify: 'center',
+      alignItems: 'center',
+      xs: 12,
+    };
+    iconProps = { size: '4rem' };
+  }
+
   return (
-    // <Grid item direction="row" justify="center" alignItems="stretch">
     <>
-      {/* <Wrapper> */}
-      {/* <Grid item container xs={2}> */}
-      <Databases>
-        <Mongodb size="6rem" />
-        <Postgresql size="6rem" />
-      </Databases>
-      {/* </Grid> */}
-      {/* <Grid item container xs={2}> */}
-      <Lang>
-        <NodeDotJs size="6rem" />
-        <Python size="6rem" />
-      </Lang>
-      {/* </Grid> */}
-      {/* <Grid item container xs={2}> */}
-      <Backend>
-        <Express size="6rem" />
-        <Django size="6rem" />
-      </Backend>
-      {/* </Grid> */}
-      {/* <Grid item container xs={2}> */}
-      <Frontend>
-        <ReactLogo size="6rem" />
-      </Frontend>
-      {/* </Grid> */}
-      {/* </Wrapper> */}
-      {/* </Grid> */}
+      <Grid {...gridProps}>
+        <Mongodb {...iconProps} />
+        <Postgresql {...iconProps} />
+      </Grid>
+      <Grid {...gridProps}>
+        <NodeDotJs {...iconProps} />
+        <Python {...iconProps} />
+      </Grid>
+      <Grid {...gridProps}>
+        <Express {...iconProps} />
+        <Django {...iconProps} />
+      </Grid>
+      <Grid {...gridProps}>
+        <ReactLogo {...iconProps} />
+      </Grid>
     </>
   );
 }

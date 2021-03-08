@@ -114,7 +114,17 @@ function About() {
             </Typography>
           </Box>
         </Grid>
-        <Stack />
+        <Grid
+          container
+          item
+          direction="row"
+          justify="center"
+          alignItems="center"
+          xs={12}
+          md={6}
+        >
+          <Stack />
+        </Grid>
       </Grid>
       <Grid
         container

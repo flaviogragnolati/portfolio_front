@@ -42,22 +42,12 @@ function About() {
         xs={12}
         md={4}
       >
-        {/* <Box
-          display="flex"
-          flexDirection="row"
-          justifyContent="flex-end"
-          alignItems="center"
-          // flexGrow={1}
-          flexWrap="wrap"
-        > */}
-        <Grid container item xs={12}>
+        <Grid container item xs={10} sm={8} md={12}>
           <CVButton text={downloadCVBtn} icon="download" />
         </Grid>
-        <Grid container item xs={12}>
+        <Grid container item xs={10} sm={8} md={12}>
           <CVButton text={viewCVBtn} icon="view" />
         </Grid>
-
-        {/* </Box> */}
       </Grid>
       <Grid
         container

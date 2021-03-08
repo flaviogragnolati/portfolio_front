@@ -115,17 +115,26 @@ function Stack() {
   const [mobile, tablet, desktop] = useScreenSize();
 
   let gridProps, iconProps;
-  if (tablet || desktop) {
+  if (desktop) {
     gridProps = {
       container: true,
       item: true,
       direction: 'column',
       justify: 'center',
       alignItems: 'center',
-      xs: 12,
       md: 3,
     };
     iconProps = { size: '6rem' };
+  } else if (tablet) {
+    gridProps = {
+      container: true,
+      item: true,
+      direction: 'column',
+      justify: 'center',
+      alignItems: 'center',
+      sm: 3,
+    };
+    iconProps = { size: '4.5rem' };
   } else if (mobile) {
     gridProps = {
       container: true,

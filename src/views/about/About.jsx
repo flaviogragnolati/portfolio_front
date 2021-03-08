@@ -15,38 +15,9 @@ import ResponsiveAboutCard from 'components/AboutCard';
 
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 
-const Left = styled.div`
-  color: ${(p) => p.theme.palette.text.primary};
-  /* background-color: blue; */
-  /* height: 100%; */
-  /* padding: 1rem; */
-  text-align: center;
-`;
-
-const Right = styled.div`
-  padding: 1rem;
-  /* background-color: ${(p) => p.theme.palette.background.paper}; */
-  /* height: 100%; */
-  color: ${(p) => p.theme.palette.text.primary};
-`;
-
-const FullPaper = styled(Paper)`
-  height: 100%;
-  width: 100%;
-  padding: 1rem;
-`;
-const Color = styled.div`
-  background-color: red;
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-`;
-
 function About() {
   const {
     About: {
-      descriptionTitle,
       description,
       stackTitle,
       stackSubTitle,
@@ -91,7 +62,7 @@ function About() {
             xs={12}
             sm={6}
             md={4}
-            direction="column"
+            direction="row"
             justify="center"
             alignItems="stretch"
           >
@@ -122,7 +93,9 @@ function About() {
           justify="center"
           alignItems="center"
           xs={12}
-          md={6}
+          sm={10}
+          md={8}
+          lg={10}
         >
           <Stack />
         </Grid>

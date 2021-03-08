@@ -10,9 +10,9 @@ function ResponsiveAboutCard(props) {
 
   let aboutCard;
 
-  if (tablet || desktop) {
+  if (desktop) {
     aboutCard = <DesktopAboutCard {...props} />;
-  } else if (mobile) {
+  } else if (mobile || tablet) {
     aboutCard = <MobileAboutCard {...props} />;
   }
   return <>{aboutCard}</>;

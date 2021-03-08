@@ -11,7 +11,7 @@ import {
 import ExpandAbout from './components/ExpandAbout';
 import CVButton from './components/CVButton';
 import Stack from './components/Stack';
-import AboutCard from './components/AboutCard';
+import ResponsiveAboutCard from 'components/AboutCard';
 
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 
@@ -88,13 +88,14 @@ function About() {
           <Grid
             container
             item
-            xs={6}
+            xs={12}
             sm={6}
             md={4}
+            direction="column"
             justify="center"
             alignItems="stretch"
           >
-            <AboutCard key={idx} text={card.text} icon={card.icon} />
+            <ResponsiveAboutCard key={idx} text={card.text} icon={card.icon} />
           </Grid>
         ))}
       </Grid>

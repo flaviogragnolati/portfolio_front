@@ -1,19 +1,21 @@
-import { Box, Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import styled from 'styled-components';
-
-//Import Icons for cards
-import { Handshake, Glasses } from 'styled-icons/fa-solid';
-import { Factory } from 'styled-icons/boxicons-solid';
-import { Team } from 'styled-icons/remix-fill';
-import { Brain } from 'styled-icons/boxicons-regular';
-import { ChatAlt2 } from 'styled-icons/heroicons-solid';
+import { Box, Grid, Typography } from '@material-ui/core';
+import Icon from './Icon';
+// //Import Icons for cards
+// import { Handshake, Glasses } from 'styled-icons/fa-solid';
+// import { Factory } from 'styled-icons/boxicons-solid';
+// import { Team } from 'styled-icons/remix-fill';
+// import { Brain } from 'styled-icons/boxicons-regular';
+// import { ChatAlt2 } from 'styled-icons/heroicons-solid';
 
 import { defaults } from 'utils/config';
+// import useScreenSize from 'utils/useScreenSize';
+// import MobileAboutCard from 'views/about/components/MobileAboutCard';
 
-const {
-  aboutCards: { team, learn, work, communication, problem, responsible },
-} = defaults;
+// const {
+//   aboutCards: { team, learn, work, communication, problem, responsible },
+// } = defaults;
 
 const Wrapper = styled.div`
   background-color: blue;
@@ -118,34 +120,12 @@ const Text = styled(Typography)`
   /* font-size: 1.5rem; */
 `;
 
-const IconSelector = (icon, props) => {
-  switch (icon) {
-    case team:
-      return <Team {...props} />;
-    case learn:
-      return <Glasses {...props} />;
-    case work:
-      return <Factory {...props} />;
-    case communication:
-      return <ChatAlt2 {...props} />;
-    case problem:
-      return <Brain {...props} />;
-    case responsible:
-      return <Handshake {...props} />;
-    default:
-      break;
-  }
-};
-
-function AboutCard({ text, icon }) {
+function DesktopAboutCard({ text, icon }) {
   return (
-    // <Wrapper>
-    // <Box     display="flex" justifyContent="center"   >
     <FlipBox>
       <Front>
         <Content>
-          {/* <ChatAlt2 size="5rem" /> */}
-          {IconSelector(icon, { size: '5rem' })}
+          <Icon icon={icon} size="6rem" />
         </Content>
       </Front>
       <Back>
@@ -154,9 +134,7 @@ function AboutCard({ text, icon }) {
         </Content>
       </Back>
     </FlipBox>
-    // </Box>
-    // </Wrapper>
   );
 }
 
-export default AboutCard;
+export default DesktopAboutCard;

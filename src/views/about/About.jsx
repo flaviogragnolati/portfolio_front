@@ -33,18 +33,31 @@ function About() {
           <Typography variant="h6">{description}</Typography>
         </Box>
       </Grid>
-      <Grid item xs={12} md={4}>
-        <Box
+      <Grid
+        container
+        item
+        direction="row"
+        justify="center"
+        alignItems="stretch"
+        xs={12}
+        md={4}
+      >
+        {/* <Box
           display="flex"
           flexDirection="row"
           justifyContent="flex-end"
           alignItems="center"
-          flexGrow={1}
+          // flexGrow={1}
           flexWrap="wrap"
-        >
+        > */}
+        <Grid container item xs={12}>
           <CVButton text={downloadCVBtn} icon="download" />
+        </Grid>
+        <Grid container item xs={12}>
           <CVButton text={viewCVBtn} icon="view" />
-        </Box>
+        </Grid>
+
+        {/* </Box> */}
       </Grid>
       <Grid
         container

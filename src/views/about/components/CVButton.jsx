@@ -12,13 +12,13 @@ const FillButton = styled(ButtonBase)`
   color: ${(p) => p.theme.palette.primary.contrastText}
   line-height: 1;
   border-radius: 5px;
-  margin: 0.5rem 1rem;
+  margin: 0.5rem 0;
   padding: 0.2rem 2rem;
   width:100%;
   transition: 0.5s;
   /* font-size:1.2rem; */
   &:hover {
-    box-shadow: inset 0 0 0 2rem ${(p) => p.theme.palette.primary.light};
+    box-shadow: inset 0 0 0 2.8rem ${(p) => p.theme.palette.primary.light};
     border-color: ${(p) => p.theme.palette.primary.dark};
     color: ${(p) => p.theme.palette.primary.contrastText};
   }

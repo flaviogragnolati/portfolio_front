@@ -6,12 +6,24 @@ const SHARED = {
       value: 100,
     },
     {
+      text: 'ES6',
+      value: 60,
+    },
+    {
       text: 'Python',
       value: 100,
     },
     {
       text: 'TypeScript',
       value: 30,
+    },
+    {
+      text: 'SQL',
+      value: 45,
+    },
+    {
+      text: 'noSQL',
+      value: 40,
     },
     //JS Backend tech
     {
@@ -32,7 +44,7 @@ const SHARED = {
     },
     {
       text: 'Express',
-      value: 70,
+      value: 80,
     },
     {
       text: 'Apollo',
@@ -61,7 +73,7 @@ const SHARED = {
     //PY Backend tech
     {
       text: 'Django',
-      value: 60,
+      value: 80,
     },
     {
       text: 'Django Restful API',
@@ -93,6 +105,14 @@ const SHARED = {
       value: 60,
     },
     {
+      text: 'React navigation',
+      value: 1,
+    },
+    {
+      text: 'Redux saga',
+      value: 25,
+    },
+    {
       text: 'Redux thunk',
       value: 40,
     },
@@ -114,11 +134,15 @@ const SHARED = {
     },
     {
       text: 'ANT Design',
-      value: 50,
+      value: 40,
     },
     {
       text: 'Bootstrap',
-      value: 50,
+      value: 60,
+    },
+    {
+      text: 'Semantic UI',
+      value: 30,
     },
     {
       text: 'Formik',
@@ -188,7 +212,7 @@ const SHARED = {
     },
     {
       text: 'Apache',
-      value: 50,
+      value: 35,
     },
     {
       text: 'Gunicorn',
@@ -207,8 +231,12 @@ const SHARED = {
       value: 60,
     },
     {
+      text: 'Firebase',
+      value: 35,
+    },
+    {
       text: 'Docker',
-      value: 70,
+      value: 65,
     },
     {
       text: 'Netlify',
@@ -224,11 +252,11 @@ const SHARED = {
     },
     {
       text: 'Jupyter',
-      value: 80,
+      value: 65,
     },
     {
       text: 'Anaconda',
-      value: 80,
+      value: 65,
     },
     {
       text: 'Webpack',
@@ -243,9 +271,14 @@ const SHARED = {
       value: 20,
     },
     {
-      text: 'pyenv',
+      text: 'pip',
       value: 20,
     },
+    {
+      text: 'Jira',
+      value: 35,
+    },
+
     //Soft Skills
     {
       text: 'Project Management',

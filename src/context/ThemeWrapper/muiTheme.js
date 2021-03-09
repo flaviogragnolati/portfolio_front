@@ -1,8 +1,8 @@
 import { createMuiTheme } from '@material-ui/core';
 import { indigo, teal, orange } from '@material-ui/core/colors';
-import { Desktop } from '@styled-icons/fa-solid';
 
-const contrastThreshold = 3;
+import { defaults } from 'utils/config';
+const { colors } = defaults;
 
 const muiTheme = {
   light: {
@@ -30,36 +30,7 @@ const muiTheme = {
     },
     palette: {
       type: 'light',
-      primary: {
-        main: indigo[500],
-      },
-      secondary: {
-        main: orange['A400'],
-      },
-      error: {
-        light: '#e57373',
-        main: '#f44336',
-        dark: '#d32f2f',
-        contrastText: '#fff',
-      },
-      warning: {
-        light: '#ffb74d',
-        main: '#ff9800',
-        dark: '#f57c00',
-        contrastText: 'rgba(0, 0, 0, 0.87)',
-      },
-      info: {
-        light: '#64b5f6',
-        main: '#2196f3',
-        dark: '#1976d2',
-        contrastText: ' #fff',
-      },
-      success: {
-        light: '#81c784',
-        main: '#4caf50',
-        dark: '#388e3c',
-        contrastText: 'rgba(0, 0, 0, 0.87)',
-      },
+      ...colors,
     },
   },
   dark: {
@@ -87,12 +58,7 @@ const muiTheme = {
     },
     palette: {
       type: 'dark',
-      primary: {
-        main: indigo[500],
-      },
-      secondary: {
-        main: orange['A400'],
-      },
+      ...colors,
     },
   },
 };

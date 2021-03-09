@@ -1,13 +1,12 @@
-import { grey } from '@material-ui/core/colors';
+import { defaults } from 'utils/config';
+const { colors } = defaults;
 
 const appTheme = {
   light: {
-    main: '#fafafa',
-    grey: grey[500],
+    main: colors.main.light,
   },
   dark: {
-    main: '#0D0C1D',
-    hover: '#d05327',
+    main: colors.main.dark, //'#0D0C1D'
   },
 };
 

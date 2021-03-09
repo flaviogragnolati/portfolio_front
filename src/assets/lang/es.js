@@ -26,6 +26,7 @@ const ES = {
   About: {
     descriptionTitle: 'Un poco sobre mi...',
     description:
+      //I love clean code, learning new things, strong engineering culture,
       'Soy Full stack well developer, trabajo orientado a objetivos, estoy preparado para trabajar bajo presión y en entornos de cambios constantes. Desarrollo aplicaciones con código escalable, mantenible, limpio y debuggeable. ',
     aboutCards: [
       {

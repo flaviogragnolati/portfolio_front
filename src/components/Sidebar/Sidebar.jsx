@@ -20,7 +20,6 @@ import {
 import MenuIcon from '@material-ui/icons/Menu';
 
 // Custom components and hooks
-import SocialContact from './components/SocialContact';
 import SidebarItem from './components/SidebarItem';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import LangPicker from './components/LangPicker';
@@ -61,7 +60,7 @@ const useStyles = makeStyles((theme) => ({
 function Sidebar({ scrollAt, spy }, ref) {
   const classes = useStyles();
   const theme = useTheme();
-  const [mobile, desktop] = useScreenSize();
+  const [mobile, tablet, desktop] = useScreenSize();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [current, setCurrent] = useState('home');
 

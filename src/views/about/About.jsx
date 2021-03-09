@@ -53,7 +53,6 @@ function About() {
         container
         item
         xs={12}
-        md={12}
         direction="row"
         justify="center"
         alignItems="center"

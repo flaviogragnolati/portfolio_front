@@ -14,11 +14,11 @@ function Section({ id, title, children, ...props }, ref) {
         <Grid item>
           <SectionTitle title={title} />
         </Grid>
-        <Grid item xs={0} md={1} />
-        <Grid container item xs={12} md={10} spacing={5}>
+        <Grid item xs={0} md={1} xl={4} />
+        <Grid container item xs={12} md={10} xl={4} spacing={5}>
           {children}
         </Grid>
-        <Grid item xs={0} md={1} />
+        <Grid item xs={0} md={1} xl={4} />
       </Grid>
     </StyledSection>
   );

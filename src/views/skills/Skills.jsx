@@ -46,7 +46,6 @@ function Skills() {
     size = undefined;
   } else if (mobile || tablet.low) {
     size = [width - 0.15 * width, height - 0.08 * height];
-    console.log('size', size);
   }
   return (
     <Grid item xs={12}>

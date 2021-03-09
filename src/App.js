@@ -39,6 +39,7 @@ const App = () => {
   const classes = useStyles();
   const { spyItems, nodeRefs } = useSpy();
   const { home, about, skills, projects, contact } = spyItems;
+  const [tablet] = useScreenSize();
   const mdScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
   // const [mobile ] = useScreenSize();
 

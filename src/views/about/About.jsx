@@ -56,7 +56,8 @@ function About() {
         md={12}
         direction="row"
         justify="center"
-        alignItems="flex-start"
+        alignItems="center"
+        // spacing={5}
       >
         {aboutCards.map((card, idx) => (
           <Grid
@@ -68,10 +69,17 @@ function About() {
             lg={4}
             direction="row"
             justify="center"
-            // alignItems="stretch"
+            alignItems="stretch"
+            // spacing={10}
             // alignContent="stretch"
           >
-            <ResponsiveAboutCard key={idx} text={card.text} icon={card.icon} />
+            <Box mt={5} mr={2} ml={2} display="flex" flexGrow={1}>
+              <ResponsiveAboutCard
+                key={idx}
+                text={card.text}
+                icon={card.icon}
+              />
+            </Box>
           </Grid>
         ))}
       </Grid>

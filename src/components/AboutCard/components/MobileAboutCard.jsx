@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   height: 100%;
   min-height: 5rem;
   width: 100%;
+  /* min-width: 20rem; */
   position: relative;
   background-color: ${(p) => p.theme.palette.primary.dark};
   display: flex;
@@ -45,47 +46,21 @@ const ContentDiv = styled.div`
 
 function MobileAboutCard({ text, icon }) {
   return (
-    <Box mt={5} mr={2} ml={2}>
-      <Grid container item spacing={2}>
-        <Wrapper>
-          <Grid container item xs={4}>
-            <IconDiv>
-              <Icon icon={icon} size="3rem" />
-            </IconDiv>
-          </Grid>
-          <Grid container item xs={8}>
-            <ContentDiv>
-              <Typography variant="body1">{text}</Typography>
-            </ContentDiv>
-          </Grid>
-        </Wrapper>
-      </Grid>
-    </Box>
+    <Grid container item spacing={1}>
+      <Wrapper>
+        <Grid container item xs={4}>
+          <IconDiv>
+            <Icon icon={icon} size="3rem" />
+          </IconDiv>
+        </Grid>
+        <Grid container item xs={8}>
+          <ContentDiv>
+            <Typography variant="body1">{text}</Typography>
+          </ContentDiv>
+        </Grid>
+      </Wrapper>
+    </Grid>
   );
-  // return (
-  //   <Grid
-  //     container
-  //     item
-  //     // xs={12}
-  //     // direction="row"
-  //     // justify="center"
-  //     // alignItems="stretch"
-  //     spacing={0}
-  //   >
-  //     <Wrapper>
-  //       <Grid contianer item xs={4}>
-  //         <IconDiv>
-  //           <Icon icon={icon} size="3rem" />
-  //         </IconDiv>
-  //       </Grid>
-  //       <Grid container item xs={8}>
-  //         <ContentDiv>
-  //           <Typography variant="body1">{text}</Typography>
-  //         </ContentDiv>
-  //       </Grid>
-  //     </Wrapper>
-  //   </Grid>
-  // );
 }
 
 export default MobileAboutCard;

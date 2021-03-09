@@ -7,12 +7,12 @@ import useScreenSize from 'utils/useScreenSize';
 
 function ResponsiveAboutCard(props) {
   const [mobile, tablet, desktop] = useScreenSize();
-
+  console.log('tablet', tablet);
   let aboutCard;
 
-  if (desktop) {
+  if (desktop || tablet.high) {
     aboutCard = <DesktopAboutCard {...props} />;
-  } else if (mobile || tablet) {
+  } else if (mobile || tablet.low) {
     aboutCard = <MobileAboutCard {...props} />;
   }
   return <>{aboutCard}</>;

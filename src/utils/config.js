@@ -1,4 +1,6 @@
 import { langList } from 'assets/lang';
+import { indigo, teal, orange } from '@material-ui/core/colors';
+
 //defaults
 export const defaults = {
   lang: langList.spanish,
@@ -15,5 +17,9 @@ export const defaults = {
     communication: 'communication',
     problem: 'problem',
     responsible: 'responsible',
+  },
+  colors: {
+    primary: { main: indigo[500] },
+    secondary: { main: orange['A400'] },
   },
 };

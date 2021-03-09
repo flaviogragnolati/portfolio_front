@@ -64,10 +64,12 @@ function About() {
             item
             xs={12}
             sm={6}
-            md={4}
+            md={6}
+            lg={4}
             direction="row"
             justify="center"
-            alignItems="stretch"
+            // alignItems="stretch"
+            // alignContent="stretch"
           >
             <ResponsiveAboutCard key={idx} text={card.text} icon={card.icon} />
           </Grid>
@@ -83,7 +85,9 @@ function About() {
       >
         <Grid item xs={12}>
           <Box textAlign="center">
-            <Typography variant="h4">{stackTitle}</Typography>
+            <Typography variant="h4" color="inherit">
+              {stackTitle}
+            </Typography>
             <Typography variant="subtitle1" gutterBottom>
               {stackSubTitle}
             </Typography>

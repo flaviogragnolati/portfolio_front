@@ -1,5 +1,6 @@
 import { createMuiTheme } from '@material-ui/core';
 import { indigo, teal, orange } from '@material-ui/core/colors';
+import { Desktop } from '@styled-icons/fa-solid';
 
 const contrastThreshold = 3;
 

@@ -125,7 +125,7 @@ function Stack() {
       md: 3,
     };
     iconProps = { size: '6rem' };
-  } else if (tablet) {
+  } else if (tablet.all) {
     gridProps = {
       container: true,
       item: true,

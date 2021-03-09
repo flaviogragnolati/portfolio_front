@@ -96,7 +96,7 @@ function Projects() {
       <StyledCarousel
         naturalSlideWidth={w}
         naturalSlideHeight={
-          desktop ? w * ratio : tablet ? w * ratio : w * (ratio + 0.4)
+          desktop ? w * ratio : tablet.all ? w * ratio : w * (ratio + 0.4)
         }
         totalSlides={3}
         infinite={true}

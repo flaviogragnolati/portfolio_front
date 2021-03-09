@@ -169,6 +169,7 @@ const ES = {
       },
     ],
   },
+  Skills: {},
   Projects: {
     subtitle: 'Estos son algunos de los proyectos en los que he trabajado',
     endphrase: 'Si queres saber mas respecto de algun proyecto contactame',

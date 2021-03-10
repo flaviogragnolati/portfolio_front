@@ -39,9 +39,7 @@ const App = () => {
   const classes = useStyles();
   const { spyItems, nodeRefs } = useSpy();
   const { home, about, skills, projects, contact } = spyItems;
-  const [tablet] = useScreenSize();
-  const mdScreen = useMediaQuery((theme) => theme.breakpoints.down('sm'));
-  // const [mobile ] = useScreenSize();
+  const [mobile, tablet] = useScreenSize();
 
   const {
     Sidebar: { index },
@@ -68,10 +66,7 @@ const App = () => {
         <Section id="contact" title={index[4].text} ref={contact.ref}>
           <Contact />
         </Section>
-        {mdScreen && <Footer />}
-        {/* <Graph>
-          <BarGraph />
-        </Graph> */}
+        {(mobile || tablet.low) && <Footer />}
         <BackToTopBtn />
       </main>
     </div>

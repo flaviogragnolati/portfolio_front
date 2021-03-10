@@ -7,7 +7,6 @@ import useScreenSize from 'utils/useScreenSize';
 
 function ResponsiveAboutCard(props) {
   const [mobile, tablet, desktop] = useScreenSize();
-  console.log('tablet', tablet);
   let aboutCard;
 
   if (desktop || tablet.high) {

@@ -13,8 +13,8 @@ const useSpy = () => {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     let [ref, inView, entry, nodeRef] = useInView({
       root: null,
-      rootMargin: '10% 0% 0% 0%',
-      threshold: 0.25,
+      rootMargin: '50px 0% 0% 0%',
+      threshold: 0.3,
       initialInView: section === 'home' && true,
     });
     // add to compound object all observables, nodeRefs and setRefs

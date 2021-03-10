@@ -57,13 +57,12 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.main,
   },
 }));
-function Sidebar({ scrollAt, spy }, ref) {
+function Sidebar({ spy }, ref) {
   const classes = useStyles();
   const theme = useTheme();
   const [mobile, tablet, desktop] = useScreenSize();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [current, setCurrent] = useState('home');
-
   const {
     Sidebar: { index, logo },
   } = useTranslation();
@@ -110,6 +109,7 @@ function Sidebar({ scrollAt, spy }, ref) {
             item={item}
             current={current}
             setCurrent={setCurrent}
+            spy={spy}
           />
         ))}
         <Divider />
@@ -171,7 +171,6 @@ function Sidebar({ scrollAt, spy }, ref) {
               paper: classes.drawerPaper,
             }}
             variant="permanent"
-            open
           >
             {sidebarContent}
           </Drawer>

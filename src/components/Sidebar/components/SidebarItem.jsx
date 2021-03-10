@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect, useRef } from 'react';
 import { ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
 import HomeIcon from '@material-ui/icons/Home';
 import InfoIcon from '@material-ui/icons/Info';
@@ -7,10 +7,7 @@ import WorkIcon from '@material-ui/icons/Work';
 import ForumIcon from '@material-ui/icons/Forum';
 import { defaults } from 'utils/config';
 
-function SidebarItem(
-  { item, idx, current, setCurrent, iconProps, ...rest },
-  ref
-) {
+function SidebarItem({ item, current, setCurrent, spy, ...rest }, ref) {
   const { text, icon, id } = item;
   const { sections } = defaults;
   let Icon;
@@ -34,10 +31,19 @@ function SidebarItem(
       break;
   }
 
+  const listItemRef = useRef(null);
+
+  useEffect(() => {
+    if (spy[item.id].inView) {
+      setCurrent(item.id);
+    }
+  }, [spy, item.id, setCurrent]);
+
   const handleClick = (event) => {
     const section = event.currentTarget.getAttribute('section');
     if (sections.includes(section)) {
       setCurrent(section);
+      listItemRef.current.blur();
       ref.current.scrollIntoView({
         behavior: 'smooth',
       });
@@ -46,6 +52,7 @@ function SidebarItem(
 
   return (
     <ListItem
+      ref={listItemRef}
       button
       onClick={handleClick}
       selected={current === id}
@@ -53,7 +60,7 @@ function SidebarItem(
       {...rest}
     >
       <ListItemIcon>
-        <Icon {...iconProps} fontSize="small" />
+        <Icon fontSize="small" />
       </ListItemIcon>
       <ListItemText primary={text} />
     </ListItem>

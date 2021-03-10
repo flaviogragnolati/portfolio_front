@@ -43,7 +43,7 @@ function Contact() {
 
   return (
     <>
-      <Grid
+      {/* <Grid
         container
         item
         xs={12}
@@ -61,8 +61,8 @@ function Contact() {
           {splitSideText[1]}
         </Box>
         <p>{socialText}</p>
-        {/* <SocialContact /> */}
-      </Grid>
+        <SocialContact /> 
+      </Grid> */}
       <Grid
         container
         item

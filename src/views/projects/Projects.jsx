@@ -112,7 +112,7 @@ function Projects() {
       <StyledCarousel
         naturalSlideWidth={slideWidth}
         naturalSlideHeight={slideHeight}
-        totalSlides={3}
+        totalSlides={projects.length}
         infinite={true}
         visibleSlides={1}
       >

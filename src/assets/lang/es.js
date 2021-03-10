@@ -10,7 +10,6 @@ const ES = {
     ],
   },
   LangPicker: {
-    header: 'Lenguaje',
     langs: ['Español', 'English', 'Italiano'],
   },
   Main: {
@@ -27,7 +26,7 @@ const ES = {
     descriptionTitle: 'Un poco sobre mi...',
     description:
       //I love clean code, learning new things, strong engineering culture,
-      'Soy Full stack well developer, trabajo orientado a objetivos, estoy preparado para trabajar bajo presión y en entornos de cambios constantes. Desarrollo aplicaciones con código escalable, mantenible, limpio y debuggeable. ',
+      'Soy Full stack web developer con un fuerte cultura ingenieril que esta siempre aprendiendo. Trabajo orientado a objetivos, estoy preparado para trabajar bajo presión y en entornos de cambios constantes. Me gusta sesarrar aplicaciones con código escalable, mantenible, limpio y debuggeable. ',
     aboutCards: [
       {
         title: 'Trabajo en equipo',
@@ -68,16 +67,18 @@ const ES = {
   MoreAbout: {
     moreBtn: 'Mas acerca de mi',
     lessBtn: 'Menos acerca de mi',
+    subtitle: 'Mi experiencia previa y calificaciones',
     workTitle: 'Experiencia Laboral',
     educationTitle: 'Educación',
-    subtitle: 'Mi experiencia previa y calificaciones',
+    moreTooltip:
+      'Más información sobre mi experiencia laboral y formación académica previa.',
     education: [
       {
         school: 'HENRY Bootcamp',
         title: 'Fullstack Developer',
         type: 'Bootcamp',
         date: ['10/2020', '02/2021'],
-        description: '',
+        description: 'Fullstack web developer bootcamp basado en Node y React',
       },
       {
         school: 'University of Michigan - Coursera',
@@ -110,6 +111,13 @@ const ES = {
         gpa_oof: '10',
       },
       {
+        school: 'Academia Nacional de Ingeniería',
+        title: 'Premio a los mejores egresados de Ingeniería de Argentina',
+        type: 'Premio',
+        date: ['2011'],
+        description: '',
+      },
+      {
         school: 'UTN FRTDF',
         title: 'Ingeniero Industrial',
         type: 'Carrera de Grado',
@@ -129,12 +137,15 @@ const ES = {
         description: '',
       },
       {
-        company: 'Aghua del Fagnano',
+        company: 'Agua del Fagnano',
         sector: 'Empresa productora de agua mineral',
         website: 'www.aguadelfagnano.com',
         position: 'Director Tecnico',
         date: ['08/2018', '03/2019'],
-        description: '',
+        description:
+          'Responsable de la calidad del producto final y del proceso productivo. Encargado del laboratorio interno y externo.',
+        highlight:
+          'Rediseño del proceso productivo con el ojetivo de incrementar la eficiencia productivar y diminuir costos de producción',
       },
       {
         company: 'Tecnomyl',
@@ -142,7 +153,9 @@ const ES = {
         website: 'www.tecnomyl.com',
         position: 'Coordinador de I+D',
         date: ['01/2017', '08/2018'],
-        description: '',
+        description:
+          'Desarrollo de nuevas formulaciones & refoluacion de productos fitosanitarios, reingeniería de productos de competencia. Seguimiento de estudios de campo, análisis de envases y efectividad de formulaciones. Caracterizacion de propiedades fisicoquímicas mediante análisis cuantitativo instrumental.',
+        highlight: '',
       },
       {
         company: 'Total Austral',
@@ -150,7 +163,10 @@ const ES = {
         website: 'www.total.com',
         position: 'Ingeniero Well Performance',
         date: ['11/2015', '01/2017'],
-        description: '',
+        description:
+          'Monitoreo de parámetros de produccion y análisis de posibles escenarios para anticipar el comportamiento del pozo. Análisis PVT, con curas de eficiencia y manejo de arenas de producción. Ensayos de integridad de las instalaciones.',
+        highlight:
+          'Coordinación y ejecución de operaciones de SlickLine, WireLine, CoiledTubing, Acidizing, Fracking & Stimulation',
       },
       {
         company: 'Total Austral',
@@ -158,7 +174,10 @@ const ES = {
         website: 'www.total.com',
         position: 'Responsable Operaciones Especiales',
         date: ['02/2013', '11/2015'],
-        description: '',
+        description:
+          'Elaboración de procedimientos operaciones para ejecución de tareas únicas y rutinarias. Planificación, coordinación y ejecución de tareas de optiomización de operaciones de interveción e inspección de equipos.',
+        highlight:
+          'Commiisioning y start-up en diversos proyectos de ingeniería EPCC.',
       },
       {
         company: 'BGH',
@@ -166,23 +185,54 @@ const ES = {
         website: 'www.bgh.com.ar',
         position: 'Responsable de Proyectos RCM',
         date: ['02/2011', '02/2013'],
-        tasks: [''],
+        tasks: [
+          'Gestion integral de proyectos de manufactura de celulares para SONY, Motorola, Huawei y ZTE. Planificación anticipada de la calidad del producto, elaboración de FMEA y progrmaa de control estadístico de proceso.',
+        ],
+        highlight:
+          'Coordinación simultena de 6 proyectos, incluyendo cálculo y diseño de los medios de producción, instalación y configuración de los medios de control.',
       },
     ],
   },
   Skills: {
     subtitle:
       'Algunas de las tecnologías y herramientas con las que he trabajado...',
+    langSpecificSkills: [
+      //Soft Skills
+      {
+        text: 'Project Management',
+        value: 70,
+      },
+      {
+        text: 'Comunicacion eficaz',
+        value: 60,
+      },
+      {
+        text: 'Liderazgo',
+        value: 60,
+      },
+      {
+        text: 'Aprendizaje rapido',
+        value: 80,
+      },
+    ],
   },
   Projects: {
     subtitle: 'Estos son algunos de los proyectos en los que he trabajado',
-    endphrase: 'Si queres saber mas respecto de algun proyecto contactame',
+    endphrase:
+      'Si te interesa algún proyecto y queres saber mas respecto de algun proyecto no dudes en contactarme',
     projectStatus: {
       0: 'Prototipo',
       1: 'Desarrollo',
       2: 'Produccion',
       3: 'Finalizado',
       4: 'Cancelado',
+    },
+    tooltip: {
+      statusTooltip: 'Estado',
+      techStackMoreTooltip: '??',
+      codeTooltip: 'Ver código en Github',
+      webTooltip: 'Ver versión en vivo',
+      previewTooltip: 'Ver breve demo del proyecto',
     },
     card: {
       statusHeading: 'Estado',
@@ -196,11 +246,18 @@ const ES = {
         title: 'quizApp',
         subtitle: 'App de quizzes',
         description:
-          'Aplicacion web y movil para la gestion de quizzes. Herramienta para las instituciones educativas tercericen sus examenes',
+          'Aplicacion web y móvil para la gestion de quizzes. Herramienta para las instituciones educativas tercericen sus examenes',
         status: 2,
         tech: {
-          backend: ['express', 'sequelize', 'passport', 'oAuth', 'postgres'],
-          frontend: ['react', 'redux', 'formik', 'material-ui'],
+          backend: [
+            'express',
+            'sequelize',
+            'passport',
+            'oAuth',
+            'postgres',
+            'nodemailer',
+          ],
+          frontend: ['react', 'redux', 'formik', 'material-ui', 'axios'],
         },
         git: 'www.github.com',
         website: 'www.website.com',
@@ -210,13 +267,14 @@ const ES = {
       {
         img: '',
         title: 'wineStore',
-        subtitle: 'ecommrce de vinos',
-        description: 'Vinoteca web',
+        subtitle: 'e-commerce de vinos',
+        description: 'Sitio web para la venta de vinos.',
         status: 1,
         tech: {
           backend: [
             'express',
             'sequelize',
+            'mercadopago',
             'passport',
             'oAuth',
             'postgres',
@@ -240,18 +298,53 @@ const ES = {
       {
         img: '',
         title: 'Materia Ceramica',
-        subtitle: 'ecommerce, blog y membership',
-        description:
-          'Aplicacion web y movil para la gestion de quizzes. Herramienta para las instituciones educativas tercericen sus examenes',
+        subtitle: 'e-commerce, blog y membership',
+        description: 'Sitio web para emprendimiento de cerámica.',
         status: 0,
         tech: {
           backend: ['django', 'postgres', 'django-rest-framework'],
-          frontend: ['react', 'redux', 'formik', 'material-ui'],
+          frontend: ['react', 'redux', 'formik', 'material-ui', 'axios'],
         },
         git: 'www.github.com',
         website: 'www.website.com',
         preview: '',
-        date: '2321',
+        date: '2021',
+      },
+      {
+        img: '',
+        title: 'Quasar Analytic',
+        subtitle: 'Landing Page',
+        description: 'Lading page con formulario de contacto',
+        status: 0,
+        tech: {
+          backend: [
+            'django',
+            'postgres',
+            'django-rest-framework',
+            'php',
+            'php-pear',
+          ],
+          frontend: ['bootstrap', 'jQuery'],
+        },
+        git: 'www.github.com',
+        website: 'www.website.com',
+        preview: '',
+        date: '2021',
+      },
+      {
+        img: '',
+        title: 'SC2-API',
+        subtitle: 'API',
+        description: 'API del videjojuego Starcraft II.',
+        status: 0,
+        tech: {
+          backend: ['django', 'postgres', 'django-rest-framework'],
+          frontend: [''],
+        },
+        git: 'www.github.com',
+        website: 'www.website.com',
+        preview: '',
+        date: '2021',
       },
     ],
   },
@@ -264,7 +357,7 @@ const ES = {
       name: {
         name: 'name',
         label: 'Nombre',
-        requiredErrorMsg: 'Debe proveer un nombre',
+        requiredErrorMsg: 'El nombre es necesario',
       },
       subject: {
         name: 'subject',
@@ -279,7 +372,7 @@ const ES = {
       message: {
         name: 'message',
         label: 'Mensaje',
-        requiredErrorMsg: 'El cuerpo del mensaje es requerido',
+        requiredErrorMsg: 'Es necesario escribir un mensaje',
         minErrorMsg: 'El mensaje es demasiado corto',
       },
       submit: {
@@ -292,6 +385,11 @@ const ES = {
   Tooltips: {
     langBtn: 'Cambiar lenguaje',
     hireBtn: 'Contratame',
+    social: {
+      linkedin: 'Ir a mi LinkedIn',
+      git: 'Ver mi repositorio de GitHub',
+      mail: 'Enviarme un email',
+    },
   },
 };
 

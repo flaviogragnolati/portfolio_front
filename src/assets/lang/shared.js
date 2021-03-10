@@ -1,5 +1,5 @@
 const SHARED = {
-  tech: [
+  techSkills: [
     //Langs
     {
       text: 'JavaScript',
@@ -277,24 +277,6 @@ const SHARED = {
     {
       text: 'Jira',
       value: 35,
-    },
-
-    //Soft Skills
-    {
-      text: 'Project Management',
-      value: 70,
-    },
-    {
-      text: 'Comunicacion eficaz',
-      value: 60,
-    },
-    {
-      text: 'Liderazgo',
-      value: 60,
-    },
-    {
-      text: 'Aprendizaje rapido',
-      value: 80,
     },
   ],
 };

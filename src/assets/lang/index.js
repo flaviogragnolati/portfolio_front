@@ -1,5 +1,6 @@
 import EN from './en';
 import ES from './es';
+import SHARED from './shared';
 
 export const langList = {
   english: 'en',
@@ -7,8 +8,8 @@ export const langList = {
 };
 
 const translations = {
-  en: { ...EN },
-  es: { ...ES },
+  en: { ...EN, ...SHARED },
+  es: { ...ES, ...SHARED },
   it: {},
   fr: {},
 };

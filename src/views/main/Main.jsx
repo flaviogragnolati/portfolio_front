@@ -105,10 +105,10 @@ function Main(props, ref) {
             <TitleTwo variant="h1">{splitTitle[1]}</TitleTwo>
           </Box>
           <br></br>
-          <Subtitle type={type} />
+          {/* <Subtitle type={type} /> */}
           <br></br>
           {/* <HireMeButton text={hireBtnText} /> */}
-          <HireButton text={hireBtnText} />
+          {/* <HireButton text={hireBtnText} /> */}
           <ScrollDown ref={ref} />
           {/* <Social size="2rem" style={{ size: '2em' }} /> */}
         </ContentDiv>

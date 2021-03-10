@@ -43,7 +43,8 @@ function Skills() {
   const [mobile, tablet, desktop] = useScreenSize();
   const { width, height } = useWindowDimensions();
   const {
-    Skills: { subtitle },
+    Skills: { subtitle, langSpecificSkills },
+    techSkills,
   } = useTranslation();
 
   let size;
@@ -62,7 +63,7 @@ function Skills() {
       <Grid item xs={12}>
         <ReactWordcloud
           size={size}
-          words={shared.tech}
+          words={[...techSkills, ...langSpecificSkills]}
           options={options}
           callbacks={callbacks}
         />

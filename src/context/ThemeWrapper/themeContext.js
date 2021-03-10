@@ -14,7 +14,7 @@ export const useTheme = () => {
     throw new Error('Using theme context outside provider');
   }
   if (typeof theme !== 'string' || typeof toggleTheme !== 'function') {
-    throw new Error('theme is no a str or toggleTheme is not a func');
+    throw new Error('theme is not a str or toggleTheme is not a func');
   }
   return T;
 };

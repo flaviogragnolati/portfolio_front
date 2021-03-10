@@ -2,12 +2,16 @@ import React from 'react';
 import VerticalTimelineComponent from 'components/VerticalTimeline';
 import 'components/VerticalTimeline/VerticalTimeline.css';
 import 'components/VerticalTimeline/VerticalTimelineElement.css';
+import { FlagCheckered } from 'styled-icons/boxicons-solid';
 import { NetworkChart } from '@styled-icons/boxicons-regular/NetworkChart';
-import { Star } from '@styled-icons/boxicons-regular/Star';
+import { School } from 'styled-icons/ionicons-outline';
+import { Award, Star, CodeCurly } from 'styled-icons/boxicons-regular';
+import { University } from 'styled-icons/fa-solid';
 import styled from 'styled-components';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import useFullTheme from 'context/ThemeWrapper/useFullTheme';
+
 const { VerticalTimeline, VerticalTimelineElement } = VerticalTimelineComponent;
 
 const JobTitle = styled(Typography)`
@@ -17,6 +21,21 @@ const JobTitle = styled(Typography)`
 const Company = styled(Typography)`
   color: ${(p) => p.theme.palette.text.primary};
 `;
+
+const iconSelector = (icon) => {
+  switch (icon) {
+    case 'award':
+      return <Award />;
+    case 'university':
+      return <University />;
+    case 'course':
+      return <School />;
+    case 'bootcamp':
+      return <CodeCurly />;
+    default:
+      break;
+  }
+};
 
 function EducationTimeline() {
   const {
@@ -32,7 +51,7 @@ function EducationTimeline() {
       </Grid>
       <Grid item>
         <VerticalTimeline>
-          {education.map(({ school, title, type, date, description }) => (
+          {education.map(({ school, title, type, icon, date, description }) => (
             <VerticalTimelineElement
               contentStyle={{
                 background: t.palette.background.default,
@@ -47,7 +66,7 @@ function EducationTimeline() {
                 background: t.palette.primary.main,
                 color: '#fff',
               }}
-              icon={<NetworkChart />}
+              icon={iconSelector(icon)}
             >
               <JobTitle variant="h5">{title}</JobTitle>
               <Company variant="h6">{school}</Company>
@@ -58,8 +77,11 @@ function EducationTimeline() {
             </VerticalTimelineElement>
           ))}
           <VerticalTimelineElement
-            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-            icon={<Star />}
+            iconStyle={{
+              backgroundColor: t.palette.primary.light,
+              color: '#fff',
+            }}
+            icon={<FlagCheckered />}
           />
         </VerticalTimeline>
       </Grid>

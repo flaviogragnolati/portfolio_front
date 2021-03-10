@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, IconButton } from '@material-ui/core';
-
+import { CloseSquareOutline } from 'styled-icons/evaicons-outline';
 function CloseBtn({ handleClose }) {
   return (
     <Box
@@ -10,7 +10,9 @@ function CloseBtn({ handleClose }) {
       //   pt={1}
       pr={1}
     >
-      <IconButton onClick={handleClose}>x</IconButton>
+      <IconButton onClick={handleClose}>
+        <CloseSquareOutline size="2rem" />
+      </IconButton>
     </Box>
   );
 }

@@ -3,8 +3,8 @@ import VerticalTimelineComponent from 'components/VerticalTimeline';
 import 'components/VerticalTimeline/VerticalTimeline.css';
 import 'components/VerticalTimeline/VerticalTimelineElement.css';
 import { NetworkChart } from '@styled-icons/boxicons-regular/NetworkChart';
-import { School } from '@styled-icons/boxicons-solid/School';
-import { Star } from '@styled-icons/boxicons-regular/Star';
+import { FlagCheckered } from 'styled-icons/boxicons-solid';
+import { WorkOutline } from 'styled-icons/material-outlined';
 import styled from 'styled-components';
 import { Box, Grid, Typography } from '@material-ui/core';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
@@ -12,7 +12,7 @@ import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 const { VerticalTimeline, VerticalTimelineElement } = VerticalTimelineComponent;
 
 const JobTitle = styled(Typography)`
-  color: ${(p) => p.theme.palette.primary.light};
+  color: ${(p) => p.theme.palette.secondary.light};
 `;
 
 const Company = styled(Typography)`
@@ -46,10 +46,10 @@ function WorkTimeline() {
                 date={date}
                 dateStyle={{ color: t.palette.text.primary }}
                 iconStyle={{
-                  background: t.palette.primary.main,
+                  background: t.palette.secondary.main,
                   color: '#fff',
                 }}
-                icon={<NetworkChart />}
+                icon={<WorkOutline />}
               >
                 <JobTitle variant="h5">{position}</JobTitle>
                 <Company variant="h6">{company}</Company>
@@ -61,8 +61,11 @@ function WorkTimeline() {
             )
           )}
           <VerticalTimelineElement
-            iconStyle={{ background: 'rgb(16, 204, 82)', color: '#fff' }}
-            icon={<Star />}
+            iconStyle={{
+              backgroundColor: t.palette.secondary.ligth,
+              color: '#fff',
+            }}
+            icon={<FlagCheckered />}
           />
         </VerticalTimeline>
       </Grid>

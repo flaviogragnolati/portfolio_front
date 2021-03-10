@@ -7,12 +7,17 @@ import TechStack from './TechStack';
 import StatusChip from './StatusChip';
 
 const Card = styled.div`
-  width: 80%;
-  margin: 0.5rem auto;
+  width: 85%;
+  /* margin: 0.5rem auto; */
+  padding-top: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   /* overflow: hidden; */
 `;
 const CardHeader = styled.div`
-  height: 30vh;
+  height: 25vh;
   width: 100%;
   position: relative;
 `;
@@ -102,7 +107,6 @@ function MobileProjectCard({ project }) {
             >
               {subtitle}
             </SubTitle>
-
             <Description>
               <Typography variant="body1" display="block" align="left">
                 {description}

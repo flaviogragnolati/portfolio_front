@@ -38,7 +38,6 @@ const Front = styled.div`
 
 const Back = styled.div`
   position: relative;
-  background-color: #1b2d61;
   /* color: white; */
   display: flex;
   justify-content: center;

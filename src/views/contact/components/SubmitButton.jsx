@@ -8,12 +8,12 @@ const FillButton = styled(ButtonBase)`
   background: ${(p) => p.theme.palette.background.paper};
   border: 2px solid ${(p) => p.theme.palette.primary.light};
   font: inherit;
-  color: ${(p) => p.theme.palette.primary.contrastText}
+  color: ${(p) => p.theme.palette.text.primary};
   line-height: 1;
   border-radius: 5px;
   margin: 0.5rem 0;
   padding: 0.2rem 2rem;
-  width:100%;
+  width: 100%;
   transition: 0.5s ease;
   /* font-size:1.2rem; */
   &:hover {

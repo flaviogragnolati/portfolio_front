@@ -25,9 +25,6 @@ function Subtitle({ type }) {
         .pauseFor(300)
         .deleteChars(type[1].length)
         .typeString(type[2])
-        .pauseFor(300)
-        .deleteChars(type[2].length)
-        .typeString(type[3])
         .pauseFor(500)
         .start();
     }

@@ -1,7 +1,8 @@
 import { createContext, useContext } from 'react';
+import { defaults } from 'utils/config';
 
 export const ThemeContext = createContext({
-  theme: 'light',
+  theme: defaults.theme,
   toggleTheme: () => {},
 });
 

@@ -1,8 +1,9 @@
 import { createMuiTheme, responsiveFontSizes } from '@material-ui/core';
 import appTheme from './appTheme';
 import muiTheme, { overridesMuiTheme } from './muiTheme';
+import { defaults } from 'utils/config';
 
-const applyTheme = (theme = 'light') => {
+const applyTheme = (theme = defaults.theme) => {
   let fullTheme;
 
   if (theme === 'dark') {

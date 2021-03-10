@@ -3,6 +3,7 @@ import { indigo, grey, orange } from '@material-ui/core/colors';
 
 //defaults
 export const defaults = {
+  theme: 'dark',
   lang: langList.spanish,
   sections: ['home', 'about', 'skills', 'projects', 'contact'],
   screens: Object.freeze({

@@ -1,13 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import {
-  Box,
-  Button,
-  Container,
-  Grid,
-  Paper,
-  Typography,
-} from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 import ExpandAbout from './components/ExpandAbout';
 import CVButton from './components/CVButton';
 import Stack from './components/Stack';
@@ -30,7 +23,9 @@ function About() {
     <>
       <Grid item xs={12} md={8}>
         <Box textAlign="center">
-          <Typography variant="h6">{description}</Typography>
+          <Typography variant="h6" color="textPrimary">
+            {description}
+          </Typography>
         </Box>
       </Grid>
       <Grid
@@ -99,10 +94,10 @@ function About() {
       >
         <Grid item xs={12}>
           <Box textAlign="center">
-            <Typography variant="h4" color="inherit">
+            <Typography variant="h4" color="textPrimary">
               {stackTitle}
             </Typography>
-            <Typography variant="subtitle1" gutterBottom>
+            <Typography variant="subtitle1" color="textSecondary" gutterBottom>
               {stackSubTitle}
             </Typography>
           </Box>
@@ -132,19 +127,6 @@ function About() {
         <ExpandAbout />
       </Grid>
     </>
-
-    //     <Grid item>
-    //       <Box textAlign="center">
-    //         <Typography variant="h4">{stackTitle}</Typography>
-    //         <Typography variant="subtitle1" gutterBottom>
-    //           {stackSubTitle}
-    //         </Typography>
-    //       </Box>
-    //     </Grid>
-    //   <Stack />
-    //   </Grid> */}
-    //   {/* <ExpandAbout /> */}
-    // </Grid>
   );
 }
 

@@ -17,9 +17,8 @@ const ES = {
     hireBtnText: 'Contratame!',
     type: [
       'Fullstack Web Developer, ',
-      'orientado a objetivos',
-      'codigo limpio',
-      'codigo DRY',
+      'aunque tambien Ingeniero Químico...',
+      'y tambien, Ingeniero Industrial',
     ],
   },
   About: {

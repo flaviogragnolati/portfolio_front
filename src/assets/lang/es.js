@@ -139,6 +139,7 @@ const ES = {
         sector: 'Tecnologia y Ciencia de Datos',
         website: 'www.quasaranalytic.com',
         position: 'Fundador',
+        icon: 'tech',
         date: ['03/2019', 'Present'],
         description: '',
       },
@@ -147,6 +148,7 @@ const ES = {
         sector: 'Empresa productora de agua mineral',
         website: 'www.aguadelfagnano.com',
         position: 'Director Tecnico',
+        icon: 'chem',
         date: ['08/2018', '03/2019'],
         description:
           'Responsable de la calidad del producto final y del proceso productivo. Encargado del laboratorio interno y externo.',
@@ -158,6 +160,7 @@ const ES = {
         sector: 'Empresa productora de fitosanitarios',
         website: 'www.tecnomyl.com',
         position: 'Coordinador de I+D',
+        icon: 'chem',
         date: ['01/2017', '08/2018'],
         description:
           'Desarrollo de nuevas formulaciones & refoluacion de productos fitosanitarios, reingeniería de productos de competencia. Seguimiento de estudios de campo, análisis de envases y efectividad de formulaciones. Caracterizacion de propiedades fisicoquímicas mediante análisis cuantitativo instrumental.',
@@ -168,6 +171,7 @@ const ES = {
         sector: 'Empresa operadora de petróleo y gas',
         website: 'www.total.com',
         position: 'Ingeniero Well Performance',
+        icon: 'oil',
         date: ['11/2015', '01/2017'],
         description:
           'Monitoreo de parámetros de produccion y análisis de posibles escenarios para anticipar el comportamiento del pozo. Análisis PVT, con curas de eficiencia y manejo de arenas de producción. Ensayos de integridad de las instalaciones.',
@@ -179,6 +183,7 @@ const ES = {
         sector: 'Empresa operadora de petróleo y gas',
         website: 'www.total.com',
         position: 'Responsable Operaciones Especiales',
+        icon: 'oil',
         date: ['02/2013', '11/2015'],
         description:
           'Elaboración de procedimientos operaciones para ejecución de tareas únicas y rutinarias. Planificación, coordinación y ejecución de tareas de optiomización de operaciones de interveción e inspección de equipos.',
@@ -190,6 +195,7 @@ const ES = {
         sector: 'Empresa productora de electronica de consumo',
         website: 'www.bgh.com.ar',
         position: 'Responsable de Proyectos RCM',
+        icon: 'factory',
         date: ['02/2011', '02/2013'],
         tasks: [
           'Gestion integral de proyectos de manufactura de celulares para SONY, Motorola, Huawei y ZTE. Planificación anticipada de la calidad del producto, elaboración de FMEA y progrmaa de control estadístico de proceso.',

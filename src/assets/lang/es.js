@@ -170,7 +170,10 @@ const ES = {
       },
     ],
   },
-  Skills: {},
+  Skills: {
+    subtitle:
+      'Algunas de las tecnologías y herramientas con las que he trabajado...',
+  },
   Projects: {
     subtitle: 'Estos son algunos de los proyectos en los que he trabajado',
     endphrase: 'Si queres saber mas respecto de algun proyecto contactame',

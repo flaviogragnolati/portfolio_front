@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import ReactWordcloud from 'react-wordcloud';
 import shared from 'assets/lang/shared';
 
@@ -7,6 +7,7 @@ import { indigo, grey, orange } from '@material-ui/core/colors';
 
 import useScreenSize from 'utils/useScreenSize';
 import useWindowDimensions from 'utils/useWindowDimensions';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 
 const options = {
   // colors: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'],
@@ -41,6 +42,10 @@ const callbacks = {
 function Skills() {
   const [mobile, tablet, desktop] = useScreenSize();
   const { width, height } = useWindowDimensions();
+  const {
+    Skills: { subtitle },
+  } = useTranslation();
+
   let size;
   if (desktop || tablet.high) {
     size = undefined;
@@ -48,14 +53,21 @@ function Skills() {
     size = [width - 0.15 * width, height - 0.08 * height];
   }
   return (
-    <Grid item xs={12}>
-      <ReactWordcloud
-        size={size}
-        words={shared.tech}
-        options={options}
-        callbacks={callbacks}
-      />
-    </Grid>
+    <>
+      <Grid item xs={12}>
+        <Typography variant="subtitle1" gutterBottom>
+          {subtitle}
+        </Typography>
+      </Grid>
+      <Grid item xs={12}>
+        <ReactWordcloud
+          size={size}
+          words={shared.tech}
+          options={options}
+          callbacks={callbacks}
+        />
+      </Grid>
+    </>
   );
 }
 

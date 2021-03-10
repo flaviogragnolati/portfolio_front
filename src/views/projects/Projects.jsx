@@ -89,14 +89,19 @@ function Projects() {
 
   const { height, width } = useWindowDimensions();
   const ratio = height / width;
-  const w = width - (10 % width);
+  const w = width - 0.7 * width;
   return (
     <>
       Looking for a custom job? Click here to contact me! 👋
       <StyledCarousel
         naturalSlideWidth={w}
         naturalSlideHeight={
-          desktop ? w * ratio : tablet.all ? w * ratio : w * (ratio + 0.4)
+          w * ratio
+          // desktop || tablet.high
+          //   ? w * ratio
+          //   : tablet.low
+          //   ? w * ratio
+          //   : w * (ratio + 0.4)
         }
         totalSlides={3}
         infinite={true}

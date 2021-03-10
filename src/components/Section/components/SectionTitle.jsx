@@ -23,10 +23,13 @@ const Title = styled(Typography)`
     content: '';
     position: absolute;
     width: 50%;
-    height: 1px;
+    height: 5px;
     bottom: -5%;
     left: 25%;
-    border-bottom: 3px solid ${(p) => p.theme.palette.secondary.light};
+    background: ${(p) => p.theme.palette.secondary.light};
+    border-radius: 3px;
+    /* border-bottom: 3px solid ${(p) => p.theme.palette.secondary.light};
+    border-radius: 3px; */
   }
 `;
 

@@ -4,6 +4,7 @@ import img from 'assets/img/project1.jpg';
 import StatusChip from '../components/StatusChip';
 import TechStack from '../components/TechStack';
 import Icons from '../components/Icons';
+import { Typography } from '@material-ui/core';
 
 const hoverBg = `rgba(150, 150, 150, 0.4)`;
 //Hover in Left Div with tags
@@ -97,7 +98,7 @@ const Description = styled.div`
     }
   }
 `;
-const DescriptionText = styled.p`
+const DescriptionText = styled(Typography)`
   color: ${(p) => p.theme.palette.text.secondary};
   position: relative;
   margin: 1rem 0 0;
@@ -112,15 +113,15 @@ const DescriptionText = styled.p`
     border-radius: 3px;
   }
 `;
-const Title = styled.h3`
+const Title = styled(Typography)`
   line-height: 1;
-  margin: 0;
-  font-size: 1.7rem;
+  margin-top: 0.5rem;
+  /* font-size: 1.7rem; */
   color: ${(p) => p.theme.palette.text.primary};
 `;
-const SubTitle = styled.h4`
-  font-size: 1rem;
-  font-weight: 300;
+const SubTitle = styled(Typography)`
+  /* font-size: 1rem; */
+  font-weight: 400;
   text-transform: uppercase;
   color: ${(p) => p.theme.palette.text.secondary};
   margin-top: 15px;
@@ -140,23 +141,23 @@ const Links = styled.div`
   padding: 0.2rem;
 `;
 
-const More = styled.p`
-  text-align: right;
-  color: ${(p) => p.theme.palette.secondary.main};
-  /* display: inline-block;
-  position: relative; */
-  &:after {
-    content: '>';
-    margin-left: -10px;
-    opacity: 0;
-    vertical-align: middle;
-    transition: margin 0.3s, opacity 0.3s;
-  }
-  &:hover:after {
-    margin-left: 5px;
-    opacity: 1;
-  }
-`;
+// const More = styled.p`
+//   text-align: right;
+//   color: ${(p) => p.theme.palette.secondary.main};
+//   /* display: inline-block;
+//   position: relative; */
+//   &:after {
+//     content: '>';
+//     margin-left: -10px;
+//     opacity: 0;
+//     vertical-align: middle;
+//     transition: margin 0.3s, opacity 0.3s;
+//   }
+//   &:hover:after {
+//     margin-left: 5px;
+//     opacity: 1;
+//   }
+// `;
 
 function DesktopProjectCard({ project }) {
   const {
@@ -182,9 +183,9 @@ function DesktopProjectCard({ project }) {
       </Meta>
       <Description>
         <StatusChip status={status} size="small" />
-        <Title>{title}</Title>
-        <SubTitle>{subtitle}</SubTitle>
-        <DescriptionText>{description}</DescriptionText>
+        <Title variant="h3">{title}</Title>
+        <SubTitle variant="subtitle1">{subtitle}</SubTitle>
+        <DescriptionText variant="body1">{description}</DescriptionText>
         <Links>
           <Icons git={git} website={website} preview={preview} />
           {/* <More>Preview: {preview}</More> */}

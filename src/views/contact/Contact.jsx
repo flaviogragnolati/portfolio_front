@@ -1,11 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Box, Button, Grid, Paper } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import { getFormLang } from './components/contactForm';
-import SocialContact from './components/SocialContact';
 import { TextField } from 'formik-material-ui';
-import styled from 'styled-components';
+import SubmitButton from './components/SubmitButton';
 
 const StyledTextField = styled(TextField)`
   margin-top: 0.5rem;
@@ -115,17 +115,18 @@ function Contact() {
               required
             />
             <br></br>
-            <Box
-              display="flex"
-              flexGrow="1"
-              justifyContent="flex-end"
-              pt={2}
-              pb={2}
-            >
-              <SubmitBtn type="submit" variant="contained" size="lg">
-                {labels.submit}
-              </SubmitBtn>
-            </Box>
+            <Grid container item xs={12} sm={6}>
+              <Box
+                display="flex"
+                flexDirection="row"
+                flexGrow={1}
+                // justifyContent="flex-end"
+                pt={2}
+                pb={2}
+              >
+                <SubmitButton type="submit">{labels.submit}</SubmitButton>
+              </Box>
+            </Grid>
           </Form>
         </Formik>
       </Grid>

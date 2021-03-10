@@ -63,7 +63,7 @@ const App = () => {
           <Skills />
         </Section>
         <Section id="projects" title={index[3].text} ref={projects.ref}>
-          {/* <Projects /> */}
+          <Projects />
         </Section>
         <Section id="contact" title={index[4].text} ref={contact.ref}>
           <Contact />

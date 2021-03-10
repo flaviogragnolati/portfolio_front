@@ -96,7 +96,7 @@ export const overridesMuiTheme = {
    * tablet.all [720,1280)
    *  tablet.low [720,1024)
    *  tablet.high [1024,1280)
-   * desktop [2160,infinity) keep FHD as lg screen
+   * desktop [1280,infinity) keep FHD as lg screen
    */
   breakpoints: {
     values: {

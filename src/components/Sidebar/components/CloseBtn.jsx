@@ -8,7 +8,7 @@ function CloseBtn({ handleClose }) {
       flexDirection="row"
       justifyContent="flex-end"
       //   pt={1}
-      pr={1}
+      // pr={1}
     >
       <IconButton onClick={handleClose}>
         <CloseSquareOutline size="2rem" />

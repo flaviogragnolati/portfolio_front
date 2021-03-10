@@ -16,6 +16,7 @@ import Footer from 'components/Footer';
 import useScreenSize from 'utils/useScreenSize';
 import { defaults } from 'utils/config';
 import styled from 'styled-components';
+import TestWord from './TestWord';
 const { sections } = defaults;
 
 const useStyles = makeStyles((theme) => ({
@@ -78,6 +79,9 @@ const App = () => {
         <Section id="contact" title={index[4].text} ref={contact.ref}>
           <Contact />
         </Section>
+        {/* <Section>
+          <TestWord />
+        </Section> */}
         {(mobile || tablet.low) && <Footer />}
         <BackToTopBtn />
       </main>

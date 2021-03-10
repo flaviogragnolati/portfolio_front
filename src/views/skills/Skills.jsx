@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback, useMemo } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import ReactWordcloud from 'react-wordcloud';
 import shared from 'assets/lang/shared';
@@ -20,7 +20,7 @@ const options = {
     orange['A700'],
     grey[400],
   ],
-  enableOptimizations: true,
+  enableOptimizations: false,
   enableTooltip: false,
   deterministic: false,
   padding: 3.5,
@@ -30,7 +30,7 @@ const options = {
   fontWeight: 'normal',
   scale: 'sqrt',
   spiral: 'archimedean',
-  transitionDuration: 1500,
+  transitionDuration: 1000,
   rotations: 0,
   rotationAngles: [-25, 25],
 };
@@ -47,12 +47,25 @@ function Skills() {
     techSkills,
   } = useTranslation();
 
-  let size;
-  if (desktop || tablet.high) {
-    size = undefined;
-  } else if (mobile || tablet.low) {
-    size = [width - 0.15 * width, height - 0.08 * height];
-  }
+  const resize = (size, mobile, tablet, desktop) => {
+    let memoSize;
+
+    if (desktop || tablet.high) {
+      size = undefined;
+    } else if (mobile || tablet.low) {
+      size = [width - 0.15 * width, height - 0.08 * height];
+    }
+    return memoSize;
+  };
+  const resizeCb = useCallback(resize, []);
+
+  const memoSize = useMemo(() => resizeCb(mobile, tablet, desktop), [
+    mobile,
+    tablet,
+    desktop,
+    resizeCb,
+  ]);
+
   return (
     <>
       <Grid item xs={12}>
@@ -62,7 +75,7 @@ function Skills() {
       </Grid>
       <Grid item xs={12}>
         <ReactWordcloud
-          size={size}
+          size={memoSize}
           words={[...techSkills, ...langSpecificSkills]}
           options={options}
           callbacks={callbacks}

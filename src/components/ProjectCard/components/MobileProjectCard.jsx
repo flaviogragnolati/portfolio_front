@@ -97,7 +97,6 @@ function MobileProjectCard({ project }) {
             <StatusChip status={status} size="small" />
             <Title variant="h3" display="block" noWrap={true} align="left">
               {title}
-              {title}
             </Title>
             <SubTitle
               variant="subtitle1"
@@ -109,21 +108,6 @@ function MobileProjectCard({ project }) {
             </SubTitle>
             <Description>
               <Typography variant="body1" display="block" align="left">
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
-                {description}
                 {description}
               </Typography>
             </Description>

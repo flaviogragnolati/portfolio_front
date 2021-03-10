@@ -9,11 +9,11 @@ import {
   Django as _Django,
   Docker as _Docker,
 } from '@styled-icons/simple-icons';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Grid } from '@material-ui/core';
 import useScreenSize from 'utils/useScreenSize';
 
-const iconProps = {
+const iconStyle = {
   padding: '5px',
   margin: '2rem',
   'border-radius': '10px',
@@ -24,7 +24,12 @@ const iconHoverProps = {
 };
 
 const Mongodb = styled(_Mongodb)`
-  ${{ ...iconProps }};
+  ${(p) =>
+    p.theme.themeName === 'light' &&
+    css`
+      color: ${(p) => p.theme.palette.text.secondary};
+    `};
+  ${{ ...iconStyle }};
   &:hover {
     color: #3fa037;
     background-color: #3f3e42;
@@ -32,7 +37,12 @@ const Mongodb = styled(_Mongodb)`
   }
 `;
 const Express = styled(_Express)`
-  ${{ ...iconProps }};
+  ${(p) =>
+    p.theme.themeName === 'light' &&
+    css`
+      color: ${(p) => p.theme.palette.text.secondary};
+    `};
+  ${{ ...iconStyle }};
   &:hover {
     color: white;
     background-color: #cd7871;
@@ -40,7 +50,12 @@ const Express = styled(_Express)`
   }
 `;
 const ReactLogo = styled(_ReactLogo)`
-  ${{ ...iconProps }};
+  ${(p) =>
+    p.theme.themeName === 'light' &&
+    css`
+      color: ${(p) => p.theme.palette.text.secondary};
+    `};
+  ${{ ...iconStyle }};
   &:hover {
     color: #61dbfb;
     background-color: #1f1f1f;
@@ -48,7 +63,12 @@ const ReactLogo = styled(_ReactLogo)`
   }
 `;
 const NodeDotJs = styled(_NodeDotJs)`
-  ${{ ...iconProps }};
+  ${(p) =>
+    p.theme.themeName === 'light' &&
+    css`
+      color: ${(p) => p.theme.palette.text.secondary};
+    `};
+  ${{ ...iconStyle }};
   &:hover {
     color: #3c873a;
     background-color: #303030;
@@ -56,7 +76,12 @@ const NodeDotJs = styled(_NodeDotJs)`
   }
 `;
 const Python = styled(_Python)`
-  ${{ ...iconProps }};
+  ${(p) =>
+    p.theme.themeName === 'light' &&
+    css`
+      color: ${(p) => p.theme.palette.text.secondary};
+    `};
+  ${{ ...iconStyle }};
   &:hover {
     color: #ffd43b;
     background-color: #646464;
@@ -64,7 +89,12 @@ const Python = styled(_Python)`
   }
 `;
 const Postgresql = styled(_Postgresql)`
-  ${{ ...iconProps }};
+  ${(p) =>
+    p.theme.themeName === 'light' &&
+    css`
+      color: ${(p) => p.theme.palette.text.secondary};
+    `};
+  ${{ ...iconStyle }};
   &:hover {
     color: #336791;
     background-color: #848484;
@@ -72,43 +102,17 @@ const Postgresql = styled(_Postgresql)`
   }
 `;
 const Django = styled(_Django)`
-  ${{ ...iconProps }};
+  ${(p) =>
+    p.theme.themeName === 'light' &&
+    css`
+      color: ${(p) => p.theme.palette.text.secondary};
+    `};
+  ${{ ...iconStyle }};
   &:hover {
     color: white;
     background-color: #103e2e;
     ${{ ...iconHoverProps }};
   }
-`;
-
-const Databases = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-const Backend = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-const Lang = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-const Frontend = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-const Wrapper = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 `;
 
 function Stack() {

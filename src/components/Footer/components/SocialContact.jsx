@@ -109,17 +109,29 @@ const MailDiv = styled.div`
   }
 `;
 
-function Social() {
+function Social({ links }) {
+  const { linkedin, github, mail, subject } = links;
   return (
     <SocialDiv variant="outlined">
       <LinkedinDiv>
-        <LinkedinIcon size="2.5rem" />
+        <a href={linkedin}>
+          <LinkedinIcon size="2.5rem" />
+        </a>
       </LinkedinDiv>
       <GitDiv>
-        <GithubIcon size="2.4rem" />
+        <a href={github}>
+          <GithubIcon size="2.4rem" />
+        </a>
       </GitDiv>
       <MailDiv>
-        <MailIcon size="2.5rem" />
+        <a
+          // onClick={`javascript:window.open('mailto:${mail}?subject=${subject}', 'mail');event.preventDefault()`}
+          target="_blank"
+          rel="noreferrer"
+          href={`mailto:${mail}?subject=${subject}`}
+        >
+          <MailIcon size="2.5rem" />
+        </a>
       </MailDiv>
     </SocialDiv>
   );

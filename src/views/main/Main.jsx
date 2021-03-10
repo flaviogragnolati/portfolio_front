@@ -6,7 +6,6 @@ import argonath from 'assets/img/argonathj.jpg';
 import Subtitle from './components/Subtitle';
 import HireMeButton from './components/HireMeButton';
 import ScrollDown from './components/ScrollDown';
-import Social from './components/Social';
 import HireButton from './components/HireButton';
 import { Box, Typography } from '@material-ui/core';
 import useScreenSize from 'utils/useScreenSize';

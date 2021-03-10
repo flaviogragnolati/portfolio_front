@@ -387,7 +387,15 @@ const ES = {
       },
     },
   },
-  Footer: { copy: 'Copyright 2021 FG' },
+  Footer: {
+    copy: 'Copywrite 2021 FG',
+    socialLinks: {
+      linkedin: 'https://www.linkedin.com/in/flavio-gragnolati/',
+      github: 'https://github.com/flaviogragnolati',
+      mail: 'flavio.gragnolati@gmail.com',
+      subject: 'Hola!',
+    },
+  },
   Tooltips: {
     langBtn: 'Cambiar lenguaje',
     hireBtn: 'Contratame',

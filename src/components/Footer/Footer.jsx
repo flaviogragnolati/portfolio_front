@@ -1,4 +1,5 @@
 import { Box, Typography } from '@material-ui/core';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 import React from 'react';
 import styled from 'styled-components';
 import SocialContact from './components/SocialContact';
@@ -13,11 +14,14 @@ const FooterWrapper = styled.div`
 `;
 
 function Footer() {
+  const {
+    Footer: { copy, socialLinks },
+  } = useTranslation();
   return (
     <FooterWrapper>
-      <SocialContact />
+      <SocialContact links={socialLinks} />
       <Typography variant="caption" display="block" gutterBottom>
-        Copywrite 2021 FG
+        {copy}
       </Typography>
     </FooterWrapper>
   );

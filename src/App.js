@@ -14,10 +14,7 @@ import Projects from 'views/projects';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import Footer from 'components/Footer';
 import useScreenSize from 'utils/useScreenSize';
-import { defaults } from 'utils/config';
 import styled from 'styled-components';
-import TestWord from './TestWord';
-const { sections } = defaults;
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -62,26 +59,25 @@ const App = () => {
 
       <main className={classes.content}>
         <div id="top-anchor" />
-        {/* <Div> */}
         <section id="home" title={index[0].text} ref={home.ref}>
           <Main id="home" ref={nodeRefs.about} />
         </section>
-        {/* </Div> */}
+        {/* <div ref={about.ref} /> */}
         <Section id="about" title={index[1].text} ref={about.ref}>
           <About />
         </Section>
+        {/* <div ref={skills.ref} /> */}
         <Section id="skills" title={index[2].text} ref={skills.ref}>
           <Skills />
         </Section>
+        {/* <div ref={projects.ref} /> */}
         <Section id="projects" title={index[3].text} ref={projects.ref}>
           <Projects />
         </Section>
+        {/* <div ref={contact.ref} /> */}
         <Section id="contact" title={index[4].text} ref={contact.ref}>
           <Contact />
         </Section>
-        {/* <Section>
-          <TestWord />
-        </Section> */}
         {(mobile || tablet.low) && <Footer />}
         <BackToTopBtn />
       </main>

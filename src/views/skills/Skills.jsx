@@ -35,10 +35,6 @@ const options = {
   rotationAngles: [-25, 25],
 };
 
-const callbacks = {
-  // getWordColor: (word) => (word.value > 50 ? 'blue' : 'red'),
-};
-
 function Skills() {
   const [mobile, tablet, desktop] = useScreenSize();
   const { width, height } = useWindowDimensions();
@@ -47,27 +43,36 @@ function Skills() {
     techSkills,
   } = useTranslation();
 
-  const resize = (size, mobile, tablet, desktop) => {
-    let memoSize;
+  // const resize = (size, mobile, tablet, desktop) => {
+  //   let memoSize;
 
-    if (desktop || tablet.high) {
-      size = undefined;
-    } else if (mobile || tablet.low) {
-      size = [width - 0.15 * width, height - 0.08 * height];
-    }
-    return memoSize;
-  };
-  const resizeCb = useCallback(resize, []);
+  //   if (desktop || tablet.high) {
+  //     memoSize = undefined;
+  //   } else if (mobile || tablet.low) {
+  //     memoSize = [width - 0.15 * width, height - 0.08 * height];
+  //   }
+  //   return memoSize;
+  // };
+  // const resizeCb = useCallback(resize, [height, width]);
 
-  const memoSize = useMemo(() => resizeCb(mobile, tablet, desktop), [
-    mobile,
-    tablet,
-    desktop,
-    resizeCb,
-  ]);
+  // const memoSize = useMemo(() => resizeCb(mobile, tablet, desktop), [
+  //   mobile,
+  //   tablet,
+  //   desktop,
+  //   resizeCb,
+  // ]);
+
+  let size;
+
+  if (desktop || tablet.high) {
+    size = undefined;
+  } else if (mobile || tablet.low) {
+    size = [width - 0.15 * width, height - 0.08 * height];
+  }
 
   return (
     <>
+      {console.log('rerendering')}
       <Grid item xs={12}>
         <Typography variant="subtitle1" gutterBottom>
           {subtitle}
@@ -75,10 +80,9 @@ function Skills() {
       </Grid>
       <Grid item xs={12}>
         <ReactWordcloud
-          size={memoSize}
+          size={size}
           words={[...techSkills, ...langSpecificSkills]}
           options={options}
-          callbacks={callbacks}
         />
       </Grid>
     </>

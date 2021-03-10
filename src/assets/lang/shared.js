@@ -126,8 +126,12 @@ const SHARED = {
       value: 40,
     },
     {
-      text: 'SASS/LESS',
+      text: 'Tailwind',
       value: 35,
+    },
+    {
+      text: 'SASS/LESS',
+      value: 30,
     },
     {
       text: 'normalizr',

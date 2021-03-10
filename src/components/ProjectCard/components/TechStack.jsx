@@ -52,8 +52,8 @@ function TechStack({ tech }) {
 
   let techStack;
 
-  const [mobile, desktop] = useScreenSize();
-  const screen = { mobile, desktop };
+  const [mobile, tablet, desktop] = useScreenSize();
+  const screen = { mobile, tablet, desktop };
 
   if (mobile) {
     techStack = (
@@ -74,6 +74,31 @@ function TechStack({ tech }) {
               <StyledChip color="secondary" label={tag} size="small" />
             ))}
             <StyledChip color="secondary" label={'...'} size="small" />
+          </span>
+        </Backend>
+      </TechStackDiv>
+    );
+  } else if (tablet.all) {
+    techStack = (
+      <TechStackDiv screen={screen}>
+        <Typography variant="h5" gutterBottom>
+          {techStackHeading}
+        </Typography>
+        <Frontend variant="h6" gutterBottom>
+          Frontend:{' '}
+          <span>
+            {tech.frontend.map((tag, idx) => {
+              return <StyledChip color="primary" label={tag} desktop />;
+            })}
+          </span>
+        </Frontend>
+        <br />
+        <Backend variant="h6">
+          Backend:{' '}
+          <span>
+            {tech.backend.map((tag) => (
+              <StyledChip color="secondary" label={tag} desktop />
+            ))}
           </span>
         </Backend>
       </TechStackDiv>

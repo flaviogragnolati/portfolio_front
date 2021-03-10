@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useMediaQuery } from '@material-ui/core';
+import { Grid, useMediaQuery } from '@material-ui/core';
 import {
   CarouselProvider,
   Slider,
@@ -88,21 +88,30 @@ function Projects() {
   const [mobile, tablet, desktop] = useScreenSize();
 
   const { height, width } = useWindowDimensions();
-  const ratio = height / width;
-  const w = width - 0.7 * width;
+
+  const ratio = width / height;
+
+  let slideWidth, slideHeight;
+  if (0.9 <= ratio && ratio <= 1.1) {
+    console.log('ratio between 0.9,1.1', ratio);
+    slideWidth = 1;
+    slideHeight = 1;
+  } else if (ratio > 1.1) {
+    console.log('ratio  >1.1', ratio);
+    slideWidth = desktop ? 3 : tablet.high ? 3 : tablet.low ? 2 : 1;
+    slideHeight = desktop ? 1.25 : tablet.high ? 2.5 : tablet.low ? 1.3 : 2.45;
+  } else {
+    console.log('ratio  <0.9', ratio);
+    slideWidth = desktop ? 3 : tablet.high ? 3 : tablet.low ? 1 : 1;
+    slideHeight = desktop ? 2 : tablet.high ? 2.45 : tablet.low ? 0.8 : 2.7;
+  }
+
   return (
-    <>
+    <Grid item container>
       Looking for a custom job? Click here to contact me! 👋
       <StyledCarousel
-        naturalSlideWidth={w}
-        naturalSlideHeight={
-          w * ratio
-          // desktop || tablet.high
-          //   ? w * ratio
-          //   : tablet.low
-          //   ? w * ratio
-          //   : w * (ratio + 0.4)
-        }
+        naturalSlideWidth={slideWidth}
+        naturalSlideHeight={slideHeight}
         totalSlides={3}
         infinite={true}
         visibleSlides={1}
@@ -117,7 +126,7 @@ function Projects() {
         <StyledBack />
         <StyledNext />
       </StyledCarousel>
-    </>
+    </Grid>
   );
 }
 

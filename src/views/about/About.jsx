@@ -72,7 +72,14 @@ function About() {
             // spacing={10}
             // alignContent="stretch"
           >
-            <Box mt={5} mr={2} ml={2} display="flex" flexGrow={1}>
+            <Box
+              mt={5}
+              mr={2}
+              ml={2}
+              display="flex"
+              justifyContent="center"
+              flexGrow={1}
+            >
               <ResponsiveAboutCard
                 key={idx}
                 text={card.text}

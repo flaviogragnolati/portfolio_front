@@ -1,24 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Typography } from '@material-ui/core';
 import Icon from './Icon';
-// //Import Icons for cards
-// import { Handshake, Glasses } from 'styled-icons/fa-solid';
-// import { Factory } from 'styled-icons/boxicons-solid';
-// import { Team } from 'styled-icons/remix-fill';
-// import { Brain } from 'styled-icons/boxicons-regular';
-// import { ChatAlt2 } from 'styled-icons/heroicons-solid';
-
-import { defaults } from 'utils/config';
-// import useScreenSize from 'utils/useScreenSize';
-// import MobileAboutCard from 'views/about/components/MobileAboutCard';
-
-// const {
-//   aboutCards: { team, learn, work, communication, problem, responsible },
-// } = defaults;
 
 const Wrapper = styled.div`
-  background-color: blue;
+  ${(p) => p.theme.main};
 `;
 
 const Front = styled.div`
@@ -30,6 +16,7 @@ const Front = styled.div`
   align-content: center;
   flex: 0 0 100%;
   transition: all 1s cubic-bezier(0.5, 1.3, 0.5, 1.3);
+  border-radius: 5%;
   transform-style: preserve-3d;
   background-size: cover;
   background-position: center;
@@ -63,6 +50,7 @@ const Back = styled.div`
   background-size: cover;
   background-position: center;
   background-color: ${(p) => p.theme.palette.background.paper};
+  border-radius: 5%;
   position: absolute;
   left: 0;
   top: 0;
@@ -92,6 +80,8 @@ const FlipBox = styled.div`
   flex-wrap: wrap;
   position: relative;
   border: 10px solid transparent;
+  /* border: 2px solid ${(p) => p.theme.palette.primary.light}; */
+  border-radius: 5%;
   padding: 0;
   margin-top: 5rem;
   /* border-top: 0; */
@@ -122,6 +112,7 @@ const Text = styled(Typography)`
 
 function DesktopAboutCard({ text, icon }) {
   return (
+    // <Wrapper>
     <FlipBox>
       <Front>
         <Content>
@@ -134,6 +125,7 @@ function DesktopAboutCard({ text, icon }) {
         </Content>
       </Back>
     </FlipBox>
+    // </Wrapper>
   );
 }
 

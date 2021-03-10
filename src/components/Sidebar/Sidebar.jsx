@@ -171,6 +171,7 @@ function Sidebar({ spy }, ref) {
               paper: classes.drawerPaper,
             }}
             variant="permanent"
+            open={false}
           >
             {sidebarContent}
           </Drawer>

@@ -10,6 +10,8 @@ import Social from './components/Social';
 import HireButton from './components/HireButton';
 import { Box, Typography } from '@material-ui/core';
 import useScreenSize from 'utils/useScreenSize';
+import { FullScreen, useFullScreenHandle } from 'react-full-screen';
+
 const img = argonath;
 
 const insideStyles = {
@@ -23,13 +25,11 @@ const insideStyles = {
 const HeroDiv = styled.div`
   /* position: absolute;
   top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0; */
+  left: -250px;*/
+  /* width: 100vw; */
   height: 100vh;
   min-height: 100vh;
-  /* width: 100vw; */
-  z-index: 999;
+  z-index: ${(p) => p.theme.zIndex.drawer + 1};
 `;
 
 const ContentDiv = styled.div`
@@ -80,6 +80,9 @@ function Main(props, ref) {
     Main: { title, hireBtnText, type },
   } = useTranslation();
   const splitTitle = title.split(' ');
+
+  const handle = useFullScreenHandle();
+
   return (
     <Parallax
       bgImage={img}

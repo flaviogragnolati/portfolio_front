@@ -5,7 +5,49 @@ import { Paper } from '@material-ui/core';
 import { Github } from '@styled-icons/bootstrap';
 import { SocialLinkedin } from '@styled-icons/foundation';
 
-const SocialDiv = styled(Paper)`
+// const old = `width: 100%;
+//   height: 100%;
+//   text-align: center;
+//   border-radius: 5%;
+//   position: relative;
+//   overflow: hidden;
+//   transition: 0.5s;
+//   padding: 10px;
+//   cursor: pointer;
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     top: 100%;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     background: ${(p) => p.theme.palette.primary.light};
+//     transition: 0.5s;
+//   }
+//   &:hover:before {
+//     top: 0;
+//   }
+
+//   &:hover ${LinkedinIcon} {
+//     color: ${(p) => p.theme.palette.background.paper};
+//   }`;
+
+const divProps = {
+  position: 'relative',
+  overflow: 'hidden',
+  width: ' 100%',
+  height: ' 100%',
+  'text-align': 'center',
+  'border-radius': '5%',
+  padding: '10px',
+  transition: '0.8s ease',
+  cursor: 'pointer',
+};
+
+const SocialDiv = styled.div`
+  background: ${(p) => p.theme.palette.background.paper};
+  border: 2px solid ${(p) => p.theme.palette.primary.light};
+  border-radius: 5px;
   display: flex;
   flex-direction: row;
   transition: all 0.5s;
@@ -19,29 +61,13 @@ const LinkedinIcon = styled(SocialLinkedin)`
   }
 `;
 const LinkedinDiv = styled.div`
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  border-radius: 5%;
-  position: relative;
-  overflow: hidden;
-  transition: 0.5s;
-  padding: 10px;
-  cursor: pointer;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: ${(p) => p.theme.palette.primary.light};
-    transition: 0.5s;
+  ${{ ...divProps }}
+  color: ${(p) => p.theme.palette.primary.contrastText};
+  &:hover {
+    box-shadow: inset 0 0 0 3rem ${(p) => p.theme.palette.primary.light};
+    border-color: ${(p) => p.theme.palette.primary.dark};
+    color: ${(p) => p.theme.palette.primary.contrastText};
   }
-  &:hover:before {
-    top: 0;
-  }
-
   &:hover ${LinkedinIcon} {
     color: ${(p) => p.theme.palette.background.paper};
   }
@@ -53,27 +79,12 @@ const GithubIcon = styled(Github)`
   transition: 0.5s;
 `;
 const GitDiv = styled.div`
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  border-radius: 5%;
-  position: relative;
-  overflow: hidden;
-  padding: 10px;
-  transition: 0.5s;
-  cursor: pointer;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: ${(p) => p.theme.palette.primary.light};
-    transition: 0.5s;
-  }
-  &:hover:before {
-    top: 0;
+  ${{ ...divProps }}
+  color: ${(p) => p.theme.palette.primary.contrastText};
+  &:hover {
+    box-shadow: inset 0 0 0 3rem ${(p) => p.theme.palette.primary.light};
+    border-color: ${(p) => p.theme.palette.primary.dark};
+    color: ${(p) => p.theme.palette.primary.contrastText};
   }
   &:hover ${GithubIcon} {
     color: ${(p) => p.theme.palette.background.paper};
@@ -86,27 +97,12 @@ const MailIcon = styled(Mail)`
   transition: 0.5s;
 `;
 const MailDiv = styled.div`
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  border-radius: 5%;
-  position: relative;
-  overflow: hidden;
-  padding: 10px;
-  transition: 0.5s;
-  cursor: pointer;
-  &:before {
-    content: '';
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: ${(p) => p.theme.palette.primary.light};
-    transition: 0.5s;
-  }
-  &:hover:before {
-    top: 0;
+  ${{ ...divProps }}
+  color: ${(p) => p.theme.palette.primary.contrastText};
+  &:hover {
+    box-shadow: inset 0 0 0 3rem ${(p) => p.theme.palette.primary.light};
+    border-color: ${(p) => p.theme.palette.primary.dark};
+    color: ${(p) => p.theme.palette.primary.contrastText};
   }
   &:hover ${MailIcon} {
     color: ${(p) => p.theme.palette.background.paper};

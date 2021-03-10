@@ -19,7 +19,7 @@ const BottomDiv = styled.div`
   align-items: flex-end;
   flex-grow: 1;
   position: absolute;
-  bottom: 2%;
+  bottom: 5%;
   animation-name: ${bounce};
   :hover {
     color: ${(p) => p.theme.palette.secondary.light};

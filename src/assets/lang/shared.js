@@ -1,4 +1,13 @@
 const SHARED = {
+  stackTooltip: {
+    mongo: 'Mongo DB',
+    postgres: 'Postgres DB',
+    node: 'Node JS',
+    python: 'Python',
+    express: 'Express',
+    django: 'Django',
+    react: 'React',
+  },
   techSkills: [
     //Langs
     {

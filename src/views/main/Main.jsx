@@ -74,7 +74,7 @@ const TitleTwo = styled(Typography)`
   } */
 `;
 
-function Main(props, ref) {
+function Main(props) {
   const {
     Main: { title, hireBtnText, type },
   } = useTranslation();
@@ -108,7 +108,7 @@ function Main(props, ref) {
           <br></br>
           {/* <HireMeButton text={hireBtnText} /> */}
           {/* <HireButton text={hireBtnText} /> */}
-          <ScrollDown ref={ref} />
+          <ScrollDown />
           {/* <Social size="2rem" style={{ size: '2em' }} /> */}
         </ContentDiv>
       </HeroDiv>
@@ -116,4 +116,4 @@ function Main(props, ref) {
   );
 }
 
-export default forwardRef(Main);
+export default Main;

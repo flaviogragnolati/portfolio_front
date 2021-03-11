@@ -46,9 +46,7 @@ const useInView = ({
             root,
             rootMargin,
             threshold,
-            // @ts-ignore
             trackVisibility,
-            // @ts-ignore
             delay,
           }
         );

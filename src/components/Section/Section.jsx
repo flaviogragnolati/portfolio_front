@@ -1,4 +1,4 @@
-import React, { forwardRef } from 'react';
+import React, { forwardRef, useEffect } from 'react';
 import { Box, Grid } from '@material-ui/core';
 import styled from 'styled-components';
 import SectionTitle from './components/SectionTitle';
@@ -7,9 +7,37 @@ const StyledSection = styled.section`
   padding-bottom: 4rem;
 `;
 
-function Section({ id, title, children, ...props }, ref) {
+function Section({
+  id,
+  title,
+  children,
+  refs,
+  currentSection,
+  setCurrentSection,
+  ...props
+}) {
+  useEffect(() => {
+    const observerConfig = {
+      rootMargin: '-50% 0px -50% 0px',
+      threshold: 0,
+    };
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.target.id !== currentSection && entry.isIntersecting) {
+          setCurrentSection({ type: 'set', payload: entry.target.id });
+        }
+      });
+    };
+    const observer = new IntersectionObserver(
+      handleIntersection,
+      observerConfig
+    );
+    observer.observe(refs[id].current);
+    return () => observer.disconnect();
+  }, [currentSection, setCurrentSection, refs, id]);
+
   return (
-    <StyledSection id={id} ref={ref} {...props}>
+    <StyledSection id={id} ref={refs[id]} {...props}>
       <Grid container direction="column" justify="center" alignItems="center">
         <Grid item>
           <SectionTitle title={title} />
@@ -32,4 +60,4 @@ function Section({ id, title, children, ...props }, ref) {
   );
 }
 
-export default forwardRef(Section);
+export default Section;

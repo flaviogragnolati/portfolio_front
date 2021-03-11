@@ -1,4 +1,4 @@
-import React, { forwardRef, useEffect, useState } from 'react';
+import React, { forwardRef, useEffect, useReducer, useState } from 'react';
 import styled from 'styled-components';
 // MUI Core
 import {
@@ -57,15 +57,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.main,
   },
 }));
-function Sidebar({ spy }, ref) {
+function Sidebar({ currentSection, setCurrentSection }) {
+  const {
+    Sidebar: { index, logo },
+  } = useTranslation();
   const classes = useStyles();
   const theme = useTheme();
   const [mobile, tablet, desktop] = useScreenSize();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [current, setCurrent] = useState('home');
-  const {
-    Sidebar: { index, logo },
-  } = useTranslation();
+  // const [current, setCurrent] = useState('home');
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -104,12 +104,14 @@ function Sidebar({ spy }, ref) {
       <List>
         {index.map((item, idx) => (
           <SidebarItem
-            ref={ref[item.id]}
+            // ref={ref[item.id]}
             key={idx}
             item={item}
-            current={current}
-            setCurrent={setCurrent}
-            spy={spy}
+            currentSection={currentSection}
+            // setCurrent={setCurrent}
+            setCurrentSection={setCurrentSection}
+            // spy={spy}
+            // inView={inView}
           />
         ))}
         <Divider />
@@ -130,6 +132,7 @@ function Sidebar({ spy }, ref) {
   );
   return (
     <>
+      {console.log('SIDEBAR RENDERING')}
       <CssBaseline />
       <AppBar
         color="transparent"
@@ -181,4 +184,4 @@ function Sidebar({ spy }, ref) {
   );
 }
 
-export default forwardRef(Sidebar);
+export default React.memo(Sidebar);

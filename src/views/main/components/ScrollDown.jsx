@@ -28,9 +28,10 @@ const BottomDiv = styled.div`
   animation-iteration-count: infinite;
 `;
 
-function ScrollDown(props, ref) {
+function ScrollDown() {
+  const ref = document.getElementById('about');
   const handleClick = () => {
-    ref.current.scrollIntoView({
+    ref.scrollIntoView({
       behavior: 'smooth',
     });
   };
@@ -44,4 +45,4 @@ function ScrollDown(props, ref) {
   );
 }
 
-export default forwardRef(ScrollDown);
+export default ScrollDown;

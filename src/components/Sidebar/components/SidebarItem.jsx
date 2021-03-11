@@ -7,7 +7,7 @@ import WorkIcon from '@material-ui/icons/Work';
 import ForumIcon from '@material-ui/icons/Forum';
 import { defaults } from 'utils/config';
 
-function SidebarItem({ item, current, setCurrent, spy, ...rest }, ref) {
+function SidebarItem({ item, currentSection, setCurrentSection, ...rest }) {
   const { text, icon, id } = item;
   const { sections } = defaults;
   let Icon;
@@ -33,20 +33,32 @@ function SidebarItem({ item, current, setCurrent, spy, ...rest }, ref) {
 
   const listItemRef = useRef(null);
 
-  useEffect(() => {
-    if (spy[item.id].inView) {
-      setCurrent(item.id);
-    }
-  }, [spy, item.id, setCurrent]);
+  // useEffect(() => {
+  //   if (spy[item.id].inView) {
+  //     setCurrent(item.id);
+  //   }
+  // }, [spy, item.id, setCurrent]);
+
+  // useEffect(() => {
+  //   if (inView) {
+  //     console.log('USEFFECT', inView, item.id, current);
+  //     setCurrent(item.id);
+  //   }
+  // }, [inView, setCurrent, item.id]);
 
   const handleClick = (event) => {
     const section = event.currentTarget.getAttribute('section');
     if (sections.includes(section)) {
-      setCurrent(section);
+      const refSection = document.getElementById(section);
+      // setCurrent(section);
+      setCurrentSection({ type: 'set', payload: section });
       listItemRef.current.blur();
-      ref.current.scrollIntoView({
+      refSection.scrollIntoView({
         behavior: 'smooth',
       });
+      // ref.current.scrollIntoView({
+      //   behavior: 'smooth',
+      // });
     }
   };
 
@@ -55,7 +67,7 @@ function SidebarItem({ item, current, setCurrent, spy, ...rest }, ref) {
       ref={listItemRef}
       button
       onClick={handleClick}
-      selected={current === id}
+      selected={currentSection === id}
       section={id}
       {...rest}
     >
@@ -67,4 +79,4 @@ function SidebarItem({ item, current, setCurrent, spy, ...rest }, ref) {
   );
 }
 
-export default forwardRef(SidebarItem);
+export default React.memo(SidebarItem);

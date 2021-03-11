@@ -20,7 +20,7 @@ const options = {
     orange['A700'],
     grey[400],
   ],
-  enableOptimizations: false,
+  enableOptimizations: true,
   enableTooltip: false,
   deterministic: false,
   padding: 3.5,

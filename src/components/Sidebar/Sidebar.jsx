@@ -120,7 +120,7 @@ function Sidebar({ spy }) {
             currentSection={currentSection}
             // setCurrent={setCurrent}
             setCurrentSection={setCurrentSection}
-            // spy={spy[item.id]}
+            spy={spy[item.id]}
             // inView={inView}
           />
         ))}

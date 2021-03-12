@@ -52,8 +52,8 @@ const App = () => {
   } = useTranslation();
   const classes = useStyles();
   const [mobile, tablet] = useScreenSize();
-  // const { spyItems, nodeRefs } = useSpy();
-  // const { home, about, skills, projects, contact } = spyItems;
+  const { spyItems, nodeRefs } = useSpy();
+  const { home, about, skills, projects, contact } = spyItems;
   // const [homeRef, homeInView, homeEntry] = useInView(useInViewOptions);
   // const [aboutRef, aboutInView, abouttEntry] = useInView(useInViewOptions);
   // const [skillsRef, skillsInView, skillsEntry] = useInView(useInViewOptions);
@@ -90,9 +90,7 @@ const App = () => {
         {/* {spyItems[sections[1]].inView && (
         <Sidebar ref={nodeRefs} spy={spyItems} />
       )} */}
-        <Sidebar
-        // spy={spyItems}
-        />
+        <Sidebar spy={spyItems} />
         {/* <Sidebar
           currentSection={currentSection}
           setCurrentSection={setCurrentSection}
@@ -105,7 +103,7 @@ const App = () => {
             title={index[0].text}
             // currentSection={currentSection}
             // setCurrentSection={setCurrentSection}
-            // ref={home.ref}
+            ref={home.ref}
             // ref={homeRef}
           >
             <Main
@@ -121,7 +119,7 @@ const App = () => {
             // setCurrentSection={setCurrentSection}
             // refs={refs}
             // ref={aboutRef}
-            // ref={about.ref}
+            ref={about.ref}
           >
             <About />
           </Section>
@@ -133,7 +131,7 @@ const App = () => {
             // setCurrentSection={setCurrentSection}
             // refs={refs}
             // ref={skillsRef}
-            // ref={skills.ref}
+            ref={skills.ref}
           >
             <Skills />
           </Section>
@@ -144,7 +142,7 @@ const App = () => {
             // setCurrentSection={setCurrentSection}
             // refs={refs}
             // ref={projectsRef}
-            // ref={projects.ref}
+            ref={projects.ref}
           >
             <Projects />
           </Section>
@@ -156,7 +154,7 @@ const App = () => {
             // setCurrentSection={setCurrentSection}
             // refs={refs}
             // ref={contactRef}
-            // ref={contact.ref}
+            ref={contact.ref}
           >
             <Contact />
           </Section>

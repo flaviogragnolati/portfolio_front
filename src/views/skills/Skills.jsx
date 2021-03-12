@@ -81,7 +81,7 @@ function Skills() {
   } else if (mobile || tablet.low) {
     size = [width - 0.15 * width, height - 0.08 * height];
   }
-
+  const words = [...techSkills, ...langSpecificSkills].slice(0, 20);
   return (
     <>
       {console.log('rerendering')}
@@ -93,7 +93,7 @@ function Skills() {
       <Grid item xs={12}>
         <ReactWordcloud
           size={size}
-          words={[...techSkills, ...langSpecificSkills]}
+          words={techSkills.slice(0, 20)}
           options={options}
         />
       </Grid>

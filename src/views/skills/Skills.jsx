@@ -84,7 +84,6 @@ function Skills() {
   const words = [...techSkills, ...langSpecificSkills].slice(0, 20);
   return (
     <>
-      {console.log('rerendering')}
       <Grid item xs={12}>
         <Typography variant="subtitle1" gutterBottom>
           {subtitle}
@@ -93,7 +92,7 @@ function Skills() {
       <Grid item xs={12}>
         <ReactWordcloud
           size={size}
-          words={techSkills.slice(0, 20)}
+          words={techSkills.slice(0, 30)}
           options={options}
         />
       </Grid>

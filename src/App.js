@@ -54,20 +54,7 @@ const App = () => {
   const [mobile, tablet] = useScreenSize();
   const { spyItems, nodeRefs } = useSpy();
   const { home, about, skills, projects, contact } = spyItems;
-  // const [homeRef, homeInView, homeEntry] = useInView(useInViewOptions);
-  // const [aboutRef, aboutInView, abouttEntry] = useInView(useInViewOptions);
-  // const [skillsRef, skillsInView, skillsEntry] = useInView(useInViewOptions);
-  // const [projectsRef, projectsInView, projectsEntry] = useInView(
-  //   useInViewOptions
-  // );
-  // const [contactRef, contactInView, contactEntry] = useInView(useInViewOptions);
-  // const spy = {
-  //   homeInView,
-  //   aboutInView,
-  //   skillsInView,
-  //   projectsInView,
-  //   contactInView,
-  // };
+
   // const reducer = (state, action) => {
   //   switch (action.type) {
   //     case 'set':
@@ -84,85 +71,74 @@ const App = () => {
   // }, {});
 
   return (
-    <>
-      {console.log('APP RENDERING')}
-      <div className={classes.root}>
-        {/* {spyItems[sections[1]].inView && (
-        <Sidebar ref={nodeRefs} spy={spyItems} />
-      )} */}
-        <Sidebar spy={spyItems} />
-        {/* <Sidebar
-          currentSection={currentSection}
-          setCurrentSection={setCurrentSection}
-        /> */}
+    <div className={classes.root}>
+      <Sidebar spy={spyItems} />
+      <main className={classes.content}>
+        <div id="top-anchor" />
+        <section
+          id="home"
+          title={index[0].text}
+          // currentSection={currentSection}
+          // setCurrentSection={setCurrentSection}
+          ref={home.ref}
+          // ref={homeRef}
+        >
+          <Main
+          // id="home"
+          // ref={nodeRefs.about}
+          />
+        </section>
+        {/* <div ref={about.ref} /> */}
+        <Section
+          id="about"
+          title={index[1].text}
+          // currentSection={currentSection}
+          // setCurrentSection={setCurrentSection}
+          // refs={refs}
 
-        <main className={classes.content}>
-          <div id="top-anchor" />
-          <section
-            id="home"
-            title={index[0].text}
-            // currentSection={currentSection}
-            // setCurrentSection={setCurrentSection}
-            ref={home.ref}
-            // ref={homeRef}
-          >
-            <Main
-            // id="home"
-            // ref={nodeRefs.about}
-            />
-          </section>
-          {/* <div ref={about.ref} /> */}
-          <Section
-            id="about"
-            title={index[1].text}
-            // currentSection={currentSection}
-            // setCurrentSection={setCurrentSection}
-            // refs={refs}
-            // ref={aboutRef}
-            ref={about.ref}
-          >
-            <About />
-          </Section>
-          {/* <div ref={skills.ref} /> */}
-          <Section
-            id="skills"
-            title={index[2].text}
-            // currentSection={currentSection}
-            // setCurrentSection={setCurrentSection}
-            // refs={refs}
-            // ref={skillsRef}
-            ref={skills.ref}
-          >
-            <Skills />
-          </Section>
-          <Section
-            id="projects"
-            title={index[3].text}
-            // currentSection={currentSection}
-            // setCurrentSection={setCurrentSection}
-            // refs={refs}
-            // ref={projectsRef}
-            ref={projects.ref}
-          >
-            <Projects />
-          </Section>
-          {/* <div ref={contact.ref} /> */}
-          <Section
-            id="contact"
-            title={index[4].text}
-            // currentSection={currentSection}
-            // setCurrentSection={setCurrentSection}
-            // refs={refs}
-            // ref={contactRef}
-            ref={contact.ref}
-          >
-            <Contact />
-          </Section>
-          {(mobile || tablet.low) && <Footer />}
-          <BackToTopBtn />
-        </main>
-      </div>
-    </>
+          ref={about.ref}
+        >
+          <About />
+        </Section>
+        {/* <div ref={skills.ref} /> */}
+        <Section
+          id="skills"
+          title={index[2].text}
+          // currentSection={currentSection}
+          // setCurrentSection={setCurrentSection}
+          // refs={refs}
+
+          ref={skills.ref}
+        >
+          <Skills />
+        </Section>
+        <Section
+          id="projects"
+          title={index[3].text}
+          // currentSection={currentSection}
+          // setCurrentSection={setCurrentSection}
+          // refs={refs}
+
+          ref={projects.ref}
+        >
+          <Projects />
+        </Section>
+
+        <Section
+          id="contact"
+          title={index[4].text}
+          // currentSection={currentSection}
+          // setCurrentSection={setCurrentSection}
+          // refs={refs}
+
+          ref={contact.ref}
+        >
+          <Contact />
+        </Section>
+        {(mobile || tablet.low) && <Footer />}
+        <BackToTopBtn />
+      </main>
+    </div>
   );
 };
 

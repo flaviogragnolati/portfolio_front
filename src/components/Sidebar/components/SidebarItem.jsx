@@ -39,11 +39,11 @@ function SidebarItem({
 
   const listItemRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (spy.inView) {
-  //     setCurrentSection({ type: 'set', payload: item.id });
-  //   }
-  // }, [spy, setCurrentSection, item.id]);
+  useEffect(() => {
+    if (spy.inView) {
+      setCurrentSection({ type: 'set', payload: item.id });
+    }
+  }, [spy, setCurrentSection, item.id]);
 
   // useEffect(() => {
   //   if (inView) {

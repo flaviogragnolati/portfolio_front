@@ -72,7 +72,7 @@ function Sidebar({ spy }) {
       case 'set':
         return (state = action.payload);
       default:
-        throw new Error('not a reducer aciont');
+        throw new Error('not a reducer action');
     }
   };
   const [currentSection, setCurrentSection] = useReducer(reducer, 'home');
@@ -114,14 +114,11 @@ function Sidebar({ spy }) {
       <List>
         {index.map((item, idx) => (
           <SidebarItem
-            // ref={ref[item.id]}
             key={idx}
             item={item}
             currentSection={currentSection}
-            // setCurrent={setCurrent}
             setCurrentSection={setCurrentSection}
             spy={spy[item.id]}
-            // inView={inView}
           />
         ))}
         <Divider />
@@ -142,7 +139,6 @@ function Sidebar({ spy }) {
   );
   return (
     <>
-      {console.log('SIDEBAR RENDERING')}
       <CssBaseline />
       <AppBar
         color="transparent"

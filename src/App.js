@@ -52,8 +52,8 @@ const App = () => {
   } = useTranslation();
   const classes = useStyles();
   const [mobile, tablet] = useScreenSize();
-  // const { spyItems, nodeRefs } = useSpy();
-  // const { home, about, skills, projects, contact } = spyItems;
+  const { spyItems, nodeRefs } = useSpy();
+  const { home, about, skills, projects, contact } = spyItems;
   // const [homeRef, homeInView, homeEntry] = useInView(useInViewOptions);
   // const [aboutRef, aboutInView, abouttEntry] = useInView(useInViewOptions);
   // const [skillsRef, skillsInView, skillsEntry] = useInView(useInViewOptions);
@@ -68,20 +68,20 @@ const App = () => {
   //   projectsInView,
   //   contactInView,
   // };
-  const reducer = (state, action) => {
-    switch (action.type) {
-      case 'set':
-        return (state = action.payload);
-      default:
-        throw new Error('not a reducer aciont');
-    }
-  };
-  const [currentSection, setCurrentSection] = useReducer(reducer, 'home');
+  // const reducer = (state, action) => {
+  //   switch (action.type) {
+  //     case 'set':
+  //       return (state = action.payload);
+  //     default:
+  //       throw new Error('not a reducer aciont');
+  //   }
+  // };
+  // const [currentSection, setCurrentSection] = useReducer(reducer, 'home');
 
-  const refs = index.reduce((refsObj, section) => {
-    refsObj[section.id] = createRef();
-    return refsObj;
-  }, {});
+  // const refs = index.reduce((refsObj, section) => {
+  //   refsObj[section.id] = createRef();
+  //   return refsObj;
+  // }, {});
 
   return (
     <>
@@ -90,11 +90,11 @@ const App = () => {
         {/* {spyItems[sections[1]].inView && (
         <Sidebar ref={nodeRefs} spy={spyItems} />
       )} */}
-        {/* <Sidebar ref={nodeRefs} spy={spyItems} /> */}
-        <Sidebar
+        <Sidebar spy={spyItems} />
+        {/* <Sidebar
           currentSection={currentSection}
           setCurrentSection={setCurrentSection}
-        />
+        /> */}
 
         <main className={classes.content}>
           <div id="top-anchor" />
@@ -117,9 +117,9 @@ const App = () => {
             title={index[1].text}
             // currentSection={currentSection}
             // setCurrentSection={setCurrentSection}
-            refs={refs}
+            // refs={refs}
             // ref={aboutRef}
-            // ref={about.ref}
+            ref={about.ref}
           >
             <About />
           </Section>
@@ -129,21 +129,20 @@ const App = () => {
             title={index[2].text}
             // currentSection={currentSection}
             // setCurrentSection={setCurrentSection}
-            refs={refs}
+            // refs={refs}
             // ref={skillsRef}
-            // ref={skills.ref}
+            ref={skills.ref}
           >
             <Skills />
           </Section>
-          {/* <div ref={projects.ref} /> */}
           <Section
             id="projects"
             title={index[3].text}
             // currentSection={currentSection}
             // setCurrentSection={setCurrentSection}
-            refs={refs}
+            // refs={refs}
             // ref={projectsRef}
-            // ref={projects.ref}
+            ref={projects.ref}
           >
             <Projects />
           </Section>
@@ -153,9 +152,9 @@ const App = () => {
             title={index[4].text}
             // currentSection={currentSection}
             // setCurrentSection={setCurrentSection}
-            refs={refs}
+            // refs={refs}
             // ref={contactRef}
-            // ref={contact.ref}
+            ref={contact.ref}
           >
             <Contact />
           </Section>

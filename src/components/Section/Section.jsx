@@ -7,15 +7,10 @@ const StyledSection = styled.section`
   padding-bottom: 4rem;
 `;
 
-function Section({
-  id,
-  title,
-  children,
-  refs,
-  currentSection,
-  setCurrentSection,
-  ...props
-}) {
+function Section(
+  { id, title, children, refs, currentSection, setCurrentSection, ...props },
+  ref
+) {
   // useEffect(() => {
   //   const observerConfig = {
   //     rootMargin: '-50% 0px -50% 0px',
@@ -37,7 +32,7 @@ function Section({
   // }, [currentSection, setCurrentSection, refs, id]);
 
   return (
-    <StyledSection id={id} ref={refs[id]} {...props}>
+    <StyledSection id={id} ref={ref} {...props}>
       <Grid container direction="column" justify="center" alignItems="center">
         <Grid item>
           <SectionTitle title={title} />
@@ -60,4 +55,4 @@ function Section({
   );
 }
 
-export default Section;
+export default forwardRef(Section);

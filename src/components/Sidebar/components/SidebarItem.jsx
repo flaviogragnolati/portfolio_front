@@ -7,7 +7,13 @@ import WorkIcon from '@material-ui/icons/Work';
 import ForumIcon from '@material-ui/icons/Forum';
 import { defaults } from 'utils/config';
 
-function SidebarItem({ item, currentSection, setCurrentSection, ...rest }) {
+function SidebarItem({
+  item,
+  currentSection,
+  setCurrentSection,
+  spy,
+  ...rest
+}) {
   const { text, icon, id } = item;
   const { sections } = defaults;
   let Icon;
@@ -33,11 +39,11 @@ function SidebarItem({ item, currentSection, setCurrentSection, ...rest }) {
 
   const listItemRef = useRef(null);
 
-  // useEffect(() => {
-  //   if (spy[item.id].inView) {
-  //     setCurrent(item.id);
-  //   }
-  // }, [spy, item.id, setCurrent]);
+  useEffect(() => {
+    if (spy.inView) {
+      setCurrentSection({ type: 'set', payload: item.id });
+    }
+  }, [spy, setCurrentSection, item.id]);
 
   // useEffect(() => {
   //   if (inView) {

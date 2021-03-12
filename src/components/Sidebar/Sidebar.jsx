@@ -57,7 +57,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.main,
   },
 }));
-function Sidebar({ currentSection, setCurrentSection }) {
+function Sidebar({ spy }) {
   const {
     Sidebar: { index, logo },
   } = useTranslation();
@@ -66,6 +66,16 @@ function Sidebar({ currentSection, setCurrentSection }) {
   const [mobile, tablet, desktop] = useScreenSize();
   const [mobileOpen, setMobileOpen] = useState(false);
   // const [current, setCurrent] = useState('home');
+
+  const reducer = (state, action) => {
+    switch (action.type) {
+      case 'set':
+        return (state = action.payload);
+      default:
+        throw new Error('not a reducer aciont');
+    }
+  };
+  const [currentSection, setCurrentSection] = useReducer(reducer, 'home');
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -110,7 +120,7 @@ function Sidebar({ currentSection, setCurrentSection }) {
             currentSection={currentSection}
             // setCurrent={setCurrent}
             setCurrentSection={setCurrentSection}
-            // spy={spy}
+            spy={spy[item.id]}
             // inView={inView}
           />
         ))}

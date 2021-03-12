@@ -80,7 +80,7 @@ function Skills() {
       </Grid>
       <Grid item xs={12}>
         <ReactWordcloud
-          size={[250, 250]}
+          // size={[250, 250]}
           words={[...techSkills, ...langSpecificSkills]}
           options={options}
         />

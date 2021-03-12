@@ -116,13 +116,13 @@ function Projects() {
         infinite={true}
         visibleSlides={1}
       >
-        <Slider>
+        {/* <Slider>
           {projects.map((project, idx) => (
             <Slide index={idx}>
               <ResponsiveProjectCard project={project} />
             </Slide>
           ))}
-        </Slider>
+        </Slider> */}
         <StyledBack />
         <StyledNext />
       </StyledCarousel>

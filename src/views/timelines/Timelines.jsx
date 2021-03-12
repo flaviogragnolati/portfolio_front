@@ -1,13 +1,15 @@
 import React from 'react';
-import { Grid, Typography } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 import EducationTimeline from './components/EducationTimeline';
 import WorkTimeline from './components/WorkTimeline';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
+import LessAboutBtn from 'views/about/components/LessAboutBtn';
 
-function Timelines() {
+function Timelines({ setExpanded }) {
   const {
-    MoreAbout: { subtitle },
+    MoreAbout: { subtitle, lessBtn },
   } = useTranslation();
+
   return (
     <Grid container>
       <Grid
@@ -46,6 +48,14 @@ function Timelines() {
         md={6}
       >
         <WorkTimeline />
+      </Grid>
+      <Grid item xs={12}>
+        <Box mt={2}>
+          <LessAboutBtn
+            BtnText={lessBtn}
+            onClick={() => setExpanded((prevState) => !prevState)}
+          />
+        </Box>
       </Grid>
     </Grid>
   );

@@ -120,10 +120,10 @@ const HoverBox = styled(Box)`
   }
 `;
 
-function LessAboutBtn({ BtnText }) {
+function LessAboutBtn({ BtnText, ...props }) {
   return (
     <Box display="flex" justifyContent="flex-end" flexGrow="1">
-      <HoverBox>
+      <HoverBox {...props}>
         <ButtonBase focusRipple>
           <MoreText>
             <Typography variant="h6">{BtnText}</Typography>

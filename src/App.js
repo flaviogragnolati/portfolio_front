@@ -85,7 +85,7 @@ const App = () => {
 
   return (
     <>
-      {console.log('APP RENDERING')}
+      {console.log('APP RENDERING', currentSection, refs)}
       <div className={classes.root}>
         {/* {spyItems[sections[1]].inView && (
         <Sidebar ref={nodeRefs} spy={spyItems} />
@@ -101,8 +101,8 @@ const App = () => {
           <section
             id="home"
             title={index[0].text}
-            currentSection={currentSection}
-            setCurrentSection={setCurrentSection}
+            // currentSection={currentSection}
+            // setCurrentSection={setCurrentSection}
             // ref={home.ref}
             // ref={homeRef}
           >
@@ -115,8 +115,8 @@ const App = () => {
           <Section
             id="about"
             title={index[1].text}
-            currentSection={currentSection}
-            setCurrentSection={setCurrentSection}
+            // currentSection={currentSection}
+            // setCurrentSection={setCurrentSection}
             refs={refs}
             // ref={aboutRef}
             // ref={about.ref}
@@ -127,8 +127,8 @@ const App = () => {
           <Section
             id="skills"
             title={index[2].text}
-            currentSection={currentSection}
-            setCurrentSection={setCurrentSection}
+            // currentSection={currentSection}
+            // setCurrentSection={setCurrentSection}
             refs={refs}
             // ref={skillsRef}
             // ref={skills.ref}
@@ -139,8 +139,8 @@ const App = () => {
           <Section
             id="projects"
             title={index[3].text}
-            currentSection={currentSection}
-            setCurrentSection={setCurrentSection}
+            // currentSection={currentSection}
+            // setCurrentSection={setCurrentSection}
             refs={refs}
             // ref={projectsRef}
             // ref={projects.ref}
@@ -151,8 +151,8 @@ const App = () => {
           <Section
             id="contact"
             title={index[4].text}
-            currentSection={currentSection}
-            setCurrentSection={setCurrentSection}
+            // currentSection={currentSection}
+            // setCurrentSection={setCurrentSection}
             refs={refs}
             // ref={contactRef}
             // ref={contact.ref}

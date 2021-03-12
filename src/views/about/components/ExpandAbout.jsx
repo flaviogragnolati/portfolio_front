@@ -8,6 +8,7 @@ import LessAboutBtn from './LessAboutBtn';
 import styled from 'styled-components';
 import Timelines from 'views/timelines';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
+import { Box } from '@material-ui/core';
 
 const Accordion = styled(MuiAccordion)`
   background-color: transparent;
@@ -51,7 +52,7 @@ export default function CustomizedAccordions() {
         )}
       </AccordionSummary>
       <AccordionDetails>
-        <Timelines />
+        <Timelines setExpanded={setExpanded} />
       </AccordionDetails>
     </Accordion>
   );

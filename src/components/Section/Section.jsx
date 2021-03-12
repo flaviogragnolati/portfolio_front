@@ -16,25 +16,25 @@ function Section({
   setCurrentSection,
   ...props
 }) {
-  useEffect(() => {
-    const observerConfig = {
-      rootMargin: '-50% 0px -50% 0px',
-      threshold: 0,
-    };
-    const handleIntersection = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.target.id !== currentSection && entry.isIntersecting) {
-          setCurrentSection({ type: 'set', payload: entry.target.id });
-        }
-      });
-    };
-    const observer = new IntersectionObserver(
-      handleIntersection,
-      observerConfig
-    );
-    observer.observe(refs[id].current);
-    return () => observer.disconnect();
-  }, [currentSection, setCurrentSection, refs, id]);
+  // useEffect(() => {
+  //   const observerConfig = {
+  //     rootMargin: '-50% 0px -50% 0px',
+  //     threshold: 0,
+  //   };
+  //   const handleIntersection = (entries) => {
+  //     entries.forEach((entry) => {
+  //       if (entry.target.id !== currentSection && entry.isIntersecting) {
+  //         setCurrentSection({ type: 'set', payload: entry.target.id });
+  //       }
+  //     });
+  //   };
+  //   const observer = new IntersectionObserver(
+  //     handleIntersection,
+  //     observerConfig
+  //   );
+  //   observer.observe(refs[id].current);
+  //   return () => observer.disconnect();
+  // }, [currentSection, setCurrentSection, refs, id]);
 
   return (
     <StyledSection id={id} ref={refs[id]} {...props}>

@@ -1,4 +1,4 @@
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useEffect, useMemo } from 'react';
 import { Grid, Typography } from '@material-ui/core';
 import ReactWordcloud from 'react-wordcloud';
 import shared from 'assets/lang/shared';
@@ -22,7 +22,7 @@ const options = {
   ],
   enableOptimizations: true,
   enableTooltip: false,
-  deterministic: false,
+  deterministic: true,
   padding: 3.5,
   fontFamily: 'sans-serif',
   fontSizes: [20, 65],
@@ -63,6 +63,18 @@ function Skills() {
   // ]);
 
   let size;
+  // useEffect(() => {
+  //   const calcSize = () => {
+  //     if (desktop || tablet.high) {
+  //       size = undefined;
+  //     } else if (mobile || tablet.low) {
+  //       size = [width - 0.15 * width, height - 0.08 * height];
+  //     }
+  //     console.log('RUN EVERY 5 seg');
+  //   };
+  //   const calcSizeInterval = setInterval(calcSize(), 5000);
+  //   return () => clearInterval(calcSizeInterval);
+  // }, []);
 
   if (desktop || tablet.high) {
     size = undefined;
@@ -80,7 +92,7 @@ function Skills() {
       </Grid>
       <Grid item xs={12}>
         <ReactWordcloud
-          // size={size}
+          size={size}
           words={[...techSkills, ...langSpecificSkills]}
           options={options}
         />

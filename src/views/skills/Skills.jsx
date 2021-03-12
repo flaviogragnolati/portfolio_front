@@ -91,11 +91,11 @@ function Skills() {
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        {/* <ReactWordcloud
+        <ReactWordcloud
           size={size}
           words={[...techSkills, ...langSpecificSkills]}
           options={options}
-        /> */}
+        />
       </Grid>
     </>
   );

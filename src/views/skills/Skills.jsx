@@ -22,7 +22,7 @@ const options = {
   ],
   enableOptimizations: true,
   enableTooltip: false,
-  deterministic: false,
+  deterministic: true,
   padding: 3.5,
   fontFamily: 'sans-serif',
   fontSizes: [20, 65],

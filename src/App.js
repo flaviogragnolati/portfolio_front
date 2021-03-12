@@ -85,7 +85,7 @@ const App = () => {
 
   return (
     <>
-      {console.log('APP RENDERING', currentSection, refs)}
+      {console.log('APP RENDERING')}
       <div className={classes.root}>
         {/* {spyItems[sections[1]].inView && (
         <Sidebar ref={nodeRefs} spy={spyItems} />

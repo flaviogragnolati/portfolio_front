@@ -38,8 +38,8 @@ function Contact() {
     console.log('SUBMITTING FORM', values);
   };
 
-  const emailMatch = sideText.match(/<.*>/g)[0].replace(/<|>/g, '');
-  const splitSideText = sideText.split('<email>');
+  // const emailMatch = sideText.match(/<.*>/g)[0].replace(/<|>/g, '');
+  // const splitSideText = sideText.split('<email>');
 
   return (
     <>

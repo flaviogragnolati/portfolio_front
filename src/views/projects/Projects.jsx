@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { createRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { Grid, useMediaQuery } from '@material-ui/core';
+import { Grid, Typography, useMediaQuery } from '@material-ui/core';
 import {
   CarouselProvider,
   Slider,
@@ -9,6 +9,8 @@ import {
   ButtonNext,
 } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import EndPhrase from './components/EndPhrase';
+
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import ResponsiveProjectCard from 'components/ProjectCard';
 import useScreenSize from 'utils/useScreenSize';
@@ -82,13 +84,13 @@ const StyledNext = styled(ButtonNext)`
 
 function Projects() {
   const {
-    Projects: { subtitle, endphrase, projects },
+    Projects: { subtitle, endphrase, tooltip, projects },
   } = useTranslation();
+
   // const matches = useMediaQuery((theme) => theme.breakpoints.up('md'));
   const [mobile, tablet, desktop] = useScreenSize();
 
   const { height, width } = useWindowDimensions();
-
   const ratio = width / height;
 
   let slideWidth, slideHeight;
@@ -108,7 +110,6 @@ function Projects() {
 
   return (
     <Grid item container>
-      Looking for a custom job? Click here to contact me! 👋
       <StyledCarousel
         naturalSlideWidth={slideWidth}
         naturalSlideHeight={slideHeight}
@@ -126,6 +127,13 @@ function Projects() {
         <StyledBack />
         <StyledNext />
       </StyledCarousel>
+      <br />
+      <Grid item xs={12}>
+        <EndPhrase text={endphrase} />
+      </Grid>
+      {/* <Typography color="inherit" variant="body1" gutterBottom>
+        {endphrase}
+      </Typography> */}
     </Grid>
   );
 }

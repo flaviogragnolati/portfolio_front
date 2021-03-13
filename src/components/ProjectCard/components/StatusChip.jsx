@@ -1,5 +1,5 @@
 import React from 'react';
-import { Chip, Typography } from '@material-ui/core';
+import { Chip, Tooltip, Typography } from '@material-ui/core';
 import styled from 'styled-components';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 
@@ -18,6 +18,7 @@ function StatusChip({ status, color: _color, ...rest }) {
     Projects: {
       projectStatus,
       card: { statusHeading },
+      tooltip: { statusTooltip },
     },
   } = useTranslation();
   let label, color;
@@ -49,9 +50,11 @@ function StatusChip({ status, color: _color, ...rest }) {
   }
 
   return (
-    <Status variant="overline">
-      <StyledChip label={label} type={color} {...rest} />
-    </Status>
+    <Tooltip title={statusTooltip}>
+      <Status variant="overline">
+        <StyledChip label={label} type={color} {...rest} />
+      </Status>
+    </Tooltip>
   );
 }
 

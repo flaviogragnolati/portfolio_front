@@ -89,16 +89,14 @@ function Skills() {
   }
   const words = [...techSkills, ...langSpecificSkills].slice(0, 20);
   return (
-    <>
-      <Grid item xs={12}>
-        <Typography variant="subtitle1" gutterBottom>
-          {subtitle}
-        </Typography>
-      </Grid>
-      <Grid item xs={12}>
-        <ReactWordcloud size={size} words={techSkills} options={options} />
-      </Grid>
-    </>
+    <Grid item xs={12}>
+      <ReactWordcloud size={size} words={techSkills} options={options} />
+    </Grid>
+    //    <Grid item xs={12}>
+    //   <Typography variant="subtitle1" gutterBottom>
+    //     {subtitle}
+    //   </Typography>
+    // </Grid>
   );
 }
 

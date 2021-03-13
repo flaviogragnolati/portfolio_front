@@ -9,11 +9,11 @@ const SubtitleDiv = styled.div`
 `;
 
 function Subtitle({ type }) {
-  const writeHere = createRef();
+  const typeRef = createRef();
 
   useEffect(() => {
-    if (writeHere.current) {
-      const typewriter = new Typewriter(writeHere.current, {
+    if (typeRef.current) {
+      const typewriter = new Typewriter(typeRef.current, {
         loop: true,
         delay: 75,
       });
@@ -28,9 +28,9 @@ function Subtitle({ type }) {
         .pauseFor(500)
         .start();
     }
-  }, [writeHere, type]);
+  }, [typeRef, type]);
 
-  return <SubtitleDiv ref={writeHere}></SubtitleDiv>;
+  return <SubtitleDiv ref={typeRef}></SubtitleDiv>;
 }
 
 export default Subtitle;

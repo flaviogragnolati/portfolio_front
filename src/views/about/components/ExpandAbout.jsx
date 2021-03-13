@@ -8,7 +8,7 @@ import LessAboutBtn from './LessAboutBtn';
 import styled from 'styled-components';
 import Timelines from 'views/timelines';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
-import { Box } from '@material-ui/core';
+import { Box, Tooltip } from '@material-ui/core';
 
 const Accordion = styled(MuiAccordion)`
   background-color: transparent;
@@ -30,7 +30,7 @@ const AccordionDetails = styled(MuiAccordionDetails)`
 
 export default function CustomizedAccordions() {
   const {
-    MoreAbout: { moreBtn, lessBtn },
+    MoreAbout: { moreBtn, lessBtn, moreTooltip },
   } = useTranslation();
 
   const [expanded, setExpanded] = useState(false);
@@ -44,13 +44,15 @@ export default function CustomizedAccordions() {
       expanded={expanded === true}
       onChange={handleChange('moreAbout')}
     >
-      <AccordionSummary id="moreAbout">
-        {expanded ? (
-          <LessAboutBtn BtnText={lessBtn} />
-        ) : (
-          <MoreAboutBtn BtnText={moreBtn} />
-        )}
-      </AccordionSummary>
+      <Tooltip title={moreTooltip} placement="top-end">
+        <AccordionSummary id="moreAbout">
+          {expanded ? (
+            <LessAboutBtn BtnText={lessBtn} />
+          ) : (
+            <MoreAboutBtn BtnText={moreBtn} />
+          )}
+        </AccordionSummary>
+      </Tooltip>
       <AccordionDetails>
         <Timelines setExpanded={setExpanded} />
       </AccordionDetails>

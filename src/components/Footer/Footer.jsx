@@ -15,11 +15,11 @@ const FooterWrapper = styled.div`
 
 function Footer() {
   const {
-    Footer: { copy, socialLinks },
+    Footer: { copy, socialLinks, socialTooltips },
   } = useTranslation();
   return (
     <FooterWrapper>
-      <SocialContact links={socialLinks} />
+      <SocialContact links={socialLinks} tooltips={socialTooltips} />
       <Typography variant="caption" display="block" gutterBottom>
         {copy}
       </Typography>

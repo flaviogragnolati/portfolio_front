@@ -8,9 +8,15 @@ const ES = {
       { text: 'Proyectos', icon: 'projects', id: 'projects' },
       { text: 'Contacto', icon: 'contact', id: 'contact' },
     ],
-  },
-  LangPicker: {
-    langs: ['Español', 'English', 'Italiano'],
+    langTooltip: 'Cambiar lenguaje',
+    themeTooltip: {
+      dark: 'Demasiado oscuro?',
+      light: 'Demasiado claro?',
+    },
+    // langPicker: {
+    //   langs: ['Español', 'English', 'Italiano'],
+    //   langTooltip: 'Cambiar lenguaje',
+    // },
   },
   Main: {
     title: 'Flavio Gragnolati',
@@ -401,11 +407,7 @@ const ES = {
       mail: 'flavio.gragnolati@gmail.com',
       subject: 'Hola!',
     },
-  },
-  Tooltips: {
-    langBtn: 'Cambiar lenguaje',
-    hireBtn: 'Contratame',
-    social: {
+    socialTooltips: {
       linkedin: 'Ir a mi LinkedIn',
       git: 'Ver mi repositorio de GitHub',
       mail: 'Enviarme un email',

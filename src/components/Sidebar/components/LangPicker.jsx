@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { forwardRef, useState } from 'react';
 import { Button, capitalize, MenuItem, Menu, Fade } from '@material-ui/core';
 import TranslateIcon from '@material-ui/icons/Translate';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
@@ -14,7 +14,7 @@ for (const lang in langList) {
   }
 }
 
-function LangPicker() {
+function LangPicker(props, ref) {
   const [lang, changeLang] = useLangContext();
   const [selectedIndex, setSelectedIndex] = useState(1);
   const [anchorEl, setAnchorEl] = useState(null);
@@ -41,6 +41,8 @@ function LangPicker() {
         onClick={handleButtonClick}
         startIcon={<TranslateIcon />}
         endIcon={<ExpandMoreIcon />}
+        ref={ref}
+        {...props}
       >
         {lang}
       </Button>
@@ -67,4 +69,4 @@ function LangPicker() {
   );
 }
 
-export default LangPicker;
+export default forwardRef(LangPicker);

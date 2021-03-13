@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { forwardRef, useEffect } from 'react';
 
 import { IconButton } from '@material-ui/core';
 
@@ -9,7 +9,7 @@ import NightsStayTwoToneIcon from '@material-ui/icons/NightsStayTwoTone';
 
 import { useTheme } from 'context/ThemeWrapper/themeContext';
 
-function SunMoon({ action, ...rest }) {
+function SunMoon({ action, ...rest }, ref) {
   const [theme, toggleTheme] = useTheme();
   let themeButton;
 
@@ -27,10 +27,15 @@ function SunMoon({ action, ...rest }) {
     );
   }
   return (
-    <IconButton edge="start" color="inherit" onClick={() => toggleTheme()}>
+    <IconButton
+      edge="start"
+      color="inherit"
+      onClick={() => toggleTheme()}
+      ref={ref}
+    >
       {themeButton}
     </IconButton>
   );
 }
 
-export default SunMoon;
+export default forwardRef(SunMoon);

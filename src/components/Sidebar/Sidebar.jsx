@@ -12,6 +12,7 @@ import {
   List,
   makeStyles,
   Toolbar,
+  Tooltip,
   Typography,
   useTheme,
 } from '@material-ui/core';
@@ -59,10 +60,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 function Sidebar({ spy }) {
   const {
-    Sidebar: { index, logo },
+    Sidebar: { index, logo, langTooltip, themeTooltip },
   } = useTranslation();
   const classes = useStyles();
   const theme = useTheme();
+  console.log('THEME', theme);
   const [mobile, tablet, desktop] = useScreenSize();
   const [mobileOpen, setMobileOpen] = useState(false);
   // const [current, setCurrent] = useState('home');
@@ -106,8 +108,18 @@ function Sidebar({ spy }) {
           justifyContent="center"
           alignItems="flex-end"
         >
-          <SunMoon />
-          <LangPicker />
+          <Tooltip
+            title={
+              theme.themeName === 'dark'
+                ? themeTooltip.dark
+                : themeTooltip.light
+            }
+          >
+            <SunMoon />
+          </Tooltip>
+          <Tooltip title={langTooltip}>
+            <LangPicker />
+          </Tooltip>
         </Box>
       </Box>
       <Divider />

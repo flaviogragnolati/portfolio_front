@@ -18,6 +18,7 @@ const Card = styled.div`
 `;
 const CardHeader = styled.div`
   height: 25vh;
+  min-height: 25vh;
   width: 100%;
   position: relative;
 `;
@@ -61,6 +62,8 @@ const SubTitle = styled(Typography)`
 
 const Description = styled.div`
   max-height: 35vh;
+  height: 35vh;
+  nin-height: 35vh;
   overflow-y: scroll;
 `;
 

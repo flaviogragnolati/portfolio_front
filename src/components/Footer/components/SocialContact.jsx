@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Mail } from '@styled-icons/foundation';
-import { Paper } from '@material-ui/core';
+import { Paper, Tooltip } from '@material-ui/core';
 import { Github } from '@styled-icons/bootstrap';
 import { SocialLinkedin } from '@styled-icons/foundation';
 
@@ -109,30 +109,36 @@ const MailDiv = styled.div`
   }
 `;
 
-function Social({ links }) {
+function Social({ links, tooltips }) {
   const { linkedin, github, mail, subject } = links;
   return (
     <SocialDiv variant="outlined">
-      <LinkedinDiv>
-        <a href={linkedin}>
-          <LinkedinIcon size="2.5rem" />
-        </a>
-      </LinkedinDiv>
-      <GitDiv>
-        <a href={github}>
-          <GithubIcon size="2.4rem" />
-        </a>
-      </GitDiv>
-      <MailDiv>
-        <a
-          // onClick={`javascript:window.open('mailto:${mail}?subject=${subject}', 'mail');event.preventDefault()`}
-          target="_blank"
-          rel="noreferrer"
-          href={`mailto:${mail}?subject=${subject}`}
-        >
-          <MailIcon size="2.5rem" />
-        </a>
-      </MailDiv>
+      <Tooltip title={tooltips.linkedin}>
+        <LinkedinDiv>
+          <a href={linkedin}>
+            <LinkedinIcon size="2.5rem" />
+          </a>
+        </LinkedinDiv>
+      </Tooltip>
+      <Tooltip title={tooltips.git}>
+        <GitDiv>
+          <a href={github}>
+            <GithubIcon size="2.4rem" />
+          </a>
+        </GitDiv>
+      </Tooltip>
+      <Tooltip title={tooltips.mail}>
+        <MailDiv>
+          <a
+            // onClick={`javascript:window.open('mailto:${mail}?subject=${subject}', 'mail');event.preventDefault()`}
+            target="_blank"
+            rel="noreferrer"
+            href={`mailto:${mail}?subject=${subject}`}
+          >
+            <MailIcon size="2.5rem" />
+          </a>
+        </MailDiv>
+      </Tooltip>
     </SocialDiv>
   );
 }

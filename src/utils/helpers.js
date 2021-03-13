@@ -3,5 +3,5 @@ export const capitalize = (str) => {
 };
 
 export const fakeRequest = () => {
-  return new Promise((resolve) => setTimeout(() => resolve(), 2500));
+  return new Promise((resolve) => setTimeout(() => resolve(), 2000));
 };

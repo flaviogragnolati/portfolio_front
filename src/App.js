@@ -60,22 +60,8 @@ const App = () => {
         setLoading(!isLoading);
       }
     });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
-  // const reducer = (state, action) => {
-  //   switch (action.type) {
-  //     case 'set':
-  //       return (state = action.payload);
-  //     default:
-  //       throw new Error('not a reducer aciont');
-  //   }
-  // };
-  // const [currentSection, setCurrentSection] = useReducer(reducer, 'home');
-
-  // const refs = index.reduce((refsObj, section) => {
-  //   refsObj[section.id] = createRef();
-  //   return refsObj;
-  // }, {});
 
   if (isLoading) {
     return null;
@@ -89,48 +75,29 @@ const App = () => {
         <section
           id="home"
           title={index[0].text}
-          // currentSection={currentSection}
-          // setCurrentSection={setCurrentSection}
-          ref={home.ref}
-          // ref={homeRef}
+          // ref={home.ref}
         >
-          <Main
-          // id="home"
-          // ref={nodeRefs.about}
-          />
+          <Main />
         </section>
-        {/* <div ref={about.ref} /> */}
+
         <Section
           id="about"
           title={index[1].text}
-          // currentSection={currentSection}
-          // setCurrentSection={setCurrentSection}
-          // refs={refs}
-
-          ref={about.ref}
+          // ref={about.ref}
         >
           <About />
         </Section>
-        {/* <div ref={skills.ref} /> */}
         <Section
           id="skills"
           title={index[2].text}
-          // currentSection={currentSection}
-          // setCurrentSection={setCurrentSection}
-          // refs={refs}
-
-          ref={skills.ref}
+          // ref={skills.ref}
         >
           <Skills />
         </Section>
         <Section
           id="projects"
           title={index[3].text}
-          // currentSection={currentSection}
-          // setCurrentSection={setCurrentSection}
-          // refs={refs}
-
-          ref={projects.ref}
+          // ref={projects.ref}
         >
           <Projects />
         </Section>
@@ -138,11 +105,7 @@ const App = () => {
         <Section
           id="contact"
           title={index[4].text}
-          // currentSection={currentSection}
-          // setCurrentSection={setCurrentSection}
-          // refs={refs}
-
-          ref={contact.ref}
+          // ref={contact.ref}
         >
           <Contact />
         </Section>

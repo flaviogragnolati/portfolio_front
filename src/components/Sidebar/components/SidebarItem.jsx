@@ -39,11 +39,11 @@ function SidebarItem({
 
   const listItemRef = useRef(null);
 
-  useEffect(() => {
-    if (spy.inView) {
-      setCurrentSection({ type: 'set', payload: item.id });
-    }
-  }, [spy, setCurrentSection, item.id]);
+  // useEffect(() => {
+  //   if (spy.inView) {
+  //     setCurrentSection({ type: 'set', payload: item.id });
+  //   }
+  // }, [spy, setCurrentSection, item.id]);
 
   // useEffect(() => {
   //   if (inView) {
@@ -73,7 +73,10 @@ function SidebarItem({
       ref={listItemRef}
       button
       onClick={handleClick}
-      selected={currentSection === id}
+      selected={
+        false
+        // currentSection === id
+      }
       section={id}
       {...rest}
     >

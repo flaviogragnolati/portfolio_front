@@ -10,8 +10,9 @@ import {
   Docker as _Docker,
 } from '@styled-icons/simple-icons';
 import styled, { css } from 'styled-components';
-import { Grid } from '@material-ui/core';
+import { Grid, Tooltip } from '@material-ui/core';
 import useScreenSize from 'utils/useScreenSize';
+import { useTranslation } from 'context/LangWrapper/useTranslation';
 
 const iconStyle = {
   padding: '5px',
@@ -123,7 +124,11 @@ const Frame = styled.div`
 
 function Stack() {
   const [mobile, tablet, desktop] = useScreenSize();
-
+  const {
+    About: {
+      stackTooltip: { mongo, pg, js, py, ex, dj, react },
+    },
+  } = useTranslation();
   let gridProps, iconProps;
   if (desktop) {
     gridProps = {
@@ -160,19 +165,33 @@ function Stack() {
   return (
     <>
       <Grid {...gridProps}>
-        <Mongodb {...iconProps} />
-        <Postgresql {...iconProps} />
+        <Tooltip title={mongo}>
+          <Mongodb {...iconProps} />
+        </Tooltip>
+        <Tooltip title={pg}>
+          <Postgresql {...iconProps} />
+        </Tooltip>
       </Grid>
       <Grid {...gridProps}>
-        <NodeDotJs {...iconProps} />
-        <Python {...iconProps} />
+        <Tooltip title={js}>
+          <NodeDotJs {...iconProps} />
+        </Tooltip>
+        <Tooltip title={py}>
+          <Python {...iconProps} />
+        </Tooltip>
       </Grid>
       <Grid {...gridProps}>
-        <Express {...iconProps} />
-        <Django {...iconProps} />
+        <Tooltip title={ex}>
+          <Express {...iconProps} />
+        </Tooltip>
+        <Tooltip title={dj}>
+          <Django {...iconProps} />
+        </Tooltip>
       </Grid>
       <Grid {...gridProps}>
-        <ReactLogo {...iconProps} />
+        <Tooltip title={react}>
+          <ReactLogo {...iconProps} />
+        </Tooltip>
       </Grid>
     </>
   );

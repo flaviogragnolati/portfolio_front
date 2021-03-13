@@ -11,13 +11,13 @@ const SHARED = {
   techSkills: [
     //Langs
     {
-      text: 'JavaScript',
+      text: 'JavaScript (ES6+)',
       value: 100,
     },
-    {
-      text: 'ES6',
-      value: 60,
-    },
+    // {
+    //   text: 'ES6',
+    //   value: 60,
+    // },
     {
       text: 'Python',
       value: 100,
@@ -26,14 +26,14 @@ const SHARED = {
       text: 'TypeScript',
       value: 30,
     },
-    {
-      text: 'SQL',
-      value: 45,
-    },
-    {
-      text: 'noSQL',
-      value: 40,
-    },
+    // {
+    //   text: 'SQL',
+    //   value: 45,
+    // },
+    // {
+    //   text: 'noSQL',
+    //   value: 40,
+    // },
     //JS Backend tech
     {
       text: 'Sequelize',
@@ -43,42 +43,42 @@ const SHARED = {
       text: 'Passport',
       value: 50,
     },
-    {
-      text: 'OAuth',
-      value: 30,
-    },
-    {
-      text: 'Mongoose',
-      value: 30,
-    },
+    // {
+    //   text: 'OAuth',
+    //   value: 30,
+    // },
+    // {
+    //   text: 'Mongoose',
+    //   value: 30,
+    // },
     {
       text: 'Express',
       value: 80,
     },
-    {
-      text: 'Apollo',
-      value: 40,
-    },
-    {
-      text: 'Nodemailer',
-      value: 30,
-    },
-    {
-      text: 'sessions',
-      value: 25,
-    },
-    {
-      text: 'handlebars',
-      value: 20,
-    },
+    // {
+    //   text: 'Apollo',
+    //   value: 40,
+    // },
+    // {
+    //   text: 'Nodemailer',
+    //   value: 30,
+    // },
+    // {
+    //   text: 'sessions',
+    //   value: 25,
+    // },
+    // {
+    //   text: 'handlebars',
+    //   value: 20,
+    // },
     {
       text: 'JWT',
       value: 35,
     },
-    {
-      text: 'Socket.io',
-      value: 20,
-    },
+    // {
+    //   text: 'Socket.io',
+    //   value: 20,
+    // },
     //PY Backend tech
     {
       text: 'Django',
@@ -106,40 +106,44 @@ const SHARED = {
       value: 70,
     },
     {
-      text: 'axios',
-      value: 65,
+      text: 'AJAX',
+      value: 55,
     },
-    {
-      text: 'React router',
-      value: 60,
-    },
-    {
-      text: 'React navigation',
-      value: 1,
-    },
-    {
-      text: 'Redux saga',
-      value: 25,
-    },
-    {
-      text: 'Redux thunk',
-      value: 40,
-    },
+    // {
+    //   text: 'axios',
+    //   value: 65,
+    // },
+    // {
+    //   text: 'React router',
+    //   value: 60,
+    // },
+    // {
+    //   text: 'React navigation',
+    //   value: 10,
+    // },
+    // {
+    //   text: 'Redux saga',
+    //   value: 25,
+    // },
+    // {
+    //   text: 'Redux thunk',
+    //   value: 40,
+    // },
     {
       text: 'Tailwind',
       value: 35,
     },
-    {
-      text: 'SASS/LESS',
-      value: 30,
-    },
+    // {
+    //   text: 'SASS/LESS',
+    //   value: 30,
+    // },
     {
       text: 'normalizr',
       value: 40,
     },
     {
       text: 'styled-components',
-      value: 75,
+      value: 40,
     },
     {
       text: 'Material UI',
@@ -163,24 +167,24 @@ const SHARED = {
     },
     {
       text: 'Nivo',
-      value: 40,
-    },
-    {
-      text: 'lodash',
-      value: 35,
-    },
-    {
-      text: 'yup',
-      value: 25,
-    },
-    {
-      text: 'Notistack',
       value: 30,
     },
+    // {
+    //   text: 'lodash',
+    //   value: 35,
+    // },
+    // {
+    //   text: 'yup',
+    //   value: 25,
+    // },
     {
-      text: 'Mercadopago',
-      value: 50,
+      text: 'Notistack',
+      value: 35,
     },
+    // {
+    //   text: 'Mercadopago',
+    //   value: 50,
+    // },
     {
       text: 'JQuery',
       value: 30,
@@ -188,16 +192,16 @@ const SHARED = {
     //Data Science
     {
       text: 'Pandas',
-      value: 50,
+      value: 55,
     },
     {
-      text: 'NumPy',
+      text: 'NumPy/SciPy',
       value: 50,
     },
-    {
-      text: 'SciPy',
-      value: 50,
-    },
+    // {
+    //   text: 'SciPy',
+    //   value: 50,
+    // },
     {
       text: 'MatplotLib',
       value: 50,
@@ -215,33 +219,33 @@ const SHARED = {
       value: 30,
     },
     //DEV OPS & Tools
-    {
-      text: 'Postman',
-      value: 30,
-    },
-    {
-      text: 'Nginx',
-      value: 30,
-    },
-    {
-      text: 'Apache',
-      value: 35,
-    },
-    {
-      text: 'Gunicorn',
-      value: 30,
-    },
+    // {
+    //   text: 'Postman',
+    //   value: 30,
+    // },
+    // {
+    //   text: 'Nginx',
+    //   value: 30,
+    // },
+    // {
+    //   text: 'Apache',
+    //   value: 35,
+    // },
+    // {
+    //   text: 'Gunicorn',
+    //   value: 30,
+    // },
     {
       text: 'AWS',
-      value: 50,
+      value: 25,
     },
     {
       text: 'Google Cloud',
-      value: 50,
+      value: 25,
     },
     {
       text: 'Heroku',
-      value: 60,
+      value: 45,
     },
     {
       text: 'Firebase',
@@ -255,42 +259,42 @@ const SHARED = {
       text: 'Netlify',
       value: 50,
     },
-    {
-      text: 'Git',
-      value: 50,
-    },
+    // {
+    //   text: 'Git',
+    //   value: 50,
+    // },
     {
       text: 'GitHub',
-      value: 70,
+      value: 60,
     },
     {
       text: 'Jupyter',
-      value: 65,
+      value: 50,
     },
-    {
-      text: 'Anaconda',
-      value: 65,
-    },
-    {
-      text: 'Webpack',
-      value: 40,
-    },
-    {
-      text: 'yarn',
-      value: 20,
-    },
-    {
-      text: 'npm',
-      value: 20,
-    },
-    {
-      text: 'pip',
-      value: 20,
-    },
-    {
-      text: 'Jira',
-      value: 35,
-    },
+    // {
+    //   text: 'Anaconda',
+    //   value: 65,
+    // },
+    // {
+    //   text: 'Webpack',
+    //   value: 40,
+    // },
+    // {
+    //   text: 'yarn',
+    //   value: 20,
+    // },
+    // {
+    //   text: 'npm',
+    //   value: 20,
+    // },
+    // {
+    //   text: 'pip',
+    //   value: 20,
+    // },
+    // {
+    //   text: 'Jira',
+    //   value: 35,
+    // },
   ],
 };
 

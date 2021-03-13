@@ -114,6 +114,12 @@ const Django = styled(_Django)`
     ${{ ...iconHoverProps }};
   }
 `;
+const Frame = styled.div`
+  border: 2px red solid;
+  width: 1584px;
+  height: 396px;
+  display: flex;
+`;
 
 function Stack() {
   const [mobile, tablet, desktop] = useScreenSize();

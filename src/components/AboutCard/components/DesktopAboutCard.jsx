@@ -101,7 +101,12 @@ const Content = styled.div`
   align-items: center;
   flex-direction: column;
   transform: translateZ(50px);
-  text-shadow: 0px 0px 2px black;
+  text-shadow: 0px 0px 2px
+    ${(p) => {
+      if (p.theme.themeName === 'dark') {
+        return 'black';
+      } else return 'white';
+    }};
 `;
 
 const Text = styled(Typography)`

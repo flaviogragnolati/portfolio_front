@@ -1,4 +1,4 @@
-import React, { createRef, useReducer } from 'react';
+import React, { createRef, useEffect, useReducer, useState } from 'react';
 
 // Custom Components
 import { makeStyles, useMediaQuery } from '@material-ui/core';
@@ -16,6 +16,7 @@ import Footer from 'components/Footer';
 import useScreenSize from 'utils/useScreenSize';
 import styled from 'styled-components';
 import { useInView } from 'react-intersection-observer';
+import { fakeRequest } from 'utils/helpers';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -41,19 +42,25 @@ const Div = styled.div`
   height: 100vh;
 `;
 
-const useInViewOptions = {
-  root: null,
-  rootMargin: '50px 0% 0% 0%',
-  threshold: 0.3,
-};
 const App = () => {
   const {
     Sidebar: { index },
   } = useTranslation();
   const classes = useStyles();
+  const [isLoading, setLoading] = useState(true);
   const [mobile, tablet] = useScreenSize();
   const { spyItems, nodeRefs } = useSpy();
   const { home, about, skills, projects, contact } = spyItems;
+
+  useEffect(() => {
+    fakeRequest().then(() => {
+      const el = document.querySelector('.loader-container');
+      if (el) {
+        el.remove();
+        setLoading(!isLoading);
+      }
+    });
+  }, []);
 
   // const reducer = (state, action) => {
   //   switch (action.type) {
@@ -69,6 +76,10 @@ const App = () => {
   //   refsObj[section.id] = createRef();
   //   return refsObj;
   // }, {});
+
+  if (isLoading) {
+    return null;
+  }
 
   return (
     <div className={classes.root}>

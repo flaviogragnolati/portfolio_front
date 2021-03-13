@@ -8,6 +8,12 @@ import { indigo, grey, orange } from '@material-ui/core/colors';
 import useScreenSize from 'utils/useScreenSize';
 import useWindowDimensions from 'utils/useWindowDimensions';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
+import styled from 'styled-components';
+
+const Frame = styled.div`
+  border: 2px red solid;
+  border-right: 0px transparent;
+`;
 
 const options = {
   // colors: ['#1f77b4', '#ff7f0e', '#2ca02c', '#d62728', '#9467bd', '#8c564b'],
@@ -90,11 +96,7 @@ function Skills() {
         </Typography>
       </Grid>
       <Grid item xs={12}>
-        <ReactWordcloud
-          size={size}
-          words={techSkills.slice(0, 30)}
-          options={options}
-        />
+        <ReactWordcloud size={size} words={techSkills} options={options} />
       </Grid>
     </>
   );

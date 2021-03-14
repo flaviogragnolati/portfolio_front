@@ -1,6 +1,6 @@
 import React, { createRef, useEffect } from 'react';
 import styled from 'styled-components';
-import { Grid, Typography, useMediaQuery } from '@material-ui/core';
+import { Box, Grid, Typography, useMediaQuery } from '@material-ui/core';
 import {
   CarouselProvider,
   Slider,
@@ -105,36 +105,38 @@ function Projects() {
   } else {
     // console.log('ratio  <0.9', ratio);
     slideWidth = desktop ? 3 : tablet.high ? 3 : tablet.low ? 1 : 1;
-    slideHeight = desktop ? 2 : tablet.high ? 2.45 : tablet.low ? 0.8 : 2.7;
+    slideHeight = desktop ? 2 : tablet.high ? 2.45 : tablet.low ? 0.8 : 1.9;
   }
 
   return (
-    <Grid item container>
-      <StyledCarousel
-        naturalSlideWidth={slideWidth}
-        naturalSlideHeight={slideHeight}
-        totalSlides={projects.length}
-        infinite={true}
-        visibleSlides={1}
-      >
-        <Slider>
-          {projects.map((project, idx) => (
-            <Slide index={idx}>
-              <ResponsiveProjectCard project={project} />
-            </Slide>
-          ))}
-        </Slider>
-        <StyledBack />
-        <StyledNext />
-      </StyledCarousel>
-      <br />
-      <Grid item xs={12}>
-        <EndPhrase text={endphrase} />
-      </Grid>
-      {/* <Typography color="inherit" variant="body1" gutterBottom>
+    <>
+      <Grid item container>
+        <StyledCarousel
+          naturalSlideWidth={slideWidth}
+          naturalSlideHeight={slideHeight}
+          totalSlides={projects.length}
+          infinite={true}
+          visibleSlides={1}
+        >
+          <Slider>
+            {projects.map((project, idx) => (
+              <Slide index={idx}>
+                <ResponsiveProjectCard project={project} />
+              </Slide>
+            ))}
+          </Slider>
+          <StyledBack />
+          <StyledNext />
+        </StyledCarousel>
+        {/* <br /> */}
+        {/* <Typography color="inherit" variant="body1" gutterBottom>
         {endphrase}
       </Typography> */}
-    </Grid>
+      </Grid>
+      <Grid container item xs={12}>
+        <EndPhrase text={endphrase} />
+      </Grid>
+    </>
   );
 }
 

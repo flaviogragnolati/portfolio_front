@@ -7,30 +7,7 @@ const StyledSection = styled.section`
   padding-bottom: 4rem;
 `;
 
-function Section(
-  { id, title, children, refs, currentSection, setCurrentSection, ...props },
-  ref
-) {
-  // useEffect(() => {
-  //   const observerConfig = {
-  //     rootMargin: '-50% 0px -50% 0px',
-  //     threshold: 0,
-  //   };
-  //   const handleIntersection = (entries) => {
-  //     entries.forEach((entry) => {
-  //       if (entry.target.id !== currentSection && entry.isIntersecting) {
-  //         setCurrentSection({ type: 'set', payload: entry.target.id });
-  //       }
-  //     });
-  //   };
-  //   const observer = new IntersectionObserver(
-  //     handleIntersection,
-  //     observerConfig
-  //   );
-  //   observer.observe(refs[id].current);
-  //   return () => observer.disconnect();
-  // }, [currentSection, setCurrentSection, refs, id]);
-
+function Section({ id, title, children, ...props }, ref) {
   return (
     <StyledSection id={id} ref={ref} {...props}>
       <Grid container direction="column" justify="center" alignItems="center">

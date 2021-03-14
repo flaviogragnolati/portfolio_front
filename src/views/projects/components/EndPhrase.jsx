@@ -3,7 +3,8 @@ import Typewriter from 'typewriter-effect/dist/core';
 import styled from 'styled-components';
 
 const EndPhraseDiv = styled.div`
-  /* height: 15vh; */
+  margin: 1rem 0;
+  height: 10vh;
   text-align: center;
 `;
 
@@ -16,13 +17,7 @@ function EndPhrase({ text, ...props }) {
         loop: false,
         delay: 75,
       });
-      typewriter
-        .pauseFor(200)
-        .typeString(text)
-        // .pauseFor(300)
-        // .deleteChars(text.length)
-        .pauseFor(500)
-        .start();
+      typewriter.pauseFor(200).typeString(text).pauseFor(500).start();
     }
   }, [typeRef, text]);
 

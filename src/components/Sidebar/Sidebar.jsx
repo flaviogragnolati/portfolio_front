@@ -64,7 +64,7 @@ function Sidebar({ spy }) {
   } = useTranslation();
   const classes = useStyles();
   const theme = useTheme();
-  console.log('THEME', theme);
+  // console.log('THEME', theme);
   const [mobile, tablet, desktop] = useScreenSize();
   const [mobileOpen, setMobileOpen] = useState(false);
   // const [current, setCurrent] = useState('home');

@@ -115,14 +115,14 @@ function Social({ links, tooltips }) {
     <SocialDiv variant="outlined">
       <Tooltip title={tooltips.linkedin}>
         <LinkedinDiv>
-          <a href={linkedin}>
+          <a href={linkedin} target="_blank" rel="noreferrer">
             <LinkedinIcon size="2.5rem" />
           </a>
         </LinkedinDiv>
       </Tooltip>
       <Tooltip title={tooltips.git}>
         <GitDiv>
-          <a href={github}>
+          <a href={github} target="_blank" rel="noreferrer">
             <GithubIcon size="2.4rem" />
           </a>
         </GitDiv>

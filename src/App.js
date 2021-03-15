@@ -1,7 +1,7 @@
 import React, { createRef, useEffect, useReducer, useState } from 'react';
 
 // Custom Components
-import { makeStyles, useMediaQuery } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core';
 import Sidebar from 'components/Sidebar';
 import Main from 'views/main';
 import About from 'views/about';
@@ -15,7 +15,6 @@ import { useTranslation } from 'context/LangWrapper/useTranslation';
 import Footer from 'components/Footer';
 import useScreenSize from 'utils/useScreenSize';
 import styled from 'styled-components';
-import { useInView } from 'react-intersection-observer';
 import { fakeRequest } from 'utils/helpers';
 
 const useStyles = makeStyles((theme) => ({
@@ -32,16 +31,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Div = styled.div`
-  background-color: ${(p) => p.theme.main};
-  position: absolute;
-  top: 0;
-  left: -220px;
-  z-index: ${(p) => p.theme.zIndex.drawer + 100};
-  width: 100vw;
-  height: 100vh;
-`;
-
 const App = () => {
   const {
     Sidebar: { index },
@@ -49,8 +38,8 @@ const App = () => {
   const classes = useStyles();
   const [isLoading, setLoading] = useState(true);
   const [mobile, tablet] = useScreenSize();
-  const { spyItems, nodeRefs } = useSpy();
-  const { home, about, skills, projects, contact } = spyItems;
+  // const { spyItems, nodeRefs } = useSpy();
+  // const { home, about, skills, projects, contact } = spyItems;
 
   useEffect(() => {
     fakeRequest().then(() => {
@@ -69,7 +58,9 @@ const App = () => {
 
   return (
     <div className={classes.root}>
-      <Sidebar spy={spyItems} />
+      <Sidebar
+      // spy={spyItems}
+      />
       <main className={classes.content}>
         <div id="top-anchor" />
         <section

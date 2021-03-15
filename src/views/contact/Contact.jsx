@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Box, Button, Grid, Paper } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import { getFormLang } from './components/contactForm';
@@ -16,18 +16,9 @@ const StyledTextField = styled(TextField)`
   }
 `;
 
-const SubmitBtn = styled(Button)`
-  width: 100%;
-  color: ${(p) => p.theme.palette.primary.contrastText};
-  background-color: ${(p) => p.theme.palette.primary.dark};
-  &:hover {
-    background-color: ${(p) => p.theme.palette.primary.light};
-  }
-`;
-
 function Contact() {
   const {
-    Contact: { formModel, subtitle, sideText, socialText },
+    Contact: { formModel },
   } = useTranslation();
 
   const [initialValues, contactFormValidation, labels, names] = getFormLang(
@@ -38,31 +29,8 @@ function Contact() {
     console.log('SUBMITTING FORM', values);
   };
 
-  // const emailMatch = sideText.match(/<.*>/g)[0].replace(/<|>/g, '');
-  // const splitSideText = sideText.split('<email>');
-
   return (
     <>
-      {/* <Grid
-        container
-        item
-        xs={12}
-        md={4}
-        direction="column"
-        justify="space-evenly"
-        alignItems="stretch"
-      >
-        <h3>{subtitle}</h3>
-        <Box>
-          {splitSideText[0]}
-          <span>
-            <Button size="medium">{emailMatch}</Button>
-          </span>
-          {splitSideText[1]}
-        </Box>
-        <p>{socialText}</p>
-        <SocialContact /> 
-      </Grid> */}
       <Grid
         container
         item

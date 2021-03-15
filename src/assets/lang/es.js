@@ -13,30 +13,27 @@ const ES = {
       dark: 'Demasiado oscuro?',
       light: 'Demasiado claro?',
     },
-    // langPicker: {
-    //   langs: ['Español', 'English', 'Italiano'],
-    //   langTooltip: 'Cambiar lenguaje',
-    // },
   },
   Main: {
     title: 'Flavio Gragnolati',
     hireBtnText: 'Contratame!',
     type: [
       'Fullstack Web Developer, ',
-      'aunque tambien Ingeniero Químico...',
-      'y tambien, Ingeniero Industrial',
+      'tambien...Ingeniero Químico...',
+      'y además, Ingeniero Industrial',
     ],
   },
   About: {
     descriptionTitle: 'Un poco sobre mi...',
     description:
       //I love clean code, learning new things, strong engineering culture,
-      'Soy Full stack web developer con un fuerte cultura ingenieril que esta siempre aprendiendo. Trabajo orientado a objetivos, estoy preparado para trabajar bajo presión y en entornos de cambios constantes. Me gusta desarrollar aplicaciones con código escalable, mantenible, limpio y debuggeable. ',
+      'Full stack developer proactivo y eficiente, rápido para adquirir nuevos conomientos, que puede adaptarse facilmente a entornos de cambios constantes y sin miedo para trabajar bajo presión. Listo para integrarse en equipos multidisciplinarios y trabajar bajo metodologias agiles orientadas hacia objetivos. Me gusta escribir código claro, escalable y DRY.',
     aboutCards: [
       {
         title: 'Trabajo en equipo',
         icon: 'team',
-        text: 'Con experiencia dirigiendo equipos multidiciplinarios',
+        text:
+          'Con experiencia trabajando en, y dirigiendo, equipos multidiciplinarios',
       },
       {
         title: 'Aprendizaje',
@@ -51,12 +48,13 @@ const ES = {
       {
         title: 'Comunicación',
         icon: 'communication',
-        text: 'Comunicación Bilingüe fluida y clara',
+        text: 'Comunicador fluido tanto en inglés como en español',
       },
       {
         title: 'Resolución de problemas',
         icon: 'problem',
-        text: 'Resolución de analítica de problemas',
+        text:
+          'Fuerte cultura ingenieril con resolución de analítica de problemas',
       },
       {
         title: 'Compromiso',
@@ -65,7 +63,7 @@ const ES = {
       },
     ],
     stackTitle: 'Mi stack de soluciones preferidas',
-    stackSubTitle: '(sin miedo de aprender nuevas tecnologias)',
+    stackSubTitle: 'sin miedo de aprender nuevas tecnologias',
     stackTooltip: {
       mongo: 'MongoDB',
       pg: 'PostgreSQL',
@@ -93,7 +91,10 @@ const ES = {
         icon: 'bootcamp',
         type: 'Bootcamp',
         date: ['10/2020', '02/2021'],
-        description: 'Fullstack web developer bootcamp basado en Node y React',
+        description:
+          'Bootcamp teorico practico de 700+ horas enfocado en avaScript ES+6, React, Redux, Express, Sequelize, Node, PostgreSQL y RESTful API. Finalizando con el desarrollo de diversos proyectos `reales` bajo metodologias ágiles',
+        certificate:
+          'https://s3-sa-east-1.amazonaws.com/certs.henry/cert?id=e3f5335c-ecb5-4c0e-8ae2-651a457b0810',
       },
       {
         school: 'University of Michigan - Coursera',
@@ -104,46 +105,63 @@ const ES = {
         description: '',
       },
       {
-        school: 'University of Michigan - Coursera',
-        title: 'Applied Machine Learning in Python',
+        school: 'Coursera - University of Michigan',
+        title: 'Applied Data Science with Python',
         type: 'Curso',
         icon: 'course',
         date: ['2020'],
-        description: '',
+        description:
+          'Especialización en Ciencia de Datos de 5 cursos, con Python, aplicado a machine learning, visualización de información, analisis de lenguaje y redes.',
+        certificate:
+          'https://www.coursera.org/account/accomplishments/specialization/257L7JGP5WX8',
       },
       {
         school: 'Centro REDES - CONICET',
-        title: 'Procesamiento de imagenes Satelitales con QGIS',
+        title: 'Procesamiento de imagenes satelitales con QGIS',
         type: 'Curso',
         icon: 'course',
         date: ['2020'],
         description: '',
       },
       {
+        school: 'edX - TUDelftX',
+        title: 'Industrial Biotechnology',
+        type: 'Curso',
+        icon: 'course',
+        date: ['2016'],
+        description:
+          'Insights and tools for the design of biotechnology processes in a sustainable way. Sustainable processing for biobased products',
+        certificate:
+          'https://courses.edx.org/certificates/c169395352d04948b6f9e7b89b0ef2b5',
+      },
+      {
         school: 'UTN FRTDF',
-        title: 'Ingeniero Químico',
+        title: 'Ingeniería Química',
         type: 'Carrera de Grado',
         icon: 'university',
         date: ['2011', '2018'],
-        description: '',
+        description:
+          'Tésis:  Diseño integral fotobioreactores, y planta de producción de Spirulina a granel.',
         gpa: '9.32',
         gpa_oof: '10',
       },
       {
         school: 'Academia Nacional de Ingeniería',
-        title: 'Premio a los mejores egresados de Ingeniería de Argentina',
-        type: 'Premio',
+        title: 'Award to the best engineering graduates of Argentina',
+        type: 'Award',
         icon: 'award',
         date: ['2011'],
-        description: '',
+        description:
+          'Award (Ing. Isidoro Martín) bestowed annually to outstanding engineering graduates from Argentina.',
       },
       {
         school: 'UTN FRTDF',
-        title: 'Ingeniero Industrial',
-        type: 'Carrera de Grado',
+        title: 'Ingeniería Industrial',
+        type: 'Carrea de grado',
         icon: 'university',
         date: ['2006', '2011'],
-        description: '',
+        description:
+          'Tesis: Diseño integral de planta de tratamiento y valorización de la fracción orgánica de los RSU mediante la biometanizacion.',
         gpa: '8.80',
         gpa_oof: '10',
       },
@@ -151,64 +169,67 @@ const ES = {
     work: [
       {
         company: 'Quasar Analytic',
-        sector: 'Tecnologia y Ciencia de Datos',
-        website: 'www.quasaranalytic.com',
-        position: 'Fundador',
+        sector: 'Terch and Data Science',
+        website: 'https://quasaranalytic.com/',
+        position: 'Co-Founder',
         icon: 'tech',
         date: ['03/2019', 'Present'],
         description: '',
       },
       {
         company: 'Agua del Fagnano',
-        sector: 'Empresa productora de agua mineral',
-        website: 'www.aguadelfagnano.com',
-        position: 'Director Tecnico',
+        sector: 'Mineral Water manufacturer',
+        website: 'http://www.aguadelfagnano.com/',
+        position: 'Techincal Director',
         icon: 'chem',
         date: ['08/2018', '03/2019'],
-        description:
-          'Responsable de la calidad del producto final y del proceso productivo. Encargado del laboratorio interno y externo.',
+        description: `Production and quality assurance lab manager. Responsible for the product and process quality.
+        Responsible for the implementation of integral quality management system.`,
         highlight:
-          'Rediseño del proceso productivo con el ojetivo de incrementar la eficiencia productivar y diminuir costos de producción',
+          'Project Manager for the redesign of the production process, with the objective to improve production capacity, reducing downtimes and minimizing contamination risks.',
       },
       {
         company: 'Tecnomyl',
-        sector: 'Empresa productora de fitosanitarios',
-        website: 'www.tecnomyl.com',
+        sector: 'Pythosanitary manufacturer',
+        website: 'https://tecnomyl.com.ar/',
         position: 'Coordinador de I+D',
         icon: 'chem',
         date: ['01/2017', '08/2018'],
-        description:
-          'Desarrollo de nuevas formulaciones & refoluacion de productos fitosanitarios, reingeniería de productos de competencia. Seguimiento de estudios de campo, análisis de envases y efectividad de formulaciones. Caracterizacion de propiedades fisicoquímicas mediante análisis cuantitativo instrumental.',
-        highlight: '',
+        description: `Research and development of new phytosanitary products, with Reverse Engineering of competitors products.
+        Physical and chemical product characterization with quantitative instrumental analysis (HPLC, GC & SP).`,
+        highlight:
+          'Redesign of existing product formulations, to reduce production cost, improve manufacturing times or enhance product efficiency.',
       },
       {
         company: 'Total Austral',
-        sector: 'Empresa operadora de petróleo y gas',
-        website: 'www.total.com',
-        position: 'Ingeniero Well Performance',
+        sector: 'Oil&Gas upstream operator',
+        website: 'https://www.total.com.ar/',
+        position: 'Well Performance Engineer',
         icon: 'oil',
         date: ['11/2015', '01/2017'],
-        description:
-          'Monitoreo de parámetros de produccion y análisis de posibles escenarios para anticipar el comportamiento del pozo. Análisis PVT, con curas de eficiencia y manejo de arenas de producción. Ensayos de integridad de las instalaciones.',
+        description: `Well monitoring and production studies, with PVT analysis, efficiency curves and sand management.
+        Well integrity tests for surface and subsurface security and process equipment and accessories.
+        `,
         highlight:
-          'Coordinación y ejecución de operaciones de SlickLine, WireLine, CoiledTubing, Acidizing, Fracking & Stimulation',
+          'Coordination and execution of Slickline, Wireline, CoiledTubing, cidizing, fracking & well stimulation operations.',
       },
       {
         company: 'Total Austral',
-        sector: 'Empresa operadora de petróleo y gas',
-        website: 'www.total.com',
-        position: 'Responsable Operaciones Especiales',
+        sector: 'Oil&Gas upstream operator',
+        website: 'https://www.total.com.ar/',
+        position: 'Special Operations Responsible',
         icon: 'oil',
         date: ['02/2013', '11/2015'],
-        description:
-          'Elaboración de procedimientos operaciones para ejecución de tareas únicas y rutinarias. Planificación, coordinación y ejecución de tareas de optiomización de operaciones de interveción e inspección de equipos.',
+        description: `Writing of operational procedures for the execution of special and unique tasks, as well as routine work, within the production facilities.
+        Planification, coordination and execution of inspections and interventions of production equipment.
+        `,
         highlight:
-          'Commiisioning y start-up en diversos proyectos de ingeniería EPCC.',
+          'Commissioning and start-up of several engineering projects (increase of compression capacity, oil treatment plant extension, setup of Vega Pleyade rig, etc.)',
       },
       {
         company: 'BGH',
-        sector: 'Empresa productora de electronica de consumo',
-        website: 'www.bgh.com.ar',
+        sector: 'Consumer electronis manufacturer',
+        website: 'https://bgh.com.ar/',
         position: 'Responsable de Proyectos RCM',
         icon: 'factory',
         date: ['02/2011', '02/2013'],
@@ -221,8 +242,7 @@ const ES = {
     ],
   },
   Skills: {
-    subtitle:
-      'Algunas de las tecnologías y herramientas con las que he trabajado...',
+    subtitle: "Some of the techonologies and tools I've worked with...",
     langSpecificSkills: [
       //Soft Skills
       {
@@ -230,42 +250,42 @@ const ES = {
         value: 70,
       },
       {
-        text: 'Comunicacion eficaz',
+        text: 'Efficent Communication?',
         value: 60,
       },
       {
-        text: 'Liderazgo',
+        text: 'Leadership',
         value: 60,
       },
       {
-        text: 'Aprendizaje rapido',
-        value: 80,
+        text: 'Fast Learner',
+        value: 95,
       },
     ],
   },
   Projects: {
-    subtitle: 'Estos son algunos de los proyectos en los que he trabajado',
+    subtitle: "Some of the projects I've worked on...",
     endphrase:
-      'Si te interesa algún proyecto y queres saber mas respecto de algun proyecto no dudes en contactarme',
+      'Si estas interesado en un proyecto, querés saber más sobre mi trabajo o estas buscando un desarrollador para un trabajo especial, sentite libre de contactarme',
     projectStatus: {
       0: 'Prototipo',
       1: 'Desarrollo',
-      2: 'Produccion',
+      2: 'Producción',
       3: 'Finalizado',
       4: 'Cancelado',
     },
     tooltip: {
-      statusTooltip: 'Estado',
-      techStackMoreTooltip: '??',
-      codeTooltip: 'Ver código en Github',
-      webTooltip: 'Ver versión en vivo',
-      previewTooltip: 'Ver breve demo del proyecto',
+      statusTooltip: 'Estado del proyecto',
+      techStackMoreTooltip: '',
+      codeTooltip: 'Ver código en GitHub',
+      webTooltip: 'Ver una versión de prueba en vivo',
+      previewTooltip: 'Vista previa de la app',
     },
     card: {
       statusHeading: 'Estado',
       techStackHeading: 'Tecnologias',
-      previewHeading: 'Vista Previa',
-      dateHeading: 'Fecha',
+      previewHeading: 'Vista previa',
+      dateHeading: 'Date',
     },
     projects: [
       {
@@ -273,18 +293,18 @@ const ES = {
         title: 'quizApp',
         subtitle: 'App de quizzes',
         description:
-          'Aplicacion web y móvil para la gestion de quizzes. Herramienta para las instituciones educativas tercericen sus examenes',
+          'Web & mobile app for the management of quizzes. A tool designed for education institutions to outsource their examinations.',
         status: 2,
         tech: {
           backend: [
             'express',
+            'postgres',
             'sequelize',
             'passport',
             'oAuth',
-            'postgres',
             'nodemailer',
           ],
-          frontend: ['react', 'redux', 'formik', 'material-ui', 'axios'],
+          frontend: ['react', 'ionic', 'redux', 'formik', 'material-ui'],
         },
         git: 'www.github.com',
         website: 'www.website.com',
@@ -294,8 +314,9 @@ const ES = {
       {
         img: '',
         title: 'wineStore',
-        subtitle: 'e-commerce de vinos',
-        description: 'Sitio web para la venta de vinos.',
+        subtitle: 'Wine e-commerce',
+        description:
+          'A simple but sleek e-commerce designed for online selling of wines.',
         status: 1,
         tech: {
           backend: [
@@ -341,7 +362,8 @@ const ES = {
         img: '',
         title: 'Quasar Analytic',
         subtitle: 'Landing Page',
-        description: 'Lading page con formulario de contacto',
+        description:
+          'Simple landing page with contact form, and back office for form generation and administration.',
         status: 0,
         tech: {
           backend: [
@@ -349,7 +371,7 @@ const ES = {
             'postgres',
             'django-rest-framework',
             'php',
-            'php-pear',
+            'pear-php',
           ],
           frontend: ['bootstrap', 'jQuery'],
         },
@@ -377,9 +399,8 @@ const ES = {
   },
   Contact: {
     title: 'Contacto',
-    subtitle: 'Estemos en contacto?',
-    sideText: 'No te gustan los formularios? Enviame un <email>👋',
-    socialText: '...O encontrame en las redes sociales',
+    sideText: 'No te gustan los formularios? Enviame un email👋',
+    socialText: '...o encontrame en las redes sociales',
     formModel: {
       name: {
         name: 'name',
@@ -414,7 +435,7 @@ const ES = {
       linkedin: 'https://www.linkedin.com/in/flavio-gragnolati/',
       github: 'https://github.com/flaviogragnolati',
       mail: 'flavio.gragnolati@gmail.com',
-      subject: 'Hola!',
+      subject: 'Hello!',
     },
     socialTooltips: {
       linkedin: 'Ir a mi LinkedIn',

@@ -110,7 +110,7 @@ const EN = {
         icon: 'course',
         date: ['2020'],
         description:
-          '5 course specialization to data science through python, applied to machine learning, information visualization, text analysis, and social network analysis.',
+          '5 course specialization to data science through python, applied to machine learning, information visualization, natural language analysis, and social network analysis.',
         certificate:
           'https://www.coursera.org/account/accomplishments/specialization/257L7JGP5WX8',
       },

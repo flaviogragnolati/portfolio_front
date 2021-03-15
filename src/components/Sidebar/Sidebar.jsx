@@ -130,7 +130,7 @@ function Sidebar({ spy }) {
             item={item}
             currentSection={currentSection}
             setCurrentSection={setCurrentSection}
-            spy={spy[item.id]}
+            // spy={spy[item.id]}
           />
         ))}
         <Divider />

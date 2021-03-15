@@ -50,7 +50,7 @@ function About() {
         xs={12}
         direction="row"
         justify="center"
-        alignItems="center"
+        alignItems="stretch"
         // spacing={5}
       >
         {aboutCards.map((card, idx) => (

@@ -250,7 +250,7 @@ const ES = {
   Projects: {
     subtitle: "Some of the projects I've worked on...",
     endphrase:
-      'Si estas interesado en un proyecto, querés saber más sobre mi trabajo o estas buscando un desarrollador para un trabajo especial, sentite libre de contactarme',
+      'Si estas interesado en un proyecto, querés saber más sobre mi trabajo o estas buscando un desarrollador para un trabajo especial, no dudes en contactarme',
     projectStatus: {
       0: 'Prototipo',
       1: 'Desarrollo',

@@ -95,7 +95,6 @@ const App = () => {
         >
           <Projects />
         </Section>
-
         <Section
           id="contact"
           title={index[4].text}

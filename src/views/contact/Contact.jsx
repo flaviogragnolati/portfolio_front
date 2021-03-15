@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Box, Grid } from '@material-ui/core';
 import { Formik, Form, Field } from 'formik';
@@ -6,6 +6,7 @@ import { useTranslation } from 'context/LangWrapper/useTranslation';
 import { getFormLang } from './components/contactForm';
 import { TextField } from 'formik-material-ui';
 import SubmitButton from './components/SubmitButton';
+import { defaults } from 'utils/config';
 
 const StyledTextField = styled(TextField)`
   margin-top: 0.5rem;
@@ -18,15 +19,28 @@ const StyledTextField = styled(TextField)`
 
 function Contact() {
   const {
-    Contact: { formModel },
+    Contact: { formModel, submitSuccess },
   } = useTranslation();
 
   const [initialValues, contactFormValidation, labels, names] = getFormLang(
     formModel
   );
 
-  const handleSubmit = (values, onSubmitProps) => {
+  const [submit, setSubmit] = useState(false);
+  const handleSubmit = async (values, onSubmitProps) => {
     console.log('SUBMITTING FORM', values);
+    const response = await fetch(defaults.mailURL, {
+      method: 'post',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(values),
+    });
+    console.log(response, typeof response.status);
+    if (response.status === 200) {
+      setSubmit(true);
+    }
   };
 
   return (
@@ -92,7 +106,13 @@ function Contact() {
                 pt={2}
                 pb={2}
               >
-                <SubmitButton type="submit">{labels.submit}</SubmitButton>
+                <SubmitButton
+                  type="submit"
+                  submit={submit}
+                  submitText={submitSuccess}
+                >
+                  {labels.submit}
+                </SubmitButton>
               </Box>
             </Grid>
           </Form>

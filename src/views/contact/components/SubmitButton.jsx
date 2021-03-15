@@ -1,11 +1,20 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Box, ButtonBase, Typography } from '@material-ui/core';
 import { MailSend as _MailSend } from 'styled-icons/boxicons-regular';
 
 const FillButton = styled(ButtonBase)`
-  /* background-color: ${(p) => p.theme.palette.primary.light}; */
-  background: ${(p) => p.theme.palette.background.paper};
+  background: ${(p) => {
+    if (p.submit) {
+      return css`
+        ${(p) => p.theme.palette.success.main};
+      `;
+    } else {
+      return css`
+        ${(p) => p.theme.palette.background.paper};
+      `;
+    }
+  }};
   border: 2px solid ${(p) => p.theme.palette.primary.light};
   font: inherit;
   color: ${(p) => p.theme.palette.text.primary};
@@ -27,9 +36,16 @@ const MailSend = styled(_MailSend)`
   margin-left: 25px;
 `;
 
-function SubmitButton({ children, ...props }) {
+function SubmitButton({ children, submit, submitText, ...props }) {
   return (
-    <FillButton variant="contained" focusRipple size="large">
+    <FillButton
+      variant="contained"
+      focusRipple
+      size="large"
+      disabled={submit}
+      submit={submit}
+      {...props}
+    >
       <Box
         display="flex"
         flexDirection="row"
@@ -37,7 +53,7 @@ function SubmitButton({ children, ...props }) {
         alignItems="center"
         flexGrow="1"
       >
-        <Typography variant="h6">{children}</Typography>
+        <Typography variant="h6">{submit ? submitText : children}</Typography>
         <MailSend size="1.5rem" />
       </Box>
     </FillButton>

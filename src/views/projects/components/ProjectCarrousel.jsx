@@ -89,7 +89,7 @@ function ProjectCarrousel({ projects }) {
   } = useScreenSize();
 
   const { height, width } = useWindowDimensionsInitial();
-  console.log('size', height, width);
+  //  console.log('size', height, width);
   //   const { height, width } = useWindowDimensions();
   const ratio = width / height;
 

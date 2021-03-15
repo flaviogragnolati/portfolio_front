@@ -6,6 +6,7 @@ export const defaults = {
   theme: 'dark',
   lang: langList.english,
   sections: ['home', 'about', 'skills', 'projects', 'contact'],
+  mailURL: '',
   screens: Object.freeze({
     mobile: 0,
     tablet: 1,

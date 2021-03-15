@@ -8,7 +8,6 @@ import HireMeButton from './components/HireMeButton';
 import ScrollDown from './components/ScrollDown';
 import HireButton from './components/HireButton';
 import { Box, Typography } from '@material-ui/core';
-import useScreenSize from 'utils/useScreenSize';
 import { FullScreen, useFullScreenHandle } from 'react-full-screen';
 
 const img = argonath;

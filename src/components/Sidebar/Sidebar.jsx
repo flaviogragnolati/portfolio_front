@@ -27,7 +27,6 @@ import LangPicker from './components/LangPicker';
 import SunMoon from './components/SunMoon';
 import Avatar from './components/Avatar';
 import Footer from 'components/Footer';
-import useScreenSize from 'utils/useScreenSize';
 import CloseBtn from 'components/Sidebar/components/CloseBtn';
 
 const drawerWidth = 220;
@@ -65,7 +64,6 @@ function Sidebar({ spy }) {
   const classes = useStyles();
   const theme = useTheme();
   // console.log('THEME', theme);
-  const [mobile, tablet, desktop] = useScreenSize();
   const [mobileOpen, setMobileOpen] = useState(false);
   // const [current, setCurrent] = useState('home');
 

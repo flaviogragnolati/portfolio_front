@@ -14,9 +14,7 @@ import Projects from 'views/projects';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import Footer from 'components/Footer';
 import useScreenSize from 'utils/useScreenSize';
-import styled from 'styled-components';
 import { fakeRequest } from 'utils/helpers';
-import EndPhrase from 'views/projects/components/EndPhrase';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,12 +33,11 @@ const useStyles = makeStyles((theme) => ({
 const App = () => {
   const {
     Sidebar: { index },
-    Projects: { endphrase },
   } = useTranslation();
 
   const classes = useStyles();
   const [isLoading, setLoading] = useState(true);
-  const [mobile, tablet] = useScreenSize();
+  const { mobile, tablet } = useScreenSize();
   // const { spyItems, nodeRefs } = useSpy();
   // const { home, about, skills, projects, contact } = spyItems;
 
@@ -102,7 +99,6 @@ const App = () => {
         >
           <Contact />
         </Section>
-        <EndPhrase text={endphrase} />
         {(mobile || tablet.low) && <Footer />}
         <BackToTopBtn />
       </main>

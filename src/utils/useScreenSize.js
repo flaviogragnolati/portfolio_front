@@ -20,23 +20,31 @@ const useScreenSize = () => {
 
   const desktop = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
-  const screens = [mobile, tablet, desktop, windowDimensions];
-  const prevScreens = usePrevious(screens);
+  // const screens = [mobile, tablet, desktop, windowDimensions];
+  const screens = {
+    mobile,
+    tablet,
+    desktop,
+    size: windowDimensions,
+  };
+  // const prevScreens = usePrevious(screens);
+  // useEffectWhen(
+  //   () => {
+  //     console.log('USE EFFECT', isEqual(prevScreens, screens));
+  //     if (!isEqual(prevScreens, screens)) {
+  //       console.log('screens', screens);
+  //       console.log('getting', getWindowDimensions());
+  //       setWindowDimensions(getWindowDimensions());
+  //     }
+  //   },
+  //   [],
+  //   [screens]
+  // );
 
-  screens['mobile'] = screens[0];
-  screens['tablet'] = screens[1];
-  screens['desktop'] = screens[2];
-  screens['size'] = windowDimensions;
-
-  useEffectWhen(
-    () => {
-      if (!isEqual(prevScreens, screens)) {
-        setWindowDimensions(getWindowDimensions());
-      }
-    },
-    [],
-    [screens]
-  );
+  // screens['mobile'] = screens[0];
+  // screens['tablet'] = screens[1];
+  // screens['desktop'] = screens[2];
+  // screens['size'] = windowDimensions;
 
   return screens;
 };

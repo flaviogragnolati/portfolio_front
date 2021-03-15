@@ -6,7 +6,7 @@ import useScreenSize from 'utils/useScreenSize';
 
 function ResponsiveProjectCard({ project, screenType }) {
   let card;
-  const [mobile, tablet, desktop] = useScreenSize();
+  const { mobile, tablet, desktop } = useScreenSize();
 
   if (mobile) {
     card = <MobileProjectCard project={project} screenType={screenType} />;

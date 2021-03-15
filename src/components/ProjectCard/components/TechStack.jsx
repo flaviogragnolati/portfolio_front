@@ -52,7 +52,7 @@ function TechStack({ tech }) {
 
   let techStack;
 
-  const [mobile, tablet, desktop] = useScreenSize();
+  const { mobile, tablet, desktop } = useScreenSize();
   const screen = { mobile, tablet, desktop };
 
   const techTag = (array, props) => {

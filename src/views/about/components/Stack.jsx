@@ -123,7 +123,7 @@ const Frame = styled.div`
 `;
 
 function Stack() {
-  const [mobile, tablet, desktop] = useScreenSize();
+  const { mobile, tablet, desktop } = useScreenSize();
   const {
     About: {
       stackTooltip: { mongo, pg, js, py, ex, dj, react },

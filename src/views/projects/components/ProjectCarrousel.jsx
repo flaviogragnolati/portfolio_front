@@ -12,6 +12,7 @@ import ResponsiveProjectCard from 'components/ProjectCard';
 
 import useScreenSize from 'utils/useScreenSize';
 import useWindowDimensions from 'utils/useWindowDimensions';
+import useWindowDimensionsInitial from 'utils/useWindowDimensionInitial';
 
 const StyledCarousel = styled(CarouselProvider)`
   width: 100%;
@@ -80,9 +81,16 @@ const StyledNext = styled(ButtonNext)`
 `;
 
 function ProjectCarrousel({ projects }) {
-  const [mobile, tablet, desktop] = useScreenSize();
+  const {
+    mobile,
+    tablet,
+    desktop,
+    // size: { height, width },
+  } = useScreenSize();
 
-  const { height, width } = useWindowDimensions();
+  const { height, width } = useWindowDimensionsInitial();
+  console.log('size', height, width);
+  //   const { height, width } = useWindowDimensions();
   const ratio = width / height;
 
   let slideWidth, slideHeight, screenType;

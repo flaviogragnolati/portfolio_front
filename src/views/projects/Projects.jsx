@@ -1,6 +1,6 @@
-import React, { createRef, useEffect } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { Box, Grid, Typography, useMediaQuery } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import {
   CarouselProvider,
   Slider,
@@ -84,7 +84,7 @@ const StyledNext = styled(ButtonNext)`
 
 function Projects() {
   const {
-    Projects: { subtitle, endphrase, tooltip, projects },
+    Projects: { endphrase, projects },
   } = useTranslation();
 
   // const matches = useMediaQuery((theme) => theme.breakpoints.up('md'));

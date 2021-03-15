@@ -33,7 +33,7 @@ const EN = {
         title: 'Team work',
         icon: 'team',
         text:
-          'A great deal of of experience working in, and leading, multidisciplinary teams',
+          'A great deal of experience working in, and leading, multidisciplinary teams',
       },
       {
         title: 'Learning',
@@ -98,7 +98,7 @@ const EN = {
       {
         school: 'University of Michigan - Coursera',
         title: 'Applied Plotting, Charting & Data Representastion in Python',
-        type: 'Curso',
+        type: 'Course',
         icon: 'course',
         date: ['2020'],
         description: '',
@@ -117,7 +117,7 @@ const EN = {
       {
         school: 'Centro REDES - CONICET',
         title: 'Satelite image processing with QGIS',
-        type: 'Curso',
+        type: 'Course',
         icon: 'course',
         date: ['2020'],
         description: '',
@@ -125,7 +125,7 @@ const EN = {
       {
         school: 'edX - TUDelftX',
         title: 'Industrial Biotechnology',
-        type: 'Curso',
+        type: 'Course',
         icon: 'course',
         date: ['2016'],
         description:
@@ -206,7 +206,7 @@ const EN = {
         position: 'Well Performance Engineer',
         icon: 'oil',
         date: ['11/2015', '01/2017'],
-        description: `Well monitoring and production studies, with PVT analysis, efficiency curves and sand management.
+        description: `Well monitoring and productivity studies, with PVT analysis, efficiency curves and sand management.
         Well integrity tests for surface and subsurface security and process equipment and accessories.
         `,
         highlight:
@@ -232,33 +232,20 @@ const EN = {
         position: 'Responsable de Proyectos RCM',
         icon: 'factory',
         date: ['02/2011', '02/2013'],
-        tasks: [
-          'Gestion integral de proyectos de manufactura de celulares para SONY, Motorola, Huawei y ZTE. Planificación anticipada de la calidad del producto, elaboración de FMEA y progrmaa de control estadístico de proceso.',
-        ],
+        description: `Diseño de ingenieria y commissioning de lineas de producción, incluyendo infraestructura, equipamiento y flujo de producción.
+        Implementación de planificación anticipada de la calidad del producto, con FMEAs y el desarrollo de un sistema de trabajo para la aplicación de conrol estadistico de procesos.`,
         highlight:
-          'Coordinación simultena de 6 proyectos, incluyendo cálculo y diseño de los medios de producción, instalación y configuración de los medios de control.',
+          'Gestión de hasta 6 (seis) proyectos, en simultáneo, de manufactura de celulares para Sony, Motorola, Huawei & ZTE.',
       },
     ],
   },
   Skills: {
-    subtitle: "Some of the techonologies and tools I've worked with...",
+    subtitle: 'Algunas de las tecnologias con las que he trabajado...',
     langSpecificSkills: [
       //Soft Skills
       {
-        text: 'Project Management',
+        text: 'Gestión de proyectos',
         value: 70,
-      },
-      {
-        text: 'Efficent Communication?',
-        value: 60,
-      },
-      {
-        text: 'Leadership',
-        value: 60,
-      },
-      {
-        text: 'Fast Learner',
-        value: 95,
       },
     ],
   },

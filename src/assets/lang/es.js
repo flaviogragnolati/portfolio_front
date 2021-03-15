@@ -111,7 +111,7 @@ const ES = {
         icon: 'course',
         date: ['2020'],
         description:
-          'Especialización en Ciencia de Datos de 5 cursos, con Python, aplicado a machine learning, visualización de información, analisis de lenguaje y redes.',
+          'Especialización en Ciencia de Datos, con Python, de 5 cursos, aplicado a machine learning, visualización de información, analisis de lenguaje y redes.',
         certificate:
           'https://www.coursera.org/account/accomplishments/specialization/257L7JGP5WX8',
       },
@@ -130,7 +130,7 @@ const ES = {
         icon: 'course',
         date: ['2016'],
         description:
-          'Insights and tools for the design of biotechnology processes in a sustainable way. Sustainable processing for biobased products',
+          'Herramientas y criterios para el diseño de procesos biotecnológicos de manera sustentable. Obtención y procesamiento de bioproductos.',
         certificate:
           'https://courses.edx.org/certificates/c169395352d04948b6f9e7b89b0ef2b5',
       },
@@ -183,10 +183,9 @@ const ES = {
         position: 'Techincal Director',
         icon: 'chem',
         date: ['08/2018', '03/2019'],
-        description: `Production and quality assurance lab manager. Responsible for the product and process quality.
-        Responsible for the implementation of integral quality management system.`,
-        highlight:
-          'Project Manager for the redesign of the production process, with the objective to improve production capacity, reducing downtimes and minimizing contamination risks.',
+        description: `Jefe de laboratorio de producción y calidad. Responsable de la calidad del producto y el proceso.
+        Responsable de la implementación de sistema de gestión de calidad integrl.`,
+        highlight: `Encargado de proyecto para el rediseño del proceso productivo, con el objetivo de mejorar la capacidad productiva, reduciendo los tiempos de parada y minimizando los riesgos de contaminacion y no conformidades.`,
       },
       {
         company: 'Tecnomyl',
@@ -195,10 +194,9 @@ const ES = {
         position: 'Coordinador de I+D',
         icon: 'chem',
         date: ['01/2017', '08/2018'],
-        description: `Research and development of new phytosanitary products, with Reverse Engineering of competitors products.
-        Physical and chemical product characterization with quantitative instrumental analysis (HPLC, GC & SP).`,
-        highlight:
-          'Redesign of existing product formulations, to reduce production cost, improve manufacturing times or enhance product efficiency.',
+        description: `Investigación y desarrollo de nuevos productos fitosanitarios, y además reingeniería de productos de competencia.
+        Caracterización de propiedades fisicoquímica de productos mediante analísis cuantitativo instrumental(HPLC, GC & SP).`,
+        highlight: `Rediseño de formulaciones existentes, para reducir costos de producción, mejorar los tiempos de manufactura e incrementar la eficiencia del producto.`,
       },
       {
         company: 'Total Austral',
@@ -207,11 +205,10 @@ const ES = {
         position: 'Well Performance Engineer',
         icon: 'oil',
         date: ['11/2015', '01/2017'],
-        description: `Well monitoring and production studies, with PVT analysis, efficiency curves and sand management.
-        Well integrity tests for surface and subsurface security and process equipment and accessories.
-        `,
+        description: `Monitorieo de pozos y estudios de productividad, con análisis PVT, curvas de eficiencia y manejo de arenas de producción.
+        Ensayos de integridad de instalaciones, equipos y accesorios, de seguridad y proceso subterraneos y de superficie.`,
         highlight:
-          'Coordination and execution of Slickline, Wireline, CoiledTubing, cidizing, fracking & well stimulation operations.',
+          'Copordinación y ejecución de operaciones de SlickLine, Wireline, CoiledTubing, cidizing, fracking & estimulación.',
       },
       {
         company: 'Total Austral',
@@ -220,11 +217,10 @@ const ES = {
         position: 'Special Operations Responsible',
         icon: 'oil',
         date: ['02/2013', '11/2015'],
-        description: `Writing of operational procedures for the execution of special and unique tasks, as well as routine work, within the production facilities.
-        Planification, coordination and execution of inspections and interventions of production equipment.
-        `,
+        description: `Elaboración de procedimientos operacionales de producción para la ejecución de tareas únicas y rutinarias.
+        Planificación, coordinación y ejecucción de operaciones de intervención e inspección de equipos e instalaciones productivas.`,
         highlight:
-          'Commissioning and start-up of several engineering projects (increase of compression capacity, oil treatment plant extension, setup of Vega Pleyade rig, etc.)',
+          'Commissioning y start-up de diversos proyectos de ingeniería (incremento de capacida de compresión, ampliación de planta de tratamiento de petróleo, puesta en marcha de plataforma Vega Pleyade rig, etc.)',
       },
       {
         company: 'BGH',
@@ -248,18 +244,6 @@ const ES = {
       {
         text: 'Project Management',
         value: 70,
-      },
-      {
-        text: 'Efficent Communication?',
-        value: 60,
-      },
-      {
-        text: 'Leadership',
-        value: 60,
-      },
-      {
-        text: 'Fast Learner',
-        value: 95,
       },
     ],
   },

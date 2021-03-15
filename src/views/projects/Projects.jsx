@@ -105,7 +105,7 @@ function Projects() {
   } else {
     // console.log('ratio  <0.9', ratio);
     slideWidth = desktop ? 3 : tablet.high ? 3 : tablet.low ? 1 : 1;
-    slideHeight = desktop ? 2 : tablet.high ? 2.45 : tablet.low ? 0.8 : 1.9;
+    slideHeight = desktop ? 2 : tablet.high ? 2.45 : tablet.low ? 0.8 : 2.3;
   }
 
   return (

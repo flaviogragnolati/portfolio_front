@@ -15,7 +15,7 @@ const Card = styled.div`
   /* overflow: hidden; */
 `;
 const CardHeader = styled.div`
-  height: 25vh;
+  height: 250px;
   width: 100%;
   position: relative;
 `;
@@ -59,7 +59,7 @@ const SubTitle = styled(Typography)`
 `;
 
 const Description = styled.div`
-  height: 18vh;
+  height: 200px;
   overflow-y: scroll;
 `;
 

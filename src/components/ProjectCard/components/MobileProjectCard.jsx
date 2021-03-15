@@ -17,8 +17,8 @@ const Card = styled.div`
   /* overflow: hidden; */
 `;
 const CardHeader = styled.div`
-  height: 25vh;
-  min-height: 25vh;
+  /* height: 25vh; */
+  min-height: 220px;
   width: 100%;
   position: relative;
 `;
@@ -72,7 +72,7 @@ const Links = styled.div`
   padding-top: 10px;
 `;
 
-function MobileProjectCard({ project }) {
+function MobileProjectCard({ project, screenType }) {
   const {
     title,
     subtitle,

@@ -86,6 +86,7 @@ const EN = {
     education: [
       {
         school: 'HENRY Bootcamp',
+        website: 'https://www.soyhenry.com/',
         title: 'Fullstack Developer',
         icon: 'bootcamp',
         type: 'Bootcamp',
@@ -96,15 +97,9 @@ const EN = {
           'https://s3-sa-east-1.amazonaws.com/certs.henry/cert?id=e3f5335c-ecb5-4c0e-8ae2-651a457b0810',
       },
       {
-        school: 'University of Michigan - Coursera',
-        title: 'Applied Plotting, Charting & Data Representastion in Python',
-        type: 'Course',
-        icon: 'course',
-        date: ['2020'],
-        description: '',
-      },
-      {
         school: 'Coursera - University of Michigan',
+        website:
+          'https://www.coursera.org/courses?query=university%20of%20michigan&page=1',
         title: 'Applied Data Science with Python',
         type: 'Course',
         icon: 'course',
@@ -116,6 +111,7 @@ const EN = {
       },
       {
         school: 'Centro REDES - CONICET',
+        website: 'http://www.centroredes.org.ar/',
         title: 'Satelite image processing with QGIS',
         type: 'Course',
         icon: 'course',
@@ -124,6 +120,7 @@ const EN = {
       },
       {
         school: 'edX - TUDelftX',
+        website: 'https://www.edx.org/es/school/delftx',
         title: 'Industrial Biotechnology',
         type: 'Course',
         icon: 'course',
@@ -135,6 +132,7 @@ const EN = {
       },
       {
         school: 'UTN FRTDF',
+        website: 'https://utn.edu.ar/es/',
         title: 'Chemical Engineer',
         type: 'Masters degree',
         icon: 'university',
@@ -146,6 +144,7 @@ const EN = {
       },
       {
         school: 'Academia Nacional de Ingeniería',
+        website: 'http://www.acadning.org.ar/premio_egresados.htm',
         title: 'Award to the best engineering graduates of Argentina',
         type: 'Award',
         icon: 'award',
@@ -155,6 +154,7 @@ const EN = {
       },
       {
         school: 'UTN FRTDF',
+        website: 'https://utn.edu.ar/es/',
         title: 'Industrial Engineer',
         type: 'Masters degree',
         icon: 'university',
@@ -210,7 +210,7 @@ const EN = {
         Well integrity tests for surface and subsurface security and process equipment and accessories.
         `,
         highlight:
-          'Coordination and execution of Slickline, Wireline, CoiledTubing, cidizing, fracking & well stimulation operations.',
+          'Coordination and execution of Slickline, Wireline, CoiledTubing, acidizing, fracking & well stimulation operations.',
       },
       {
         company: 'Total Austral',
@@ -419,7 +419,7 @@ const EN = {
     },
   },
   Footer: {
-    copy: 'Copywrite 2021 FG',
+    copy: 'copyright 2021 FG',
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/flavio-gragnolati/',
       github: 'https://github.com/flaviogragnolati',

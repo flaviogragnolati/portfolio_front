@@ -1,17 +1,20 @@
 import React from 'react';
+import styled from 'styled-components';
+import { Grid, Typography } from '@material-ui/core';
+
+//Timeline
 import VerticalTimelineComponent from 'components/VerticalTimeline';
 import 'components/VerticalTimeline/VerticalTimeline.css';
 import 'components/VerticalTimeline/VerticalTimelineElement.css';
-import { NetworkChart } from '@styled-icons/boxicons-regular/NetworkChart';
+
+//Icons
 import { FlagCheckered } from 'styled-icons/boxicons-solid';
-import { WorkOutline } from 'styled-icons/material-outlined';
 import { Factory } from 'styled-icons/boxicons-solid';
 import { Atom } from 'styled-icons/boxicons-regular';
 import { DesktopComputer } from 'styled-icons/heroicons-outline';
 import { OilCan } from 'styled-icons/fa-solid';
 
-import styled from 'styled-components';
-import { Box, Grid, Typography } from '@material-ui/core';
+//Hooks and utils
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 
@@ -23,6 +26,14 @@ const JobTitle = styled(Typography)`
 
 const Company = styled(Typography)`
   color: ${(p) => p.theme.palette.text.primary};
+  text-decoration: none;
+`;
+const Sector = styled(Typography)`
+  color: ${(p) => p.theme.palette.text.primary};
+`;
+
+const Highlight = styled(Typography)`
+  color: ${(p) => p.theme.palette.primary.light};
 `;
 
 const iconSelector = (icon) => {
@@ -63,6 +74,7 @@ function WorkTimeline() {
               icon,
               date,
               description,
+              highlight,
             }) => (
               <VerticalTimelineElement
                 contentStyle={{
@@ -81,11 +93,14 @@ function WorkTimeline() {
                 icon={iconSelector(icon)}
               >
                 <JobTitle variant="h5">{position}</JobTitle>
-                <Company variant="h6">{company}</Company>
-                <Company variant="caption">{sector}</Company>
-                <Typography variant="body2" gutterBottom>
-                  {description}
-                </Typography>
+                <a href={website} target="_blank" rel="noreferrer">
+                  <Company variant="h6">{company}</Company>
+                </a>
+                <Sector variant="caption">{sector}</Sector>
+                <Typography variant="body2">{description}</Typography>
+                {highlight && (
+                  <Highlight variant="body2">{highlight}</Highlight>
+                )}
               </VerticalTimelineElement>
             )
           )}

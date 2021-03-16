@@ -141,24 +141,6 @@ const Links = styled.div`
   padding: 0.2rem;
 `;
 
-// const More = styled.p`
-//   text-align: right;
-//   color: ${(p) => p.theme.palette.secondary.main};
-//   /* display: inline-block;
-//   position: relative; */
-//   &:after {
-//     content: '>';
-//     margin-left: -10px;
-//     opacity: 0;
-//     vertical-align: middle;
-//     transition: margin 0.3s, opacity 0.3s;
-//   }
-//   &:hover:after {
-//     margin-left: 5px;
-//     opacity: 1;
-//   }
-// `;
-
 function DesktopProjectCard({ project }) {
   const {
     title,
@@ -166,7 +148,6 @@ function DesktopProjectCard({ project }) {
     description,
     status,
     tech,
-    date,
     git,
     website,
     preview,

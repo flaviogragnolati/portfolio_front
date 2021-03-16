@@ -2,7 +2,6 @@ import React from 'react';
 
 import MobileAboutCard from './components/MobileAboutCard';
 import DesktopAboutCard from './components/DesktopAboutCard';
-import Icon from './components/Icon';
 import useScreenSize from 'utils/useScreenSize';
 
 function ResponsiveAboutCard(props) {

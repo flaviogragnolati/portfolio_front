@@ -1,20 +1,9 @@
 import React from 'react';
-import styled from 'styled-components';
-import { Box, Grid } from '@material-ui/core';
-import {
-  CarouselProvider,
-  Slider,
-  Slide,
-  ButtonBack,
-  ButtonNext,
-} from 'pure-react-carousel';
-import 'pure-react-carousel/dist/react-carousel.es.css';
+import { Grid } from '@material-ui/core';
 
 import EndPhrase from './components/EndPhrase';
 import ProjectCarrousel from './components/ProjectCarrousel';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
-import ResponsiveProjectCard from 'components/ProjectCard';
-import useWindowDimensions from 'utils/useWindowDimensions';
 
 function Projects() {
   const {

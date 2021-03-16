@@ -22,4 +22,12 @@ export const GlobalStyles = createGlobalStyle`
     /* justify-content: center; */
     /* text-rendering: optimizeLegibility; */
   };
+  a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+ a, a:hover, a:focus, a:active {
+      text-decoration: none;
+      color: inherit;
+ }
 }  `;

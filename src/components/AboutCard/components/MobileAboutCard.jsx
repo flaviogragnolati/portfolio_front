@@ -1,4 +1,4 @@
-import { Box, Grid, Typography } from '@material-ui/core';
+import { Grid, Typography } from '@material-ui/core';
 import React from 'react';
 import styled from 'styled-components';
 import Icon from './Icon';
@@ -7,16 +7,9 @@ const Wrapper = styled.div`
   height: 100%;
   min-height: 5rem;
   width: 100%;
-  /* min-width: 20rem; */
   position: relative;
   background-color: ${(p) => p.theme.palette.primary.dark};
   display: flex;
-  /* margin-top: 4rem; */
-  /* border: 2px red solid; */
-  /* display: flex; */
-  /* direction: row; */
-  /* flex-grow: 1; */
-  /* padding: 1.5rem 0.2rem; */
   &:after {
     content: '';
     position: absolute;

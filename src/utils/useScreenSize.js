@@ -1,9 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
-import isEqual from 'lodash.isequal';
+import { useState } from 'react';
 import { useMediaQuery } from '@material-ui/core';
-import useWindowDimensions from './useWindowDimensions';
-import useEffectWhen from './useEffectWhen';
-import usePrevious from './usePrevious';
 import { getWindowDimensions, resizeDelta } from 'utils/helpers';
 
 const useScreenSize = () => {

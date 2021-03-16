@@ -3,10 +3,6 @@ import styled from 'styled-components';
 import { Typography } from '@material-ui/core';
 import Icon from './Icon';
 
-const Wrapper = styled.div`
-  ${(p) => p.theme.main};
-`;
-
 const Front = styled.div`
   position: relative;
   background-color: ${(p) => p.theme.palette.primary.dark};
@@ -28,8 +24,7 @@ const Front = styled.div`
     position: absolute;
     bottom: 0;
     right: 0;
-    /* width: 30px; */
-    /* height: 30px; */
+
     border: 15px solid ${(p) => p.theme.palette.secondary.dark};
     border-bottom-color: ${(p) => p.theme.main};
     border-right-color: ${(p) => p.theme.main};
@@ -38,7 +33,6 @@ const Front = styled.div`
 
 const Back = styled.div`
   position: relative;
-  /* color: white; */
   display: flex;
   justify-content: center;
   align-content: center;
@@ -62,11 +56,6 @@ const Back = styled.div`
     position: absolute;
     bottom: 0;
     left: 0;
-    /* width: 30px; */
-    /* height: 30px; */
-    /* border: 15px solid transparent;
-    border-bottom-color: ${(p) => p.theme.palette.primary.dark};
-    border-left-color: ${(p) => p.theme.palette.primary.dark}; */
   }
 `;
 
@@ -75,15 +64,12 @@ const FlipBox = styled.div`
   align-content: stretch;
   height: 15rem;
   width: 15rem;
-  /* font-size: 4rem; */
   flex-wrap: wrap;
   position: relative;
   border: 10px solid transparent;
-  /* border: 2px solid ${(p) => p.theme.palette.primary.light}; */
   border-radius: 5%;
   padding: 0;
   margin-top: 5rem;
-  /* border-top: 0; */
   perspective: 1000;
   &:hover ${Back} {
     transform: rotateY(0deg);
@@ -111,12 +97,10 @@ const Content = styled.div`
 
 const Text = styled(Typography)`
   color: ${(p) => p.theme.palette.text.primary};
-  /* font-size: 1.5rem; */
 `;
 
 function DesktopAboutCard({ text, icon }) {
   return (
-    // <Wrapper>
     <FlipBox>
       <Front>
         <Content>
@@ -129,7 +113,6 @@ function DesktopAboutCard({ text, icon }) {
         </Content>
       </Back>
     </FlipBox>
-    // </Wrapper>
   );
 }
 

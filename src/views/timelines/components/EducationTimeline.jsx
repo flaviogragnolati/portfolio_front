@@ -18,8 +18,11 @@ const JobTitle = styled(Typography)`
   color: ${(p) => p.theme.palette.primary.light};
 `;
 
-const Company = styled(Typography)`
+const Institution = styled(Typography)`
   color: ${(p) => p.theme.palette.text.primary};
+`;
+const Type = styled(Typography)`
+  color: ${(p) => p.theme.palette.text.secondary};
 `;
 
 const iconSelector = (icon) => {
@@ -51,31 +54,35 @@ function EducationTimeline() {
       </Grid>
       <Grid item>
         <VerticalTimeline>
-          {education.map(({ school, title, type, icon, date, description }) => (
-            <VerticalTimelineElement
-              contentStyle={{
-                background: t.palette.background.default,
-                boxShadow: t.shadows[3],
-              }}
-              contentArrowStyle={{
-                borderRight: `11px solid  ${t.palette.background.paper}`,
-              }}
-              date={date}
-              dateStyle={{ color: t.palette.text.primary }}
-              iconStyle={{
-                background: t.palette.primary.main,
-                color: '#fff',
-              }}
-              icon={iconSelector(icon)}
-            >
-              <JobTitle variant="h5">{title}</JobTitle>
-              <Company variant="h6">{school}</Company>
-              <Company variant="caption">{type}</Company>
-              <Typography variant="body2" gutterBottom>
-                {description}
-              </Typography>
-            </VerticalTimelineElement>
-          ))}
+          {education.map(
+            ({ school, website, title, type, icon, date, description }) => (
+              <VerticalTimelineElement
+                contentStyle={{
+                  background: t.palette.background.default,
+                  boxShadow: t.shadows[3],
+                }}
+                contentArrowStyle={{
+                  borderRight: `11px solid  ${t.palette.background.paper}`,
+                }}
+                date={date}
+                dateStyle={{ color: t.palette.text.primary }}
+                iconStyle={{
+                  background: t.palette.primary.main,
+                  color: '#fff',
+                }}
+                icon={iconSelector(icon)}
+              >
+                <JobTitle variant="h5">{title}</JobTitle>
+                <a href={website} target="_blank" rel="noreferrer">
+                  <Institution variant="h6">{school}</Institution>
+                </a>
+                <Type variant="caption">{type}</Type>
+                <Typography variant="body2" gutterBottom>
+                  {description}
+                </Typography>
+              </VerticalTimelineElement>
+            )
+          )}
           <VerticalTimelineElement
             iconStyle={{
               backgroundColor: t.palette.primary.light,

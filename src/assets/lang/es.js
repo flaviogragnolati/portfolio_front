@@ -385,6 +385,9 @@ const ES = {
     title: 'Contacto',
     sideText: 'No te gustan los formularios? Enviame un email👋',
     socialText: '...o encontrame en las redes sociales',
+    submitLoding: 'Enviando...',
+    submitSuccess: 'Email Enviado!',
+    submitError: 'Error...intente nuevamente',
     formModel: {
       name: {
         name: 'name',

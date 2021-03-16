@@ -2,12 +2,21 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { Box, ButtonBase, Typography } from '@material-ui/core';
 import { MailSend as _MailSend } from 'styled-icons/boxicons-regular';
+import { useFormikContext } from 'formik';
 
 const FillButton = styled(ButtonBase)`
   background: ${(p) => {
-    if (p.submit) {
+    if (p.submitStatus === 'pending') {
+      return css`
+        ${(p) => p.theme.palette.info.main};
+      `;
+    } else if (p.submitStatus === 'sent') {
       return css`
         ${(p) => p.theme.palette.success.main};
+      `;
+    } else if (p.submitStatus === 'error') {
+      return css`
+        ${(p) => p.theme.palette.error.main};
       `;
     } else {
       return css`
@@ -36,14 +45,16 @@ const MailSend = styled(_MailSend)`
   margin-left: 25px;
 `;
 
-function SubmitButton({ children, submit, submitText, ...props }) {
+function SubmitButton({ children, submitText, submitStatus, ...props }) {
+  const { isSubmitting, isValid, isValidating } = useFormikContext();
+
   return (
     <FillButton
       variant="contained"
       focusRipple
       size="large"
-      disabled={submit}
-      submit={submit}
+      disabled={submitStatus === 'sent' || isSubmitting}
+      submitStatus={submitStatus}
       {...props}
     >
       <Box
@@ -53,7 +64,9 @@ function SubmitButton({ children, submit, submitText, ...props }) {
         alignItems="center"
         flexGrow="1"
       >
-        <Typography variant="h6">{submit ? submitText : children}</Typography>
+        <Typography variant="h6">
+          {submitStatus === 'idle' ? children : submitText}
+        </Typography>
         <MailSend size="1.5rem" />
       </Box>
     </FillButton>

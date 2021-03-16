@@ -387,7 +387,9 @@ const EN = {
     title: 'Contact',
     sideText: "Don't like forms? Send me and email👋",
     socialText: '...or find me at social networks',
+    submitLoding: 'Sending...',
     submitSuccess: 'Email Sent!',
+    submitError: 'Error...try again',
     formModel: {
       name: {
         name: 'name',

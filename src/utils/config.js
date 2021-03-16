@@ -6,7 +6,7 @@ export const defaults = {
   theme: 'dark',
   lang: langList.english,
   sections: ['home', 'about', 'skills', 'projects', 'contact'],
-  mailURL: '',
+  mailURL: 'https://flavio-portfolio-contact.herokuapp.com/mail-contact',
   screens: Object.freeze({
     mobile: 0,
     tablet: 1,

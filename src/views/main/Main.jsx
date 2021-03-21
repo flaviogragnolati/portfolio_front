@@ -1,6 +1,5 @@
 import React, { forwardRef } from 'react';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
-import { Parallax } from 'react-parallax';
 import styled, { keyframes } from 'styled-components';
 import argonath from 'assets/img/argonathj.jpg';
 import Subtitle from './components/Subtitle';

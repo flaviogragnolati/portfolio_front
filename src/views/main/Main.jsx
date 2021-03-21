@@ -8,8 +8,8 @@ import HireMeButton from './components/HireMeButton';
 import ScrollDown from './components/ScrollDown';
 import HireButton from './components/HireButton';
 import { Box, Typography } from '@material-ui/core';
-import { FullScreen, useFullScreenHandle } from 'react-full-screen';
 import ParticlesBackground from 'views/main/components/ParticlesBackground';
+import useScreenSize from 'utils/useScreenSize';
 
 const img = argonath;
 
@@ -47,40 +47,16 @@ const ContentDiv = styled.div`
   z-index: 10;
 `;
 
-const flip = keyframes`
-  from {
-    transform: perspective(400px);
-  }
-
-  30% {
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    opacity: 1;
-  }
-
-  to {
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    opacity: 0;
-  }
-  `;
-
 const TitleOne = styled(Typography)`
   font-weight: 500;
-  /* font-size: 3rem; */
   color: ${(p) => p.theme.palette.primary.light};
   /* background-color: ${(p) => p.theme.main}; */
   border-radius: 25%;
   background: radial-gradient(${(p) => p.theme.main}, transparent);
 `;
 const TitleTwo = styled(Typography)`
-  /* font-size: 3rem; */
   font-weight: 500;
   color: ${(p) => p.theme.palette.secondary.light};
-  /* animation-duration: 2s;
-  backface-visibility: visible !important;
-  border-radius: 10%; */
-  /* :hover {
-    animation-name: ${flip};
-  } */
   border-radius: 25%;
   background: radial-gradient(${(p) => p.theme.main}, transparent);
 `;
@@ -89,9 +65,9 @@ function Main(props) {
   const {
     Main: { title, hireBtnText, type },
   } = useTranslation();
-  const splitTitle = title.split(' ');
+  const { mobile, tablet, desktop } = useScreenSize();
 
-  const handle = useFullScreenHandle();
+  const splitTitle = title.split(' ');
 
   return (
     <HeroDiv>
@@ -106,12 +82,17 @@ function Main(props) {
           pb={5}
           flexWrap="wrap"
         >
-          <TitleOne variant="h1">{splitTitle[0]}</TitleOne>
-          <TitleTwo variant="h1">{splitTitle[1]}</TitleTwo>
+          <TitleOne variant={mobile || tablet.low ? 'h2' : 'h1'}>
+            {splitTitle[0]}
+          </TitleOne>
+          <TitleTwo variant={mobile || tablet.low ? 'h2' : 'h1'}>
+            {splitTitle[1]}
+          </TitleTwo>
         </Box>
         <br></br>
-        <Subtitle type={type} />
-        <br></br>
+        <Box pb={5}>
+          <Subtitle type={type} />
+        </Box>
         {/* <HireMeButton text={hireBtnText} /> */}
         {/* <HireButton text={hireBtnText} /> */}
         <ScrollDown />

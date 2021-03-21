@@ -3,8 +3,10 @@ import Particles from 'react-tsparticles';
 import { Code } from '@styled-icons/fa-solid';
 import useWindowDimensionsInitial from 'utils/useWindowDimensionInitial';
 import useFullTheme from 'context/ThemeWrapper/useFullTheme';
+import useScreenSize from 'utils/useScreenSize';
 
 function ParticlesBackground() {
+  const { mobile, tablet, dektop } = useScreenSize();
   const { width, height } = useWindowDimensionsInitial();
   const t = useFullTheme();
   return (
@@ -12,7 +14,7 @@ function ParticlesBackground() {
       id="tsparticles"
       // init={this.particlesInit}
       // loaded={this.particlesLoaded}
-      width={width - 250}
+      width={mobile || tablet.low ? width : width - 250}
       height="100vh"
       options={{
         fps_limit: 60,

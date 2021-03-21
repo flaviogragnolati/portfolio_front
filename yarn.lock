@@ -9757,11 +9757,6 @@ react-is@^16.7.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
-react-parallax@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/react-parallax/-/react-parallax-3.2.0.tgz#1285c25945fd17fbb9072e5443f688bb595a3720"
-  integrity sha512-IXHYhoqXhqSdg59/9DbeGh6E8CJ8UKl0ZxyxoqpLOPQJfOtvRdud6j/XccajLo0snxRGxDpJ/oLHtIaABAlaOQ==
-
 react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"

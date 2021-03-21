@@ -1,6 +1,5 @@
 import React from 'react';
 import Particles from 'react-tsparticles';
-import { Code } from '@styled-icons/fa-solid';
 import useWindowDimensionsInitial from 'utils/useWindowDimensionInitial';
 import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 import useScreenSize from 'utils/useScreenSize';
@@ -11,7 +10,7 @@ function ParticlesBackground() {
   const t = useFullTheme();
   return (
     <Particles
-      id="tsparticles"
+      id="mainbg"
       // init={this.particlesInit}
       // loaded={this.particlesLoaded}
       width={mobile || tablet.low ? width : width - 250}
@@ -89,7 +88,7 @@ function ParticlesBackground() {
                 value: [
                   '\uf13b', //HTML5
                   '\uf38b', //css
-                  '\uf3d3', //Node
+                  // '\uf3d3', //Node
                   // '\uf1cb',//Codepen
                 ],
                 weight: '400',
@@ -101,7 +100,7 @@ function ParticlesBackground() {
                 value: [
                   '\uf3e2', //Python
                   '\uf3b9', //JS
-                  '\uf3d3', //Node
+                  // '\uf3d3', //Node
                 ],
                 weight: '600',
               },
@@ -111,18 +110,29 @@ function ParticlesBackground() {
                 style: '',
                 value: [
                   '\uf1d3', //git
-                  // '\uf3b9', //JS
+                  '\uf1cb', //codepen
                   // '\uf3d3', //Node
+                  // '\uf3b9', //JS
                 ],
                 weight: '600',
               },
-              // {
-              //   fill: true,
-              //   font: 'Font Awesome 5 Free',
-              //   style: '',
-              //   // value: ['\uf06a', '\uf7ba', '\uf3ed', '\uf55f', '\uf013'],
-              //   weight: '900',
-              // },
+              {
+                fill: true,
+                font: 'Font Awesome 5 Free',
+                style: '',
+                value: [
+                  // '\uf121', //code
+                  // '\uf5d2', //atom
+                  // '\uf06a',
+                  // '\uf7ba',
+                  // '\uf3ed',
+                  // '\uf55f',
+                  // '\uf013',
+                  // '\uf6ec', //hike
+                  // '\uf6fc', //mountain
+                ],
+                weight: '500',
+              },
             ],
             // image: {
             //   height: 100,

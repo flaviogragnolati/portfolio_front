@@ -32,9 +32,9 @@ const EyeOutline = styled(_EyeOutline)`
   margin-left: 25px;
 `;
 
-function CVButton({ text, icon }) {
+function CVButton({ text, icon, ...props }) {
   return (
-    <FillButton variant="contained" focusRipple size="large">
+    <FillButton variant="contained" focusRipple size="large" {...props}>
       <Box
         display="flex"
         flexDirection="row"

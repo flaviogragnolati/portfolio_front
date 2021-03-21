@@ -1,12 +1,16 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Box, Grid, Typography } from '@material-ui/core';
+
 import ExpandAbout from './components/ExpandAbout';
 import CVButton from './components/CVButton';
 import Stack from './components/Stack';
 import ResponsiveAboutCard from 'components/AboutCard';
+import CV_EN from 'assets/cv/CV_FlavioGragnolati(en).pdf';
+import CV_ES from 'assets/cv/CV_FlavioGragnolati(es).pdf';
 
 import { useTranslation } from 'context/LangWrapper/useTranslation';
+import useLang from 'context/LangWrapper/useLang';
+import { langList } from 'assets/lang';
 
 function About() {
   const {
@@ -19,6 +23,17 @@ function About() {
       aboutCards,
     },
   } = useTranslation();
+  const [lang] = useLang();
+
+  const handleViewCV = () => {
+    if (lang === 'en') {
+      window.open(CV_EN);
+    } else if (lang === 'es') {
+      window.open(CV_ES);
+    }
+  };
+  const handleDownloadCV = () => {};
+
   return (
     <>
       <Grid item xs={12} md={8}>
@@ -38,10 +53,14 @@ function About() {
         md={4}
       >
         <Grid container item xs={10} sm={8} md={12}>
-          <CVButton text={downloadCVBtn} icon="download" />
+          <CVButton
+            text={downloadCVBtn}
+            icon="download"
+            onClick={handleDownloadCV}
+          />
         </Grid>
         <Grid container item xs={10} sm={8} md={12}>
-          <CVButton text={viewCVBtn} icon="view" />
+          <CVButton text={viewCVBtn} icon="view" onClick={handleViewCV} />
         </Grid>
       </Grid>
       <Grid

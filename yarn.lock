@@ -11485,13 +11485,6 @@ tslib@^2.0.3:
   resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.1.0.tgz#da60860f1c2ecaa5703ab7d39bc05b6bf988b97a"
   integrity sha512-hcVC3wYEziELGGmEEXue7D75zbwIIVUMWAVbHItGPx0ziyXxrOMQx4rQEVEV45Ut/1IotuEvwqPopzIOkDMf0A==
 
-tsparticles-preset-font-awesome@^1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/tsparticles-preset-font-awesome/-/tsparticles-preset-font-awesome-1.7.1.tgz#c70a629968aecd58209f4ba4e6a1a45b86b63f32"
-  integrity sha512-jJGzeQbL7mCY6w7Vy+Ev6d9bLVid/anmeSofWKn+QLX/kHyBskA3RKVXnfGVqcWibj1Z52us6y1JWURM3Xup3A==
-  dependencies:
-    tsparticles "^1.22.1"
-
 tsparticles@^1.22.1:
   version "1.22.1"
   resolved "https://registry.yarnpkg.com/tsparticles/-/tsparticles-1.22.1.tgz#ddca8ee621b374a70568b366f4ce49afd0eb4c10"

@@ -7,9 +7,9 @@ const StyledSection = styled.section`
   padding-bottom: 4rem;
 `;
 
-function Section({ id, title, children, ...props }, ref) {
+function Section({ title, children, ...props }, ref) {
   return (
-    <StyledSection id={id} ref={ref} {...props}>
+    <StyledSection ACKref={ref} {...props}>
       <Grid container direction="column" justify="center" alignItems="center">
         <Grid item>
           <SectionTitle title={title} />

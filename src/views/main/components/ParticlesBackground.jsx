@@ -26,7 +26,7 @@ function ParticlesBackground() {
             onclick: { enable: true, mode: 'repulse' },
             onhover: {
               enable: true,
-              mode: 'bubble',
+              mode: 'attract',
               parallax: { enable: false, force: 60, smooth: 10 },
             },
             resize: true,
@@ -42,7 +42,7 @@ function ParticlesBackground() {
             grab: { distance: 400, line_linked: { opacity: 1 } },
             push: { particles_nb: 4 },
             remove: { particles_nb: 2 },
-            repulse: { distance: 200, duration: 0.4 },
+            repulse: { distance: 200, duration: 0.4, speed: 2 },
           },
         },
         particles: {
@@ -69,10 +69,10 @@ function ParticlesBackground() {
             enable: true,
             out_mode: 'out',
             random: false,
-            speed: 3,
+            speed: 5,
             straight: false,
           },
-          number: { density: { enable: true, value_area: 800 }, value: 35 },
+          number: { density: { enable: true, value_area: 1000 }, value: 35 },
           opacity: {
             anim: { enable: true, opacity_min: 0.5, speed: 1, sync: false },
             random: false,
@@ -85,9 +85,6 @@ function ParticlesBackground() {
                 font: 'Font Awesome 5 Brands',
                 style: '',
                 value: [
-                  // '\uf3e2', //Python
-                  // '\uf3b9', //JS
-                  // '\uf41b', //React
                   '\uf13b', //HTML5
                   '\uf38b', //css
                   '\uf3d3', //Node
@@ -106,6 +103,17 @@ function ParticlesBackground() {
                 ],
                 weight: '600',
               },
+              {
+                fill: true,
+                font: 'Font Awesome 5 Brands',
+                style: '',
+                value: [
+                  '\uf1d3', //git
+                  // '\uf3b9', //JS
+                  // '\uf3d3', //Node
+                ],
+                weight: '600',
+              },
               // {
               //   fill: true,
               //   font: 'Font Awesome 5 Free',
@@ -114,14 +122,14 @@ function ParticlesBackground() {
               //   weight: '900',
               // },
             ],
-            image: {
-              height: 100,
-              replace_color: true,
-              src: 'images/github.svg',
-              width: 100,
-            },
-            polygon: { nb_sides: 5 },
-            stroke: { color: '#ffffff', width: 1 },
+            // image: {
+            //   height: 100,
+            //   replace_color: true,
+            //   src: 'images/github.svg',
+            //   width: 100,
+            // },
+            // polygon: { nb_sides: 5 },
+            // stroke: { color: '#23f322', width: 1 },
             type: 'char',
           },
           size: {
@@ -130,13 +138,13 @@ function ParticlesBackground() {
             value: 24,
           },
         },
-        polygon: {
-          draw: { enable: false, lineColor: '#ffffff', lineWidth: 0.5 },
-          move: { radius: 10 },
-          scale: 1,
-          type: 'none',
-          url: '',
-        },
+        // polygon: {
+        //   draw: { enable: false, lineColor: '#ffffff', lineWidth: 0.5 },
+        //   move: { radius: 10 },
+        //   scale: 1,
+        //   type: 'none',
+        //   url: '',
+        // },
         retina_detect: true,
       }}
     />

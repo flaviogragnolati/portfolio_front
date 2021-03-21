@@ -29,8 +29,8 @@ const BottomDiv = styled.div`
 `;
 
 function ScrollDown() {
-  const ref = document.getElementById('about');
   const handleClick = () => {
+    const ref = document.getElementById('about');
     ref.scrollIntoView({
       behavior: 'smooth',
     });

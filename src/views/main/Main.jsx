@@ -9,6 +9,7 @@ import ScrollDown from './components/ScrollDown';
 import HireButton from './components/HireButton';
 import { Box, Typography } from '@material-ui/core';
 import { FullScreen, useFullScreenHandle } from 'react-full-screen';
+import ParticlesBackground from 'views/main/components/ParticlesBackground';
 
 const img = argonath;
 
@@ -27,7 +28,9 @@ const HeroDiv = styled.div`
   /* width: 100vw; */
   height: 100vh;
   min-height: 100vh;
-  z-index: ${(p) => p.theme.zIndex.drawer + 1};
+  position: relative;
+  z-index: 1;
+  /* z-index: ${(p) => p.theme.zIndex.drawer + 1}; */
 `;
 
 const ContentDiv = styled.div`
@@ -35,9 +38,13 @@ const ContentDiv = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
   flex-grow: 1;
   min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  z-index: 10;
 `;
 
 const flip = keyframes`
@@ -60,6 +67,9 @@ const TitleOne = styled(Typography)`
   font-weight: 500;
   /* font-size: 3rem; */
   color: ${(p) => p.theme.palette.primary.light};
+  /* background-color: ${(p) => p.theme.main}; */
+  border-radius: 25%;
+  background: radial-gradient(${(p) => p.theme.main}, transparent);
 `;
 const TitleTwo = styled(Typography)`
   /* font-size: 3rem; */
@@ -71,6 +81,8 @@ const TitleTwo = styled(Typography)`
   /* :hover {
     animation-name: ${flip};
   } */
+  border-radius: 25%;
+  background: radial-gradient(${(p) => p.theme.main}, transparent);
 `;
 
 function Main(props) {
@@ -82,37 +94,64 @@ function Main(props) {
   const handle = useFullScreenHandle();
 
   return (
-    <Parallax
-      bgImage={img}
-      bgImageAlt="main section background img"
-      bgImageStyle={{ height: '100vh', opacity: '0.7' }}
-      strength={500}
-    >
-      <HeroDiv>
-        <ContentDiv>
-          <Box
-            display="flex"
-            // flexDirection={mobile || tablet ? 'column' : 'row'}
-            flexDirection="row"
-            justifyContent="center"
-            alignItems="center"
-            pb={5}
-            flexWrap="wrap"
-          >
-            <TitleOne variant="h1">{splitTitle[0]}</TitleOne>
-            <TitleTwo variant="h1">{splitTitle[1]}</TitleTwo>
-          </Box>
-          <br></br>
-          <Subtitle type={type} />
-          <br></br>
-          {/* <HireMeButton text={hireBtnText} /> */}
-          {/* <HireButton text={hireBtnText} /> */}
-          <ScrollDown />
-          {/* <Social size="2rem" style={{ size: '2em' }} /> */}
-        </ContentDiv>
-      </HeroDiv>
-    </Parallax>
+    <HeroDiv>
+      <ParticlesBackground />
+      <ContentDiv>
+        <Box
+          display="flex"
+          // flexDirection={mobile || tablet ? 'column' : 'row'}
+          flexDirection="row"
+          justifyContent="center"
+          alignItems="center"
+          pb={5}
+          flexWrap="wrap"
+        >
+          <TitleOne variant="h1">{splitTitle[0]}</TitleOne>
+          <TitleTwo variant="h1">{splitTitle[1]}</TitleTwo>
+        </Box>
+        <br></br>
+        <Subtitle type={type} />
+        <br></br>
+        {/* <HireMeButton text={hireBtnText} /> */}
+        {/* <HireButton text={hireBtnText} /> */}
+        <ScrollDown />
+        {/* <Social size="2rem" style={{ size: '2em' }} /> */}
+      </ContentDiv>
+    </HeroDiv>
   );
+
+  // return (
+  //   <Parallax
+  //     bgImage={img}
+  //     bgImageAlt="main section background img"
+  //     bgImageStyle={{ height: '100vh', opacity: '0.7' }}
+  //     strength={500}
+  //   >
+  //     <HeroDiv>
+  //       <ContentDiv>
+  //         <Box
+  //           display="flex"
+  //           // flexDirection={mobile || tablet ? 'column' : 'row'}
+  //           flexDirection="row"
+  //           justifyContent="center"
+  //           alignItems="center"
+  //           pb={5}
+  //           flexWrap="wrap"
+  //         >
+  //           <TitleOne variant="h1">{splitTitle[0]}</TitleOne>
+  //           <TitleTwo variant="h1">{splitTitle[1]}</TitleTwo>
+  //         </Box>
+  //         <br></br>
+  //         <Subtitle type={type} />
+  //         <br></br>
+  //         {/* <HireMeButton text={hireBtnText} /> */}
+  //         {/* <HireButton text={hireBtnText} /> */}
+  //         <ScrollDown />
+  //         {/* <Social size="2rem" style={{ size: '2em' }} /> */}
+  //       </ContentDiv>
+  //     </HeroDiv>
+  //   </Parallax>
+  // );
 }
 
 export default Main;

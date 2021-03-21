@@ -9,28 +9,12 @@ import useScreenSize from 'utils/useScreenSize';
 import useWindowDimensions from 'utils/useWindowDimensions';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import styled from 'styled-components';
+import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 
 const Frame = styled.div`
   border: 2px red solid;
   border-right: 0px transparent;
 `;
-
-const options = {
-  colors: [indigo[300], indigo[700], orange['A200'], orange['A700'], grey[400]],
-  enableOptimizations: true,
-  enableTooltip: false,
-  deterministic: false,
-  padding: 3.5,
-  fontFamily: 'sans-serif',
-  fontSizes: [20, 65],
-  fontStyle: 'normal',
-  fontWeight: 'normal',
-  scale: 'sqrt',
-  spiral: 'archimedean',
-  transitionDuration: 1000,
-  rotations: 0,
-  rotationAngles: [-25, 25],
-};
 
 function Skills() {
   // const { mobile, tablet, desktop, size } = useScreenSize();
@@ -40,6 +24,7 @@ function Skills() {
     techSkills,
   } = useTranslation();
 
+  const t = useFullTheme();
   // let divSize;
   // if (desktop || tablet.high) {
   //   divSize = undefined;
@@ -50,6 +35,34 @@ function Skills() {
   //   ];
   //   divSize = [Math.max(...s), Math.min(...s)];
   // }
+
+  const options = {
+    colors: [
+      indigo[300],
+      indigo[700],
+      orange['A200'],
+      orange['A700'],
+      grey[400],
+      // t.palette.primary.light,
+      // t.palette.primary.dark,
+      // t.palette.secondary.light,
+      // t.palette.secondary.dark,
+      // t.palette.grey['400'],
+    ],
+    enableOptimizations: true,
+    enableTooltip: false,
+    deterministic: false,
+    padding: 3.5,
+    fontFamily: 'sans-serif',
+    fontSizes: [20, 65],
+    fontStyle: 'normal',
+    fontWeight: 'normal',
+    scale: 'sqrt',
+    spiral: 'archimedean',
+    transitionDuration: 1000,
+    rotations: 0,
+    rotationAngles: [-25, 25],
+  };
 
   const words = [...techSkills, ...langSpecificSkills].slice(0, 20);
   return (

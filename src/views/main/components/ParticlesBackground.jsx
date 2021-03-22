@@ -104,35 +104,35 @@ function ParticlesBackground() {
                 ],
                 weight: '600',
               },
-              {
-                fill: true,
-                font: 'Font Awesome 5 Brands',
-                style: '',
-                value: [
-                  '\uf1d3', //git
-                  '\uf1cb', //codepen
-                  // '\uf3d3', //Node
-                  // '\uf3b9', //JS
-                ],
-                weight: '600',
-              },
-              {
-                fill: true,
-                font: 'Font Awesome 5 Free',
-                style: '',
-                value: [
-                  // '\uf121', //code
-                  // '\uf5d2', //atom
-                  // '\uf06a',
-                  // '\uf7ba',
-                  // '\uf3ed',
-                  // '\uf55f',
-                  // '\uf013',
-                  // '\uf6ec', //hike
-                  // '\uf6fc', //mountain
-                ],
-                weight: '500',
-              },
+              // {
+              //   fill: true,
+              //   font: 'Font Awesome 5 Brands',
+              //   style: '',
+              //   value: [
+              //     '\uf1d3', //git
+              //     '\uf1cb', //codepen
+              //     // '\uf3d3', //Node
+              //     // '\uf3b9', //JS
+              //   ],
+              //   weight: '600',
+              // },
+              // {
+              //   fill: true,
+              //   font: 'Font Awesome 5 Free',
+              //   style: '',
+              //   value: [
+              //     // '\uf121', //code
+              //     // '\uf5d2', //atom
+              //     // '\uf06a',
+              //     // '\uf7ba',
+              //     // '\uf3ed',
+              //     // '\uf55f',
+              //     // '\uf013',
+              //     // '\uf6ec', //hike
+              //     // '\uf6fc', //mountain
+              //   ],
+              //   weight: '500',
+              // },
             ],
             // image: {
             //   height: 100,

@@ -27,7 +27,7 @@ const EN = {
     descriptionTitle: 'A little about me...',
     description:
       //I love clean code, learning new things, strong engineering culture,
-      'Proactive and efficient full stack developer, really fast learner that can adapt easily to rapid change work environments and not afraid of working under pressure. Ready to work with multidisciplinary teams under objective driven methodologies. I love clean, scalable and DRY code.',
+      'Proactive and efficient full stack developer, really fast learner that can easily adapt to rapid change work environments and not afraid of working under pressure. Ready to work with multidisciplinary teams under objective driven methodologies. I love clean, scalable and DRY code.',
     aboutCards: [
       {
         title: 'Team work',
@@ -92,7 +92,7 @@ const EN = {
         type: 'Bootcamp',
         date: ['10/2020', '02/2021'],
         description:
-          '700+ hr Theoretical & Practical Bootcamp with focus in JavaScript ES+6, React, Redux, Express, Sequelize, Node, PostgreSQL and RESTful API. Concluding with the development of several real life projects under Agile methodologies.',
+          '800+ hr Theoretical & Practical Bootcamp with focus in JavaScript ES+6, React, Redux, Express, Sequelize, Node, PostgreSQL and RESTful API. Concluding with the development of several real life projects under Agile methodologies.',
         certificate:
           'https://s3-sa-east-1.amazonaws.com/certs.henry/cert?id=e3f5335c-ecb5-4c0e-8ae2-651a457b0810',
       },
@@ -333,14 +333,15 @@ const EN = {
         img: '',
         title: 'Materia Ceramica',
         subtitle: 'e-commerce, blog y membership',
-        description: 'Sitio web para emprendimiento de cerámica.',
+        description:
+          'Web site for a Ceramic Shop, that includes the standard e-commerce with all its functionalities, with an included membership program. Also, a blog for posting updates on products, techniques and more.',
         status: 0,
         tech: {
           backend: ['django', 'postgres', 'django-rest-framework'],
           frontend: ['react', 'redux', 'formik', 'material-ui', 'axios'],
         },
-        git: 'www.github.com',
-        website: 'www.website.com',
+        git: 'https://github.com/flaviogragnolati/materia_ceramica',
+        website: 'https://www.materia-ceramica.com/',
         preview: '',
         date: '2021',
       },
@@ -362,25 +363,25 @@ const EN = {
           frontend: ['bootstrap', 'jQuery'],
         },
         git: 'www.github.com',
-        website: 'www.website.com',
+        website: 'www.quasaranalytic.com',
         preview: '',
-        date: '2021',
+        date: '2020',
       },
-      {
-        img: '',
-        title: 'SC2-API',
-        subtitle: 'API',
-        description: 'API del videjojuego Starcraft II.',
-        status: 0,
-        tech: {
-          backend: ['django', 'postgres', 'django-rest-framework'],
-          frontend: [''],
-        },
-        git: 'www.github.com',
-        website: 'www.website.com',
-        preview: '',
-        date: '2021',
-      },
+      // {
+      //   img: '',
+      //   title: 'SC2-API',
+      //   subtitle: 'API',
+      //   description: 'API del videjojuego Starcraft II.',
+      //   status: 0,
+      //   tech: {
+      //     backend: ['django', 'postgres', 'django-rest-framework'],
+      //     frontend: [''],
+      //   },
+      //   git: 'www.github.com',
+      //   website: 'www.website.com',
+      //   preview: '',
+      //   date: '2021',
+      // },
     ],
   },
   Contact: {

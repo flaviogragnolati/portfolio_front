@@ -1,13 +1,10 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@material-ui/core';
-import styled from 'styled-components';
 
 import ExpandAbout from './components/ExpandAbout';
 import CVButton from './components/CVButton';
 import Stack from './components/Stack';
 import ResponsiveAboutCard from 'components/AboutCard';
-import CV_EN from 'assets/cv/CV_FlavioGragnolati(en).pdf';
-import CV_ES from 'assets/cv/CV_FlavioGragnolati(es).pdf';
 
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 

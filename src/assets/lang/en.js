@@ -5,7 +5,7 @@ const EN = {
       { text: 'Home', icon: 'home', id: 'home' },
       { text: 'About', icon: 'about', id: 'about' },
       { text: 'Skills', icon: 'services', id: 'skills' },
-      { text: 'Proyects', icon: 'projects', id: 'projects' },
+      { text: 'Projects', icon: 'projects', id: 'projects' },
       { text: 'Contact', icon: 'contact', id: 'contact' },
     ],
     langTooltip: 'Change Language',

@@ -1,6 +1,7 @@
-import React, { createRef, useEffect } from 'react';
+import React, { useRef, useEffect } from 'react';
 import Typewriter from 'typewriter-effect/dist/core';
 import styled from 'styled-components';
+import { InView } from 'react-intersection-observer';
 
 const EndPhraseDiv = styled.div`
   margin: 1rem 0;
@@ -8,8 +9,8 @@ const EndPhraseDiv = styled.div`
   text-align: center;
 `;
 
-function EndPhrase({ text, ...props }) {
-  const typeRef = createRef();
+function EndPhrase({ text, intersectionObserverProps, ...props }) {
+  const typeRef = useRef();
 
   useEffect(() => {
     if (typeRef.current) {

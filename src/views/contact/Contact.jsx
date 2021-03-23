@@ -7,6 +7,7 @@ import { getFormLang } from './components/contactForm';
 import { TextField } from 'formik-material-ui';
 import SubmitButton from './components/SubmitButton';
 import { defaults } from 'utils/config';
+import useScreenSize from 'utils/useScreenSize';
 
 const StyledTextField = styled(TextField)`
   margin-top: 0.5rem;
@@ -21,6 +22,8 @@ function Contact() {
   const [initialValues, contactFormValidation, labels, names] = getFormLang(
     formModel
   );
+
+  const { mobile, tablet, desktop } = useScreenSize();
 
   const [submitStatus, setSubmitStatus] = useState('idle');
   const [submitText, setSubmitText] = useState('');
@@ -78,25 +81,48 @@ function Contact() {
                   required
                   disabled={submitStatus === 'sent' || props.isSubmitting}
                 />
-                <Box display="flex" flexGrow="1">
-                  <Field
-                    component={StyledTextField}
-                    name={names.email}
-                    label={labels.email}
-                    variant="outlined"
-                    fullWidth
-                    required
-                    disabled={submitStatus === 'sent' || props.isSubmitting}
-                  />
-                  <Field
-                    component={StyledTextField}
-                    name={names.subject}
-                    label={labels.subject}
-                    variant="outlined"
-                    fullWidth
-                    disabled={submitStatus === 'sent' || props.isSubmitting}
-                  />
-                </Box>
+                {mobile || tablet.low ? (
+                  <>
+                    <Field
+                      component={StyledTextField}
+                      name={names.email}
+                      label={labels.email}
+                      variant="outlined"
+                      fullWidth
+                      required
+                      disabled={submitStatus === 'sent' || props.isSubmitting}
+                    />
+                    <Field
+                      component={StyledTextField}
+                      name={names.subject}
+                      label={labels.subject}
+                      variant="outlined"
+                      fullWidth
+                      disabled={submitStatus === 'sent' || props.isSubmitting}
+                    />
+                  </>
+                ) : (
+                  <Box display="flex" flexGrow="1">
+                    <Field
+                      component={StyledTextField}
+                      name={names.email}
+                      label={labels.email}
+                      variant="outlined"
+                      fullWidth
+                      required
+                      disabled={submitStatus === 'sent' || props.isSubmitting}
+                    />
+                    <Field
+                      component={StyledTextField}
+                      name={names.subject}
+                      label={labels.subject}
+                      variant="outlined"
+                      fullWidth
+                      disabled={submitStatus === 'sent' || props.isSubmitting}
+                    />
+                  </Box>
+                )}
+
                 <Field
                   component={StyledTextField}
                   name={names.message}

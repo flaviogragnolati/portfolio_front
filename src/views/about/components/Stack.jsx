@@ -129,7 +129,9 @@ function Stack() {
       stackTooltip: { mongo, pg, js, py, ex, dj, react },
     },
   } = useTranslation();
+
   let gridProps, iconProps;
+
   if (desktop) {
     gridProps = {
       container: true,

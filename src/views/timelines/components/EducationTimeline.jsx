@@ -14,7 +14,7 @@ import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 
 const { VerticalTimeline, VerticalTimelineElement } = VerticalTimelineComponent;
 
-const JobTitle = styled(Typography)`
+const Title = styled(Typography)`
   color: ${(p) => p.theme.palette.primary.light};
 `;
 
@@ -55,7 +55,16 @@ function EducationTimeline() {
       <Grid item>
         <VerticalTimeline>
           {education.map(
-            ({ school, website, title, type, icon, date, description }) => (
+            ({
+              school,
+              website,
+              certificate,
+              title,
+              type,
+              icon,
+              date,
+              description,
+            }) => (
               <VerticalTimelineElement
                 contentStyle={{
                   background: t.palette.background.default,
@@ -72,7 +81,15 @@ function EducationTimeline() {
                 }}
                 icon={iconSelector(icon)}
               >
-                <JobTitle variant="h5">{title}</JobTitle>
+                <Title variant="h5">
+                  <a
+                    href={certificate || website}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {title}
+                  </a>
+                </Title>
                 <a href={website} target="_blank" rel="noreferrer">
                   <Institution variant="h6">{school}</Institution>
                 </a>

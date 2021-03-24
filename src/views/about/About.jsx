@@ -98,9 +98,9 @@ function About() {
             <Typography variant="h4" color="textPrimary">
               {stackTitle}
             </Typography>
-            <Typography variant="subtitle1" color="textSecondary" gutterBottom>
+            {/* <Typography variant="subtitle1" color="textSecondary" gutterBottom>
               {stackSubTitle}
-            </Typography>
+            </Typography> */}
           </Box>
         </Grid>
         <Grid

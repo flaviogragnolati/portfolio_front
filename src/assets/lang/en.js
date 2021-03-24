@@ -18,7 +18,7 @@ const EN = {
     title: 'Flavio Gragnolati',
     hireBtnText: 'Hire Me!',
     type: [
-      'Fullstack Developer, ',
+      'Full Stack Developer, ',
       'also...Chemical Engineer...',
       'and Industrial Engineer as well',
     ],
@@ -38,7 +38,7 @@ const EN = {
       {
         title: 'Learning',
         icon: 'learn',
-        text: 'Willing to learn new techonologies',
+        text: 'Willing to learn new technologies',
       },
       {
         title: 'Work experience',
@@ -48,7 +48,7 @@ const EN = {
       {
         title: 'Communication',
         icon: 'communication',
-        text: 'Fluid communicator in both english and spanish',
+        text: 'Fluid communicator in both English and Spanish',
       },
       {
         title: 'Problem Solving',
@@ -87,12 +87,12 @@ const EN = {
       {
         school: 'HENRY Bootcamp',
         website: 'https://www.soyhenry.com/',
-        title: 'Fullstack Developer',
+        title: 'Full Stack Developer',
         icon: 'bootcamp',
         type: 'Bootcamp',
         date: ['10/2020', '02/2021'],
         description:
-          '800+ hr Theoretical & Practical Bootcamp with focus in JavaScript ES+6, React, Redux, Express, Sequelize, Node, PostgreSQL and RESTful API. Concluding with the development of several real life projects under Agile methodologies.',
+          '800+ hr. Theoretical & Practical Bootcamp with focus in JavaScript ES+6, React, Redux, Express, Sequelize, Node, PostgreSQL and RESTful API. Concluding with the development of several real-life projects under Agile methodologies.',
         certificate:
           'https://s3-sa-east-1.amazonaws.com/certs.henry/cert?id=e3f5335c-ecb5-4c0e-8ae2-651a457b0810',
       },
@@ -112,7 +112,7 @@ const EN = {
       {
         school: 'Centro REDES - CONICET',
         website: 'http://www.centroredes.org.ar/',
-        title: 'Satelite image processing with QGIS',
+        title: 'Satellite image processing with QGIS',
         type: 'Course',
         icon: 'course',
         date: ['2020'],
@@ -126,7 +126,7 @@ const EN = {
         icon: 'course',
         date: ['2016'],
         description:
-          'Insights and tools for the design of biotechnology processes in a sustainable way. Sustainable processing for biobased products',
+          'Insights and tools for the design of biotechnology processes in a sustainable way. Sustainable processing for bio-based products',
         certificate:
           'https://courses.edx.org/certificates/c169395352d04948b6f9e7b89b0ef2b5',
       },
@@ -134,7 +134,7 @@ const EN = {
         school: 'UTN FRTDF',
         website: 'https://utn.edu.ar/es/',
         title: 'Chemical Engineer',
-        type: 'Masters degree',
+        type: 'Master’s degree',
         icon: 'university',
         date: ['2011', '2018'],
         description:
@@ -156,7 +156,7 @@ const EN = {
         school: 'UTN FRTDF',
         website: 'https://utn.edu.ar/es/',
         title: 'Industrial Engineer',
-        type: 'Masters degree',
+        type: 'Master’s degree',
         icon: 'university',
         date: ['2006', '2011'],
         description:
@@ -168,7 +168,7 @@ const EN = {
     work: [
       {
         company: 'Quasar Analytic',
-        sector: 'Terch and Data Science',
+        sector: 'Tech and Data Science',
         website: 'https://quasaranalytic.com/',
         position: 'Co-Founder',
         icon: 'tech',
@@ -179,7 +179,7 @@ const EN = {
         company: 'Agua del Fagnano',
         sector: 'Mineral Water manufacturer',
         website: 'http://www.aguadelfagnano.com/',
-        position: 'Techincal Director',
+        position: 'Technical Director',
         icon: 'chem',
         date: ['08/2018', '03/2019'],
         description: `Production and quality assurance lab manager. Responsible for the product and process quality.
@@ -189,9 +189,9 @@ const EN = {
       },
       {
         company: 'Tecnomyl',
-        sector: 'Pythosanitary manufacturer',
+        sector: 'Phytosanitary manufacturer',
         website: 'https://tecnomyl.com.ar/',
-        position: 'Coordinador de I+D',
+        position: 'Senior R&D Engineer',
         icon: 'chem',
         date: ['01/2017', '08/2018'],
         description: `Research and development of new phytosanitary products, with Reverse Engineering of competitors products.
@@ -227,24 +227,24 @@ const EN = {
       },
       {
         company: 'BGH',
-        sector: 'Consumer electronis manufacturer',
+        sector: 'Consumer electronics manufacturer',
         website: 'https://bgh.com.ar/',
-        position: 'Responsable de Proyectos RCM',
+        position: 'New Product Introduction Manager',
         icon: 'factory',
         date: ['02/2011', '02/2013'],
-        description: `Diseño de ingenieria y commissioning de lineas de producción, incluyendo infraestructura, equipamiento y flujo de producción.
-        Implementación de planificación anticipada de la calidad del producto, con FMEAs y el desarrollo de un sistema de trabajo para la aplicación de conrol estadistico de procesos.`,
+        description: `Engineering design and commissioning of complete production lines, including infrastructure, process flow and test equipment. 
+        Implementation of advanced product quality planning, making of FMEAs and setup of a company framework for the application statistical process control.`,
         highlight:
-          'Gestión de hasta 6 (seis) proyectos, en simultáneo, de manufactura de celulares para Sony, Motorola, Huawei & ZTE.',
+          'Mobile phone manufacturing Project Management of up to 6 (six) simultaneous projects for Sony, Motorola, Huawei & ZTE.',
       },
     ],
   },
   Skills: {
-    subtitle: 'Algunas de las tecnologias con las que he trabajado...',
+    subtitle: 'Some of the technologies I’ve worked with…',
     langSpecificSkills: [
       //Soft Skills
       {
-        text: 'Gestión de proyectos',
+        text: 'Example',
         value: 70,
       },
     ],
@@ -420,7 +420,7 @@ const EN = {
     },
   },
   Footer: {
-    copy: 'copyright 2021 FG',
+    copy: '© 2021 FG',
     socialLinks: {
       linkedin: 'https://www.linkedin.com/in/flavio-gragnolati/',
       github: 'https://github.com/flaviogragnolati',

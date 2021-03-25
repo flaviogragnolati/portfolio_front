@@ -275,11 +275,11 @@ const EN = {
     },
     projects: [
       {
-        img: '',
+        img: 'quizApp.png',
         title: 'quizApp',
-        subtitle: 'App de quizzes',
+        subtitle: 'App for managing quizzes',
         description:
-          'Web & mobile app for the management of quizzes. A tool designed for education institutions to outsource their examinations.',
+          'Web & mobile app for the management of quizzes. An admin web tool designed for education institutions to outsource their examinations. And a mobile version for taking the quizzes.',
         status: 2,
         tech: {
           backend: [
@@ -298,7 +298,7 @@ const EN = {
         date: '2020',
       },
       {
-        img: '',
+        img: 'wineStore.png',
         title: 'wineStore',
         subtitle: 'Wine e-commerce',
         description:
@@ -330,7 +330,7 @@ const EN = {
         date: '2020',
       },
       {
-        img: '',
+        img: 'materia.png',
         title: 'Materia Ceramica',
         subtitle: 'e-commerce, blog y membership',
         description:
@@ -346,7 +346,7 @@ const EN = {
         date: '2021',
       },
       {
-        img: '',
+        img: 'quasar.png',
         title: 'Quasar Analytic',
         subtitle: 'Landing Page',
         description:

@@ -4,16 +4,16 @@ import TabletProjectCard from './components/TabletProjectCard';
 import DesktopProjectCard from './components/DesktopProjectCard';
 import useScreenSize from 'utils/useScreenSize';
 
-function ResponsiveProjectCard({ project, screenType }) {
+function ResponsiveProjectCard({ project }) {
   let card;
   const { mobile, tablet, desktop } = useScreenSize();
 
   if (mobile) {
-    card = <MobileProjectCard project={project} screenType={screenType} />;
+    card = <MobileProjectCard project={project} />;
   } else if (tablet.all) {
-    card = <TabletProjectCard project={project} screenType={screenType} />;
+    card = <TabletProjectCard project={project} />;
   } else {
-    card = <DesktopProjectCard project={project} screenType={screenType} />;
+    card = <DesktopProjectCard project={project} />;
   }
   return <>{card}</>;
 }

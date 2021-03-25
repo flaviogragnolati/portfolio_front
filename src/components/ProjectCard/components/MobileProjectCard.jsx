@@ -5,6 +5,7 @@ import img from 'assets/img/project1.jpg';
 import Icons from './Icons';
 import TechStack from './TechStack';
 import StatusChip from './StatusChip';
+import Img from './Img';
 
 const Card = styled.div`
   width: 85%;
@@ -30,13 +31,13 @@ const CardBody = styled.div`
   padding: 10px;
 `;
 
-const Img = styled.img`
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  z-index: -1;
-  position: relative;
-`;
+// const Img = styled.img`
+//   height: 100%;
+//   width: 100%;
+//   object-fit: cover;
+//   z-index: -1;
+//   position: relative;
+// `;
 
 const hoverBg = `rgba(150, 150, 150, 0.4)`;
 const Tech = styled.div`
@@ -61,9 +62,9 @@ const SubTitle = styled(Typography)`
 `;
 
 const Description = styled.div`
-  max-height: 35vh;
-  height: 35vh;
-  nin-height: 35vh;
+  max-height: 25vh;
+  height: 25vh;
+  min-height: 25vh;
   overflow-y: scroll;
 `;
 
@@ -89,7 +90,8 @@ function MobileProjectCard({ project, screenType }) {
       <Grid container direction="column" justify="center" alignItems="stretch">
         <Grid item xs={12} zeroMinWidth>
           <CardHeader>
-            <Img src={img} />
+            {/* <Img src={img} /> */}
+            <Img img={img} mobile={true} desktop={false} />
             <Tech>
               <TechStack tech={tech} mobile={true} />
             </Tech>

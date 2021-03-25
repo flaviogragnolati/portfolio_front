@@ -52,20 +52,20 @@ function Icons({ git, website, ...rest }) {
   return (
     <StyledDiv {...rest}>
       <Tooltip title={codeTooltip}>
-        <a href={git}>
+        <a href={git} target="_blank" rel="noreferrer">
           <Code size="2.5rem" />
         </a>
       </Tooltip>
       <Tooltip title={webTooltip}>
-        <a href={git}>
+        <a href={website} target="_blank" rel="noreferrer">
           <OpenInBrowser size="2.5rem" />
         </a>
       </Tooltip>
-      <Tooltip title={previewTooltip}>
+      {/* <Tooltip title={previewTooltip}>
         <a>
           <Preview size="2.5rem" />
         </a>
-      </Tooltip>
+      </Tooltip> */}
     </StyledDiv>
   );
 }

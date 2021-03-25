@@ -273,7 +273,7 @@ const ES = {
     },
     projects: [
       {
-        img: '',
+        img: 'quizApp.png',
         title: 'quizApp',
         subtitle: 'App de quizzes',
         description:
@@ -296,7 +296,7 @@ const ES = {
         date: '2020',
       },
       {
-        img: '',
+        img: 'wineStore.png',
         title: 'wineStore',
         subtitle: 'Vinoteca online',
         description:
@@ -328,7 +328,7 @@ const ES = {
         date: '2020',
       },
       {
-        img: '',
+        img: 'materia.png',
         title: 'Materia Ceramica',
         subtitle: 'e-commerce, blog y membership',
         description:
@@ -344,7 +344,7 @@ const ES = {
         date: '2021',
       },
       {
-        img: '',
+        img: 'quasar.png',
         title: 'Quasar Analytic',
         subtitle: 'Landing Page',
         description:

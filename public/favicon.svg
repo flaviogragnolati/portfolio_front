@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" height="134" width="111"
+stroke="#000" stroke-width="2" fill="none">
+<path xmlns="http://www.w3.org/2000/svg" d="M2,99V35.8L55.7,4.2 109.4,35.8V99L55.7,130.6Z" fill="#ff9100"/>
+<circle xmlns="http://www.w3.org/2000/svg" cx="55.7" cy="67.4" r="39" fill="#3f51b5"/>
+</svg>

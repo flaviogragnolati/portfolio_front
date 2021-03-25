@@ -85,22 +85,19 @@ function ProjectCarrousel({ projects }) {
   const { height, width } = useWindowDimensionsInitial();
   const ratio = width / height;
 
-  let slideWidth, slideHeight, screenType;
+  let slideWidth, slideHeight;
   if (0.9 <= ratio && ratio <= 1.1) {
     // console.log('ratio between 0.9,1.1', ratio);
     slideWidth = 1;
     slideHeight = 1;
-    screenType = 'square';
   } else if (ratio > 1.1) {
     // console.log('ratio  >1.1', ratio);
     slideWidth = desktop ? 3 : tablet.high ? 3 : tablet.low ? 2 : 1;
     slideHeight = desktop ? 1.25 : tablet.high ? 2.5 : tablet.low ? 1.9 : 2.45;
-    screenType = 'landscape';
   } else {
     // console.log('ratio  <0.9', ratio);
     slideWidth = desktop ? 3 : tablet.high ? 3 : tablet.low ? 1 : 1;
-    slideHeight = desktop ? 2 : tablet.high ? 2.45 : tablet.low ? 0.8 : 2.3;
-    screenType = 'portrait';
+    slideHeight = desktop ? 2 : tablet.high ? 2.45 : tablet.low ? 0.8 : 2.1;
   }
   return (
     <StyledCarousel
@@ -113,7 +110,7 @@ function ProjectCarrousel({ projects }) {
       <Slider>
         {projects.map((project, idx) => (
           <Slide index={idx}>
-            <ResponsiveProjectCard project={project} screenType={screenType} />
+            <ResponsiveProjectCard project={project} />
           </Slide>
         ))}
       </Slider>

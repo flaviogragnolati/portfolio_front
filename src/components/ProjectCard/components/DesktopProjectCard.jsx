@@ -4,6 +4,7 @@ import img from 'assets/img/project1.jpg';
 import StatusChip from '../components/StatusChip';
 import TechStack from '../components/TechStack';
 import Icons from '../components/Icons';
+// import Img from './Img';
 import { Typography } from '@material-ui/core';
 
 const hoverBg = `rgba(150, 150, 150, 0.4)`;
@@ -157,6 +158,7 @@ function DesktopProjectCard({ project }) {
       <Meta>
         <Photo>
           <Img src={img} />
+          {/* <Img img={img} mobile={false} desktop={true} /> */}
         </Photo>
         <Details>
           <TechStack tech={tech} />

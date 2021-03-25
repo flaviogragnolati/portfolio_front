@@ -116,7 +116,7 @@ const DescriptionText = styled(Typography)`
 `;
 const Title = styled(Typography)`
   line-height: 1;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
   /* font-size: 1.7rem; */
   color: ${(p) => p.theme.palette.text.primary};
 `;

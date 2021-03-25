@@ -18,8 +18,8 @@ const ImgDesktop = styled.img`
 `;
 
 const ImgMobile = styled.img`
-  height: 20px;
-  width: 20px;
+  height: 100%;
+  width: 100%;
   object-fit: contain;
   z-index: -1;
   position: relative;

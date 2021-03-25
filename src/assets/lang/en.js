@@ -255,9 +255,9 @@ const EN = {
       "If you're interested in a project, want to know more about my work or you are looking for a custom job...feel free to contact me",
     projectStatus: {
       0: 'Prototype',
-      1: 'Development',
+      1: 'In Development',
       2: 'Production',
-      3: 'Finished',
+      3: 'MVP',
       4: 'Cancelled',
     },
     tooltip: {
@@ -280,7 +280,7 @@ const EN = {
         subtitle: 'App for managing quizzes',
         description:
           'Web & mobile app for the management of quizzes. An admin web tool designed for education institutions to outsource their examinations. And a mobile version for taking the quizzes.',
-        status: 2,
+        status: 3,
         tech: {
           backend: [
             'express',
@@ -303,7 +303,7 @@ const EN = {
         subtitle: 'Wine e-commerce',
         description:
           'A simple but sleek e-commerce designed for online selling of wines.',
-        status: 1,
+        status: 3,
         tech: {
           backend: [
             'express',
@@ -335,7 +335,7 @@ const EN = {
         subtitle: 'e-commerce, blog y membership',
         description:
           'Web site for a Ceramic Shop, that includes the standard e-commerce with all its functionalities, with an included membership program. Also, a blog for posting updates on products, techniques and more.',
-        status: 0,
+        status: 1,
         tech: {
           backend: ['django', 'postgres', 'django-rest-framework'],
           frontend: ['react', 'redux', 'formik', 'material-ui', 'axios'],
@@ -351,7 +351,7 @@ const EN = {
         subtitle: 'Landing Page',
         description:
           'Simple landing page with contact form, and back office for form generation and administration.',
-        status: 0,
+        status: 2,
         tech: {
           backend: [
             'django',

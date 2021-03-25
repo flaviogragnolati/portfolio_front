@@ -253,9 +253,9 @@ const ES = {
       'Si estas interesado en un proyecto, queres saber más sobre mi trabajo o estás buscando un desarrollador para un trabajo especial, no dudes en contactarme',
     projectStatus: {
       0: 'Prototipo',
-      1: 'Desarrollo',
+      1: 'En Desarrollo',
       2: 'Producción',
-      3: 'Finalizado',
+      3: 'MVP',
       4: 'Cancelado',
     },
     tooltip: {
@@ -278,7 +278,7 @@ const ES = {
         subtitle: 'App de quizzes',
         description:
           'Aplicación web y móvil para la gestión de cuestionarios. Una herramienta pensada y diseñada que instituciones educativas tercericen sus examinaciones, cuestionarios, etc. ',
-        status: 2,
+        status: 3,
         tech: {
           backend: [
             'express',
@@ -301,7 +301,7 @@ const ES = {
         subtitle: 'Vinoteca online',
         description:
           'Una sencilla, pero elegante vinoteca web, con todas las funciones necesarias para vender online.',
-        status: 1,
+        status: 3,
         tech: {
           backend: [
             'express',
@@ -333,7 +333,7 @@ const ES = {
         subtitle: 'e-commerce, blog y membership',
         description:
           'Sitio web para negocio de Cerámica que incluye un e-commerce estándar con todas sus funciones, ya además un sistema de membresías. También, un blog para postear actualizaciones de productos, servicios, técnicas y más.',
-        status: 0,
+        status: 2,
         tech: {
           backend: ['django', 'postgres', 'django-rest-framework'],
           frontend: ['react', 'redux', 'formik', 'material-ui', 'axios'],
@@ -349,7 +349,7 @@ const ES = {
         subtitle: 'Landing Page',
         description:
           'Lading page simple con un formulario de contacto y un back office para la generación y administración de formularios.',
-        status: 0,
+        status: 2,
         tech: {
           backend: [
             'django',

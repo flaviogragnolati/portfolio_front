@@ -363,7 +363,7 @@ const EN = {
           frontend: ['bootstrap', 'jQuery'],
         },
         git: 'https://github.com/flaviogragnolati/quasar',
-        website: 'www.quasaranalytic.com',
+        website: 'http://www.quasaranalytic.com',
         preview: '',
         date: '2020',
       },

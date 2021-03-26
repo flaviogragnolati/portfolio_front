@@ -87,7 +87,7 @@ function MobileProjectCard({ project }) {
         <Grid item xs={12} zeroMinWidth>
           <CardHeader>
             {/* <Img src={img} /> */}
-            <ImgContainer img={img} mobile={true} desktop={false} />
+            <ImgContainer imgPath={img} mobile={true} desktop={false} />
             <Tech>
               <TechStack tech={tech} />
             </Tech>

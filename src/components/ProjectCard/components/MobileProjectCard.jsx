@@ -19,6 +19,7 @@ const Card = styled.div`
 const CardHeader = styled.div`
   /* height: 25vh; */
   min-height: 220px;
+  height: 220px;
   width: 100%;
   position: relative;
 `;
@@ -91,7 +92,7 @@ function MobileProjectCard({ project, screenType }) {
         <Grid item xs={12} zeroMinWidth>
           <CardHeader>
             {/* <Img src={img} /> */}
-            <ImgContainer img={img} mobile={true} desktop={false} />
+            <ImgContainer imgPath={img} mobile={true} desktop={false} />
             <Tech>
               <TechStack tech={tech} mobile={true} />
             </Tech>

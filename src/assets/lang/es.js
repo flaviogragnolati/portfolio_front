@@ -290,7 +290,7 @@ const ES = {
           ],
           frontend: ['react', 'ionic', 'redux', 'formik', 'material-ui'],
         },
-        git: 'https://github.com/flaviogragnolati/quizapp_WEB',
+        git: 'https://github.com/flaviogragnolati/quiz_front',
         website: 'https://wizardly-chandrasekhar-bdea89.netlify.app/',
         preview: '',
         date: '2020',

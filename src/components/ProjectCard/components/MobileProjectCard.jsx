@@ -1,11 +1,10 @@
 import React from 'react';
 import { Box, Grid, Typography } from '@material-ui/core';
 import styled from 'styled-components';
-import img from 'assets/img/project1.jpg';
 import Icons from './Icons';
 import TechStack from './TechStack';
 import StatusChip from './StatusChip';
-import Img from './Img';
+import ImgContainer from './ImgContainer';
 
 const Card = styled.div`
   width: 85%;
@@ -76,6 +75,7 @@ const Links = styled.div`
 function MobileProjectCard({ project, screenType }) {
   const {
     title,
+    img,
     subtitle,
     description,
     status,
@@ -91,7 +91,7 @@ function MobileProjectCard({ project, screenType }) {
         <Grid item xs={12} zeroMinWidth>
           <CardHeader>
             {/* <Img src={img} /> */}
-            <Img img={img} mobile={true} desktop={false} />
+            <ImgContainer img={img} mobile={true} desktop={false} />
             <Tech>
               <TechStack tech={tech} mobile={true} />
             </Tech>

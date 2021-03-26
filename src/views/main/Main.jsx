@@ -1,7 +1,6 @@
-import React, { forwardRef } from 'react';
+import React from 'react';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
-import styled, { keyframes } from 'styled-components';
-import argonath from 'assets/img/argonathj.jpg';
+import styled from 'styled-components';
 import Subtitle from './components/Subtitle';
 import HireMeButton from './components/HireMeButton';
 import ScrollDown from './components/ScrollDown';
@@ -9,8 +8,6 @@ import HireButton from './components/HireButton';
 import { Box, Typography } from '@material-ui/core';
 import ParticlesBackground from 'views/main/components/ParticlesBackground';
 import useScreenSize from 'utils/useScreenSize';
-
-const img = argonath;
 
 const insideStyles = {
   background: 'white',

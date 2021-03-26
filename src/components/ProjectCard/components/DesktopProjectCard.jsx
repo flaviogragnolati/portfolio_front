@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import img from 'assets/img/project1.jpg';
 import StatusChip from '../components/StatusChip';
 import TechStack from '../components/TechStack';
 import Icons from '../components/Icons';
-// import Img from './Img';
+import ImgContainer from './ImgContainer';
 import { Typography } from '@material-ui/core';
 
 const hoverBg = `rgba(150, 150, 150, 0.4)`;
@@ -27,10 +26,10 @@ const Photo = styled.div`
   transition: transform 0.2s;
 `;
 
-const Img = styled.img`
-  position: absolute;
-  left: 0;
-`;
+// const Img = styled.img`
+//   position: absolute;
+//   left: 0;
+// `;
 
 //Main wrapper Div
 const Card = styled.div`
@@ -49,9 +48,7 @@ const Card = styled.div`
   border-radius: 5px;
   overflow: hidden;
   z-index: 0;
-  &:hover ${Photo} {
-    transform: scale(1.3) rotate(3deg);
-  }
+
   &:hover ${Details} {
     backgorund-color: red;
     left: 0%;
@@ -145,6 +142,7 @@ const Links = styled.div`
 function DesktopProjectCard({ project }) {
   const {
     title,
+    img,
     subtitle,
     description,
     status,
@@ -157,8 +155,9 @@ function DesktopProjectCard({ project }) {
     <Card>
       <Meta>
         <Photo>
-          <Img src={img} />
-          {/* <Img img={img} mobile={false} desktop={true} /> */}
+          {/* <Img src={img} /> */}
+          {console.log('img base', img)}
+          <ImgContainer imgPath={img} mobile={false} desktop={true} />
         </Photo>
         <Details>
           <TechStack tech={tech} />

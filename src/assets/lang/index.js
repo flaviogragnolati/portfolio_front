@@ -10,6 +10,7 @@ export const langList = {
 const translations = {
   en: { ...EN, ...SHARED },
   es: { ...ES, ...SHARED },
+  // TODO: translate content to fr aand it
   it: {},
   fr: {},
 };

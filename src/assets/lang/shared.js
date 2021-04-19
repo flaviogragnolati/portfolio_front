@@ -14,10 +14,6 @@ const SHARED = {
       text: 'JavaScript (ES6+)',
       value: 100,
     },
-    // {
-    //   text: 'ES6',
-    //   value: 60,
-    // },
     {
       text: 'Python',
       value: 100,
@@ -26,14 +22,6 @@ const SHARED = {
       text: 'TypeScript',
       value: 30,
     },
-    // {
-    //   text: 'SQL',
-    //   value: 45,
-    // },
-    // {
-    //   text: 'noSQL',
-    //   value: 40,
-    // },
     //JS Backend tech
     {
       text: 'Sequelize',
@@ -57,15 +45,11 @@ const SHARED = {
     },
     // {
     //   text: 'Apollo',
-    //   value: 40,
+    //   value: 25,
     // },
     // {
     //   text: 'Nodemailer',
     //   value: 30,
-    // },
-    // {
-    //   text: 'sessions',
-    //   value: 25,
     // },
     // {
     //   text: 'handlebars',
@@ -90,7 +74,7 @@ const SHARED = {
     },
     {
       text: 'Django Wagtail',
-      value: 30,
+      value: 35,
     },
     //Frontend
     {
@@ -198,10 +182,6 @@ const SHARED = {
       text: 'NumPy/SciPy',
       value: 50,
     },
-    // {
-    //   text: 'SciPy',
-    //   value: 50,
-    // },
     {
       text: 'MatplotLib',
       value: 50,
@@ -253,7 +233,7 @@ const SHARED = {
     },
     {
       text: 'Docker',
-      value: 65,
+      value: 40,
     },
     {
       text: 'Netlify',

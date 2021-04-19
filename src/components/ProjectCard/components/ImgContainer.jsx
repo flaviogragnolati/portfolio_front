@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // import img from 'assets/img/projects/quizApp.png';
 
 const importAll = (r) => {
+  //helper func to import several files
   let images = {};
   r.keys().map((item, index) => (images[item.replace('./', '')] = r(item)));
   return images;

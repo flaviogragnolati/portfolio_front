@@ -130,7 +130,6 @@ function Social({ links, tooltips }) {
       <Tooltip title={tooltips.mail}>
         <MailDiv>
           <a
-            // onClick={`javascript:window.open('mailto:${mail}?subject=${subject}', 'mail');event.preventDefault()`}
             target="_blank"
             rel="noreferrer"
             href={`mailto:${mail}?subject=${subject}`}

@@ -367,21 +367,6 @@ const EN = {
         preview: '',
         date: '2020',
       },
-      // {
-      //   img: '',
-      //   title: 'SC2-API',
-      //   subtitle: 'API',
-      //   description: 'API del videjojuego Starcraft II.',
-      //   status: 0,
-      //   tech: {
-      //     backend: ['django', 'postgres', 'django-rest-framework'],
-      //     frontend: [''],
-      //   },
-      //   git: 'www.github.com',
-      //   website: 'www.website.com',
-      //   preview: '',
-      //   date: '2021',
-      // },
     ],
   },
   Contact: {

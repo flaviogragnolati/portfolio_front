@@ -1,11 +1,11 @@
-import React, { createRef, useEffect, useReducer, useState } from 'react';
+import React, { createRef, useEffect, useState } from 'react';
 
 // Custom Components
 import { makeStyles } from '@material-ui/core';
 import Sidebar from 'components/Sidebar';
 import Main from 'views/main';
 import About from 'views/about';
-import useSpy from 'utils/observerHook';
+import useSpy from 'utils/observerHook'; //! ddisabled due to performance issues...scroll spy not playing very with particles.js and wordCloud.js
 import BackToTopBtn from 'components/BackToTop';
 import Contact from 'views/contact';
 import Section from 'components/Section';
@@ -21,12 +21,9 @@ const useStyles = makeStyles((theme) => ({
     display: 'flex',
     position: 'relative',
   },
-  // necessary for content to be below app bar
-  // toolbar: theme.mixins.toolbar,
   content: {
     flexGrow: 1,
     position: 'relative',
-    // paddingLeft: '10px',
   },
 }));
 

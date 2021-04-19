@@ -5,11 +5,11 @@ import shared from 'assets/lang/shared';
 
 import { indigo, grey, orange } from '@material-ui/core/colors';
 
-import useScreenSize from 'utils/useScreenSize';
-import useWindowDimensions from 'utils/useWindowDimensions';
+// import useScreenSize from 'utils/useScreenSize';
+// import useWindowDimensions from 'utils/useWindowDimensions';
 import { useTranslation } from 'context/LangWrapper/useTranslation';
 import styled from 'styled-components';
-import useFullTheme from 'context/ThemeWrapper/useFullTheme';
+// import useFullTheme from 'context/ThemeWrapper/useFullTheme';
 
 const Frame = styled.div`
   border: 2px red solid;
@@ -24,7 +24,7 @@ function Skills() {
     techSkills,
   } = useTranslation();
 
-  const t = useFullTheme();
+  // const t = useFullTheme();
   // let divSize;
   // if (desktop || tablet.high) {
   //   divSize = undefined;
@@ -64,7 +64,7 @@ function Skills() {
     rotationAngles: [-25, 25],
   };
 
-  const words = [...techSkills, ...langSpecificSkills].slice(0, 20);
+  // const words = [...techSkills, ...langSpecificSkills].slice(0, 20);
   return (
     <Grid item xs={12}>
       <ReactWordcloud

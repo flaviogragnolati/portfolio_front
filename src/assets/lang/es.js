@@ -32,8 +32,7 @@ const ES = {
       {
         title: 'Trabajo en equipo',
         icon: 'team',
-        text:
-          'Con experiencia trabajando en, y dirigiendo, equipos multidisciplinarios',
+        text: 'Con experiencia trabajando en, y dirigiendo, equipos multidisciplinarios',
       },
       {
         title: 'Aprendizaje',
@@ -53,8 +52,7 @@ const ES = {
       {
         title: 'Resolución de problemas',
         icon: 'problem',
-        text:
-          'Fuerte cultura ingenieril con resolución de analítica de problemas',
+        text: 'Fuerte cultura ingenieril con resolución de analítica de problemas',
       },
       {
         title: 'Compromiso',
@@ -167,6 +165,15 @@ const ES = {
       },
     ],
     work: [
+      {
+        company: 'Steplix',
+        sector: 'Software Factory',
+        website: 'https://steplix.com/',
+        position: 'SSr. Software Engineer',
+        icon: 'tech',
+        date: ['01/2021', 'Present'],
+        description: '',
+      },
       {
         company: 'Quasar Analytic',
         sector: 'Tech and Data Science',

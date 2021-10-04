@@ -32,8 +32,7 @@ const EN = {
       {
         title: 'Team work',
         icon: 'team',
-        text:
-          'A great deal of experience working in, and leading, multidisciplinary teams',
+        text: 'A great deal of experience working in, and leading, multidisciplinary teams',
       },
       {
         title: 'Learning',
@@ -166,6 +165,15 @@ const EN = {
       },
     ],
     work: [
+      {
+        company: 'Steplix',
+        sector: 'Software Factory',
+        website: 'https://steplix.com/',
+        position: 'SSr. Software Engineer',
+        icon: 'tech',
+        date: ['01/2021', 'Present'],
+        description: '',
+      },
       {
         company: 'Quasar Analytic',
         sector: 'Tech and Data Science',

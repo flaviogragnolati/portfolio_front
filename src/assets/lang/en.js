@@ -89,9 +89,9 @@ const EN = {
         title: 'Full Stack Developer',
         icon: 'bootcamp',
         type: 'Bootcamp',
-        date: ['10/2020', '02/2021'],
+        date: ['10/2019', '02/2020'],
         description:
-          '800+ hr. Theoretical & Practical Bootcamp with focus in JavaScript ES+6, React, Redux, Express, Sequelize, Node, PostgreSQL and RESTful API. Concluding with the development of several real-life projects under Agile methodologies.',
+          '800+ hr. Theoretical & Practical Bootcamp with focus in JavaScript ES10, React, Redux, Express, Sequelize, Node, PostgreSQL and RESTful APIs. Concluding with the development of several real-life projects under Agile methodologies.',
         certificate:
           'https://s3-sa-east-1.amazonaws.com/certs.henry/cert?id=e3f5335c-ecb5-4c0e-8ae2-651a457b0810',
       },
@@ -171,17 +171,19 @@ const EN = {
         website: 'https://steplix.com/',
         position: 'SSr. Software Engineer',
         icon: 'tech',
-        date: ['01/2021', 'Present'],
-        description: '',
+        date: ['01/2020', 'Present'],
+        description: 'Full stack developer working with Node, SQL & Next.js using Agile methodolgies and Continuous Development and Integration process.',
+        highlight: 'Currently working in the development of a world class fintech app with 60+ microservices, and also developing a completely new trading platform.'
       },
       {
         company: 'Quasar Analytic',
-        sector: 'Tech and Data Science',
+        sector: 'Engineering & Tech',
         website: 'https://quasaranalytic.com/',
-        position: 'Co-Founder',
+        position: 'Founder',
         icon: 'tech',
         date: ['03/2019', 'Present'],
-        description: '',
+        description: 'General Engineering consultant services.',
+        highlight: 'Technical & economical feasibility analysis, EPCC project development, data discovery & analytics, software development and international certification assistance.'
       },
       {
         company: 'Agua del Fagnano',

@@ -88,7 +88,7 @@ const ES = {
         title: 'Fullstack Developer',
         icon: 'bootcamp',
         type: 'Bootcamp',
-        date: ['10/2020', '02/2021'],
+        date: ['10/2019', '02/2020'],
         description:
           'Bootcamp teórico practico de 800+ horas enfocado en JavaScript ES+6, React, Redux, Express, Sequelize, Node, PostgreSQL y RESTful API. Finalizando con el desarrollo de diversos proyectos `reales` bajo metodologías ágiles',
         certificate:
@@ -171,17 +171,19 @@ const ES = {
         website: 'https://steplix.com/',
         position: 'SSr. Software Engineer',
         icon: 'tech',
-        date: ['01/2021', 'Present'],
-        description: '',
+        date: ['01/2020', 'Present'],
+        description: 'Ingeniero de software full stack desarrollador de aplicaciones de calidad y escalables con Node, SQL & Next.js, utilizando metodologias agiles y CI/CD.',
+        highlight: 'Actualmente trabajando en proyecto de aplicación fintech escala nacional con 60+ microservicios, y además desarrollando una nueva e inovadora plataforma de trading de granos.'
       },
       {
         company: 'Quasar Analytic',
-        sector: 'Tech and Data Science',
+        sector: 'Ingeniería & Tech',
         website: 'https://quasaranalytic.com/',
-        position: 'Co-Founder',
+        position: 'Founder',
         icon: 'tech',
         date: ['03/2019', 'Present'],
-        description: '',
+        description: 'Servicios de consultoria de ingeniería en general.',
+        highlight: 'Analisis técnico y económico, desarrollo de proyectos EPCC, análisis de datos, desarrollo de software y asistencia para certificacion de estandares.'
       },
       {
         company: 'Agua del Fagnano',
